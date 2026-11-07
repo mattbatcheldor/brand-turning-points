@@ -40,7 +40,15 @@
     "method": "Company trading update",
     "credit": "Greggs, 2019",
     "data_role": "A statement",
-    "data_source": "A high-street bakery went vegan"
+    "data_source": "A high-street bakery went vegan",
+    "image": {
+      "src": "assets/edition-06/greggs-vegan-sausage-roll.webp",
+      "alt": "Greggs vegan sausage roll floating against a dark blue background",
+      "credit": "Greggs, The Vegan Sausage Roll (2019) · launch film still",
+      "source": "https://www.youtube.com/watch?v=uC1Gh8CdDYQ",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "volvo-three-point-seatbelt",
@@ -59,13 +67,19 @@
     "evidence": "The invention and the open patent are well recorded. The lives-saved figure is Volvo’s own estimate, and no public source measures what the decision did for Volvo’s sales.",
     "lesson": "The strongest brand promise is one the product keeps for you.",
     "test": "There is no effectiveness record. The evidence is the invention, the patent decision and Volvo’s estimate of its effect.",
-    "links": [],
+    "links": [
+      [
+        "Watch ‘Volvo’s three-point safety belt’ on the SafestCar channel",
+        "https://www.youtube.com/watch?v=6k1g_l-R6as"
+      ]
+    ],
     "memorable": "It is a brand built on a gift to its competitors.",
     "creative": {
-      "medium": "Safety film",
-      "label": "Watch ‘Volvo’s three-point safety belt’ on the SafestCar channel",
-      "url": "https://www.youtube.com/watch?v=6k1g_l-R6as",
-      "heading": "Film"
+      "medium": "Volvo archive film",
+      "label": "Watch Volvo’s archive film on the development of the three-point seatbelt, 1959 to 1999",
+      "url": "https://www.volvocars.com/intl/media/videos/b6fe6c4ff58645e6adc8b33e00640012/",
+      "heading": "Campaign media",
+      "screening_url": "https://www.youtube.com/watch?v=6k1g_l-R6as"
     },
     "impact_source": [
       "Read the company’s account · Volvo Group",
@@ -79,7 +93,16 @@
     "method": "Company estimate",
     "credit": "Volvo, 1959",
     "data_role": "Proof of the promise",
-    "data_source": "An invention given away"
+    "data_source": "An invention given away",
+    "image": {
+      "src": "assets/edition-06/volvo-three-point-seatbelt.webp",
+      "alt": "Nils Bohlin in the driver’s seat demonstrating Volvo’s three-point seatbelt",
+      "credit": "Nils Bohlin with the three-point belt · Volvo Group heritage archive",
+      "source": "https://www.volvogroup.com/en/about-us/heritage/three-point-safety-belt.html",
+      "width": 800,
+      "height": 699,
+      "contain": true
+    }
   },
   {
     "id": "sony-walkman",
@@ -98,12 +121,18 @@
     "evidence": "The sales are widely reported. They show the product’s success, not the effect of any single campaign.",
     "lesson": "If a product changes a habit, the brand becomes the name of the habit.",
     "test": "The record is unit sales over thirty years.",
-    "links": [],
+    "links": [
+      [
+        "Hear from the engineers behind the original Walkman · Sony",
+        "https://www.youtube.com/watch?v=F24v79XXQ5w"
+      ]
+    ],
     "memorable": "Headphones in public, which looked odd in 1979 and normal ever since.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived television advert",
+      "label": "Watch the 1979 Walkman advert in Smithsonian Music’s archive",
+      "url": "https://music.si.edu/video/iconic-sony-walkman-1979-tv-ad",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -117,7 +146,15 @@
     "method": "Reported unit sales",
     "credit": "Sony, 1979",
     "data_role": "A new category",
-    "data_source": "Music you could carry"
+    "data_source": "Music you could carry",
+    "image": {
+      "src": "assets/edition-06/sony-walkman.webp",
+      "alt": "Two performers in headphones hold up a blue Sony Walkman",
+      "credit": "Sony Walkman TV advert (1979) · still from the upload catalogued by Smithsonian Music",
+      "source": "https://music.si.edu/video/iconic-sony-walkman-1979-tv-ad",
+      "width": 800,
+      "height": 571
+    }
   },
   {
     "id": "lucozade-energy",
@@ -140,13 +177,18 @@
       [
         "Read the history · Wikipedia",
         "https://en.wikipedia.org/wiki/Lucozade"
+      ],
+      [
+        "Explore the archived Daley Thompson training campaign · History of Advertising Trust",
+        "https://www.hatads.org.uk/catalogue/record/093cb571-b2c4-4adc-8383-3cb5ab7477b9"
       ]
     ],
     "memorable": "It kept the drink and changed the patient into an athlete.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived television advert",
+      "label": "Watch Daley Thompson in the Ogilvy Museum’s Lucozade advert",
+      "url": "https://www.youtube.com/watch?v=D4YTB5FZeHQ",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -160,7 +202,15 @@
     "method": "Volume sales and tracking",
     "credit": "IPA 1992 · Ogilvy for SmithKline Beecham",
     "data_role": "A rescue",
-    "data_source": "A recovery drink became an energy drink"
+    "data_source": "A recovery drink became an energy drink",
+    "image": {
+      "src": "assets/edition-06/lucozade-energy.webp",
+      "alt": "Daley Thompson sprinting in a white vest in the Lucozade Energy advert",
+      "credit": "Lucozade, Daley Thompson advert · still from the Ogilvy Museum archive",
+      "source": "https://www.youtube.com/watch?v=D4YTB5FZeHQ",
+      "width": 480,
+      "height": 270
+    }
   },
   {
     "id": "swatch",
@@ -187,9 +237,10 @@
     ],
     "memorable": "It made a watch something you changed with your outfit.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Early television advert",
+      "label": "Watch an archived 1984 Swatch commercial",
+      "url": "https://www.youtube.com/watch?v=A-1OhtRnszU",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -203,7 +254,16 @@
     "method": "Industry history",
     "credit": "SMH, 1983",
     "data_role": "A rescue",
-    "data_source": "A cheap watch for an expensive industry"
+    "data_source": "A cheap watch for an expensive industry",
+    "image": {
+      "src": "assets/edition-06/swatch.webp",
+      "alt": "Early Swatch print advert showing a watch amid blue waves",
+      "credit": "Swatch, early print advertising · Swatch Group archive",
+      "source": "https://www.swatchgroup.com/en/swatch-group/swatch-group-history",
+      "width": 800,
+      "height": 379,
+      "contain": true
+    }
   },
   {
     "id": "guinness-draught-cans",
@@ -222,12 +282,18 @@
     "evidence": "The IPA paper reports sales success for the cans and for Guinness as a whole, with fast increases in awareness and trial. It is a sales and trial trend from a test-market launch.",
     "lesson": "When the product sounds too good to be true, the ad’s job is to make it believable.",
     "test": "A test market in three regions measured awareness, trial and sales before the national launch.",
-    "links": [],
+    "links": [
+      [
+        "Licence for the widget photograph · CC BY-SA 4.0",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ]
+    ],
     "memorable": "A small plastic ball in a can, and a nation listening for the hiss.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Product demonstration",
+      "label": "Watch BigClive cut open a Guinness Draught can and examine the floating widget",
+      "url": "https://www.youtube.com/watch?v=2SEgLeMB7r4",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -241,7 +307,15 @@
     "method": "Test-market sales and trial",
     "credit": "IPA 1990 · Ogilvy for Guinness",
     "data_role": "Proof of the promise",
-    "data_source": "A widget that made pub Guinness at home"
+    "data_source": "A widget that made pub Guinness at home",
+    "image": {
+      "src": "assets/edition-06/guinness-draught-cans.webp",
+      "alt": "A cut-open Guinness Draught can beside its white floating widget",
+      "credit": "Lupus in Saxonia, cutaway showing the later floating widget · Wikimedia Commons via Innovation Authority · CC BY-SA 4.0, resized to WebP",
+      "source": "https://innovationauthority.com/records/guinness-draught-widget",
+      "width": 800,
+      "height": 453
+    }
   },
   {
     "id": "dyson-dc01",
@@ -263,9 +337,10 @@
     "links": [],
     "memorable": "The clear bin. Watching dust spin is strangely satisfying, and it sold the machine.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Design retrospective",
+      "label": "Watch James Dyson revisit the DC01 in Invention: A Life",
+      "url": "https://www.dyson.co.uk/james-dyson/invention-a-life/06",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -279,7 +354,16 @@
     "method": "Market share",
     "credit": "Dyson, 1993",
     "data_role": "Proof of the promise",
-    "data_source": "A see-through bin that showed the dirt"
+    "data_source": "A see-through bin that showed the dirt",
+    "image": {
+      "src": "assets/edition-06/dyson-dc01.webp",
+      "alt": "Grey and yellow Dyson DC01 upright vacuum with a clear dust chamber",
+      "credit": "Dyson DC01 · Centre Pompidou, MNAM-CCI / Bertrand Prévost / Dist. GrandPalaisRmn",
+      "source": "https://www.centrepompidou.fr/en/ressources/oeuvre/cRG6b7",
+      "width": 539,
+      "height": 720,
+      "contain": true
+    }
   },
   {
     "id": "toyota-prius",
@@ -306,9 +390,10 @@
     ],
     "memorable": "Its odd shape. It looked different on purpose, so everyone knew what you drove.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived Japanese launch advert",
+      "label": "Watch the original Japanese Prius commercial",
+      "url": "https://www.youtube.com/watch?v=0lYGi9hoXsw",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the milestone report · Autoblog",
@@ -322,7 +407,15 @@
     "method": "Company sales milestones",
     "credit": "Toyota, 1997",
     "data_role": "A new category",
-    "data_source": "The first mass-produced hybrid"
+    "data_source": "The first mass-produced hybrid",
+    "image": {
+      "src": "assets/edition-06/toyota-prius.webp",
+      "alt": "A light blue first-generation Toyota Prius seen in profile",
+      "credit": "Toyota Prius · original 1997 Toyota launch press photograph",
+      "source": "https://global.toyota/en/detail/7905316",
+      "width": 800,
+      "height": 534
+    }
   },
   {
     "id": "skoda-fabia",
@@ -344,9 +437,10 @@
     "links": [],
     "memorable": "It is a brand laughing at itself, which is very British and very disarming.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived UK launch advert",
+      "label": "Watch Factory Tour, a 2000 Škoda Fabia television advert",
+      "url": "https://www.youtube.com/watch?v=amP8e1vbLuI",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -360,7 +454,15 @@
     "method": "Brand tracking and sales",
     "credit": "IPA 2002 · Gold · Fallon London for Skoda",
     "data_role": "A rescue",
-    "data_source": "A better car nobody believed in"
+    "data_source": "A better car nobody believed in",
+    "image": {
+      "src": "assets/edition-06/skoda-fabia.webp",
+      "alt": "Green first-generation Škoda Fabia driving past a building",
+      "credit": "First-generation Škoda Fabia · photograph reproduced by AutomoBible",
+      "source": "https://automobible.com/its-a-skoda-honest/",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "mini-2001",
@@ -379,12 +481,18 @@
     "evidence": "BMW’s figures show a long-running sales success. They show the product’s success, not what the launch campaigns added.",
     "lesson": "Heritage sells when the product delivers on it.",
     "test": "The record is BMW’s production figures.",
-    "links": [],
+    "links": [
+      [
+        "Watch another UK launch advert from 2001",
+        "https://www.youtube.com/watch?v=cNcRyrQnlW8"
+      ]
+    ],
     "memorable": "It looks like the old Mini at a glance and like nothing else up close.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived UK launch advert",
+      "label": "Watch Mini Martians from the UK launch campaign",
+      "url": "https://www.youtube.com/watch?v=XH5MQLgpY7Y",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the 15-year milestone · BMW Group",
@@ -398,7 +506,15 @@
     "method": "Company production record",
     "credit": "BMW Group, 2001",
     "data_role": "A rescue",
-    "data_source": "An icon rebuilt as a premium car"
+    "data_source": "An icon rebuilt as a premium car",
+    "image": {
+      "src": "assets/edition-06/mini-2001.webp",
+      "alt": "A black MINI with a white roof in the Mini Martians advert",
+      "credit": "MINI, Mini Martians · launch campaign still, catalogued by the MINI Y Register",
+      "source": "https://miniyregister.co.uk/blog/Press/yminiadventureadvert/",
+      "width": 480,
+      "height": 270
+    }
   },
   {
     "id": "nintendo-wii",
@@ -420,9 +536,10 @@
     "links": [],
     "memorable": "People waving their arms at the television, of every age.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived US launch advert",
+      "label": "Watch the 2006 Wii Would Like to Play television spot",
+      "url": "https://www.youtube.com/watch?v=KtjRClH_le0",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the sales report · Game Informer",
@@ -436,7 +553,16 @@
     "method": "Company sales figures",
     "credit": "Nintendo, 2006",
     "data_role": "A new category",
-    "data_source": "A console for the whole family"
+    "data_source": "A console for the whole family",
+    "image": {
+      "src": "assets/edition-06/nintendo-wii.webp",
+      "alt": "Original white Nintendo Wii console next to its Wii Remote",
+      "credit": "Evan-Amos, Wii console and Wii Remote · Wikimedia Commons, public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Wii-console.jpg",
+      "width": 720,
+      "height": 720,
+      "contain": true
+    }
   },
   {
     "id": "apple-iphone",
@@ -455,12 +581,18 @@
     "evidence": "Apple’s own announcement gives the milestone. It is self-reported, and it shows demand for the product rather than the effect of the advertising.",
     "lesson": "The best launch shows people something they didn’t know they wanted.",
     "test": "The record is Apple’s announced sales milestone.",
-    "links": [],
+    "links": [
+      [
+        "Licence for the Macworld photograph · CC BY 2.0",
+        "https://creativecommons.org/licenses/by/2.0/"
+      ]
+    ],
     "memorable": "The keynote itself. Jobs repeated ‘an iPod, a phone and an internet communicator’ until the audience realised it was one device.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Original keynote footage",
+      "label": "Watch Steve Jobs introduce the iPhone at Macworld in 2007",
+      "url": "https://www.youtube.com/watch?v=MnrJzXM7a6o",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the announcement · Apple Newsroom",
@@ -474,7 +606,15 @@
     "method": "Company sales figures",
     "credit": "Apple, 2007",
     "data_role": "A new category",
-    "data_source": "A phone with one screen and no keypad"
+    "data_source": "A phone with one screen and no keypad",
+    "image": {
+      "src": "assets/edition-06/apple-iphone.webp",
+      "alt": "Steve Jobs onstage introducing the iPhone at Macworld in January 2007",
+      "credit": "Blake Patterson, Steve Jobs presents iPhone (2007) · Wikimedia Commons, CC BY 2.0 · resized to WebP",
+      "source": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_presents_iPhone.jpg",
+      "width": 800,
+      "height": 536
+    }
   },
   {
     "id": "nike-vaporfly",
@@ -493,13 +633,19 @@
     "evidence": "A New York Times analysis of race data found Vaporfly runners were faster than similar runners in other shoes. That is evidence about the shoe. No public source shows the effect on Nike’s sales.",
     "lesson": "If your product is the best, let the stopwatch say so.",
     "test": "The record is race times, independent analysis of race data and the rule change.",
-    "links": [],
+    "links": [
+      [
+        "Watch WIRED explain the science behind Breaking2",
+        "https://www.youtube.com/watch?v=c6FS3D4a_kA"
+      ]
+    ],
     "memorable": "A world-class athlete running laps of a motor-racing circuit at dawn, behind a car.",
     "creative": {
-      "medium": "Explainer film",
-      "label": "Watch WIRED explain the science behind Breaking2",
-      "url": "https://www.youtube.com/watch?v=c6FS3D4a_kA",
-      "heading": "Film"
+      "medium": "Documentary",
+      "label": "Watch the Breaking2 documentary on filmmaker Brett Nicoletti’s Vimeo",
+      "url": "https://vimeo.com/292387412",
+      "heading": "Campaign media",
+      "screening_url": "https://www.youtube.com/watch?v=c6FS3D4a_kA"
     },
     "impact_source": [
       "Read the rule change · NPR",
@@ -513,7 +659,15 @@
     "method": "Race times and rule changes",
     "credit": "Nike, 2017",
     "data_role": "Proof of the promise",
-    "data_source": "A shoe tested on the world’s best"
+    "data_source": "A shoe tested on the world’s best",
+    "image": {
+      "src": "assets/edition-06/nike-vaporfly.webp",
+      "alt": "Eliud Kipchoge, Zersenay Tadese and Lelisa Desisa in Nike’s Breaking2 launch photography",
+      "credit": "Breaking2 launch photography (2016) · Nike Newsroom",
+      "source": "https://about.nike.com/en/newsroom/releases/nike-introduces-breaking2",
+      "width": 800,
+      "height": 420
+    }
   },
   {
     "id": "xbox-adaptive-controller",
@@ -556,7 +710,16 @@
     "method": "Awards",
     "credit": "D&AD 2019 · Black Pencil · Microsoft",
     "data_role": "A statement",
-    "data_source": "A controller for gamers with disabilities"
+    "data_source": "A controller for gamers with disabilities",
+    "image": {
+      "src": "assets/edition-06/xbox-adaptive-controller.webp",
+      "alt": "White Xbox Adaptive Controller connected to four coloured switches",
+      "credit": "Xbox Adaptive Controller with external switches (2018) · Microsoft",
+      "source": "https://ukstories.microsoft.com/features/the-xbox-adaptive-controller-in-pictures/",
+      "width": 800,
+      "height": 323,
+      "contain": true
+    }
   },
   {
     "id": "guinness-zero",
@@ -579,13 +742,18 @@
       [
         "Read how Guinness reached new drinkers · Marketing Week",
         "https://www.marketingweek.com/guinness-women-younger-drinkers/"
+      ],
+      [
+        "Read the October 2020 launch announcement · Diageo",
+        "https://www.diageo.com/en/news-and-media/press-releases/2020/guinness-introduces-guinness-00-the-guinness-with-everything-except-alcohol"
       ]
     ],
     "memorable": "It looks exactly like a pint of Guinness, which is the whole point in a pub.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Later campaign film",
+      "label": "Watch the singing pints in Holding Out for a ZERO, Guinness’s 2023 campaign",
+      "url": "https://www.youtube.com/watch?v=ZfELtTliPWQ",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the ranking report · The Grocer",
@@ -599,6 +767,14 @@
     "method": "Market rankings",
     "credit": "Diageo, 2020",
     "data_role": "A statement",
-    "data_source": "A pint for people who aren’t drinking"
+    "data_source": "A pint for people who aren’t drinking",
+    "image": {
+      "src": "assets/edition-06/guinness-zero.webp",
+      "alt": "A Guinness 0.0 truck carrying oversized cans through a city street",
+      "credit": "Guinness 0.0 launch activation (2020) · Hope & Glory, launch PR agency",
+      "source": "https://www.hopeandglorypr.com/the-work/its-been-stout-of-this-world-to-unveil-a-new-beer-for-guinness-introducing-guinness-0-0-non-alc-beer/",
+      "width": 800,
+      "height": 449
+    }
   }
 ]
