@@ -1,6 +1,9 @@
 # Brand Turning Points
 
-An editorial archive of campaigns that changed how people saw a brand, a product or themselves. The first edition opens with Sony BRAVIA’s *Balls* and covers 15 campaigns from 1959 to 2023.
+An editorial archive of campaigns that changed how people saw a brand, a product or themselves.
+
+- **Edition 01** (`index.html`) opens with Sony BRAVIA’s *Balls* and covers 15 of the most famous campaigns, from 1959 to 2023. It finds that the most famous campaigns rarely prove they worked.
+- **Edition 02, Proof first** (`edition-02/index.html`) opens with BT’s *It’s Good to Talk* and covers 15 campaigns that can show they worked, from 1958 to 2019. Every case is an IPA Effectiveness Awards paper.
 
 [Read the brand and editorial guidelines](Brand_Turning_Points_Guidelines.html) for the visual identity, case structure, citation standards and film policy.
 
@@ -12,10 +15,11 @@ For GitHub Pages, upload the package contents to the root of your repository and
 
 ## Maintain an edition
 
-- Edit `src/campaigns.json` to add or revise a case. Keep the original creative, the primary impact source and any further reading in their separate fields. Include a specific reason the work is memorable.
-- Give every case a `mechanism` (Demonstration, Reframed weakness, Participation, Exposing an assumption or Representation), an `evidence_level` (Modelled effect, Sales trend, Survey, Reach only or Archival), a `stat_type` (`result`, or `legacy` for a date or production fact that is not an outcome) and a one-line `take` in the curator’s own voice. The finding ladder, mechanism map, timeline and filters are generated from these fields.
-- Keep campaign thumbnails in `assets/` and record the original source and credit in the corresponding case’s image metadata.
-- Edit `src/page-template.html` for changes to the layout, typography or site copy. The screening selection lives in `src/build.py`. Use direct links for archival films and eligible official YouTube uploads for in-page viewing.
-- Run `python3 src/build.py` to regenerate `index.html`. Preview the updated site and commit the source and output together. Recheck each new source link and any film playback.
+- Each edition has its own case file: `src/campaigns.json` for Edition 01 and `src/campaigns-02.json` for Edition 02. Keep the original creative, the primary impact source and any further reading in their separate fields, and include a specific reason the work is memorable.
+- Give every case a `mechanism` (Demonstration, Reframed weakness, Participation, Exposing an assumption, Representation or Owning a moment), an `evidence_level` (Modelled effect, Sales trend, Survey, Reach only or Archival), a `stat_type` (`result`, or `legacy` for a date, award or production fact that is not an outcome) and a one-line `take` in the curator’s own voice. The finding ladder, mechanism map, timeline and filters are generated from these fields.
+- Keep campaign thumbnails in `assets/` and record the original source and credit in the corresponding case’s `image` metadata. A case without an `image` shows a method tile in the list and a drawn frame in the screening room, so nothing is reused without a source.
+- Edition 02 cases also carry a `method` (how the effect was measured) and a `credit` (the IPA record: year, award, agency and client). If no official copy of the work is online, leave `creative.url` empty and say so in `creative.label`.
+- Shared layout, typography and behaviour live in `src/site.css` and `src/site.js`. Each edition’s copy lives in its own template: `src/page-template.html` and `src/page-template-02.html`. Edition settings, including the screening-room films, are in `EDITIONS` in `src/build.py`. Use direct links for archival films and eligible official YouTube uploads for in-page viewing.
+- Run `python3 src/build.py` to regenerate both editions, or `python3 src/build.py edition-02/index.html` for one. Preview the site and commit the source and output together. Recheck each new source link and any film playback.
 
-The cover uses a still from the Sony BRAVIA *Balls* campaign. Original advertisements and external video belong to their respective rights holders.
+Edition 01’s cover uses a still from the Sony BRAVIA *Balls* campaign. Edition 02’s cover is an editorial illustration. Original advertisements and external video belong to their respective rights holders.

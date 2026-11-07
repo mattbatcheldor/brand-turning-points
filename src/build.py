@@ -1,10 +1,62 @@
 from html import escape
 from pathlib import Path
 import json
+import random
 
 root = Path(__file__).resolve().parent
-campaigns = json.loads((root / 'campaigns.json').read_text(encoding='utf-8'))
 e = escape
+
+
+def itv_art():
+    # Stylised tile map of the 1994 ITV regions. Central is left dark: BT's control region.
+    tile, gap = 64, 7
+    regions = [
+        ('Grampian', 3, 0), ('Scottish', 3, 1), ('Ulster', 1, 2), ('Border', 3, 2), ('Tyne Tees', 4, 2),
+        ('Granada', 3, 3), ('Yorkshire', 4, 3), ('HTV', 2, 4), ('Central', 3, 4), ('Anglia', 4, 4),
+        ('Westcountry', 2, 5), ('Meridian', 3, 5), ('London', 4, 5),
+    ]
+    ox, oy = 260, 26  # columns 1 to 4 span x 331 to 608, rows 0 to 5 span y 26 to 445, clear of the caption
+    warm = ['#e9c46a', '#f1d58a', '#d9f55d', '#c7e36a', '#f4a259', '#efc56f']
+    tiles = []
+    random.seed(1994)
+    for i, (name, col, row) in enumerate(regions):
+        x = ox + col * (tile + gap)
+        y = oy + row * (tile + gap)
+        label_size = 11.5 if len(name) <= 8 else (10.5 if len(name) <= 10 else 8.6)
+        if name == 'Central':
+            tiles.append(
+                f'<g><rect x="{x:.1f}" y="{y:.1f}" width="{tile}" height="{tile}" rx="6" fill="#14171f" stroke="#d9f55d" stroke-width="2" stroke-dasharray="5 4"/>'
+                f'<rect x="{x:.1f}" y="{y:.1f}" width="{tile}" height="{tile}" rx="6" fill="url(#hatch)"/>'
+                f'<text x="{x + tile / 2:.1f}" y="{y + tile / 2 - 2:.1f}" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#fffdf7">Central</text>'
+                f'<text x="{x + tile / 2:.1f}" y="{y + tile / 2 + 12:.1f}" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" letter-spacing="1.1" fill="#d9f55d">NO ADS</text></g>')
+        else:
+            fill = warm[i % len(warm)]
+            arcs = ''.join(
+                f'<path d="M{x + tile - 16:.1f} {y + 12 + k * 0:.1f} a{6 + k * 5} {6 + k * 5} 0 0 1 {6 + k * 5} {6 + k * 5}" fill="none" stroke="#171914" stroke-width="1.6" opacity="{.55 - k * .15:.2f}"/>'
+                for k in range(3))
+            tiles.append(
+                f'<g><rect x="{x:.1f}" y="{y:.1f}" width="{tile}" height="{tile}" rx="6" fill="{fill}"/>{arcs}'
+                f'<text x="{x + 6:.1f}" y="{y + tile - 8:.1f}" font-family="Arial, Helvetica, sans-serif" font-size="{label_size}" font-weight="bold" fill="#171914">{e(name)}</text></g>')
+    static = '\n'.join(
+        f'<rect x="{random.uniform(0, 920):.0f}" y="{random.uniform(0, 560):.0f}" width="{random.choice((1, 2, 3))}" height="1" fill="#fffdf7" opacity="{random.uniform(.05, .22):.2f}"/>'
+        for _ in range(260))
+    return f'''<svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
+<title id="art-title">Stylised map of the 1994 ITV regions. Every region is lit except Central, which BT left without its advertising as a control.</title>
+<defs>
+  <linearGradient id="night" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#1d2533"/><stop offset="1" stop-color="#2b2f3d"/></linearGradient>
+  <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v8" stroke="#d9f55d" stroke-width="1.2" opacity=".28"/></pattern>
+  <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5h4" stroke="#000" stroke-width="1" opacity=".22"/></pattern>
+</defs>
+<path d="M0 0h920v560H0z" fill="url(#night)"/>
+{static}
+{''.join(tiles)}
+<g font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#fffdf7">
+<rect x="78" y="34" width="16" height="16" rx="3" fill="#e9c46a"/><text x="102" y="47">Campaign on air</text>
+<rect x="78" y="60" width="16" height="16" rx="3" fill="#14171f" stroke="#d9f55d" stroke-width="1.5" stroke-dasharray="3 2"/><text x="102" y="73">Control region, no ads</text>
+</g>
+<path d="M0 0h920v560H0z" fill="url(#lines)"/>
+</svg>'''
+
 
 LEVELS = ['Modelled effect', 'Sales trend', 'Survey', 'Reach only', 'Archival']
 LEVEL_NOTES = {
@@ -20,8 +72,8 @@ MECHANISMS = [
     ('Participation', 'Hand the audience a part to play and let them spread it.'),
     ('Exposing an assumption', 'Show people a judgement they did not know they held.'),
     ('Representation', 'Put people in the picture who were missing from it.'),
+    ('Owning a moment', 'Tie the brand to an occasion people already keep.'),
 ]
-mech_names = [m for m, _ in MECHANISMS]
 ERAS = ['1950s to 1980s', '1990s and 2000s', '2010s', '2020s']
 
 
@@ -46,49 +98,69 @@ def meter(level):
             f'<span class="bars" aria-hidden="true">{bars}</span><span class="meter-label" aria-hidden="true">{e(level)}</span></span>')
 
 
-def campaign_image(c, placement):
-    image = c['image']
+def slug(text):
+    return text.lower().replace(' ', '-')
+
+
+def campaign_image(c, placement, prefix=''):
+    image = c.get('image')
+    if not image:
+        return ''
     fit = ' image-contain' if image.get('contain') else ''
-    return (f'<span class="{placement}{fit}"><img src="{e(image["src"])}" '
+    return (f'<span class="{placement}{fit}"><img src="{e(prefix + image["src"])}" '
             f'alt="{e(image["alt"])}" width="{image["width"]}" height="{image["height"]}" '
             'loading="lazy" decoding="async"></span>')
 
 
-cards = []
-for i, c in enumerate(campaigns, 1):
-    sources = '\n'.join(f'<li><a href="{e(url)}">{e(label)}</a></li>' for label, url in c['links'])
-    creative = c['creative']
-    image = c['image']
-    primary_label, primary_url = c['impact_source']
-    related_sources = f'<h3>Further sources</h3><ul class="sources">{sources}</ul>' if sources else ''
-    legacy = c['stat_type'] == 'legacy'
-    stat_tag = '<p class="stat-tag small">Legacy fact, not a result</p>' if legacy else ''
-    cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}">
+def proof_tile(c):
+    # Used where a case has no licensed image: a type tile that names how the effect was proved.
+    return (f'<span class="case-thumbnail proof-tile m-{slug(c["mechanism"])}" aria-hidden="true">'
+            f'<span class="tile-year">{c["year"]}</span><span class="tile-method">{e(c.get("method") or c["evidence_level"])}</span></span>')
+
+
+def render_cards(campaigns, notes, test_heading, prefix=''):
+    cards = []
+    for i, c in enumerate(campaigns, 1):
+        sources = '\n'.join(f'<li><a href="{e(url)}">{e(label)}</a></li>' for label, url in c['links'])
+        creative = c['creative']
+        image = c.get('image')
+        primary_label, primary_url = c['impact_source']
+        related_sources = f'<h3>Further sources</h3><ul class="sources">{sources}</ul>' if sources else ''
+        legacy = c['stat_type'] == 'legacy'
+        stat_tag = '<p class="stat-tag small">Legacy fact, not a result</p>' if legacy else ''
+        credit = f'\n<p class="case-credit small">{e(c["credit"])}</p>' if c.get('credit') else ''
+        method = f'\n<p class="method-tag"><span class="small">How it was proved</span> {e(c["method"])}</p>' if c.get('method') else ''
+        if creative.get('url'):
+            creative_link = f'<a href="{e(creative["url"])}">{e(creative["label"])}</a>'
+        else:
+            creative_link = f'<p class="no-copy">{e(creative["label"])}</p>'
+        image_credit = f'\n<p class="image-credit">Image: <a href="{e(image["source"])}">{e(image["credit"])}</a></p>' if image else ''
+        thumbnail = campaign_image(c, 'case-thumbnail', prefix) or proof_tile(c)
+        cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}">
 <summary>
 <span class="case-number small">{i:02d}</span>
-{campaign_image(c, 'case-thumbnail')}
+{thumbnail}
 <span class="case-heading"><span class="case-brand small">{e(c['brand'])} / {c['year']} / {e(c['mechanism'])}</span><span class="case-title">{e(c['title'])}</span><span class="case-hook">{e(c['hook'])}</span></span>
 <span class="metric-cell{' legacy' if legacy else ''}"><span class="row-metric">{e(c['metric'])}</span><span class="row-label small">{e(c["metric_label"])}{' · legacy fact' if legacy else ''}</span>{meter(c['evidence_level'])}</span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
-<p class="case-meta">{e(c['place'])} / {e(c['medium'])}</p>
+<p class="case-meta">{e(c['place'])} / {e(c['medium'])}</p>{credit}
 <h3>The idea</h3><p>{e(c['idea'])}</p>
 <h3>The lesson</h3><p>{e(c['lesson'])}</p>
 <div class="memory take"><h3>My take</h3><p>{e(c['take'])}</p></div>
 <div class="creative-record">
 <h3>Original creative <span>{e(creative['medium'])}</span></h3>
-<a href="{e(creative['url'])}">{e(creative['label'])}</a>
-<p class="image-credit">Image: <a href="{e(image['source'])}">{e(image['credit'])}</a></p>
+{creative_link}{image_credit}
 </div>
 </div>
 <aside class="proof" aria-label="Evidence">
 <h3>{'Headline fact' if legacy else 'Impact'} <span>{e(c['kind'])}</span></h3>
 <p class="proof-value">{e(c['metric'])}</p>
 {stat_tag}
-<p class="proof-metric">{e(c['measure'])}</p>
-<div class="proof-strength"><span class="small">Evidence strength</span>{meter(c['evidence_level'])}<p>{e(LEVEL_NOTES[c['evidence_level']])}</p></div>
+<p class="proof-metric">{e(c['measure'])}</p>{method}
+<div class="proof-strength"><span class="small">Evidence strength</span>{meter(c['evidence_level'])}<p>{e(notes[c['evidence_level']])}</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="{e(primary_url)}">{e(primary_label)}</a></p>
 </aside>
 </div>
@@ -102,36 +174,56 @@ for i, c in enumerate(campaigns, 1):
 </div>
 <div>
 <h3>What the number can and can’t show</h3><p>{e(c['evidence'])}</p>
-<h3>How to measure a similar idea</h3><p>{e(c['test'])}</p>
+<h3>{e(test_heading)}</h3><p>{e(c['test'])}</p>
 {related_sources}
 </div>
 </div>
 </details>
 </details>''')
+    return cards
 
-ladder = []
-for level in LEVELS:
-    group = [c for c in campaigns if c['evidence_level'] == level]
-    links = ', '.join(f'<a href="#{e(c["id"])}">{e(c["brand"])}</a>' for c in group)
-    ladder.append(f'''<li class="s{strength_of(level)}"><span class="ladder-name">{meter(level)}</span>
+
+def render_ladder(campaigns, notes, compare=None):
+    ladder = []
+    for level in LEVELS:
+        group = [c for c in campaigns if c['evidence_level'] == level]
+        links = ', '.join(f'<a href="#{e(c["id"])}">{e(c["brand"])}</a>' for c in group)
+        if compare is None:
+            ladder.append(f'''<li class="s{strength_of(level)}"><span class="ladder-name">{meter(level)}</span>
 <span class="ladder-count"><b>{len(group)}</b><span class="ladder-bar" style="--n:{len(group)}" aria-hidden="true"></span></span>
-<span class="ladder-cases"><span class="ladder-note">{e(LEVEL_NOTES[level])}</span> {links}</span></li>''')
+<span class="ladder-cases"><span class="ladder-note">{e(notes[level])}</span> {links}</span></li>''')
+        else:
+            before = sum(1 for c in compare['campaigns'] if c['evidence_level'] == level)
+            ladder.append(f'''<li class="s{strength_of(level)} compare-row"><span class="ladder-name">{meter(level)}</span>
+<span class="ladder-pair"><span class="pair-row now"><b>{len(group)}</b><span class="ladder-bar" style="--n:{len(group)}" aria-hidden="true"></span><span class="sr">in this edition</span></span><span class="pair-row then"><b>{before}</b><span class="ladder-bar" style="--n:{before}" aria-hidden="true"></span><span class="sr">in {e(compare['label'])}</span></span></span>
+<span class="ladder-cases"><span class="ladder-note">{e(notes[level])}</span> {links or '<span class="none">None in this edition</span>'}</span></li>''')
+    return ladder
 
-mech_cols = []
-for name, note in MECHANISMS:
-    items = ''.join(f'<li><a href="#{e(c["id"])}">{e(c["brand"])} <span>{c["year"]}</span></a></li>'
-                    for c in sorted(campaigns, key=lambda c: c['year']) if c['mechanism'] == name)
-    mech_cols.append(f'<div class="mech"><h3><button class="mech-pick" type="button" data-value="{e(name)}">{e(name)}</button></h3><p>{e(note)}</p><ul>{items}</ul></div>')
 
-first, last = min(c['year'] for c in campaigns), max(c['year'] for c in campaigns)
-span = last - first
-ticks = ''.join(f'<span class="tick" style="--x:{(y - first) / span * 100:.2f}%">{y}</span>' for y in (1960, 1970, 1980, 1990, 2000, 2010, 2020))
-dots, stacks = [], {}
-for c in sorted(campaigns, key=lambda c: c['year']):
-    stack = stacks.get(c['year'], 0)
-    stacks[c['year']] = stack + 1
-    dots.append(f'<a class="dot s{strength_of(c["evidence_level"])}" href="#{e(c["id"])}" data-id="{e(c["id"])}" style="--x:{(c["year"] - first) / span * 100:.2f}%;--y:{stack}" title="{e(c["brand"])}, {c["year"]}. {e(c["evidence_level"])}"><span class="sr">{e(c["brand"])}, {c["year"]}</span></a>')
-timeline = f'<div class="timeline" role="group" aria-label="Campaigns by year, {first} to {last}">{"".join(dots)}<div class="axis" aria-hidden="true">{ticks}</div></div>'
+def present_mechanisms(campaigns):
+    return [(m, note) for m, note in MECHANISMS if any(c['mechanism'] == m for c in campaigns)]
+
+
+def render_mechanisms(campaigns):
+    cols = []
+    for name, note in present_mechanisms(campaigns):
+        items = ''.join(f'<li><a href="#{e(c["id"])}">{e(c["brand"])} <span>{c["year"]}</span></a></li>'
+                        for c in sorted(campaigns, key=lambda c: c['year']) if c['mechanism'] == name)
+        cols.append(f'<div class="mech"><h3><button class="mech-pick" type="button" data-value="{e(name)}">{e(name)}</button></h3><p>{e(note)}</p><ul>{items}</ul></div>')
+    return cols
+
+
+def render_timeline(campaigns):
+    first, last = min(c['year'] for c in campaigns), max(c['year'] for c in campaigns)
+    span = last - first
+    decades = [y for y in range((first // 10 + 1) * 10, last + 1, 10)]
+    ticks = ''.join(f'<span class="tick" style="--x:{(y - first) / span * 100:.2f}%">{y}</span>' for y in decades)
+    dots, stacks = [], {}
+    for c in sorted(campaigns, key=lambda c: c['year']):
+        stack = stacks.get(c['year'], 0)
+        stacks[c['year']] = stack + 1
+        dots.append(f'<a class="dot s{strength_of(c["evidence_level"])}" href="#{e(c["id"])}" data-id="{e(c["id"])}" style="--x:{(c["year"] - first) / span * 100:.2f}%;--y:{stack}" title="{e(c["brand"])}, {c["year"]}. {e(c["evidence_level"])}"><span class="sr">{e(c["brand"])}, {c["year"]}</span></a>')
+    return f'<div class="timeline" role="group" aria-label="Campaigns by year, {first} to {last}">{"".join(dots)}<div class="axis" aria-hidden="true">{ticks}</div></div>'
 
 
 def chips(group, values):
@@ -140,28 +232,27 @@ def chips(group, values):
     return ''.join(out)
 
 
-filters = (f'<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span>{chips("mechanism", mech_names)}</div>'
-           f'<div class="filter-row" role="group" aria-label="Evidence strength"><span class="small">Evidence</span>{chips("evidence", LEVELS)}</div>'
-           f'<div class="filter-row" role="group" aria-label="Era"><span class="small">Era</span>{chips("era", ERAS)}</div>')
-template = (root / 'page-template.html').read_text(encoding='utf-8')
-screening_ids = ('sony-bravia', 'volvo-epic-split', 'old-spice', 'barbie-movie')
-screening_notes = {
-    'sony-bravia': 'The soundtrack lets the colour do the talking.',
-    'volvo-epic-split': 'The precision is what makes the stunt possible.',
-    'old-spice': 'Watch the eye contact as the sets change.',
-    'barbie-movie': 'The film introduces a world the partnerships bring to life.',
-}
-screenings = []
-for case_id in screening_ids:
-    c = next(entry for entry in campaigns if entry['id'] == case_id)
-    note = screening_notes[case_id]
-    creative = c['creative']
-    video = creative['url'].partition('https://www.youtube.com/watch?v=')[2]
-    player = ''
-    if video:
-        player = f'<button class="play-film small" type="button" data-video="{e(video)}" data-title="{e(c["title"])}" hidden>Play here</button>'
-    screenings.append(f'''<article class="screening">
-{campaign_image(c, 'film-frame')}
+def render_filters(campaigns):
+    mech_names = [m for m, _ in present_mechanisms(campaigns)]
+    levels = [l for l in LEVELS if any(c['evidence_level'] == l for c in campaigns)]
+    eras = [x for x in ERAS if any(era(c['year']) == x for c in campaigns)]
+    return (f'<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span>{chips("mechanism", mech_names)}</div>'
+            f'<div class="filter-row" role="group" aria-label="Evidence strength"><span class="small">Evidence</span>{chips("evidence", levels)}</div>'
+            f'<div class="filter-row" role="group" aria-label="Era"><span class="small">Era</span>{chips("era", eras)}</div>')
+
+
+def render_screenings(campaigns, screening, prefix=''):
+    screenings = []
+    for case_id, note, drawn in screening:
+        c = next(entry for entry in campaigns if entry['id'] == case_id)
+        creative = c['creative']
+        video = creative['url'].partition('https://www.youtube.com/watch?v=')[2]
+        player = ''
+        if video:
+            player = f'<button class="play-film small" type="button" data-video="{e(video)}" data-title="{e(c["title"])}" hidden>Play here</button>'
+        frame = campaign_image(c, 'film-frame', prefix) or f'<span class="film-frame drawn {drawn}" aria-hidden="true"></span>'
+        screenings.append(f'''<article class="screening">
+{frame}
 <div class="film-body">
 <div class="film-heading"><p class="small">{e(c['brand'])} / {c['year']}</p><h3>{e(c['title'])}</h3></div>
 <p>{e(note)}</p>
@@ -171,13 +262,79 @@ for case_id in screening_ids:
 </div>
 </div>
 </article>''')
-output = (template.replace('@@CASES@@', '\n'.join(cards))
-          .replace('@@SCREENINGS@@', '\n'.join(screenings))
-          .replace('@@LADDER@@', '\n'.join(ladder))
-          .replace('@@MECHANISMS@@', '\n'.join(mech_cols))
-          .replace('@@TIMELINE@@', timeline)
-          .replace('@@FILTERS@@', filters)
-          .replace('@@COUNT@@', str(len(campaigns)))
-          .replace('@@FIRST_YEAR@@', str(min(c['year'] for c in campaigns)))
-          .replace('@@LAST_YEAR@@', str(max(c['year'] for c in campaigns))))
-(root.parent / 'index.html').write_text(output, encoding='utf-8')
+    return screenings
+
+
+def build(edition):
+    campaigns = json.loads((root / edition['data']).read_text(encoding='utf-8'))
+    notes = dict(LEVEL_NOTES, **edition.get('level_notes', {}))
+    prefix = edition.get('asset_prefix', '')
+    compare = None
+    if edition.get('compare'):
+        compare = {'label': edition['compare']['label'],
+                   'campaigns': json.loads((root / edition['compare']['data']).read_text(encoding='utf-8'))}
+    template = (root / edition['template']).read_text(encoding='utf-8')
+    css = (root / 'site.css').read_text(encoding='utf-8')
+    js = (root / 'site.js').read_text(encoding='utf-8')
+    modelled = sum(1 for c in campaigns if c['evidence_level'] == 'Modelled effect')
+    compare_modelled = sum(1 for c in (compare or {}).get('campaigns', []) if c['evidence_level'] == 'Modelled effect')
+    output = (template.replace('@@CSS@@\n', css)
+              .replace('@@JS@@\n', js)
+              .replace('@@ART@@', edition['art']() if edition.get('art') else '')
+              .replace('@@CASES@@', '\n'.join(render_cards(campaigns, notes, edition['test_heading'], prefix)))
+              .replace('@@SCREENINGS@@', '\n'.join(render_screenings(campaigns, edition['screening'], prefix)))
+              .replace('@@LADDER@@', '\n'.join(render_ladder(campaigns, notes, compare)))
+              .replace('@@MECHANISMS@@', '\n'.join(render_mechanisms(campaigns)))
+              .replace('@@TIMELINE@@', render_timeline(campaigns))
+              .replace('@@FILTERS@@', render_filters(campaigns))
+              .replace('@@MODELLED@@', str(modelled))
+              .replace('@@COMPARE_MODELLED@@', str(compare_modelled))
+              .replace('@@COUNT@@', str(len(campaigns)))
+              .replace('@@FIRST_YEAR@@', str(min(c['year'] for c in campaigns)))
+              .replace('@@LAST_YEAR@@', str(max(c['year'] for c in campaigns))))
+    out = root.parent / edition['output']
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(output, encoding='utf-8')
+    return out
+
+
+EDITIONS = [
+    {
+        'data': 'campaigns.json',
+        'template': 'page-template.html',
+        'output': 'index.html',
+        'test_heading': 'How to measure a similar idea',
+        'screening': (
+            ('sony-bravia', 'The soundtrack lets the colour do the talking.', None),
+            ('volvo-epic-split', 'The precision is what makes the stunt possible.', None),
+            ('old-spice', 'Watch the eye contact as the sets change.', None),
+            ('barbie-movie', 'The film introduces a world the partnerships bring to life.', None),
+        ),
+    },
+    {
+        'data': 'campaigns-02.json',
+        'template': 'page-template-02.html',
+        'output': 'edition-02/index.html',
+        'asset_prefix': '../',
+        'art': itv_art,
+        'test_heading': 'How the proof was built',
+        'level_notes': {'Modelled effect': 'A model or a control region estimates the effect against a baseline.'},
+        'compare': {'label': 'Edition 01', 'data': 'campaigns.json'},
+        'screening': (
+            ('dft-drink-drive', 'Fifty years of films in under two minutes. Watch the target change.', 'road'),
+            ('specsavers-shouldve', 'A mistake, a beat, then the line.', 'sheep'),
+            ('john-lewis-long-wait', 'Watch where the boy is looking on Christmas morning.', 'wait'),
+            ('spies-do-it-for-denmark', 'Notice how long it plays the joke straight.', 'denmark'),
+        ),
+    },
+]
+
+if __name__ == '__main__':
+    import sys
+    wanted = sys.argv[1:]
+    for edition in EDITIONS:
+        if wanted and edition['output'] not in wanted:
+            continue
+        if not (root / edition['data']).exists():
+            continue
+        print('Built', build(edition).relative_to(root.parent))
