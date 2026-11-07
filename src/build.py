@@ -91,6 +91,42 @@ def receipt_art():
 </g></g>
 </svg>'''
 
+
+def machine_art():
+    # Editorial illustration: a prompt window whose answer is drawn half by a machine and half by hand.
+    mono = "'Courier New', Courier, monospace"
+    random.seed(4)
+    dots = []
+    for row in range(14):
+        for col in range(18):
+            x, y = 486 + col * 17, 150 + row * 17
+            d = ((x - 640) ** 2 / 1.3 + (y - 262) ** 2) ** .5
+            if d < 118 and random.random() > .08:
+                size = 4 + (1 - d / 118) * 7
+                colour = '#d9f55d' if d < 46 else ('#a5c31c' if d < 84 else '#557400')
+                dots.append(f'<rect x="{x - size / 2:.1f}" y="{y - size / 2:.1f}" width="{size:.1f}" height="{size:.1f}" fill="{colour}"/>')
+    return f'''<svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
+<title id="art-title">Illustration of a prompt window. The prompt asks for a brand turning point, and the answer is drawn half in machine pixels and half in a hand-drawn line.</title>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#1d2420"/><stop offset="1" stop-color="#101512"/></linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".45"/></filter></defs>
+<path d="M0 0h920v560H0z" fill="url(#bg)"/>
+<g transform="translate(46 22) scale(.9)"><g transform="rotate(-2 460 280)" filter="url(#sh)">
+<rect x="150" y="50" width="620" height="440" rx="10" fill="#fbf9f1"/>
+<path d="M150 60a10 10 0 0 1 10-10h600a10 10 0 0 1 10 10v26H150z" fill="#1d211b"/>
+<circle cx="174" cy="68" r="5" fill="#d9f55d"/><circle cx="192" cy="68" r="5" fill="#fbf9f1" opacity=".5"/><circle cx="210" cy="68" r="5" fill="#fbf9f1" opacity=".3"/>
+<text x="240" y="73" font-family="{mono}" font-size="13" fill="#fbf9f1">EDITION 04 / MACHINE FIRST</text>
+<text x="178" y="126" font-family="{mono}" font-size="15" fill="#1d211b">&gt; draw a brand turning point</text>
+<rect x="452" y="114" width="9" height="16" fill="#557400"/>
+<line x1="178" y1="146" x2="742" y2="146" stroke="#d3d1c5" stroke-width="1.5"/>
+{''.join(dots)}
+<path d="M640 142c-70 4-122 56-120 122s54 116 120 118" fill="none" stroke="#1d211b" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 0"/>
+<path d="M600 236c8-10 22-10 28 0M652 236c8-10 22-10 28 0M604 296c22 22 56 22 76 0" fill="none" stroke="#1d211b" stroke-width="3.5" stroke-linecap="round"/>
+<text x="178" y="200" font-family="{mono}" font-size="12" fill="#6d6f66">MACHINE</text>
+<text x="178" y="220" font-family="{mono}" font-size="12" fill="#6d6f66">OR HAND?</text>
+<text x="178" y="458" font-family="{mono}" font-size="13" fill="#1d211b">ANSWER: PEOPLE NOTICE THE DIFFERENCE</text>
+</g></g>
+</svg>'''
+
 LEVELS = ['Modelled effect', 'Sales trend', 'Survey', 'Reach only', 'Archival']
 LEVEL_NOTES = {
     'Modelled effect': 'A model estimates the effect against a baseline.',
@@ -108,6 +144,8 @@ MECHANISMS = [
     ('Owning a moment', 'Tie the brand to an occasion people already keep.'),
 ]
 ROLES = ['Data as aim', 'Data as the show', 'Data as the claim', 'Data as the product']
+# Editions that sort cases by a role (03 by data, 04 by machine) set these labels; the defaults are Edition 03's.
+ROLE_DEFAULTS = {'roles': ROLES, 'role_label': 'Data use', 'role_aria': 'How data was used', 'source_label': 'The data'}
 ERAS = ['1950s to 1980s', '1990s and 2000s', '2010s', '2020s']
 
 
@@ -157,7 +195,7 @@ def proof_tile(c):
             f'<span class="tile-year">{c["year"]}</span><span class="tile-method">{e(label)}</span></span>')
 
 
-def render_cards(campaigns, notes, test_heading, prefix=''):
+def render_cards(campaigns, notes, test_heading, prefix='', source_label='The data'):
     cards = []
     for i, c in enumerate(campaigns, 1):
         sources = '\n'.join(f'<li><a href="{e(url)}">{e(label)}</a></li>' for label, url in c['links'])
@@ -179,7 +217,7 @@ def render_cards(campaigns, notes, test_heading, prefix=''):
         data_line = ''
         if c.get('data_source'):
             data_line = f'<span class="case-data"><strong>{e(c["data_role"])}</strong> · {e(c["data_source"])}</span>'
-            method += f'\n<p class="method-tag"><span class="small">The data</span> {e(c["data_source"])}</p>'
+            method += f'\n<p class="method-tag"><span class="small">{e(source_label)}</span> {e(c["data_source"])}</p>'
         cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}"{role_attr}>
 <summary>
 <span class="case-number small">{i:02d}</span>
@@ -244,19 +282,23 @@ def render_ladder(campaigns, notes, compare=None):
     return ladder
 
 
-def render_role_grid(campaigns):
-    roles = [r for r in ROLES if any(c.get('data_role') == r for c in campaigns)]
+def render_role_grid(campaigns, all_roles=ROLES, role_aria='How data was used'):
+    roles = [r for r in all_roles if any(c.get('data_role') == r for c in campaigns)]
     if not roles:
         return ''
     levels = [l for l in LEVELS if any(c['evidence_level'] == l for c in campaigns)]
     cells = ['<span class="rg-corner" aria-hidden="true"></span>'] + [f'<span class="rg-head">{e(l)}</span>' for l in levels]
+    brands = [c['brand'] for c in campaigns]
+    def chip_label(c):
+        # Name the year too when a brand appears more than once, so two IBM chips can be told apart.
+        return f'{c["brand"]} {c["year"]}' if brands.count(c['brand']) > 1 else c['brand']
     for r in roles:
         cells.append(f'<span class="rg-role">{e(r)}</span>')
         for l in levels:
             group = [c for c in campaigns if c.get('data_role') == r and c['evidence_level'] == l]
-            chips_html = ''.join(f'<a class="rg-chip s{strength_of(l)}" href="#{e(c["id"])}">{e(c["brand"])}</a>' for c in group)
+            chips_html = ''.join(f'<a class="rg-chip s{strength_of(l)}" href="#{e(c["id"])}">{e(chip_label(c))}</a>' for c in group)
             cells.append(f'<span class="rg-cell{" empty" if not group else ""}" data-level="{e(l)}">{chips_html}</span>')
-    return (f'<div class="role-grid" style="--cols:{len(levels)}" role="group" aria-label="Cases by how data was used and by evidence strength">'
+    return (f'<div class="role-grid" style="--cols:{len(levels)}" role="group" aria-label="Cases by {e(role_aria.lower())} and by evidence strength">'
             + ''.join(cells) + '</div>')
 
 
@@ -303,12 +345,12 @@ def chips(group, values):
     return ''.join(out)
 
 
-def render_filters(campaigns):
+def render_filters(campaigns, all_roles=ROLES, role_label='Data use', role_aria='How data was used'):
     mech_names = [m for m, _ in present_mechanisms(campaigns)]
     levels = [l for l in LEVELS if any(c['evidence_level'] == l for c in campaigns)]
     eras = [x for x in ERAS if any(era(c['year']) == x for c in campaigns)]
-    roles = [r for r in ROLES if any(c.get('data_role') == r for c in campaigns)]
-    role_row = f'<div class="filter-row" role="group" aria-label="How data was used"><span class="small">Data use</span>{chips("role", roles)}</div>' if roles else ''
+    roles = [r for r in all_roles if any(c.get('data_role') == r for c in campaigns)]
+    role_row = f'<div class="filter-row" role="group" aria-label="{e(role_aria)}"><span class="small">{e(role_label)}</span>{chips("role", roles)}</div>' if roles else ''
     return role_row + (f'<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span>{chips("mechanism", mech_names)}</div>'
             f'<div class="filter-row" role="group" aria-label="Evidence strength"><span class="small">Evidence</span>{chips("evidence", levels)}</div>'
             f'<div class="filter-row" role="group" aria-label="Era"><span class="small">Era</span>{chips("era", eras)}</div>')
@@ -399,21 +441,22 @@ def build(edition):
     template = (root / edition['template']).read_text(encoding='utf-8')
     css = (root / 'site.css').read_text(encoding='utf-8')
     js = (root / 'site.js').read_text(encoding='utf-8')
+    r = dict(ROLE_DEFAULTS, **edition.get('roles', {}))
     modelled = sum(1 for c in campaigns if c['evidence_level'] == 'Modelled effect')
     compare_modelled = sum(1 for c in (compare or {}).get('campaigns', []) if c['evidence_level'] == 'Modelled effect')
     output = (template.replace('@@CSS@@\n', css)
               .replace('@@JS@@\n', js)
               .replace('@@ART@@', edition['art']() if edition.get('art') else '')
-              .replace('@@CASES@@', '\n'.join(render_cards(campaigns, notes, edition['test_heading'], prefix)))
+              .replace('@@CASES@@', '\n'.join(render_cards(campaigns, notes, edition['test_heading'], prefix, r['source_label'])))
               .replace('@@SCREENINGS@@', '\n'.join(render_screenings(campaigns, edition['screening'], prefix)))
               .replace('@@LADDER@@', '\n'.join(render_ladder(campaigns, notes, compare)))
               .replace('@@MECHANISMS@@', '\n'.join(render_mechanisms(campaigns)))
               .replace('@@TIMELINE@@', render_timeline(campaigns))
-              .replace('@@FILTERS@@', render_filters(campaigns))
+              .replace('@@FILTERS@@', render_filters(campaigns, r['roles'], r['role_label'], r['role_aria']))
               .replace('@@MODELLED@@', str(modelled))
               .replace('@@COMPARE_MODELLED@@', str(compare_modelled))
               .replace('@@EDITION_NAV@@', render_edition_nav(edition))
-              .replace('@@ROLE_GRID@@', render_role_grid(campaigns))
+              .replace('@@ROLE_GRID@@', render_role_grid(campaigns, r['roles'], r['role_aria']))
               .replace('@@SERIES_MODELLED@@', series_modelled(edition))
               .replace('@@COUNT@@', str(len(campaigns)))
               .replace('@@FIRST_YEAR@@', str(min(c['year'] for c in campaigns)))
@@ -482,6 +525,33 @@ EDITIONS = [
             ('british-airways-look-up', 'One plane, one billboard and a child pointing at the sky.', 'sky'),
             ('hellmanns-recipe-receipt', 'Watch the till do the cooking.', 'till'),
             ('snickers-hungerithm', 'Notice who is setting the price.', 'mood'),
+        ),
+    },
+    {
+        'number': '04',
+        'name': 'Machine first',
+        'data': 'campaigns-04.json',
+        'template': 'page-template-04.html',
+        'output': 'edition-04/index.html',
+        'asset_prefix': '../',
+        'art': machine_art,
+        'test_heading': 'How the proof was built',
+        'level_notes': {
+            'Modelled effect': 'A model estimates what the work added against a baseline.',
+            'Survey': 'A pre-test or a panel said people liked it.',
+            'Archival': 'The record shows what happened, not what it earned.',
+        },
+        'roles': {
+            'roles': ['Machine as the show', 'Machine as the maker', 'Machine behind the scenes'],
+            'role_label': 'Machine',
+            'role_aria': 'What the machine did',
+            'source_label': 'The machine',
+        },
+        'screening': (
+            ('ibm-watson-jeopardy', 'IBM’s own account of building a machine for a quiz show. Notice how much rides on one night of television.', 'quiz'),
+            ('cadbury-not-just-an-ad', 'Listen for the shop names. Every version was different.', 'shop'),
+            ('ing-next-rembrandt', 'Watch how long it takes to get to the brushstrokes.', 'canvas'),
+            ('dove-the-code', 'The prompts are simple. Watch the faces of the women reading the results.', 'prompt'),
         ),
     },
 ]
