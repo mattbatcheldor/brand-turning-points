@@ -24,6 +24,10 @@
       [
         "Read the 2011 Gold paper · IPA",
         "https://ipa.co.uk/knowledge/case-studies/program-of-humanitarian-attention-to-the-demobilised-farc-operation-christmas-campaign/"
+      ],
+      [
+        "Explore Lowe SSP3’s original case film · D&AD",
+        "https://www.dandad.org/work/d-ad-awards-archive/operation-christmas"
       ]
     ],
     "memorable": "Lights coming on in the dark as someone walks past. It is a Christmas card that finds you.",
@@ -44,7 +48,15 @@
     "method": "Modelled return, later disputed",
     "credit": "IPA 2011 · Gold, and IPA 2014 · Silver · Lowe SSP3 and MullenLowe London for the Colombian Ministry of Defence",
     "data_role": "Place first",
-    "data_source": "A government talking to guerrillas at Christmas"
+    "data_source": "A government talking to guerrillas at Christmas",
+    "image": {
+      "src": "assets/edition-07/operation-christmas.webp",
+      "alt": "A red banner hanging in the jungle asks people to come home for Christmas",
+      "credit": "Lowe SSP3 and the Colombian Ministry of Defence, Operation Christmas (2010) · D&AD case-film still",
+      "source": "https://www.dandad.org/work/d-ad-awards-archive/operation-christmas",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "havaianas",
@@ -71,9 +83,10 @@
     ],
     "memorable": "A flip-flop on a fashion shoot, in colours that looked like Brazil.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archived Brazilian television advert",
+      "label": "Watch the 1994 Havaianas advert with Malu Mader and Luiz Fernando Guimarães",
+      "url": "https://www.youtube.com/watch?v=VUeT-W91dLo",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the company history · Encyclopedia.com",
@@ -87,7 +100,16 @@
     "method": "Reported unit sales",
     "credit": "Alpargatas, 1994",
     "data_role": "Place first",
-    "data_source": "A poor man’s sandal, relaunched as fashion"
+    "data_source": "A poor man’s sandal, relaunched as fashion",
+    "image": {
+      "src": "assets/edition-07/havaianas.webp",
+      "alt": "Blue Havaianas sandal on sand, framed by seashells and curved marks",
+      "credit": "Havaianas print advertising · Eugênio Mohallem’s portfolio",
+      "source": "https://eugeniomohallem.com.br/files/371.jpg",
+      "width": 800,
+      "height": 551,
+      "contain": true
+    }
   },
   {
     "id": "blendtec-will-it-blend",
@@ -130,7 +152,15 @@
     "method": "Company-reported sales",
     "credit": "Blendtec, 2006",
     "data_role": "Small first",
-    "data_source": "About $50 of supplies"
+    "data_source": "About $50 of supplies",
+    "image": {
+      "src": "assets/edition-07/blendtec-will-it-blend.webp",
+      "alt": "An iPhone in the jar of a Blendtec blender",
+      "credit": "Blendtec, Will It Blend? iPhone (2007) · original film still",
+      "source": "https://www.youtube.com/watch?v=qg1ckCkm8YI",
+      "width": 480,
+      "height": 272
+    }
   },
   {
     "id": "m-pesa",
@@ -149,7 +179,12 @@
     "evidence": "Economists used the uneven spread of M-Pesa agents as a natural experiment and estimated that access lifted 194,000 households out of poverty, with the biggest gains for households headed by women. It measures the product’s effect on lives, not the marketing.",
     "lesson": "The most powerful brand idea can be a service people couldn’t live without.",
     "test": "Researchers compared households with and without nearby agents between 2008 and 2010.",
-    "links": [],
+    "links": [
+      [
+        "Read how Vodafone and Safaricom developed M-Pesa · Vodafone",
+        "https://www.vodafone.com/news/newsroom/digital-society/m-pesa-created"
+      ]
+    ],
     "memorable": "Green agent kiosks on every corner, doing what banks never did.",
     "creative": {
       "medium": "Official film",
@@ -168,7 +203,15 @@
     "method": "Natural experiment",
     "credit": "Safaricom and Vodafone, 2007",
     "data_role": "Place first",
-    "data_source": "Money sent by text message"
+    "data_source": "Money sent by text message",
+    "image": {
+      "src": "assets/edition-07/m-pesa.webp",
+      "alt": "A customer holds an early mobile phone as a cash note changes hands",
+      "credit": "Early M-Pesa transaction photograph (2008) · Vodafone archive",
+      "source": "https://www.vodafone.com/news/newsroom/digital-society/m-pesa-created",
+      "width": 800,
+      "height": 533
+    }
   },
   {
     "id": "alibaba-singles-day",
@@ -195,9 +238,10 @@
     ],
     "memorable": "A date that looks like four people standing alone.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Official retrospective",
+      "label": "Watch Alibaba Group explain how the 11.11 shopping festival grew",
+      "url": "https://www.youtube.com/watch?v=Yyq1dHJXUz0",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Free Malaysia Today",
@@ -211,7 +255,15 @@
     "method": "Reported sales",
     "credit": "Alibaba, 2009",
     "data_role": "Place first",
-    "data_source": "A shopping day a brand invented"
+    "data_source": "A shopping day a brand invented",
+    "image": {
+      "src": "assets/edition-07/alibaba-singles-day.webp",
+      "alt": "Alibaba presenter in front of the closing sales tally for the 2018 11.11 shopping festival",
+      "credit": "2018 Global Shopping Festival stage · Alibaba Japan press archive",
+      "source": "https://www.alibaba.co.jp/news/2018/11/2018-1111-global-shopping-festival.html",
+      "width": 708,
+      "height": 470
+    }
   },
   {
     "id": "kitkat-japan",
@@ -234,14 +286,18 @@
       [
         "Read about Kit Kat postage · Japan Today",
         "https://japantoday.com/category/business/nestle-japan-post-to-launch-kit-kat-postage-for-university-candidates"
+      ],
+      [
+        "Watch the later Kit Mail Hologram campaign · MAD STARS",
+        "https://www.youtube.com/watch?v=di9mbJlwCM0"
       ]
     ],
     "memorable": "A chocolate bar with a handwritten note, arriving the week of an exam.",
     "creative": {
-      "medium": "Award entry",
-      "label": "Watch the 2016 Kit Mail Hologram entry on the MAD STARS festival channel",
-      "url": "https://www.youtube.com/watch?v=di9mbJlwCM0",
-      "heading": "Film"
+      "medium": "Archived agency case film",
+      "label": "Watch the 2009 Kit Kat Mail case film from Nestlé Japan and JWT Tokyo",
+      "url": "https://www.youtube.com/watch?v=B8m3-bysZPc",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the sales report · just-food",
@@ -255,7 +311,15 @@
     "method": "Awards and sales pattern",
     "credit": "Nestlé Japan and Japan Post · J. Walter Thompson Japan",
     "data_role": "Place first",
-    "data_source": "A chocolate bar given a job by a culture"
+    "data_source": "A chocolate bar given a job by a culture",
+    "image": {
+      "src": "assets/edition-07/kitkat-japan.webp",
+      "alt": "Pink Kit Kat Mail packages displayed at a Japanese post office counter",
+      "credit": "Nestlé Japan and JWT Tokyo, Kit Kat Mail (2009) · case-film still",
+      "source": "https://thecreativesroom.com/ref/kit-kat-mail",
+      "width": 480,
+      "height": 360
+    }
   },
   {
     "id": "dollar-shave-club",
@@ -293,7 +357,15 @@
     "method": "Orders and acquisition",
     "credit": "Dollar Shave Club, 2012",
     "data_role": "Small first",
-    "data_source": "A $4,500 video"
+    "data_source": "A $4,500 video",
+    "image": {
+      "src": "assets/edition-07/dollar-shave-club.webp",
+      "alt": "Michael Dubin stands beside warehouse equipment in the Dollar Shave Club launch film",
+      "credit": "Dollar Shave Club, Our Blades Are F***ing Great (2012) · original film still",
+      "source": "https://www.youtube.com/watch?v=ZUG9qYTJMsI",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "ice-bucket-challenge",
@@ -312,7 +384,12 @@
     "evidence": "The money raised is well recorded, and part of it funded research that identified a gene linked to ALS. The ALS Association itself called that discovery significant but not a breakthrough.",
     "lesson": "Give people a part to play that is easy, visible and fun to pass on.",
     "test": "The record is donations during and after the challenge.",
-    "links": [],
+    "links": [
+      [
+        "Watch the ALS Association explain how the challenge began",
+        "https://www.youtube.com/watch?v=zMVzSdo4NuE"
+      ]
+    ],
     "memorable": "The gasp. Everyone knows the sound of ice water hitting someone’s head.",
     "creative": {
       "medium": "Official film",
@@ -331,7 +408,15 @@
     "method": "Funds raised",
     "credit": "ALS Association, 2014",
     "data_role": "Small first",
-    "data_source": "A challenge passed between friends"
+    "data_source": "A challenge passed between friends",
+    "image": {
+      "src": "assets/edition-07/ice-bucket-challenge.webp",
+      "alt": "Pete Frates, a co-founder of the ALS Ice Bucket Challenge",
+      "credit": "Pete Frates · The ALS Association’s history of the Ice Bucket Challenge",
+      "source": "https://www.als.org/ibc-how-it-started",
+      "width": 800,
+      "height": 644
+    }
   },
   {
     "id": "oatly-made-for-humans",
@@ -358,9 +443,10 @@
     ],
     "memorable": "Packaging that reads like a letter from a slightly cheeky friend.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Original campaign film",
+      "label": "Watch Toni Petersson sing Wow No Cow on Oatly’s channel",
+      "url": "https://www.youtube.com/watch?v=_HQU0MB0D5A",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the report · Bloomberg",
@@ -374,7 +460,16 @@
     "method": "Reported sales after the lawsuit",
     "credit": "Oatly, 2014",
     "data_role": "Both",
-    "data_source": "A small Swedish brand sued by the dairy lobby"
+    "data_source": "A small Swedish brand sued by the dairy lobby",
+    "image": {
+      "src": "assets/edition-07/oatly-made-for-humans.webp",
+      "alt": "An Oatly carton beside the line It’s like milk but made for humans",
+      "credit": "Oatly, Like Milk, but Made for Humans · Forsman & Bodenfors campaign archive",
+      "source": "https://www.forsman.com/work/oatly/",
+      "width": 800,
+      "height": 559,
+      "contain": true
+    }
   },
   {
     "id": "calm-project-84",
@@ -418,6 +513,14 @@
     "method": "Modelled social return",
     "credit": "IPA 2020 · Bronze · adam&eveDDB for CALM",
     "data_role": "Small first",
-    "data_source": "A charity with a £100,000 budget"
+    "data_source": "A charity with a £100,000 budget",
+    "image": {
+      "src": "assets/edition-07/calm-project-84.webp",
+      "alt": "Figures on the roof of ITV’s South Bank studios for Project 84",
+      "credit": "CALM, Project 84 (2018) · adam&eveDDB campaign archive",
+      "source": "https://adamandeveddb.com/work/project-84/",
+      "width": 800,
+      "height": 450
+    }
   }
 ]
