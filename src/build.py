@@ -127,6 +127,42 @@ def machine_art():
 </g></g>
 </svg>'''
 
+
+def stamp_art():
+    # Editorial illustration: a press ad for a "new, improved" launch, stamped withdrawn, with the old version pinned back on top.
+    serif = "Georgia, 'Times New Roman', serif"
+    mono = "'Courier New', Courier, monospace"
+    rules = ''.join(f'<rect x="262" y="{332 + i * 16}" width="{300 - (i % 3) * 46}" height="6" fill="#d3d1c5"/>' for i in range(7))
+    return f'''<svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
+<title id="art-title">Illustration of a newspaper advert announcing a new, improved launch. A red rubber stamp across it reads withdrawn, and a note pinned on top says the original is back by popular demand.</title>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#2a1d1a"/><stop offset="1" stop-color="#160f0d"/></linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".45"/></filter></defs>
+<path d="M0 0h920v560H0z" fill="url(#bg)"/>
+<g transform="translate(46 22) scale(.9)">
+<g transform="rotate(-3 460 280)" filter="url(#sh)">
+<rect x="230" y="44" width="400" height="470" fill="#fbf9f1"/>
+<text x="262" y="92" font-family="{mono}" font-size="12" letter-spacing="2" fill="#6d6f66">EDITION 05 / FAILURE FIRST</text>
+<line x1="262" y1="106" x2="598" y2="106" stroke="#1d211b" stroke-width="2"/>
+<text x="262" y="176" font-family="{serif}" font-size="62" font-weight="bold" fill="#1d211b">NEW.</text>
+<text x="262" y="246" font-family="{serif}" font-size="62" font-weight="bold" fill="#1d211b">IMPROVED.</text>
+<text x="262" y="292" font-family="{serif}" font-size="20" font-style="italic" fill="#1d211b">You’re going to love the change.</text>
+{rules}
+<g transform="rotate(-14 430 250)" opacity=".92">
+<rect x="292" y="200" width="290" height="92" rx="8" fill="none" stroke="#d2462f" stroke-width="7"/>
+<rect x="304" y="212" width="266" height="68" rx="4" fill="none" stroke="#d2462f" stroke-width="2.5"/>
+<text x="437" y="262" text-anchor="middle" font-family="{mono}" font-size="42" font-weight="bold" letter-spacing="4" fill="#d2462f">WITHDRAWN</text>
+</g>
+</g>
+<g transform="rotate(5 680 400)" filter="url(#sh)">
+<rect x="560" y="350" width="230" height="140" fill="#d9f55d"/>
+<circle cx="675" cy="364" r="7" fill="#1d211b"/>
+<text x="580" y="410" font-family="{mono}" font-size="15" font-weight="bold" fill="#1d211b">THE ORIGINAL IS</text>
+<text x="580" y="434" font-family="{mono}" font-size="15" font-weight="bold" fill="#1d211b">BACK BY POPULAR</text>
+<text x="580" y="458" font-family="{mono}" font-size="15" font-weight="bold" fill="#1d211b">DEMAND.</text>
+</g>
+</g>
+</svg>'''
+
 LEVELS = ['Modelled effect', 'Sales trend', 'Survey', 'Reach only', 'Archival']
 LEVEL_NOTES = {
     'Modelled effect': 'A model estimates the effect against a baseline.',
@@ -309,17 +345,18 @@ def series_modelled(edition):
         if not data.exists():
             continue
         n = sum(1 for c in json.loads(data.read_text(encoding='utf-8')) if c['evidence_level'] == 'Modelled effect')
-        parts.append(f'{n} here' if other is edition else f'{n} in Edition {other["number"]}')
+        parts.append((f'{n} here' if n else 'none here') if other is edition else f'{n} in Edition {other["number"]}')
     return ', '.join(parts[:-1]) + ' and ' + parts[-1] if len(parts) > 1 else (parts[0] if parts else '')
 
 
-def present_mechanisms(campaigns):
-    return [(m, note) for m, note in MECHANISMS if any(c['mechanism'] == m for c in campaigns)]
+def present_mechanisms(campaigns, mechanisms=None):
+    # An edition can name its own mechanisms (Edition 05 sorts failures by the mistake behind them).
+    return [(m, note) for m, note in (mechanisms or MECHANISMS) if any(c['mechanism'] == m for c in campaigns)]
 
 
-def render_mechanisms(campaigns):
+def render_mechanisms(campaigns, mechanisms=None):
     cols = []
-    for name, note in present_mechanisms(campaigns):
+    for name, note in present_mechanisms(campaigns, mechanisms):
         items = ''.join(f'<li><a href="#{e(c["id"])}">{e(c["brand"])} <span>{c["year"]}</span></a></li>'
                         for c in sorted(campaigns, key=lambda c: c['year']) if c['mechanism'] == name)
         cols.append(f'<div class="mech"><h3><button class="mech-pick" type="button" data-value="{e(name)}">{e(name)}</button></h3><p>{e(note)}</p><ul>{items}</ul></div>')
@@ -345,13 +382,13 @@ def chips(group, values):
     return ''.join(out)
 
 
-def render_filters(campaigns, all_roles=ROLES, role_label='Data use', role_aria='How data was used'):
-    mech_names = [m for m, _ in present_mechanisms(campaigns)]
+def render_filters(campaigns, all_roles=ROLES, role_label='Data use', role_aria='How data was used', mechanisms=None, mech_label='Mechanism'):
+    mech_names = [m for m, _ in present_mechanisms(campaigns, mechanisms)]
     levels = [l for l in LEVELS if any(c['evidence_level'] == l for c in campaigns)]
     eras = [x for x in ERAS if any(era(c['year']) == x for c in campaigns)]
     roles = [r for r in all_roles if any(c.get('data_role') == r for c in campaigns)]
     role_row = f'<div class="filter-row" role="group" aria-label="{e(role_aria)}"><span class="small">{e(role_label)}</span>{chips("role", roles)}</div>' if roles else ''
-    return role_row + (f'<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span>{chips("mechanism", mech_names)}</div>'
+    return role_row + (f'<div class="filter-row" role="group" aria-label="{e(mech_label)}"><span class="small">{e(mech_label)}</span>{chips("mechanism", mech_names)}</div>'
             f'<div class="filter-row" role="group" aria-label="Evidence strength"><span class="small">Evidence</span>{chips("evidence", levels)}</div>'
             f'<div class="filter-row" role="group" aria-label="Era"><span class="small">Era</span>{chips("era", eras)}</div>')
 
@@ -450,9 +487,9 @@ def build(edition):
               .replace('@@CASES@@', '\n'.join(render_cards(campaigns, notes, edition['test_heading'], prefix, r['source_label'])))
               .replace('@@SCREENINGS@@', '\n'.join(render_screenings(campaigns, edition['screening'], prefix)))
               .replace('@@LADDER@@', '\n'.join(render_ladder(campaigns, notes, compare)))
-              .replace('@@MECHANISMS@@', '\n'.join(render_mechanisms(campaigns)))
+              .replace('@@MECHANISMS@@', '\n'.join(render_mechanisms(campaigns, edition.get('mechanisms'))))
               .replace('@@TIMELINE@@', render_timeline(campaigns))
-              .replace('@@FILTERS@@', render_filters(campaigns, r['roles'], r['role_label'], r['role_aria']))
+              .replace('@@FILTERS@@', render_filters(campaigns, r['roles'], r['role_label'], r['role_aria'], edition.get('mechanisms'), edition.get('mechanism_label', 'Mechanism')))
               .replace('@@MODELLED@@', str(modelled))
               .replace('@@COMPARE_MODELLED@@', str(compare_modelled))
               .replace('@@EDITION_NAV@@', render_edition_nav(edition))
@@ -552,6 +589,42 @@ EDITIONS = [
             ('cadbury-not-just-an-ad', 'Listen for the shop names. Every version was different.', 'shop'),
             ('ing-next-rembrandt', 'Watch how long it takes to get to the brushstrokes.', 'canvas'),
             ('dove-the-code', 'The prompts are simple. Watch the faces of the women reading the results.', 'prompt'),
+        ),
+    },
+    {
+        'number': '05',
+        'name': 'Failure first',
+        'data': 'campaigns-05.json',
+        'template': 'page-template-05.html',
+        'output': 'edition-05/index.html',
+        'asset_prefix': '../',
+        'art': stamp_art,
+        'test_heading': 'How the damage was recorded',
+        'level_notes': {
+            'Sales trend': 'Sales, share price or market value moved, but other causes are not separated out.',
+            'Reach only': 'The number counts attention, not recovery.',
+            'Archival': 'The record shows what happened, not what it cost.',
+        },
+        'mechanisms': [
+            ('Ignoring attachment', 'People owned the old version more than the brand realised.'),
+            ('Undermining the product', 'The brand gave people a reason to doubt what they were buying.'),
+            ('Overpromising', 'The offer was worth more than the business could pay.'),
+            ('Borrowing a cause', 'The brand used a cause it hadn’t earned, or wouldn’t stand behind.'),
+            ('Misjudging the room', 'The joke or the message read differently to the people who saw it.'),
+            ('Owning the mistake', 'The brand said plainly what went wrong and showed it had changed.'),
+        ],
+        'mechanism_label': 'The mistake',
+        'roles': {
+            'roles': ['Reversed', 'Withdrawn', 'Paid the price', 'Turned around'],
+            'role_label': 'What next',
+            'role_aria': 'What the brand did next',
+            'source_label': 'What happened',
+        },
+        'screening': (
+            ('new-coke', 'Ordinary drinkers, a few weeks in. Listen to how personal it sounds.', 'can'),
+            ('dominos-pizza-turnaround', 'Watch the faces of the people reading the reviews.', 'box'),
+            ('kfc-fck', 'The news on the day. The apology that turned it around came days later, in print.', 'bucket'),
+            ('cracker-barrel-logo', 'A local news report as the backlash grew. Notice who is defending the old logo.', 'barrel'),
         ),
     },
 ]
