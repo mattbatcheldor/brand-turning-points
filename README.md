@@ -30,6 +30,10 @@ Open `index.html` in a browser. The archive and direct watch links work from a l
 
 For GitHub Pages, upload the package contents to the root of your repository and commit to `main`. In **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, then save. GitHub Pages serves the committed `index.html` with no build step.
 
+## Source of truth
+
+`main` is the only source of truth for this site, and GitHub Pages publishes from it. Always start new work from the latest `main`, and pull it again before merging. Old edition branches, such as `edition-05-failure-first`, are finished snapshots that may be out of date: never build on them or merge them back. If more than one person or tool works on the repo, run `python3 src/build.py` after pulling, and never force-push to `main`.
+
 ## Maintain an edition
 
 - Each edition has its own case file, numbered to match: `src/campaigns-01.json` for Edition 01 and `src/campaigns-02.json` for Edition 02. Keep the original creative, the primary impact source and any further reading in their separate fields, and include a specific reason the work is memorable.
