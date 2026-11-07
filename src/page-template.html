@@ -17,19 +17,36 @@
 .screenings{margin-top:clamp(3rem,6vw,5.5rem);scroll-margin-top:1rem}.screenings .section-head h2{font-size:clamp(2.8rem,5vw,4.7rem)}.screen-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:1rem}.screening{background:var(--light);border:1px solid var(--line);min-width:0;display:flex;flex-direction:column}.film-frame{aspect-ratio:1.6;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(.75rem,1.8vw,1.5rem);background:#253552;color:#fffdf7}.film-frame h3{font-size:clamp(1.8rem,3.1vw,3.1rem);overflow-wrap:anywhere}.film-frame .small{letter-spacing:.09em}.film-frame.colour{background:radial-gradient(circle at 89% 30%,#ee785b 0 8%,transparent 8.4%),radial-gradient(circle at 81% 72%,#8bb159 0 12%,transparent 12.4%),radial-gradient(circle at 58% 44%,#9a6cc4 0 4%,transparent 4.4%),#252b40}.film-frame.split{background:linear-gradient(122deg,#21354a 0 64%,#344d64 64% 78%,#d6e0e1 78%)}.film-frame.spice{background:#702d30}.film-frame.pink{background:#f2a8cd;color:#411a36}.film-body{padding:.9rem;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:.8rem}.film-body p{font-size:.91rem}.film-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .7rem;font-size:.8rem}.play-film{padding:.37rem .5rem;background:var(--accent);border:1px solid #9eb72d;color:var(--ink)}.play-film:hover{background:#ebff9b}.film-player{width:min(56rem,calc(100% - 2rem));padding:0;border:1px solid #7d8475;background:var(--ink);color:var(--light)}.film-player::backdrop{background:#111610dc}.player-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem}.player-top h2{font:700 1rem/1.35 var(--sans);letter-spacing:0}.player-top button{border:0;background:var(--accent);color:var(--ink);padding:.3rem .65rem}.film-player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}.player-fallback{padding:.6rem 1rem}.memory{margin:1.2rem 0 1rem;padding:.9rem 1rem;border-left:3px solid #829a2d;background:#e9eddb}.case-inner h3 span{font-size:.67rem;font-weight:normal;letter-spacing:.07em;margin-left:.5rem;color:var(--muted)}.creative-record{margin-top:1.1rem;padding-top:.8rem;border-top:1px solid var(--line)}.creative-record a{font-size:.92rem;font-weight:bold}.proof .proof-value{font:normal clamp(2.6rem,5vw,4rem)/1 var(--serif);letter-spacing:-.055em;margin:.5rem 0 .4rem}.proof .proof-metric{margin-top:.4rem}.proof .impact-citation{margin-top:.45rem;font-size:.85rem}.impact-citation .small{font-size:.62rem;color:var(--muted);margin-right:.25rem}.proof .sources{margin-top:.45rem}.closing-note{padding-block:clamp(2rem,5vw,4.5rem);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1.35fr;align-items:start;gap:1.5rem 4rem}.closing-note h2{font-size:clamp(2.5rem,4.5vw,4.5rem);margin-top:.4rem}.closing-note .mission-copy{max-width:64ch}.closing-note .mission-copy p+p{margin-top:.65rem}.closing-note a{font-weight:bold}
 @media(max-width:850px){.screen-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.film-frame h3{font-size:clamp(2rem,4.5vw,3.5rem)}}
 @media(max-width:560px){.top nav{gap:.6rem}.screen-grid{gap:.55rem}.film-frame{aspect-ratio:auto;min-height:8.1rem}.film-frame h3{font-size:1.55rem}.film-frame .small{font-size:.6rem}.film-body{padding:.65rem}.film-actions{display:grid;justify-items:start}.closing-note{grid-template-columns:1fr}.case-inner h3 span{display:inline-block;margin-left:.3rem}}
+
+.byline{margin-top:.9rem;color:var(--ink)}.byline b{font-weight:bold}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.meter{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--muted)}.bars{display:inline-flex;gap:2px}.bars i{width:.38rem;height:.8rem;background:#cfcdbf;display:block}.bars i.on{background:#557400}.meter.s1 .bars i.on,.meter.s2 .bars i.on{background:#8a8c80}.meter-label{white-space:nowrap}
+.metric-cell .meter{margin-top:.45rem}.metric-cell.legacy .row-metric{color:var(--muted);font-style:italic}
+.stat-tag{display:inline-block;background:var(--paper);border:1px solid #a8aa9d;padding:.15rem .45rem;margin:.1rem 0 .3rem;font-size:.6rem}
+.proof-strength{margin-top:.9rem;padding-top:.75rem;border-top:1px solid #cfd0c0}.proof-strength .small{display:block;font-size:.62rem;color:var(--muted);margin-bottom:.3rem}.proof-strength p{font-size:.87rem;margin-top:.3rem}
+.take{background:var(--light);border-left-color:var(--ink)}.take p{font-family:var(--serif);font-size:1.12rem;line-height:1.45}
+.full-case{border-top:1px solid var(--line);margin:0 clamp(1rem,4vw,3.5rem) clamp(1rem,3vw,2rem)}.full-case>summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 0;cursor:pointer;list-style:none;font-weight:bold}.full-case>summary::-webkit-details-marker{display:none}.full-case>summary:hover{text-decoration:underline}.full-case[open] .toggle::after{content:"−"}.full-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem clamp(1.5rem,5vw,5rem);padding:.4rem 0 1.2rem}.full-inner h3{font:700 .74rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.13em;margin-bottom:.3rem}.full-inner p+h3,.full-inner p+h3{margin-top:1.1rem}.full-inner .sources{margin-top:.4rem}
+.finding{padding-block:clamp(3rem,7vw,6rem) 0;scroll-margin-top:1rem}.finding h2{font-size:clamp(2.7rem,6vw,5.8rem);max-width:15ch;margin:.5rem 0 1.4rem}.finding-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:2rem clamp(2rem,5vw,5rem);border-top:1px solid var(--ink);padding-top:1.3rem}.finding-copy p{font-size:1.07rem;max-width:44ch}.finding-copy p+p{margin-top:.8rem}.finding-copy .note{font-size:.9rem;color:var(--muted)}
+.ladder{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.ladder li{display:grid;grid-template-columns:11rem 7rem minmax(0,1fr);gap:.4rem 1rem;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--line)}.ladder .meter{font-size:.85rem;color:var(--ink);font-weight:bold}.ladder-count{display:flex;align-items:center;gap:.5rem}.ladder-count b{font:normal 2rem/1 var(--serif);min-width:1.3rem}.ladder-bar{display:block;height:.6rem;width:calc(var(--n) * .7rem);background:#557400}.ladder li.s1 .ladder-bar,.ladder li.s2 .ladder-bar{background:#8a8c80}.ladder-cases{font-size:.9rem}.ladder-note{display:block;color:var(--muted);font-size:.82rem}
+.patterns{margin-top:clamp(3rem,6vw,5.5rem);scroll-margin-top:1rem}.mech-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin-top:1rem}.mech{background:var(--light);border:1px solid var(--line);border-top:3px solid var(--ink);padding:1rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}.mech h3{font-size:1.55rem}.mech-pick{all:unset;cursor:pointer;font:inherit;letter-spacing:inherit}.mech-pick:hover{text-decoration:underline}.mech-pick:focus-visible{outline:3px solid #557400;outline-offset:3px}.mech p{font-size:.9rem;color:var(--muted)}.mech ul{list-style:none;margin:auto 0 0;padding:.6rem 0 0;border-top:1px solid var(--line);font-size:.9rem}.mech li+li{margin-top:.25rem}.mech li span{color:var(--muted)}
+.timeline{position:relative;height:6.5rem;margin:1.3rem .6rem .4rem}.axis{position:absolute;left:0;right:0;bottom:1.3rem;border-top:1px solid var(--ink)}.tick{position:absolute;left:var(--x);top:.35rem;transform:translateX(-50%);font-size:.72rem;color:var(--muted)}.tick::before{content:"";position:absolute;left:50%;top:-.6rem;height:.45rem;border-left:1px solid var(--ink)}.dot{position:absolute;left:var(--x);bottom:calc(1.3rem + .45rem + var(--y) * 1.15rem);width:.95rem;height:.95rem;margin-left:-.475rem;border-radius:50%;background:#557400;border:2px solid var(--paper);transition:opacity .2s,transform .2s}.dot.s4{background:#7c9a1e}.dot.s3{background:#a5c31c}.dot.s2,.dot.s1{background:#a8aa9d}.dot:hover,.dot:focus-visible{transform:scale(1.35)}.dot.out{opacity:.18}.timeline-key{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-size:.78rem;color:var(--muted);padding-bottom:.8rem}.timeline-key i{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.35rem;vertical-align:-.05rem}
+.filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;width:100%}.filter-row>.small{width:6.5rem;font-size:.62rem;color:var(--muted)}.filter-bar{gap:.65rem}
+.next{display:grid;grid-template-columns:1fr 1.35fr;gap:1.5rem 4rem;padding-block:clamp(2rem,5vw,4.5rem);border-bottom:1px solid var(--line)}.next h2{font-size:clamp(2.3rem,4.2vw,4.1rem);margin-top:.4rem}.next-copy p{max-width:62ch}.next-copy p+p{margin-top:.7rem}.scope{background:var(--light);border:1px solid var(--line);padding:1rem;margin-top:1rem}
+@media(max-width:1000px){.mech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.finding-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.mech-grid{grid-template-columns:1fr}.ladder li{grid-template-columns:minmax(0,1fr) auto}.ladder-count{justify-content:flex-end}.ladder-bar{width:calc(var(--n) * .4rem)}.ladder-cases{grid-column:1/-1}.full-inner,.next{grid-template-columns:1fr}.full-case{margin-inline:.75rem}.filter-row>.small{width:100%}.timeline{height:7rem}.tick:nth-child(even){display:none}.metric-cell .meter{margin-top:0}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#archive">Skip to the archive</a>
 <header class="top"><div class="wrap">
 <a class="wordmark small" href="#top"><span class="signal" aria-hidden="true"></span> Brand Turning Points</a>
-<nav class="small" aria-label="Main navigation"><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a></nav>
+<nav class="small" aria-label="Main navigation"><a href="#finding">Finding</a><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a></nav>
 </div></header>
 <main>
 <div class="wrap">
 <section class="mast" aria-labelledby="mast-title">
 <div><p class="issue small">The campaign archive / Edition 01</p><h1 id="mast-title">Brand Turning<br><em>Points.</em></h1></div>
-<div class="mast-intro" aria-labelledby="founder-note"><h2 id="founder-note" class="small">Why I started this archive</h2><p>I started Brand Turning Points to celebrate the ideas that changed how we saw brands. Some of these campaigns come from a time when, for most of us, artificial intelligence still belonged to research labs and science fiction. Now it’s part of daily life, changing how quickly ideas are made and shared.</p><p>I want to look back at the work that still moves us and see how far we’ve come. As the pace quickens, where are we headed, and what will still be worth remembering when we get there?</p><p class="small">@@COUNT@@ case studies &nbsp; / &nbsp; @@FIRST_YEAR@@ to @@LAST_YEAR@@</p></div>
+<div class="mast-intro" aria-labelledby="founder-note"><h2 id="founder-note" class="small">Why I started this archive</h2><p>I started Brand Turning Points to celebrate the ideas that changed how we saw brands, and to be straight about what we actually know about them.</p><p>Going back through the sources, one thing kept surfacing. The campaigns everyone quotes are rarely the ones with the best proof. So every case here carries its number, its source and a plain rating of how far that evidence goes.</p><p class="small">@@COUNT@@ case studies &nbsp; / &nbsp; @@FIRST_YEAR@@ to @@LAST_YEAR@@</p><p class="byline small">Curated by <b>Matthew Batcheldor</b></p></div>
 </section>
 <section class="feature" aria-labelledby="feature-title">
 <figure class="feature-art">@@ART@@<figcaption class="art-credit small">Editorial illustration</figcaption></figure>
@@ -41,44 +58,57 @@
 </div>
 </section>
 <div class="edition-meta small"><span>Featured case 01 / Product demonstration</span><span>Fallon London / Directed by Nicolai Fuglsig</span></div>
+<section class="finding" id="finding" aria-labelledby="finding-title">
+<p class="small">01 / The finding</p>
+<h2 id="finding-title">The most famous campaigns rarely prove they worked.</h2>
+<div class="finding-grid">
+<div class="finding-copy"><p>None of the @@COUNT@@ cases in this edition has a public source that isolates the campaign’s own commercial effect. Most report what happened after the work ran. Sales rose, people watched, people said they felt differently. That is useful, but it isn’t cause.</p><p>The ladder sorts every case by the strongest public evidence I could find. It rates the record, not the work. Some of the best ideas here sit on the bottom rung.</p><p class="note">Only This Girl Can publishes a modelled estimate, and it values health benefits rather than sales.</p></div>
+<ol class="ladder" aria-label="Cases by evidence strength, strongest first">
+@@LADDER@@
+</ol>
+</div>
+</section>
+<section class="patterns" id="patterns" aria-labelledby="patterns-title">
+<div class="section-head"><div><p class="small">02 / The patterns</p><h2 id="patterns-title">Five ways to change what people see</h2></div><p>Fifteen stories, five mechanisms. Choose one to filter the archive.</p></div>
+<div class="mech-grid">@@MECHANISMS@@</div>
+</section>
 <section class="screenings" id="screening" aria-labelledby="screening-title">
-<div class="section-head"><div><p class="small">01 / The screening room</p><h2 id="screening-title">Watch the work</h2></div><p>Four films to start with. Look for the creative choice that makes each one work before you read the case.</p></div>
+<div class="section-head"><div><p class="small">03 / The screening room</p><h2 id="screening-title">Watch the work</h2></div><p>Four films to start with. Look for the creative choice that makes each one work before you read the case.</p></div>
 <div class="screen-grid">@@SCREENINGS@@</div>
 </section>
 <section class="archive" id="archive" aria-labelledby="archive-title">
-<div class="section-head"><div><p class="small">02 / The collection</p><h2 id="archive-title">The campaigns</h2></div><p>Each case puts the original creative beside its sources, the reported impact and the detail that makes it worth remembering.</p></div>
+<div class="section-head"><div><p class="small">04 / The collection</p><h2 id="archive-title">The campaigns</h2></div><p>Open a case for the idea, the lesson and my take. The full story, sources and measurement notes sit one click further in.</p></div>
+@@TIMELINE@@
+<p class="timeline-key"><span><i style="background:#557400"></i>Modelled effect</span><span><i style="background:#7c9a1e"></i>Sales trend</span><span><i style="background:#a5c31c"></i>Survey</span><span><i style="background:#a8aa9d"></i>Reach only or archival</span></p>
 <div class="filter-bar" id="filters" hidden aria-label="Filter campaigns">
-<button class="filter" type="button" data-filter="All" aria-pressed="true">All</button>
-<button class="filter" type="button" data-filter="Commercial" aria-pressed="false">Commercial</button>
-<button class="filter" type="button" data-filter="Perception" aria-pressed="false">Perception</button>
-<button class="filter" type="button" data-filter="Behaviour" aria-pressed="false">Behaviour</button>
-<button class="filter" type="button" data-filter="Reach" aria-pressed="false">Reach</button>
-<button class="filter" type="button" data-filter="Creative legacy" aria-pressed="false">Creative legacy</button>
+@@FILTERS@@
 <label class="search">Search <input id="search" type="search" placeholder="Brand, idea or year" autocomplete="off"></label>
 </div>
 <p id="result" class="result" aria-live="polite">@@COUNT@@ campaigns</p>
 <div class="cases">
 @@CASES@@
 </div>
-<p class="empty" id="empty" hidden>No campaigns match. Try clearing the search or choosing All.</p>
+<p class="empty" id="empty" hidden>No campaigns match. Try clearing the search or setting a filter back to All.</p>
 </section>
 </div>
 <section class="method" id="method" aria-labelledby="method-title"><div class="wrap">
-<p class="small">03 / The evidence</p><h2 id="method-title">What counts as impact?</h2>
+<p class="small">05 / The evidence</p><h2 id="method-title">What counts as impact?</h2>
 <div class="method-grid">
 <div><h3>Commercial outcomes</h3><p>Incremental sales estimate the sales above an expected baseline. To calculate profit ROI, subtract campaign cost from the incremental contribution it generated, then divide by campaign cost. Campaign CAC divides that cost by incremental new customers. Year-on-year sales can provide context when those inputs are unavailable.</p></div>
 <div><h3>Perception and behaviour</h3><p>Look for a documented change in what people believe, intend or do. Survey answers describe what people report. The timing, sample and comparison group determine what we can attribute to a campaign.</p></div>
 <div><h3>Reach and creative legacy</h3><p>Views and shares show how far an idea travelled. Archival records, documented repeat use and production evidence can explain why a campaign matters when outcome data are sparse. Each number keeps its original scope.</p></div>
+<div><h3>The evidence rating</h3><p>Every case gets one of five ratings, strongest first: modelled effect, sales trend, survey, reach only and archival. The rating describes the best public source, not the quality of the idea. A legacy fact, such as a date or a production number, is marked so it isn’t read as a result.</p></div>
 <div><h3>How cases earn a place</h3><p>Each case has a specific shift in how people were invited to see the brand or category, a creative decision that made it possible and a traceable source. The collection is curated and unranked. The measurement ideas in each case are proposals for a comparable brief today.</p></div>
 </div></div></section>
-<section class="wrap closing-note" aria-labelledby="why-archive"><div><p class="small">04 / The editorial purpose</p><h2 id="why-archive">Keep the work in view.</h2></div><div class="mission-copy"><p>A shot held long enough to make you uneasy. A phrase turned on its head. A package that gives a stranger a reason to talk to you. The archive preserves those decisions alongside the original work, its credits and the evidence that helps us understand what happened next.</p></div></section>
+<section class="wrap closing-note" aria-labelledby="why-archive"><div><p class="small">06 / The editorial purpose</p><h2 id="why-archive">Keep the work in view.</h2></div><div class="mission-copy"><p>A shot held long enough to make you uneasy. A phrase turned on its head. A package that gives a stranger a reason to talk to you. The archive preserves those decisions alongside the original work, its credits and the evidence that helps us understand what happened next.</p></div></section>
+<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">Coming next / Edition 02</p><h2 id="next-title">What will still be worth remembering?</h2></div><div class="next-copy"><p>Some of these campaigns were made when artificial intelligence belonged to research labs and science fiction. Now it shapes how quickly ideas are made and shared. Edition 02 will look at work from that new era and ask whether faster ideas leave better evidence behind, or less.</p><div class="scope"><p><b>What Edition 01 leaves out.</b> Ten of the fifteen cases are American brands or launched in the United States, and the archive jumps 25 years from 1959 to 1984. Edition 02 will start filling both gaps.</p></div></div></section>
 </main>
 <dialog class="film-player" aria-labelledby="film-title">
 <div class="player-top"><h2 id="film-title">Campaign film</h2><form method="dialog"><button type="submit">Close player</button></form></div>
 <div id="film-screen"></div>
 <p class="player-fallback"><a id="film-original">Open on YouTube</a></p>
 </dialog>
-<footer class="wrap foot small"><span>Brand Turning Points / Edition 01</span><a href="#top">Back to top ↑</a></footer>
+<footer class="wrap foot small"><span>Brand Turning Points / Edition 01 / Curated by Matthew Batcheldor</span><a href="#top">Back to top ↑</a></footer>
 <script>
 const filters = document.querySelector('#filters');
 const search = document.querySelector('#search');
@@ -86,10 +116,11 @@ const result = document.querySelector('#result');
 const empty = document.querySelector('#empty');
 const buttons = Array.from(document.querySelectorAll('.filter'));
 const cases = Array.from(document.querySelectorAll('.case'));
-let selected = 'All';
+const dots = Array.from(document.querySelectorAll('.dot'));
+const selected = {mechanism: 'All', evidence: 'All', era: 'All'};
 
 function normalise(text) {
-  return text.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+  return text.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
     .replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
@@ -97,26 +128,32 @@ function updateArchive() {
   const terms = normalise(search.value).split(' ').filter(Boolean);
   let count = 0;
   for (const entry of cases) {
-    const matchesFilter = selected === 'All' || entry.dataset.kind === selected;
+    const matchesFilter = Object.keys(selected).every(group => selected[group] === 'All' || entry.dataset[group] === selected[group]);
     const text = normalise(entry.textContent);
     entry.hidden = !(matchesFilter && terms.every(term => text.includes(term)));
     if (!entry.hidden) count += 1;
   }
+  for (const dot of dots) {
+    const entry = document.getElementById(dot.dataset.id);
+    dot.classList.toggle('out', entry.hidden);
+  }
   for (const button of buttons) {
-    button.setAttribute('aria-pressed', String(button.dataset.filter === selected));
+    button.setAttribute('aria-pressed', String(selected[button.dataset.group] === button.dataset.value));
   }
   result.textContent = count === 1 ? '1 campaign' : count + ' campaigns';
   empty.hidden = count !== 0;
 }
 
+function resetFilters() {
+  for (const group of Object.keys(selected)) selected[group] = 'All';
+  search.value = '';
+  updateArchive();
+}
+
 function openLinkedCase(hash) {
   const entry = cases.find(item => '#' + item.id === hash);
   if (!entry) return;
-  if (entry.hidden) {
-    selected = 'All';
-    search.value = '';
-    updateArchive();
-  }
+  if (entry.hidden) resetFilters();
   entry.open = true;
   entry.scrollIntoView({block:'start'});
 }
@@ -124,13 +161,21 @@ function openLinkedCase(hash) {
 filters.hidden = false;
 for (const button of buttons) {
   button.addEventListener('click', () => {
-    selected = button.dataset.filter;
+    selected[button.dataset.group] = button.dataset.value;
     updateArchive();
+  });
+}
+for (const pick of document.querySelectorAll('.mech-pick')) {
+  pick.addEventListener('click', () => {
+    resetFilters();
+    selected.mechanism = pick.dataset.value;
+    updateArchive();
+    document.querySelector('#archive').scrollIntoView({block:'start'});
   });
 }
 search.addEventListener('input', updateArchive);
 window.addEventListener('hashchange', () => openLinkedCase(location.hash));
-for (const link of document.querySelectorAll('.feature-links .button, .film-actions a[href^="#"]')) {
+for (const link of document.querySelectorAll('main a[href^="#"]:not(.skip)')) {
   link.addEventListener('click', event => {
     if (location.hash === event.currentTarget.hash) openLinkedCase(location.hash);
   });

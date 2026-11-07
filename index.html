@@ -17,19 +17,36 @@
 .screenings{margin-top:clamp(3rem,6vw,5.5rem);scroll-margin-top:1rem}.screenings .section-head h2{font-size:clamp(2.8rem,5vw,4.7rem)}.screen-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:1rem}.screening{background:var(--light);border:1px solid var(--line);min-width:0;display:flex;flex-direction:column}.film-frame{aspect-ratio:1.6;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(.75rem,1.8vw,1.5rem);background:#253552;color:#fffdf7}.film-frame h3{font-size:clamp(1.8rem,3.1vw,3.1rem);overflow-wrap:anywhere}.film-frame .small{letter-spacing:.09em}.film-frame.colour{background:radial-gradient(circle at 89% 30%,#ee785b 0 8%,transparent 8.4%),radial-gradient(circle at 81% 72%,#8bb159 0 12%,transparent 12.4%),radial-gradient(circle at 58% 44%,#9a6cc4 0 4%,transparent 4.4%),#252b40}.film-frame.split{background:linear-gradient(122deg,#21354a 0 64%,#344d64 64% 78%,#d6e0e1 78%)}.film-frame.spice{background:#702d30}.film-frame.pink{background:#f2a8cd;color:#411a36}.film-body{padding:.9rem;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:.8rem}.film-body p{font-size:.91rem}.film-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .7rem;font-size:.8rem}.play-film{padding:.37rem .5rem;background:var(--accent);border:1px solid #9eb72d;color:var(--ink)}.play-film:hover{background:#ebff9b}.film-player{width:min(56rem,calc(100% - 2rem));padding:0;border:1px solid #7d8475;background:var(--ink);color:var(--light)}.film-player::backdrop{background:#111610dc}.player-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem}.player-top h2{font:700 1rem/1.35 var(--sans);letter-spacing:0}.player-top button{border:0;background:var(--accent);color:var(--ink);padding:.3rem .65rem}.film-player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}.player-fallback{padding:.6rem 1rem}.memory{margin:1.2rem 0 1rem;padding:.9rem 1rem;border-left:3px solid #829a2d;background:#e9eddb}.case-inner h3 span{font-size:.67rem;font-weight:normal;letter-spacing:.07em;margin-left:.5rem;color:var(--muted)}.creative-record{margin-top:1.1rem;padding-top:.8rem;border-top:1px solid var(--line)}.creative-record a{font-size:.92rem;font-weight:bold}.proof .proof-value{font:normal clamp(2.6rem,5vw,4rem)/1 var(--serif);letter-spacing:-.055em;margin:.5rem 0 .4rem}.proof .proof-metric{margin-top:.4rem}.proof .impact-citation{margin-top:.45rem;font-size:.85rem}.impact-citation .small{font-size:.62rem;color:var(--muted);margin-right:.25rem}.proof .sources{margin-top:.45rem}.closing-note{padding-block:clamp(2rem,5vw,4.5rem);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1.35fr;align-items:start;gap:1.5rem 4rem}.closing-note h2{font-size:clamp(2.5rem,4.5vw,4.5rem);margin-top:.4rem}.closing-note .mission-copy{max-width:64ch}.closing-note .mission-copy p+p{margin-top:.65rem}.closing-note a{font-weight:bold}
 @media(max-width:850px){.screen-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.film-frame h3{font-size:clamp(2rem,4.5vw,3.5rem)}}
 @media(max-width:560px){.top nav{gap:.6rem}.screen-grid{gap:.55rem}.film-frame{aspect-ratio:auto;min-height:8.1rem}.film-frame h3{font-size:1.55rem}.film-frame .small{font-size:.6rem}.film-body{padding:.65rem}.film-actions{display:grid;justify-items:start}.closing-note{grid-template-columns:1fr}.case-inner h3 span{display:inline-block;margin-left:.3rem}}
+
+.byline{margin-top:.9rem;color:var(--ink)}.byline b{font-weight:bold}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.meter{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--muted)}.bars{display:inline-flex;gap:2px}.bars i{width:.38rem;height:.8rem;background:#cfcdbf;display:block}.bars i.on{background:#557400}.meter.s1 .bars i.on,.meter.s2 .bars i.on{background:#8a8c80}.meter-label{white-space:nowrap}
+.metric-cell .meter{margin-top:.45rem}.metric-cell.legacy .row-metric{color:var(--muted);font-style:italic}
+.stat-tag{display:inline-block;background:var(--paper);border:1px solid #a8aa9d;padding:.15rem .45rem;margin:.1rem 0 .3rem;font-size:.6rem}
+.proof-strength{margin-top:.9rem;padding-top:.75rem;border-top:1px solid #cfd0c0}.proof-strength .small{display:block;font-size:.62rem;color:var(--muted);margin-bottom:.3rem}.proof-strength p{font-size:.87rem;margin-top:.3rem}
+.take{background:var(--light);border-left-color:var(--ink)}.take p{font-family:var(--serif);font-size:1.12rem;line-height:1.45}
+.full-case{border-top:1px solid var(--line);margin:0 clamp(1rem,4vw,3.5rem) clamp(1rem,3vw,2rem)}.full-case>summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 0;cursor:pointer;list-style:none;font-weight:bold}.full-case>summary::-webkit-details-marker{display:none}.full-case>summary:hover{text-decoration:underline}.full-case[open] .toggle::after{content:"−"}.full-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem clamp(1.5rem,5vw,5rem);padding:.4rem 0 1.2rem}.full-inner h3{font:700 .74rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.13em;margin-bottom:.3rem}.full-inner p+h3,.full-inner p+h3{margin-top:1.1rem}.full-inner .sources{margin-top:.4rem}
+.finding{padding-block:clamp(3rem,7vw,6rem) 0;scroll-margin-top:1rem}.finding h2{font-size:clamp(2.7rem,6vw,5.8rem);max-width:15ch;margin:.5rem 0 1.4rem}.finding-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:2rem clamp(2rem,5vw,5rem);border-top:1px solid var(--ink);padding-top:1.3rem}.finding-copy p{font-size:1.07rem;max-width:44ch}.finding-copy p+p{margin-top:.8rem}.finding-copy .note{font-size:.9rem;color:var(--muted)}
+.ladder{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.ladder li{display:grid;grid-template-columns:11rem 7rem minmax(0,1fr);gap:.4rem 1rem;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--line)}.ladder .meter{font-size:.85rem;color:var(--ink);font-weight:bold}.ladder-count{display:flex;align-items:center;gap:.5rem}.ladder-count b{font:normal 2rem/1 var(--serif);min-width:1.3rem}.ladder-bar{display:block;height:.6rem;width:calc(var(--n) * .7rem);background:#557400}.ladder li.s1 .ladder-bar,.ladder li.s2 .ladder-bar{background:#8a8c80}.ladder-cases{font-size:.9rem}.ladder-note{display:block;color:var(--muted);font-size:.82rem}
+.patterns{margin-top:clamp(3rem,6vw,5.5rem);scroll-margin-top:1rem}.mech-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin-top:1rem}.mech{background:var(--light);border:1px solid var(--line);border-top:3px solid var(--ink);padding:1rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}.mech h3{font-size:1.55rem}.mech-pick{all:unset;cursor:pointer;font:inherit;letter-spacing:inherit}.mech-pick:hover{text-decoration:underline}.mech-pick:focus-visible{outline:3px solid #557400;outline-offset:3px}.mech p{font-size:.9rem;color:var(--muted)}.mech ul{list-style:none;margin:auto 0 0;padding:.6rem 0 0;border-top:1px solid var(--line);font-size:.9rem}.mech li+li{margin-top:.25rem}.mech li span{color:var(--muted)}
+.timeline{position:relative;height:6.5rem;margin:1.3rem .6rem .4rem}.axis{position:absolute;left:0;right:0;bottom:1.3rem;border-top:1px solid var(--ink)}.tick{position:absolute;left:var(--x);top:.35rem;transform:translateX(-50%);font-size:.72rem;color:var(--muted)}.tick::before{content:"";position:absolute;left:50%;top:-.6rem;height:.45rem;border-left:1px solid var(--ink)}.dot{position:absolute;left:var(--x);bottom:calc(1.3rem + .45rem + var(--y) * 1.15rem);width:.95rem;height:.95rem;margin-left:-.475rem;border-radius:50%;background:#557400;border:2px solid var(--paper);transition:opacity .2s,transform .2s}.dot.s4{background:#7c9a1e}.dot.s3{background:#a5c31c}.dot.s2,.dot.s1{background:#a8aa9d}.dot:hover,.dot:focus-visible{transform:scale(1.35)}.dot.out{opacity:.18}.timeline-key{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-size:.78rem;color:var(--muted);padding-bottom:.8rem}.timeline-key i{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.35rem;vertical-align:-.05rem}
+.filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;width:100%}.filter-row>.small{width:6.5rem;font-size:.62rem;color:var(--muted)}.filter-bar{gap:.65rem}
+.next{display:grid;grid-template-columns:1fr 1.35fr;gap:1.5rem 4rem;padding-block:clamp(2rem,5vw,4.5rem);border-bottom:1px solid var(--line)}.next h2{font-size:clamp(2.3rem,4.2vw,4.1rem);margin-top:.4rem}.next-copy p{max-width:62ch}.next-copy p+p{margin-top:.7rem}.scope{background:var(--light);border:1px solid var(--line);padding:1rem;margin-top:1rem}
+@media(max-width:1000px){.mech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.finding-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.mech-grid{grid-template-columns:1fr}.ladder li{grid-template-columns:minmax(0,1fr) auto}.ladder-count{justify-content:flex-end}.ladder-bar{width:calc(var(--n) * .4rem)}.ladder-cases{grid-column:1/-1}.full-inner,.next{grid-template-columns:1fr}.full-case{margin-inline:.75rem}.filter-row>.small{width:100%}.timeline{height:7rem}.tick:nth-child(even){display:none}.metric-cell .meter{margin-top:0}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#archive">Skip to the archive</a>
 <header class="top"><div class="wrap">
 <a class="wordmark small" href="#top"><span class="signal" aria-hidden="true"></span> Brand Turning Points</a>
-<nav class="small" aria-label="Main navigation"><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a></nav>
+<nav class="small" aria-label="Main navigation"><a href="#finding">Finding</a><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a></nav>
 </div></header>
 <main>
 <div class="wrap">
 <section class="mast" aria-labelledby="mast-title">
 <div><p class="issue small">The campaign archive / Edition 01</p><h1 id="mast-title">Brand Turning<br><em>Points.</em></h1></div>
-<div class="mast-intro" aria-labelledby="founder-note"><h2 id="founder-note" class="small">Why I started this archive</h2><p>I started Brand Turning Points to celebrate the ideas that changed how we saw brands. Some of these campaigns come from a time when, for most of us, artificial intelligence still belonged to research labs and science fiction. Now it’s part of daily life, changing how quickly ideas are made and shared.</p><p>I want to look back at the work that still moves us and see how far we’ve come. As the pace quickens, where are we headed, and what will still be worth remembering when we get there?</p><p class="small">15 case studies &nbsp; / &nbsp; 1959 to 2023</p></div>
+<div class="mast-intro" aria-labelledby="founder-note"><h2 id="founder-note" class="small">Why I started this archive</h2><p>I started Brand Turning Points to celebrate the ideas that changed how we saw brands, and to be straight about what we actually know about them.</p><p>Going back through the sources, one thing kept surfacing. The campaigns everyone quotes are rarely the ones with the best proof. So every case here carries its number, its source and a plain rating of how far that evidence goes.</p><p class="small">15 case studies &nbsp; / &nbsp; 1959 to 2023</p><p class="byline small">Curated by <b>Matthew Batcheldor</b></p></div>
 </section>
 <section class="feature" aria-labelledby="feature-title">
 <figure class="feature-art"><svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
@@ -282,8 +299,40 @@
 </div>
 </section>
 <div class="edition-meta small"><span>Featured case 01 / Product demonstration</span><span>Fallon London / Directed by Nicolai Fuglsig</span></div>
+<section class="finding" id="finding" aria-labelledby="finding-title">
+<p class="small">01 / The finding</p>
+<h2 id="finding-title">The most famous campaigns rarely prove they worked.</h2>
+<div class="finding-grid">
+<div class="finding-copy"><p>None of the 15 cases in this edition has a public source that isolates the campaign’s own commercial effect. Most report what happened after the work ran. Sales rose, people watched, people said they felt differently. That is useful, but it isn’t cause.</p><p>The ladder sorts every case by the strongest public evidence I could find. It rates the record, not the work. Some of the best ideas here sit on the bottom rung.</p><p class="note">Only This Girl Can publishes a modelled estimate, and it values health benefits rather than sales.</p></div>
+<ol class="ladder" aria-label="Cases by evidence strength, strongest first">
+<li class="s5"><span class="ladder-name"><span class="meter s5" role="img" aria-label="Evidence strength 5 of 5: Modelled effect"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="meter-label" aria-hidden="true">Modelled effect</span></span></span>
+<span class="ladder-count"><b>1</b><span class="ladder-bar" style="--n:1" aria-hidden="true"></span></span>
+<span class="ladder-cases"><span class="ladder-note">A model estimates the effect against a baseline.</span> <a href="#this-girl-can">Sport England</a></span></li>
+<li class="s4"><span class="ladder-name"><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
+<span class="ladder-count"><b>7</b><span class="ladder-bar" style="--n:7" aria-hidden="true"></span></span>
+<span class="ladder-cases"><span class="ladder-note">Sales moved, but other causes are not separated out.</span> <a href="#apple-1984">Apple</a>, <a href="#got-milk">California Milk Processor Board</a>, <a href="#snickers-hunger">Snickers</a>, <a href="#old-spice">Old Spice</a>, <a href="#share-a-coke">Coca-Cola</a>, <a href="#patagonia-jacket">Patagonia</a>, <a href="#barbie-movie">Mattel &amp; Warner Bros.</a></span></li>
+<li class="s3"><span class="ladder-name"><span class="meter s3" role="img" aria-label="Evidence strength 3 of 5: Survey"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Survey</span></span></span>
+<span class="ladder-count"><b>2</b><span class="ladder-bar" style="--n:2" aria-hidden="true"></span></span>
+<span class="ladder-cases"><span class="ladder-note">People who saw it said something changed.</span> <a href="#volvo-epic-split">Volvo Trucks</a>, <a href="#always-like-a-girl">Always</a></span></li>
+<li class="s2"><span class="ladder-name"><span class="meter s2" role="img" aria-label="Evidence strength 2 of 5: Reach only"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Reach only</span></span></span>
+<span class="ladder-count"><b>2</b><span class="ladder-bar" style="--n:2" aria-hidden="true"></span></span>
+<span class="ladder-cases"><span class="ladder-note">The number counts attention, not outcomes.</span> <a href="#zimbabwean-trillion">The Zimbabwean</a>, <a href="#dove-real-beauty">Dove</a></span></li>
+<li class="s1"><span class="ladder-name"><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span></span>
+<span class="ladder-count"><b>3</b><span class="ladder-bar" style="--n:3" aria-hidden="true"></span></span>
+<span class="ladder-cases"><span class="ladder-note">The record shows the work existed and endured.</span> <a href="#sony-bravia">Sony BRAVIA</a>, <a href="#vw-think-small">Volkswagen</a>, <a href="#nike-just-do-it">Nike</a></span></li>
+</ol>
+</div>
+</section>
+<section class="patterns" id="patterns" aria-labelledby="patterns-title">
+<div class="section-head"><div><p class="small">02 / The patterns</p><h2 id="patterns-title">Five ways to change what people see</h2></div><p>Fifteen stories, five mechanisms. Choose one to filter the archive.</p></div>
+<div class="mech-grid"><div class="mech"><h3><button class="mech-pick" type="button" data-value="Demonstration">Demonstration</button></h3><p>Stage the benefit so people can see it for themselves.</p><ul><li><a href="#got-milk">California Milk Processor Board <span>1993</span></a></li><li><a href="#sony-bravia">Sony BRAVIA <span>2005</span></a></li><li><a href="#snickers-hunger">Snickers <span>2010</span></a></li><li><a href="#volvo-epic-split">Volvo Trucks <span>2013</span></a></li></ul></div>
+<div class="mech"><h3><button class="mech-pick" type="button" data-value="Reframed weakness">Reframed weakness</button></h3><p>Say the uncomfortable thing first and make it the point.</p><ul><li><a href="#vw-think-small">Volkswagen <span>1959</span></a></li><li><a href="#zimbabwean-trillion">The Zimbabwean <span>2009</span></a></li><li><a href="#patagonia-jacket">Patagonia <span>2011</span></a></li></ul></div>
+<div class="mech"><h3><button class="mech-pick" type="button" data-value="Participation">Participation</button></h3><p>Hand the audience a part to play and let them spread it.</p><ul><li><a href="#old-spice">Old Spice <span>2010</span></a></li><li><a href="#share-a-coke">Coca-Cola <span>2011</span></a></li><li><a href="#barbie-movie">Mattel &amp; Warner Bros. <span>2023</span></a></li></ul></div>
+<div class="mech"><h3><button class="mech-pick" type="button" data-value="Exposing an assumption">Exposing an assumption</button></h3><p>Show people a judgement they did not know they held.</p><ul><li><a href="#apple-1984">Apple <span>1984</span></a></li><li><a href="#dove-real-beauty">Dove <span>2013</span></a></li><li><a href="#always-like-a-girl">Always <span>2014</span></a></li></ul></div>
+<div class="mech"><h3><button class="mech-pick" type="button" data-value="Representation">Representation</button></h3><p>Put people in the picture who were missing from it.</p><ul><li><a href="#nike-just-do-it">Nike <span>1988</span></a></li><li><a href="#this-girl-can">Sport England <span>2015</span></a></li></ul></div></div>
+</section>
 <section class="screenings" id="screening" aria-labelledby="screening-title">
-<div class="section-head"><div><p class="small">01 / The screening room</p><h2 id="screening-title">Watch the work</h2></div><p>Four films to start with. Look for the creative choice that makes each one work before you read the case.</p></div>
+<div class="section-head"><div><p class="small">03 / The screening room</p><h2 id="screening-title">Watch the work</h2></div><p>Four films to start with. Look for the creative choice that makes each one work before you read the case.</p></div>
 <div class="screen-grid"><article class="screening">
 <div class="film-frame colour">
 <span class="small">Sony BRAVIA / 2005</span>
@@ -338,504 +387,683 @@
 </article></div>
 </section>
 <section class="archive" id="archive" aria-labelledby="archive-title">
-<div class="section-head"><div><p class="small">02 / The collection</p><h2 id="archive-title">The campaigns</h2></div><p>Each case puts the original creative beside its sources, the reported impact and the detail that makes it worth remembering.</p></div>
+<div class="section-head"><div><p class="small">04 / The collection</p><h2 id="archive-title">The campaigns</h2></div><p>Open a case for the idea, the lesson and my take. The full story, sources and measurement notes sit one click further in.</p></div>
+<div class="timeline" role="group" aria-label="Campaigns by year, 1959 to 2023"><a class="dot s1" href="#vw-think-small" data-id="vw-think-small" style="--x:0.00%;--y:0" title="Volkswagen, 1959. Archival"><span class="sr">Volkswagen, 1959</span></a><a class="dot s4" href="#apple-1984" data-id="apple-1984" style="--x:39.06%;--y:0" title="Apple, 1984. Sales trend"><span class="sr">Apple, 1984</span></a><a class="dot s1" href="#nike-just-do-it" data-id="nike-just-do-it" style="--x:45.31%;--y:0" title="Nike, 1988. Archival"><span class="sr">Nike, 1988</span></a><a class="dot s4" href="#got-milk" data-id="got-milk" style="--x:53.12%;--y:0" title="California Milk Processor Board, 1993. Sales trend"><span class="sr">California Milk Processor Board, 1993</span></a><a class="dot s1" href="#sony-bravia" data-id="sony-bravia" style="--x:71.88%;--y:0" title="Sony BRAVIA, 2005. Archival"><span class="sr">Sony BRAVIA, 2005</span></a><a class="dot s2" href="#zimbabwean-trillion" data-id="zimbabwean-trillion" style="--x:78.12%;--y:0" title="The Zimbabwean, 2009. Reach only"><span class="sr">The Zimbabwean, 2009</span></a><a class="dot s4" href="#snickers-hunger" data-id="snickers-hunger" style="--x:79.69%;--y:0" title="Snickers, 2010. Sales trend"><span class="sr">Snickers, 2010</span></a><a class="dot s4" href="#old-spice" data-id="old-spice" style="--x:79.69%;--y:1" title="Old Spice, 2010. Sales trend"><span class="sr">Old Spice, 2010</span></a><a class="dot s4" href="#share-a-coke" data-id="share-a-coke" style="--x:81.25%;--y:0" title="Coca-Cola, 2011. Sales trend"><span class="sr">Coca-Cola, 2011</span></a><a class="dot s4" href="#patagonia-jacket" data-id="patagonia-jacket" style="--x:81.25%;--y:1" title="Patagonia, 2011. Sales trend"><span class="sr">Patagonia, 2011</span></a><a class="dot s3" href="#volvo-epic-split" data-id="volvo-epic-split" style="--x:84.38%;--y:0" title="Volvo Trucks, 2013. Survey"><span class="sr">Volvo Trucks, 2013</span></a><a class="dot s2" href="#dove-real-beauty" data-id="dove-real-beauty" style="--x:84.38%;--y:1" title="Dove, 2013. Reach only"><span class="sr">Dove, 2013</span></a><a class="dot s3" href="#always-like-a-girl" data-id="always-like-a-girl" style="--x:85.94%;--y:0" title="Always, 2014. Survey"><span class="sr">Always, 2014</span></a><a class="dot s5" href="#this-girl-can" data-id="this-girl-can" style="--x:87.50%;--y:0" title="Sport England, 2015. Modelled effect"><span class="sr">Sport England, 2015</span></a><a class="dot s4" href="#barbie-movie" data-id="barbie-movie" style="--x:100.00%;--y:0" title="Mattel &amp; Warner Bros., 2023. Sales trend"><span class="sr">Mattel &amp; Warner Bros., 2023</span></a><div class="axis" aria-hidden="true"><span class="tick" style="--x:1.56%">1960</span><span class="tick" style="--x:17.19%">1970</span><span class="tick" style="--x:32.81%">1980</span><span class="tick" style="--x:48.44%">1990</span><span class="tick" style="--x:64.06%">2000</span><span class="tick" style="--x:79.69%">2010</span><span class="tick" style="--x:95.31%">2020</span></div></div>
+<p class="timeline-key"><span><i style="background:#557400"></i>Modelled effect</span><span><i style="background:#7c9a1e"></i>Sales trend</span><span><i style="background:#a5c31c"></i>Survey</span><span><i style="background:#a8aa9d"></i>Reach only or archival</span></p>
 <div class="filter-bar" id="filters" hidden aria-label="Filter campaigns">
-<button class="filter" type="button" data-filter="All" aria-pressed="true">All</button>
-<button class="filter" type="button" data-filter="Commercial" aria-pressed="false">Commercial</button>
-<button class="filter" type="button" data-filter="Perception" aria-pressed="false">Perception</button>
-<button class="filter" type="button" data-filter="Behaviour" aria-pressed="false">Behaviour</button>
-<button class="filter" type="button" data-filter="Reach" aria-pressed="false">Reach</button>
-<button class="filter" type="button" data-filter="Creative legacy" aria-pressed="false">Creative legacy</button>
+<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span><button class="filter" type="button" data-group="mechanism" data-value="All" aria-pressed="true">All</button><button class="filter" type="button" data-group="mechanism" data-value="Demonstration" aria-pressed="false">Demonstration</button><button class="filter" type="button" data-group="mechanism" data-value="Reframed weakness" aria-pressed="false">Reframed weakness</button><button class="filter" type="button" data-group="mechanism" data-value="Participation" aria-pressed="false">Participation</button><button class="filter" type="button" data-group="mechanism" data-value="Exposing an assumption" aria-pressed="false">Exposing an assumption</button><button class="filter" type="button" data-group="mechanism" data-value="Representation" aria-pressed="false">Representation</button></div><div class="filter-row" role="group" aria-label="Evidence strength"><span class="small">Evidence</span><button class="filter" type="button" data-group="evidence" data-value="All" aria-pressed="true">All</button><button class="filter" type="button" data-group="evidence" data-value="Modelled effect" aria-pressed="false">Modelled effect</button><button class="filter" type="button" data-group="evidence" data-value="Sales trend" aria-pressed="false">Sales trend</button><button class="filter" type="button" data-group="evidence" data-value="Survey" aria-pressed="false">Survey</button><button class="filter" type="button" data-group="evidence" data-value="Reach only" aria-pressed="false">Reach only</button><button class="filter" type="button" data-group="evidence" data-value="Archival" aria-pressed="false">Archival</button></div><div class="filter-row" role="group" aria-label="Era"><span class="small">Era</span><button class="filter" type="button" data-group="era" data-value="All" aria-pressed="true">All</button><button class="filter" type="button" data-group="era" data-value="1950s to 1980s" aria-pressed="false">1950s to 1980s</button><button class="filter" type="button" data-group="era" data-value="1990s and 2000s" aria-pressed="false">1990s and 2000s</button><button class="filter" type="button" data-group="era" data-value="2010s" aria-pressed="false">2010s</button><button class="filter" type="button" data-group="era" data-value="2020s" aria-pressed="false">2020s</button></div>
 <label class="search">Search <input id="search" type="search" placeholder="Brand, idea or year" autocomplete="off"></label>
 </div>
 <p id="result" class="result" aria-live="polite">15 campaigns</p>
 <div class="cases">
-<details id="sony-bravia" class="case" data-kind="Creative legacy">
+<details id="sony-bravia" class="case" data-mechanism="Demonstration" data-evidence="Archival" data-era="1990s and 2000s">
 <summary>
 <span class="case-number small">01</span>
-<span><span class="case-brand small">Sony BRAVIA / 2005</span><span class="case-title">Balls</span><span class="case-hook">The day San Francisco rolled downhill in colour.</span></span>
-<span class="metric-cell"><span class="row-metric">250,000</span><span class="row-label small">Balls in the shoot</span></span>
+<span><span class="case-brand small">Sony BRAVIA / 2005 / Demonstration</span><span class="case-title">Balls</span><span class="case-hook">The day San Francisco rolled downhill in colour.</span></span>
+<span class="metric-cell legacy"><span class="row-metric">250,000</span><span class="row-label small">Balls in the shoot · legacy fact</span><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">European launch · Filmed in San Francisco / Film &amp; earned media</p>
-<h3>The starting point</h3><p>LCD televisions were being sold through specifications. Sony needed a reason for people to care about how a picture felt.</p>
 <h3>The idea</h3><p>Fallon and director Nicolai Fuglsig sent brightly coloured bouncy balls down San Francisco streets. Residents filmed the shoot and shared the spectacle before the UK television launch.</p>
-<h3>What changed</h3><p>Colour became an experience people could picture and pass on. The making of the film became part of the distribution.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The image is instantly recognisable even as a single frame. José González’s quiet cover of “Heartbeats” makes the bouncing colour feel playful and unexpectedly tender, giving a TV demonstration the rhythm of a short film.</p></div>
 <h3>The lesson</h3><p>Make the benefit visible enough that the demonstration itself becomes the thing people share.</p>
+<div class="memory take"><h3>My take</h3><p>I&#x27;d still brief a demonstration this way. If the claim is visual, stop describing it and stage it.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Film archive</span></h3>
 <a href="https://www.hatads.org.uk/catalogue/record/e0331ed6-f87f-4ba6-8c44-0f752919b0cb">Watch the film at the History of Advertising Trust</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
-<h3>Impact <span>Creative legacy</span></h3>
+<aside class="proof" aria-label="Evidence">
+<h3>Headline fact <span>Creative legacy</span></h3>
 <p class="proof-value">250,000</p>
+<p class="stat-tag small">Legacy fact, not a result</p>
 <p class="proof-metric">Bouncy balls reported in D&amp;AD’s campaign entry</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span><p>The record shows the work existed and endured.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://www.dandad.org/work/d-ad-awards-archive/balls">D&amp;AD campaign record</a></p>
-<p>Production scale. The IPA case documents early diffusion through digital influencers and into wider audiences. The public summary gives no campaign-level sales lift, ROI or CAC.</p>
+</aside>
+</div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>LCD televisions were being sold through specifications. Sony needed a reason for people to care about how a picture felt.</p>
+<h3>What changed</h3><p>Colour became an experience people could picture and pass on. The making of the film became part of the distribution.</p>
+<h3>Why it’s memorable</h3><p>The image is instantly recognisable even as a single frame. José González’s quiet cover of “Heartbeats” makes the bouncing colour feel playful and unexpectedly tender, giving a TV demonstration the rhythm of a short film.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Production scale. The IPA case documents early diffusion through digital influencers and into wider audiences. The public summary gives no campaign-level sales lift, ROI or CAC.</p>
 <h3>How to measure a similar idea</h3><p>Measure the lift in association with superior colour, then compare retailer sell-through in matched markets.</p>
 <h3>Further sources</h3><ul class="sources"><li><a href="https://www.dandad.org/insights/awards/sony-balls-case-study-insights">Read the launch story · D&amp;AD</a></li>
 <li><a href="https://ipa.co.uk/knowledge/case-studies/sony-bravia-lcd-tv-balls">Read the effectiveness case · IPA</a></li></ul>
-</aside>
+</div>
 </div>
 </details>
-<details id="vw-think-small" class="case" data-kind="Creative legacy">
+</details>
+<details id="vw-think-small" class="case" data-mechanism="Reframed weakness" data-evidence="Archival" data-era="1950s to 1980s">
 <summary>
 <span class="case-number small">02</span>
-<span><span class="case-brand small">Volkswagen / 1959</span><span class="case-title">Think Small</span><span class="case-hook">The little car that made big cars look excessive.</span></span>
-<span class="metric-cell"><span class="row-metric">1962</span><span class="row-label small">Archival print execution</span></span>
+<span><span class="case-brand small">Volkswagen / 1959 / Reframed weakness</span><span class="case-title">Think Small</span><span class="case-hook">The little car that made big cars look excessive.</span></span>
+<span class="metric-cell legacy"><span class="row-metric">1962</span><span class="row-label small">Archival print execution · legacy fact</span><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">United States / Print</p>
-<h3>The starting point</h3><p>In a market where car advertising made size and flash look like success, the Beetle had little to gain by imitating the competition.</p>
 <h3>The idea</h3><p>Doyle Dane Bernbach placed a tiny Beetle in a field of white space. Wry copy turned smallness into a case for economy and practicality.</p>
-<h3>What changed</h3><p>Buying a small car could signal good judgement. The layout made the argument before the reader reached the copy.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The empty page makes the tiny car the most conspicuous object on it. The layout performs the argument for restraint before the headline makes it explicit.</p></div>
 <h3>The lesson</h3><p>If a perceived weakness has a real customer benefit, give that feature the most conspicuous space in the ad.</p>
+<div class="memory take"><h3>My take</h3><p>The bravest line in the ad admits the car is small. Most brands still can&#x27;t bring themselves to say the obvious thing first.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Print artefact</span></h3>
 <a href="https://www.flickr.com/photos/nationalmuseumofamericanhistory/6418777239/">View the 1959 print ad at the Smithsonian</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
-<h3>Impact <span>Creative legacy</span></h3>
+<aside class="proof" aria-label="Evidence">
+<h3>Headline fact <span>Creative legacy</span></h3>
 <p class="proof-value">1962</p>
+<p class="stat-tag small">Legacy fact, not a result</p>
 <p class="proof-metric">Date of the later execution preserved by The Henry Ford</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span><p>The record shows the work existed and endured.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://www.thehenryford.org/collections/explore/artifact/368680?AssetId=THF212470">See the 1962 execution · The Henry Ford</a></p>
-<p>Archival evidence. The Smithsonian dates an example to 1959. The 1962 execution documents the idea’s continued use. The cited material gives no attributable sales lift.</p>
-<h3>How to measure a similar idea</h3><p>Compare value perceptions, dealer enquiries and sales against markets using conventional automotive messaging.</p>
-
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>In a market where car advertising made size and flash look like success, the Beetle had little to gain by imitating the competition.</p>
+<h3>What changed</h3><p>Buying a small car could signal good judgement. The layout made the argument before the reader reached the copy.</p>
+<h3>Why it’s memorable</h3><p>The empty page makes the tiny car the most conspicuous object on it. The layout performs the argument for restraint before the headline makes it explicit.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Archival evidence. The Smithsonian dates an example to 1959. The 1962 execution documents the idea’s continued use. The cited material gives no attributable sales lift.</p>
+<h3>How to measure a similar idea</h3><p>Compare value perceptions, dealer enquiries and sales against markets using conventional automotive messaging.</p>
+
+</div>
+</div>
 </details>
-<details id="apple-1984" class="case" data-kind="Commercial">
+</details>
+<details id="apple-1984" class="case" data-mechanism="Exposing an assumption" data-evidence="Sales trend" data-era="1950s to 1980s">
 <summary>
 <span class="case-number small">03</span>
-<span><span class="case-brand small">Apple / 1984</span><span class="case-title">1984</span><span class="case-hook">A hammer made the personal computer feel personal.</span></span>
-<span class="metric-cell"><span class="row-metric">70,000</span><span class="row-label small">Launch units sold</span></span>
+<span><span class="case-brand small">Apple / 1984 / Exposing an assumption</span><span class="case-title">1984</span><span class="case-hook">A hammer made the personal computer feel personal.</span></span>
+<span class="metric-cell"><span class="row-metric">70,000</span><span class="row-label small">Launch units sold</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">United States / Television</p>
-<h3>The starting point</h3><p>Apple had to make a new computer matter to people accustomed to seeing computing as the domain of institutions and specialists.</p>
 <h3>The idea</h3><p>Chiat/Day and Ridley Scott made a dystopian film in which a runner throws a hammer into an authoritarian broadcast. Apple aired it during the Super Bowl ahead of the Macintosh launch.</p>
-<h3>What changed</h3><p>The Macintosh entered the market as a symbol of individual agency. The emotional launch made the practical promise of a more approachable computer feel consequential.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The hammer blow gives the story an image that can stand in for the whole film. The audience feels the release before Apple names the computer, and the product inherits that feeling.</p></div>
 <h3>The lesson</h3><p>Give a product launch a clear cultural opponent when the product delivers a credible alternative.</p>
+<div class="memory take"><h3>My take</h3><p>Everyone remembers the hammer. Fewer remember that it aired nationally just once, and that scarcity became part of the legend.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Museum film record</span></h3>
 <a href="https://www.computerhistory.org/revolution/personal-computers/17/303/1201">Explore the original commercial at the Computer History Museum</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">70,000</p>
+
 <p class="proof-metric">Macintosh 128K units sold in its first 100 days, per MoMA</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://www.moma.org/collection/works/3742">See the launch sales figure · MoMA</a></p>
-<p>Product launch sales. The total includes the combined effects of distribution, press, demand and other marketing. The isolated contribution of the spot is unknown.</p>
-<h3>How to measure a similar idea</h3><p>Track first-time buyers and estimate incremental units against a launch baseline that accounts for press and distribution.</p>
-<h3>Further sources</h3><ul class="sources"><li><a href="https://www.americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad">Read the campaign history · Smithsonian</a></li></ul>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Apple had to make a new computer matter to people accustomed to seeing computing as the domain of institutions and specialists.</p>
+<h3>What changed</h3><p>The Macintosh entered the market as a symbol of individual agency. The emotional launch made the practical promise of a more approachable computer feel consequential.</p>
+<h3>Why it’s memorable</h3><p>The hammer blow gives the story an image that can stand in for the whole film. The audience feels the release before Apple names the computer, and the product inherits that feeling.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Product launch sales. The total includes the combined effects of distribution, press, demand and other marketing. The isolated contribution of the spot is unknown.</p>
+<h3>How to measure a similar idea</h3><p>Track first-time buyers and estimate incremental units against a launch baseline that accounts for press and distribution.</p>
+<h3>Further sources</h3><ul class="sources"><li><a href="https://www.americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad">Read the campaign history · Smithsonian</a></li></ul>
+</div>
+</div>
 </details>
-<details id="nike-just-do-it" class="case" data-kind="Creative legacy">
+</details>
+<details id="nike-just-do-it" class="case" data-mechanism="Representation" data-evidence="Archival" data-era="1950s to 1980s">
 <summary>
 <span class="case-number small">04</span>
-<span><span class="case-brand small">Nike / 1988</span><span class="case-title">Just Do It</span><span class="case-hook">An older runner made Nike’s invitation bigger than sport.</span></span>
-<span class="metric-cell"><span class="row-metric">37 years</span><span class="row-label small">Platform span</span></span>
+<span><span class="case-brand small">Nike / 1988 / Representation</span><span class="case-title">Just Do It</span><span class="case-hook">An older runner made Nike’s invitation bigger than sport.</span></span>
+<span class="metric-cell legacy"><span class="row-metric">37 years</span><span class="row-label small">Platform span · legacy fact</span><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">United States launch / Television &amp; brand platform</p>
-<h3>The starting point</h3><p>Elite athletes could make a sports brand aspirational, but they also set a high bar for who might recognise themselves in the advertising.</p>
 <h3>The idea</h3><p>An early Wieden+Kennedy spot followed veteran San Francisco runner Walt Stack. His unglamorous routine made the line feel like a prompt anyone could act on.</p>
-<h3>What changed</h3><p>Nike gave people a way to identify with the act of starting, whether or not they thought of themselves as athletes.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>Walt Stack’s matter-of-fact delivery makes the achievement feel ordinary in the best sense. His humour and routine put a human face on a line that could otherwise sound like a command.</p></div>
 <h3>The lesson</h3><p>A brand line can outlive its first advert if it gives a broad audience something specific to do.</p>
+<div class="memory take"><h3>My take</h3><p>Three words that fit a marathon runner and someone who hasn&#x27;t trained in years. That range is the real asset.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Film archive</span></h3>
 <a href="https://www.adsoftheworld.com/campaigns/just-do-it-0c281b3b-fa6b-44f5-9728-72b4b5c93e84">Watch the Walt Stack spot at Ads of the World</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
-<h3>Impact <span>Creative legacy</span></h3>
+<aside class="proof" aria-label="Evidence">
+<h3>Headline fact <span>Creative legacy</span></h3>
 <p class="proof-value">37 years</p>
+<p class="stat-tag small">Legacy fact, not a result</p>
 <p class="proof-metric">From the 1988 launch to Nike’s 2025 reintroduction</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s1" role="img" aria-label="Evidence strength 1 of 5: Archival"><span class="bars" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Archival</span></span><p>The record shows the work existed and endured.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://about.nike.com/en/newsroom/releases/nike-why-do-it-campaign">Read the platform history · Nike</a></p>
-<p>Brand-platform longevity, calculated from Nike’s documented dates. The cited material does not isolate the original campaign’s sales, ROI or CAC.</p>
-<h3>How to measure a similar idea</h3><p>Measure brand association and incremental first purchase among occasional exercisers as well as established athletes.</p>
-
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Elite athletes could make a sports brand aspirational, but they also set a high bar for who might recognise themselves in the advertising.</p>
+<h3>What changed</h3><p>Nike gave people a way to identify with the act of starting, whether or not they thought of themselves as athletes.</p>
+<h3>Why it’s memorable</h3><p>Walt Stack’s matter-of-fact delivery makes the achievement feel ordinary in the best sense. His humour and routine put a human face on a line that could otherwise sound like a command.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Brand-platform longevity, calculated from Nike’s documented dates. The cited material does not isolate the original campaign’s sales, ROI or CAC.</p>
+<h3>How to measure a similar idea</h3><p>Measure brand association and incremental first purchase among occasional exercisers as well as established athletes.</p>
+
+</div>
+</div>
 </details>
-<details id="got-milk" class="case" data-kind="Commercial">
+</details>
+<details id="got-milk" class="case" data-mechanism="Demonstration" data-evidence="Sales trend" data-era="1990s and 2000s">
 <summary>
 <span class="case-number small">05</span>
-<span><span class="case-brand small">California Milk Processor Board / 1993</span><span class="case-title">Got Milk?</span><span class="case-hook">Milk became interesting the second it ran out.</span></span>
-<span class="metric-cell"><span class="row-metric">+2.0%</span><span class="row-label small">California milk volume</span></span>
+<span><span class="case-brand small">California Milk Processor Board / 1993 / Demonstration</span><span class="case-title">Got Milk?</span><span class="case-hook">Milk became interesting the second it ran out.</span></span>
+<span class="metric-cell"><span class="row-metric">+2.0%</span><span class="row-label small">California milk volume</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">California / Television &amp; category marketing</p>
-<h3>The starting point</h3><p>Consumers already knew milk was nutritious. Reminding them of that fact had little to do with the moment they actually wanted a glass.</p>
-<h3>The idea</h3><p>Goodby Silverstein &amp; Partners dramatized milk deprivation. In the Aaron Burr spot, a mouthful of peanut butter stops a history buff from answering a radio quiz he knows cold.</p>
-<h3>What changed</h3><p>The campaign made milk feel like the missing piece in rituals people already enjoyed. It gave existing drinkers a reason to keep it in the fridge.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The viewer can hear the right answer and knows exactly why the caller cannot say it. That shared frustration makes an empty carton the punchline and the product reminder.</p></div>
+<h3>The idea</h3><p>Goodby Silverstein &amp; Partners dramatised milk deprivation. In the Aaron Burr spot, a mouthful of peanut butter stops a history buff from answering a radio quiz he knows cold.</p>
 <h3>The lesson</h3><p>For a familiar product, show the cost of its absence in a moment the buyer recognises.</p>
+<div class="memory take"><h3>My take</h3><p>It sells the absence of the product. That&#x27;s harder to pull off than any feature list, and it&#x27;s a good argument for testing deprivation in research.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Film archive</span></h3>
 <a href="https://www.milkmustachedatabase.com/page/commercials.html">Find the original Aaron Burr spot in the Milk Mustache Database</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">+2.0%</p>
-<p class="proof-metric">California milk volume, 740m to 755m gallons from 1993 to 1994</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://aef.com/classroom-resources/case-histories/got-milk/">Read the original strategy and volumes · ANA Educational Foundation</a></p>
-<p>Observed category sales. The percentage is calculated from the ANA case’s volumes. It does not isolate advertising from price, distribution or wider category changes.</p>
-<h3>How to measure a similar idea</h3><p>Compare purchase frequency and volume against similar regions, adjusting for category and pricing trends.</p>
 
+<p class="proof-metric">California milk volume, 740m to 755m gallons from 1993 to 1994</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://aef.com/classroom-resources/case-histories/got-milk/">Read the original strategy and volumes · ANA Educational Foundation</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Consumers already knew milk was nutritious. Reminding them of that fact had little to do with the moment they actually wanted a glass.</p>
+<h3>What changed</h3><p>The campaign made milk feel like the missing piece in rituals people already enjoyed. It gave existing drinkers a reason to keep it in the fridge.</p>
+<h3>Why it’s memorable</h3><p>The viewer can hear the right answer and knows exactly why the caller cannot say it. That shared frustration makes an empty carton the punchline and the product reminder.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Observed category sales. The percentage is calculated from the ANA case’s volumes. It does not isolate advertising from price, distribution or wider category changes.</p>
+<h3>How to measure a similar idea</h3><p>Compare purchase frequency and volume against similar regions, adjusting for category and pricing trends.</p>
+
+</div>
+</div>
 </details>
-<details id="zimbabwean-trillion" class="case" data-kind="Reach">
+</details>
+<details id="zimbabwean-trillion" class="case" data-mechanism="Reframed weakness" data-evidence="Reach only" data-era="1990s and 2000s">
 <summary>
 <span class="case-number small">06</span>
-<span><span class="case-brand small">The Zimbabwean / 2009</span><span class="case-title">Trillion Dollar Campaign</span><span class="case-hook">A banknote that could barely buy anything became the medium.</span></span>
-<span class="metric-cell"><span class="row-metric">2m+</span><span class="row-label small">Rollout week web hits</span></span>
+<span><span class="case-brand small">The Zimbabwean / 2009 / Reframed weakness</span><span class="case-title">Trillion Dollar Campaign</span><span class="case-hook">A banknote that could barely buy anything became the medium.</span></span>
+<span class="metric-cell"><span class="row-metric">2m+</span><span class="row-label small">Rollout week web hits</span><span class="meter s2" role="img" aria-label="Evidence strength 2 of 5: Reach only"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Reach only</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">South Africa · Zimbabwean newspaper / Outdoor, print &amp; direct</p>
-<h3>The starting point</h3><p>The independent Zimbabwean newspaper needed readers outside Zimbabwe to help sustain distribution back home after an import duty made copies more expensive.</p>
 <h3>The idea</h3><p>TBWA\Hunt\Lascaris in Johannesburg printed the campaign on real Zimbabwean banknotes rendered nearly worthless by hyperinflation. The notes became handouts, posters and even billboards.</p>
-<h3>What changed</h3><p>The campaign made an economic crisis tangible. The thing people could hold in their hands also made the case for why the newspaper’s reporting mattered.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The absurd number on a real banknote makes the argument before the copy does. A person could take the evidence home, show it to someone else and retell the story without the billboard.</p></div>
 <h3>The lesson</h3><p>Choose a medium that physically carries the argument.</p>
+<div class="memory take"><h3>My take</h3><p>The note is the argument. You can&#x27;t pull the message away from the worthless paper it&#x27;s printed on, which is why it travelled.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Outdoor and print artefact</span></h3>
 <a href="https://www.dandad.org/work/d-ad-awards-archive/trillion-dollar-campaign">View the banknote campaign at D&amp;AD</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Reach</span></h3>
 <p class="proof-value">2m+</p>
-<p class="proof-metric">Website hits in the rollout week, according to the campaign entry</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://www.sostav.ru/articles/rus/2009/columns/cannes/0020.html">Read the entrant’s results · Cannes entry archive</a></p>
-<p>Entrant-reported web hits. A hit is a technical traffic count and can include multiple requests per page. The entry gives no comparable unique-visitor count, subscription uplift or CAC.</p>
-<h3>How to measure a similar idea</h3><p>Track attributable subscriptions, reader donations and the cost of getting a copy into the intended market.</p>
 
+<p class="proof-metric">Website hits in the rollout week, according to the campaign entry</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s2" role="img" aria-label="Evidence strength 2 of 5: Reach only"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Reach only</span></span><p>The number counts attention, not outcomes.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://www.sostav.ru/articles/rus/2009/columns/cannes/0020.html">Read the entrant’s results · Cannes entry archive</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>The independent Zimbabwean newspaper needed readers outside Zimbabwe to help sustain distribution back home after an import duty made copies more expensive.</p>
+<h3>What changed</h3><p>The campaign made an economic crisis tangible. The thing people could hold in their hands also made the case for why the newspaper’s reporting mattered.</p>
+<h3>Why it’s memorable</h3><p>The absurd number on a real banknote makes the argument before the copy does. A person could take the evidence home, show it to someone else and retell the story without the billboard.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Entrant-reported web hits. A hit is a technical traffic count and can include multiple requests per page. The entry gives no comparable unique-visitor count, subscription uplift or CAC.</p>
+<h3>How to measure a similar idea</h3><p>Track attributable subscriptions, reader donations and the cost of getting a copy into the intended market.</p>
+
+</div>
+</div>
 </details>
-<details id="snickers-hunger" class="case" data-kind="Commercial">
+</details>
+<details id="snickers-hunger" class="case" data-mechanism="Demonstration" data-evidence="Sales trend" data-era="2010s">
 <summary>
 <span class="case-number small">07</span>
-<span><span class="case-brand small">Snickers / 2010</span><span class="case-title">You’re Not You When You’re Hungry</span><span class="case-hook">Betty White made hunger a personality problem.</span></span>
-<span class="metric-cell"><span class="row-metric">+15.9%</span><span class="row-label small">One-year sales growth</span></span>
+<span><span class="case-brand small">Snickers / 2010 / Demonstration</span><span class="case-title">You’re Not You When You’re Hungry</span><span class="case-hook">Betty White made hunger a personality problem.</span></span>
+<span class="metric-cell"><span class="row-metric">+15.9%</span><span class="row-label small">One-year sales growth</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">US launch · International rollout / Television &amp; global platform</p>
-<h3>The starting point</h3><p>A chocolate bar can be easy to recognise and still lack a distinctive reason to buy it in the moment.</p>
 <h3>The idea</h3><p>In the opening US Super Bowl film, Betty White plays an out-of-sorts football teammate until a Snickers restores the player to himself. The substitution became a format local markets could adapt.</p>
-<h3>What changed</h3><p>Snickers owned an instantly recognisable social moment: being so hungry you stop acting like yourself.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>Betty White in a rough football game is funny before the first line lands. The transformation at the end turns the visual joke into a repeatable story in which the bar always has a job.</p></div>
 <h3>The lesson</h3><p>Build a repeatable story with a fixed product role and enough room for local culture.</p>
+<div class="memory take"><h3>My take</h3><p>A universal truth in a format you can recast. The faces change, the structure doesn&#x27;t, and that&#x27;s what let it run in 58 markets.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Film archive</span></h3>
 <a href="https://www.adsoftheworld.com/campaigns/betty-white">Watch the Betty White spot at Ads of the World</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">+15.9%</p>
+
 <p class="proof-metric">One-year sales growth reported in the IPA’s international case</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://ipa.co.uk/knowledge/case-studies/snickers-you-re-not-you-when-you-re-hungry/">Read the global effectiveness case · IPA</a></p>
-<p>Reported sales growth, with share gained in 56 of the 58 markets in the case. A separate IPA paper reports over US$70m incremental sales for the later Mr Bean execution. Those are different results and scopes.</p>
-<h3>How to measure a similar idea</h3><p>Compare incremental household penetration and margin across markets, using media and promotion data.</p>
-<h3>Further sources</h3><ul class="sources"><li><a href="https://ipa.co.uk/knowledge/case-studies/snickers-thinking-like-a-hollywood-blockbuster/">Read the later Mr Bean case · IPA</a></li></ul>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>A chocolate bar can be easy to recognise and still lack a distinctive reason to buy it in the moment.</p>
+<h3>What changed</h3><p>Snickers owned an instantly recognisable social moment: being so hungry you stop acting like yourself.</p>
+<h3>Why it’s memorable</h3><p>Betty White in a rough football game is funny before the first line lands. The transformation at the end turns the visual joke into a repeatable story in which the bar always has a job.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Reported sales growth, with share gained in 56 of the 58 markets in the case. A separate IPA paper reports over US$70m incremental sales for the later Mr Bean execution. Those are different results and scopes.</p>
+<h3>How to measure a similar idea</h3><p>Compare incremental household penetration and margin across markets, using media and promotion data.</p>
+<h3>Further sources</h3><ul class="sources"><li><a href="https://ipa.co.uk/knowledge/case-studies/snickers-thinking-like-a-hollywood-blockbuster/">Read the later Mr Bean case · IPA</a></li></ul>
+</div>
+</div>
 </details>
-<details id="old-spice" class="case" data-kind="Commercial">
+</details>
+<details id="old-spice" class="case" data-mechanism="Participation" data-evidence="Sales trend" data-era="2010s">
 <summary>
 <span class="case-number small">08</span>
-<span><span class="case-brand small">Old Spice / 2010</span><span class="case-title">The Man Your Man Could Smell Like</span><span class="case-hook">A body-wash pitch turned into a conversation.</span></span>
-<span class="metric-cell"><span class="row-metric">+60%</span><span class="row-label small">Body wash sales growth</span></span>
+<span><span class="case-brand small">Old Spice / 2010 / Participation</span><span class="case-title">The Man Your Man Could Smell Like</span><span class="case-hook">A body-wash pitch turned into a conversation.</span></span>
+<span class="metric-cell"><span class="row-metric">+60%</span><span class="row-label small">Body wash sales growth</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">United States / Television &amp; social video</p>
-<h3>The starting point</h3><p>Wieden+Kennedy identified women as a major audience for body wash purchases, even when the intended user was a man.</p>
 <h3>The idea</h3><p>Isaiah Mustafa addressed women directly in a film that moved from bathroom to boat to horseback. The character later answered individual fans and celebrities with 186 videos shot in two and a half days.</p>
-<h3>What changed</h3><p>Old Spice became a brand people could joke with. The live responses gave viewers a role in a campaign that began as a broadcast.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>Isaiah Mustafa’s unbroken eye contact holds the film together while the sets change around him. That deadpan delivery also made the character recognisable in 186 individual replies.</p></div>
 <h3>The lesson</h3><p>Give the character a consistent voice and a reason to respond. The audience will help write the next scene.</p>
+<div class="memory take"><h3>My take</h3><p>The response videos get the credit, but the sales number came first. I&#x27;d want to know how much of the legend belongs to the sequel.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Original film</span></h3>
 <a href="https://www.youtube.com/watch?v=owGykVbfgUE">Watch on the Old Spice YouTube channel</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">+60%</p>
-<p class="proof-metric">Red Zone Body Wash sales year on year by May 2010, per Wieden+Kennedy</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://www.wk.com/work/old-spice-smell-like-a-man-man/">Watch the creative and read the case · Wieden+Kennedy</a></p>
-<p>Agency-reported product sales growth. May precedes the July response activation, so the number belongs to the earlier campaign period. It cannot show the response videos’ separate sales effect.</p>
-<h3>How to measure a similar idea</h3><p>Separate the effects of the launch film, promotions and the response campaign on incremental buyers.</p>
 
+<p class="proof-metric">Red Zone Body Wash sales year on year by May 2010, per Wieden+Kennedy</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://www.wk.com/work/old-spice-smell-like-a-man-man/">Watch the creative and read the case · Wieden+Kennedy</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Wieden+Kennedy identified women as a major audience for body wash purchases, even when the intended user was a man.</p>
+<h3>What changed</h3><p>Old Spice became a brand people could joke with. The live responses gave viewers a role in a campaign that began as a broadcast.</p>
+<h3>Why it’s memorable</h3><p>Isaiah Mustafa’s unbroken eye contact holds the film together while the sets change around him. That deadpan delivery also made the character recognisable in 186 individual replies.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Agency-reported product sales growth. May precedes the July response activation, so the number belongs to the earlier campaign period. It cannot show the response videos’ separate sales effect.</p>
+<h3>How to measure a similar idea</h3><p>Separate the effects of the launch film, promotions and the response campaign on incremental buyers.</p>
+
+</div>
+</div>
 </details>
-<details id="share-a-coke" class="case" data-kind="Commercial">
+</details>
+<details id="share-a-coke" class="case" data-mechanism="Participation" data-evidence="Sales trend" data-era="2010s">
 <summary>
 <span class="case-number small">09</span>
-<span><span class="case-brand small">Coca-Cola / 2011</span><span class="case-title">Share a Coke</span><span class="case-hook">The logo made room for someone you knew.</span></span>
-<span class="metric-cell"><span class="row-metric">250m+</span><span class="row-label small">Named packs sold</span></span>
+<span><span class="case-brand small">Coca-Cola / 2011 / Participation</span><span class="case-title">Share a Coke</span><span class="case-hook">The logo made room for someone you knew.</span></span>
+<span class="metric-cell"><span class="row-metric">250m+</span><span class="row-label small">Named packs sold</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">Australia launch / Packaging, retail &amp; social</p>
-<h3>The starting point</h3><p>Coke was already widely recognised. The opportunity was to make a familiar brand feel personally relevant and give people a reason to seek it out.</p>
 <h3>The idea</h3><p>The Australian launch printed popular first names on bottles and cans. Finding someone’s name turned ordinary packaging into something to hunt for, photograph or give away.</p>
-<h3>What changed</h3><p>The pack became a social invitation. The idea could cross markets by changing names and cultural details while keeping the same behaviour at its centre.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>A familiar label suddenly gave shoppers someone to look for. The reward was personal and visible, which made the ordinary act of buying a Coke easy to turn into a small gift.</p></div>
 <h3>The lesson</h3><p>Put the act of participation inside the product where customers can find it and repeat it.</p>
+<div class="memory take"><h3>My take</h3><p>The name on the bottle did the media&#x27;s job. Every fridge became a hunt for someone you knew.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Agency campaign record</span></h3>
 <a href="https://www.ogilvy.com.au/Our-Work/Coca-Cola-Share-a-Coke">Explore the original Australian work at Ogilvy</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">250m+</p>
-<p class="proof-metric">Named bottles and cans sold in the launch summer in Australia</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://www.coca-colacompany.com/about-us/history/how-a-campaign-got-its-start-down-under">Read the Australian launch story · Coca-Cola</a></p>
-<p>Brand-reported unit sales for the named packs. That count includes people who may already have bought Coke and does not estimate incremental demand or unique buyers.</p>
-<h3>How to measure a similar idea</h3><p>Compare named and standard packs in matched stores to estimate incremental units, basket size and margin.</p>
 
+<p class="proof-metric">Named bottles and cans sold in the launch summer in Australia</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://www.coca-colacompany.com/about-us/history/how-a-campaign-got-its-start-down-under">Read the Australian launch story · Coca-Cola</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Coke was already widely recognised. The opportunity was to make a familiar brand feel personally relevant and give people a reason to seek it out.</p>
+<h3>What changed</h3><p>The pack became a social invitation. The idea could cross markets by changing names and cultural details while keeping the same behaviour at its centre.</p>
+<h3>Why it’s memorable</h3><p>A familiar label suddenly gave shoppers someone to look for. The reward was personal and visible, which made the ordinary act of buying a Coke easy to turn into a small gift.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Brand-reported unit sales for the named packs. That count includes people who may already have bought Coke and does not estimate incremental demand or unique buyers.</p>
+<h3>How to measure a similar idea</h3><p>Compare named and standard packs in matched stores to estimate incremental units, basket size and margin.</p>
+
+</div>
+</div>
 </details>
-<details id="patagonia-jacket" class="case" data-kind="Commercial">
+</details>
+<details id="patagonia-jacket" class="case" data-mechanism="Reframed weakness" data-evidence="Sales trend" data-era="2010s">
 <summary>
 <span class="case-number small">10</span>
-<span><span class="case-brand small">Patagonia / 2011</span><span class="case-title">Don’t Buy This Jacket</span><span class="case-hook">On Black Friday, a retailer asked people to buy less.</span></span>
-<span class="metric-cell"><span class="row-metric">~30%</span><span class="row-label small">Company sales growth</span></span>
+<span><span class="case-brand small">Patagonia / 2011 / Reframed weakness</span><span class="case-title">Don’t Buy This Jacket</span><span class="case-hook">On Black Friday, a retailer asked people to buy less.</span></span>
+<span class="metric-cell"><span class="row-metric">~30%</span><span class="row-label small">Company sales growth</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">United States / Print &amp; brand activism</p>
-<h3>The starting point</h3><p>An outdoor brand that promoted environmental responsibility also depended on selling things. Black Friday made that tension especially visible.</p>
 <h3>The idea</h3><p>Patagonia bought a New York Times ad and detailed the environmental cost of making one of its own jackets. Its existing repair and reuse efforts gave the message practical substance.</p>
-<h3>What changed</h3><p>Patagonia invited customers to judge it by how long its products could stay in use. The brand made the contradictions of consumption part of the conversation.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>A full-page product image and a refusal to sell make the reader stop. The environmental cost in the copy gives the reversal a specific argument that a provocative headline alone could never carry.</p></div>
 <h3>The lesson</h3><p>A surprising stance can build credibility when customers can point to what the company is already doing about it.</p>
+<div class="memory take"><h3>My take</h3><p>Telling people not to buy only works when the product and the repair service back it up. Without them it&#x27;s just a clever headline.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Print artefact</span></h3>
 <a href="https://www.patagonia.com/blog/wp-content/uploads/2016/07/nyt_11-25-11.pdf">Read the original New York Times ad at Patagonia</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">~30%</p>
-<p class="proof-metric">Sales growth in the following nine months, cited by IMD</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://www.imd.org/research-knowledge/sustainability/case-studies/patagonia-s-sustainability-strategy-don-t-buy-our-products/">Read the business case · IMD</a></p>
-<p>Company sales trend in an IMD business-school case. The comparison shows what happened after the ad. It gives no estimate of how much the ad contributed or whether customers consumed less.</p>
-<h3>How to measure a similar idea</h3><p>Track repair uptake, useful product life and contribution margin alongside brand trust.</p>
 
+<p class="proof-metric">Sales growth in the following nine months, cited by IMD</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://www.imd.org/research-knowledge/sustainability/case-studies/patagonia-s-sustainability-strategy-don-t-buy-our-products/">Read the business case · IMD</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>An outdoor brand that promoted environmental responsibility also depended on selling things. Black Friday made that tension especially visible.</p>
+<h3>What changed</h3><p>Patagonia invited customers to judge it by how long its products could stay in use. The brand made the contradictions of consumption part of the conversation.</p>
+<h3>Why it’s memorable</h3><p>A full-page product image and a refusal to sell make the reader stop. The environmental cost in the copy gives the reversal a specific argument that a provocative headline alone could never carry.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Company sales trend in an IMD business-school case. The comparison shows what happened after the ad. It gives no estimate of how much the ad contributed or whether customers consumed less.</p>
+<h3>How to measure a similar idea</h3><p>Track repair uptake, useful product life and contribution margin alongside brand trust.</p>
+
+</div>
+</div>
 </details>
-<details id="volvo-epic-split" class="case" data-kind="Perception">
+</details>
+<details id="volvo-epic-split" class="case" data-mechanism="Demonstration" data-evidence="Survey" data-era="2010s">
 <summary>
 <span class="case-number small">11</span>
-<span><span class="case-brand small">Volvo Trucks / 2013</span><span class="case-title">The Epic Split</span><span class="case-hook">A stunt made a steering system impossible to forget.</span></span>
-<span class="metric-cell"><span class="row-metric">Almost ½</span><span class="row-label small">Stated purchase intent</span></span>
+<span><span class="case-brand small">Volvo Trucks / 2013 / Demonstration</span><span class="case-title">The Epic Split</span><span class="case-hook">A stunt made a steering system impossible to forget.</span></span>
+<span class="metric-cell"><span class="row-metric">Nearly half</span><span class="row-label small">Stated purchase intent</span><span class="meter s3" role="img" aria-label="Evidence strength 3 of 5: Survey"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Survey</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">Global / Online film &amp; B2B marketing</p>
-<h3>The starting point</h3><p>The precision of a heavy truck’s steering is commercially important, but technical language alone gives buyers little to remember.</p>
 <h3>The idea</h3><p>Jean-Claude Van Damme did the splits between two reversing Volvo trucks. The tension of the stunt depended on the stability that Volvo Dynamic Steering was built to deliver.</p>
-<h3>What changed</h3><p>A technical product claim became a film people chose to watch. Its entertainment value depended on the engineering claim being true.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>Van Damme moves slowly enough for viewers to see the risk build. The moment works because a slight steering wobble would break the illusion and the product claim at once.</p></div>
 <h3>The lesson</h3><p>Make the technical feature indispensable to the action. If the stunt still works without the feature, the idea is too generic.</p>
+<div class="memory take"><h3>My take</h3><p>A survey of people who saw the film will always flatter the film. I&#x27;d swap the view count for one matched-territory test on orders.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Original film</span></h3>
 <a href="https://www.youtube.com/watch?v=M7FIvfx5J10">Watch on the Volvo Trucks YouTube channel</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Perception</span></h3>
-<p class="proof-value">Almost ½</p>
-<p class="proof-metric">Of surveyed truck buyers who saw the launch films said they were more likely to choose Volvo</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://news.cision.com/volvo-trucks/r/volvo-trucks-campaign-receives-one-of-the-advertising-world-s-most-prestigious-awards,c9583101">Read the survey and series metrics · Volvo Trucks</a></p>
-<p>Brand-reported purchase intent among exposed survey respondents. Volvo also reported 100m+ YouTube views across all six Live Test films in 2014. Neither result isolates the Epic Split’s effect on orders.</p>
-<h3>How to measure a similar idea</h3><p>Measure incremental qualified enquiries, orders and margin in exposed sales territories over a full purchase cycle.</p>
+<p class="proof-value">Nearly half</p>
 
+<p class="proof-metric">Of surveyed truck buyers who saw the launch films said they were more likely to choose Volvo</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s3" role="img" aria-label="Evidence strength 3 of 5: Survey"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Survey</span></span><p>People who saw it said something changed.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://news.cision.com/volvo-trucks/r/volvo-trucks-campaign-receives-one-of-the-advertising-world-s-most-prestigious-awards,c9583101">Read the survey and series metrics · Volvo Trucks</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>The precision of a heavy truck’s steering is commercially important, but technical language alone gives buyers little to remember.</p>
+<h3>What changed</h3><p>A technical product claim became a film people chose to watch. Its entertainment value depended on the engineering claim being true.</p>
+<h3>Why it’s memorable</h3><p>Van Damme moves slowly enough for viewers to see the risk build. The moment works because a slight steering wobble would break the illusion and the product claim at once.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Brand-reported purchase intent among exposed survey respondents. Volvo also reported 100m+ YouTube views across all six Live Test films in 2014. Neither result isolates the Epic Split’s effect on orders.</p>
+<h3>How to measure a similar idea</h3><p>Measure incremental qualified enquiries, orders and margin in exposed sales territories over a full purchase cycle.</p>
+
+</div>
+</div>
 </details>
-<details id="dove-real-beauty" class="case" data-kind="Reach">
+</details>
+<details id="dove-real-beauty" class="case" data-mechanism="Exposing an assumption" data-evidence="Reach only" data-era="2010s">
 <summary>
 <span class="case-number small">12</span>
-<span><span class="case-brand small">Dove / 2013</span><span class="case-title">Real Beauty Sketches</span><span class="case-hook">Two portraits showed how harshly we can see ourselves.</span></span>
-<span class="metric-cell"><span class="row-metric">124.9m</span><span class="row-label small">Online video views</span></span>
+<span><span class="case-brand small">Dove / 2013 / Exposing an assumption</span><span class="case-title">Real Beauty Sketches</span><span class="case-hook">Two portraits showed how harshly we can see ourselves.</span></span>
+<span class="metric-cell"><span class="row-metric">124.9m</span><span class="row-label small">Online video views</span><span class="meter s2" role="img" aria-label="Evidence strength 2 of 5: Reach only"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Reach only</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">Global / Online film</p>
-<h3>The starting point</h3><p>Beauty marketing regularly gives people a standard to measure themselves against. Dove had been building a platform around questioning those standards.</p>
 <h3>The idea</h3><p>Forensic artist Gil Zamora drew women from their own descriptions and then from a stranger’s description. The reveal put the two drawings beside each other.</p>
-<h3>What changed</h3><p>The film made self-criticism visible in a way viewers could recognise and discuss. It also leaves an open question about whose judgement gets to define beauty.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The two drawings make an internal judgement visible. The film lets the portraits sit beside each other long enough for the participants’ reactions to carry the emotional weight.</p></div>
 <h3>The lesson</h3><p>Use a simple reveal that lets viewers discover the insight for themselves.</p>
+<div class="memory take"><h3>My take</h3><p>Views prove attention and nothing more. The idea deserved a published before-and-after belief study.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Brand film page</span></h3>
-<a href="https://www.dove.com/us/en/campaigns/purpose/real-beauty-sketches.html?authuser=0">Watch and explore the sketches at Dove</a>
+<a href="https://www.dove.com/us/en/campaigns/purpose/real-beauty-sketches.html">Watch and explore the sketches at Dove</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Reach</span></h3>
 <p class="proof-value">124.9m</p>
-<p class="proof-metric">Online video views by 2 November 2013</p>
-<p class="impact-citation"><span class="small">Source</span> <a href="https://www.guinnessworldrecords.com/world-records/most-viewed-online-video-advertisement">See the dated view count · Guinness World Records</a></p>
-<p>Guinness World Records cites the Unruly Viral Video Chart for the film’s view count. Views show distribution and attention. They cannot establish a sustained change in self-perception or Dove sales.</p>
-<h3>How to measure a similar idea</h3><p>Measure belief and brand-association change before exposure, afterwards and again months later, with a comparison group.</p>
 
+<p class="proof-metric">Online video views by 2 November 2013</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s2" role="img" aria-label="Evidence strength 2 of 5: Reach only"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Reach only</span></span><p>The number counts attention, not outcomes.</p></div>
+<p class="impact-citation"><span class="small">Source</span> <a href="https://www.guinnessworldrecords.com/world-records/most-viewed-online-video-advertisement">See the dated view count · Guinness World Records</a></p>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Beauty marketing regularly gives people a standard to measure themselves against. Dove had been building a platform around questioning those standards.</p>
+<h3>What changed</h3><p>The film made self-criticism visible in a way viewers could recognise and discuss. It also leaves an open question about whose judgement gets to define beauty.</p>
+<h3>Why it’s memorable</h3><p>The two drawings make an internal judgement visible. The film lets the portraits sit beside each other long enough for the participants’ reactions to carry the emotional weight.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Guinness World Records cites the Unruly Viral Video Chart for the film’s view count. Views show distribution and attention. They cannot establish a sustained change in self-perception or Dove sales.</p>
+<h3>How to measure a similar idea</h3><p>Measure belief and brand-association change before exposure, afterwards and again months later, with a comparison group.</p>
+
+</div>
+</div>
 </details>
-<details id="always-like-a-girl" class="case" data-kind="Perception">
+</details>
+<details id="always-like-a-girl" class="case" data-mechanism="Exposing an assumption" data-evidence="Survey" data-era="2010s">
 <summary>
 <span class="case-number small">13</span>
-<span><span class="case-brand small">Always / 2014</span><span class="case-title">#LikeAGirl</span><span class="case-hook">The same words could be an insult or a source of pride.</span></span>
-<span class="metric-cell"><span class="row-metric">~70%</span><span class="row-label small">Self-reported attitude shift</span></span>
+<span><span class="case-brand small">Always / 2014 / Exposing an assumption</span><span class="case-title">#LikeAGirl</span><span class="case-hook">The same words could be an insult or a source of pride.</span></span>
+<span class="metric-cell"><span class="row-metric">~70%</span><span class="row-label small">Self-reported attitude shift</span><span class="meter s3" role="img" aria-label="Evidence strength 3 of 5: Survey"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Survey</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">Global / Online film &amp; social</p>
-<h3>The starting point</h3><p>For a brand that enters many customers’ lives around puberty, the link between growing up and losing confidence gave Always a specific issue to address.</p>
 <h3>The idea</h3><p>Director Lauren Greenfield asked people to run, throw and fight ‘like a girl’. The contrast between the older participants’ caricatures and younger girls’ earnest efforts exposed the phrase as a learned put-down.</p>
-<h3>What changed</h3><p>A familiar insult became something audiences could question and reclaim. The action on screen made the reversal easy to understand without an explanation.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The same direction produces two completely different performances. Seeing the girls take the instruction seriously makes it hard to hear the phrase the old way again.</p></div>
 <h3>The lesson</h3><p>Stage a contrast that exposes the assumption inside everyday language.</p>
+<div class="memory take"><h3>My take</h3><p>It takes a phrase people say without thinking and shows them what it does. That&#x27;s exposure rather than persuasion, and it&#x27;s harder to forget.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Film archive</span></h3>
 <a href="https://www.adsoftheworld.com/campaigns/like-a-girl">Watch the original social experiment at Ads of the World</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Perception</span></h3>
 <p class="proof-value">~70%</p>
+
 <p class="proof-metric">Of women in a December 2014 study said the film changed their view of the phrase</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s3" role="img" aria-label="Evidence strength 3 of 5: Survey"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Survey</span></span><p>People who saw it said something changed.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://community.apg.org.uk/fileUploads/2015/Always_59.pdf">Read the strategy and study · Account Planning Group</a></p>
-<p>The submitted APG case reports a self-reported change among surveyed viewers, alongside roughly 60% of men. The public summary gives no measure of long-term attitude change or incremental product sales.</p>
-<h3>How to measure a similar idea</h3><p>Check whether the changed meaning endures, then separately measure brand preference and incremental trial.</p>
-<h3>Further sources</h3><ul class="sources"><li><a href="https://www.warc.com/en/article/always%3A-%23likeagirl-7dac5b562abc43068488663a7f78f12c">Read the campaign case · WARC</a></li></ul>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>For a brand that enters many customers’ lives around puberty, the link between growing up and losing confidence gave Always a specific issue to address.</p>
+<h3>What changed</h3><p>A familiar insult became something audiences could question and reclaim. The action on screen made the reversal easy to understand without an explanation.</p>
+<h3>Why it’s memorable</h3><p>The same direction produces two completely different performances. Seeing the girls take the instruction seriously makes it hard to hear the phrase the old way again.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>The submitted APG case reports a self-reported change among surveyed viewers, alongside roughly 60% of men. The public summary gives no measure of long-term attitude change or incremental product sales.</p>
+<h3>How to measure a similar idea</h3><p>Check whether the changed meaning endures, then separately measure brand preference and incremental trial.</p>
+<h3>Further sources</h3><ul class="sources"><li><a href="https://www.warc.com/en/article/always%3A-%23likeagirl-7dac5b562abc43068488663a7f78f12c">Read the campaign case · WARC</a></li></ul>
+</div>
+</div>
 </details>
-<details id="this-girl-can" class="case" data-kind="Behaviour">
+</details>
+<details id="this-girl-can" class="case" data-mechanism="Representation" data-evidence="Modelled effect" data-era="2010s">
 <summary>
 <span class="case-number small">14</span>
-<span><span class="case-brand small">Sport England / 2015</span><span class="case-title">This Girl Can</span><span class="case-hook">Exercise ads finally showed what exercise feels like.</span></span>
-<span class="metric-cell"><span class="row-metric">£35 per £1</span><span class="row-label small">Modelled social return</span></span>
+<span><span class="case-brand small">Sport England / 2015 / Representation</span><span class="case-title">This Girl Can</span><span class="case-hook">Exercise ads finally showed what exercise feels like.</span></span>
+<span class="metric-cell"><span class="row-metric">£35 per £1</span><span class="row-label small">Modelled social return</span><span class="meter s5" role="img" aria-label="Evidence strength 5 of 5: Modelled effect"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="meter-label" aria-hidden="true">Modelled effect</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">England / Film, outdoor &amp; social</p>
-<h3>The starting point</h3><p>Research identified fear of judgement as a barrier to being active. Idealised images of fitness could reinforce the very feeling Sport England wanted to remove.</p>
 <h3>The idea</h3><p>The launch showed real women sweating, moving and enjoying activity in their own way. The advertising made visible the people fitness campaigns often left out.</p>
-<h3>What changed</h3><p>Exercise looked like something people could do on their own terms. The brand made participation feel more attainable by changing who was seen taking part.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>The sweat, effort and joy normally edited out of fitness ads become the images people remember. Missy Elliott’s soundtrack helps those real moments feel exuberant rather than apologetic.</p></div>
 <h3>The lesson</h3><p>If embarrassment is the barrier, representation can be a practical intervention.</p>
+<div class="memory take"><h3>My take</h3><p>The only case here with a modelled return. It also shows how much a headline number depends on what you choose to value.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Broadcaster film archive</span></h3>
 <a href="https://www.itvmedia.co.uk/living-room-legends/sport-england---this-girl-can">Watch the 2015 launch film at ITV Media</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Behaviour</span></h3>
 <p class="proof-value">£35 per £1</p>
+
 <p class="proof-metric">Estimated return in sports and health benefits, per the IPA case</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s5" role="img" aria-label="Evidence strength 5 of 5: Modelled effect"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="meter-label" aria-hidden="true">Modelled effect</span></span><p>A model estimates the effect against a baseline.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://ipa.co.uk/knowledge/case-studies/this-girl-can-giving-judgement-the-finger-inspiring-millions-of-women-to-get-active">Read the effectiveness case · IPA</a></p>
-<p>Modelled social return on marketing investment. The same case estimates over 2m women became more active and reports that the activity gender gap narrowed from 1.79m to 1.55m. The £35 is a valuation of benefits rather than revenue or profit.</p>
-<h3>How to measure a similar idea</h3><p>Follow participation and retention over time, using a comparison group and publishing the assumptions behind any monetised benefits.</p>
-<h3>Further sources</h3><ul class="sources"><li><a href="https://www.sportengland.org/funds-and-campaigns/this-girl-can">Explore the campaign · Sport England</a></li></ul>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Research identified fear of judgement as a barrier to being active. Idealised images of fitness could reinforce the very feeling Sport England wanted to remove.</p>
+<h3>What changed</h3><p>Exercise looked like something people could do on their own terms. The brand made participation feel more attainable by changing who was seen taking part.</p>
+<h3>Why it’s memorable</h3><p>The sweat, effort and joy normally edited out of fitness ads become the images people remember. Missy Elliott’s soundtrack helps those real moments feel exuberant rather than apologetic.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Modelled social return on marketing investment. The same case estimates over 2m women became more active and reports that the activity gender gap narrowed from 1.79m to 1.55m. The £35 is a valuation of benefits rather than revenue or profit.</p>
+<h3>How to measure a similar idea</h3><p>Follow participation and retention over time, using a comparison group and publishing the assumptions behind any monetised benefits.</p>
+<h3>Further sources</h3><ul class="sources"><li><a href="https://www.sportengland.org/funds-and-campaigns/this-girl-can">Explore the campaign · Sport England</a></li></ul>
+</div>
+</div>
 </details>
-<details id="barbie-movie" class="case" data-kind="Commercial">
+</details>
+<details id="barbie-movie" class="case" data-mechanism="Participation" data-evidence="Sales trend" data-era="2020s">
 <summary>
 <span class="case-number small">15</span>
-<span><span class="case-brand small">Mattel &amp; Warner Bros. / 2023</span><span class="case-title">Barbie: The Movie Launch</span><span class="case-hook">A toy brand built a world adults wanted to visit.</span></span>
-<span class="metric-cell"><span class="row-metric">No. 1</span><span class="row-label small">2023 global box office</span></span>
+<span><span class="case-brand small">Mattel &amp; Warner Bros. / 2023 / Participation</span><span class="case-title">Barbie: The Movie Launch</span><span class="case-hook">A toy brand built a world adults wanted to visit.</span></span>
+<span class="metric-cell"><span class="row-metric">No. 1</span><span class="row-label small">2023 global box office</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span></span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
 <div class="case-inner">
 <div>
 <p class="case-meta">Global / Film, licensing &amp; partnerships</p>
-<h3>The starting point</h3><p>Mattel had a toy almost everyone could recognise. Turning that recognition into anticipation for a film required a role for people who had long since stopped playing with dolls.</p>
 <h3>The idea</h3><p>The launch made elements of the film available outside the cinema. Airbnb brought back the Malibu DreamHouse with Ken as host, giving the film’s setting an address and a bookable experience.</p>
-<h3>What changed</h3><p>Barbie could be experienced as an entertainment world and a cultural event. The partnerships gave audiences ways to take part before seeing the film.</p>
-<div class="memory"><h3>Why it’s memorable</h3><p>A recognisable pink world appeared somewhere viewers could actually visit. The DreamHouse made participation possible before opening night, and Ken as host gave the activation a story of its own.</p></div>
 <h3>The lesson</h3><p>Give each partner a distinct way to extend the same world using something it already does well.</p>
+<div class="memory take"><h3>My take</h3><p>A whole film acting as the brand platform. Brilliant to watch, but it tells marketers very little about what any single partnership earned.</p></div>
 <div class="creative-record">
 <h3>Original creative <span>Official trailer</span></h3>
 <a href="https://www.youtube.com/watch?v=pBk4NYhWNMM">Watch on the Warner Bros. Pictures YouTube channel</a>
 </div>
 </div>
-<aside class="proof" aria-label="Evidence and sources">
+<aside class="proof" aria-label="Evidence">
 <h3>Impact <span>Commercial</span></h3>
 <p class="proof-value">No. 1</p>
+
 <p class="proof-metric">Global box-office ranking among 2023 films, per Mattel</p>
+<div class="proof-strength"><span class="small">Evidence strength</span><span class="meter s4" role="img" aria-label="Evidence strength 4 of 5: Sales trend"><span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="meter-label" aria-hidden="true">Sales trend</span></span><p>Sales moved, but other causes are not separated out.</p></div>
 <p class="impact-citation"><span class="small">Source</span> <a href="https://www.sec.gov/Archives/edgar/data/63276/000162828024016677/mat-20240418.htm">Read the annual results · Mattel filing</a></p>
-<p>Commercial outcome for the film as a whole. The ranking includes the effects of the film, reviews, distribution and promotion. It cannot isolate the value of individual partnerships or incremental toy sales.</p>
-<h3>How to measure a similar idea</h3><p>Use partner-tagged referrals and market holdouts to estimate incremental ticket sales, brand lift and partner contribution.</p>
-<h3>Further sources</h3><ul class="sources"><li><a href="https://news.airbnb.com/barbies-malibu-dreamhouse-is-back-on-airbnb-but-this-time-kens-hosting">See the DreamHouse activation · Airbnb</a></li></ul>
 </aside>
 </div>
+<details class="full-case">
+<summary><span>Read the full case</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="full-inner">
+<div>
+<h3>The starting point</h3><p>Mattel had a toy almost everyone could recognise. Turning that recognition into anticipation for a film required a role for people who had long since stopped playing with dolls.</p>
+<h3>What changed</h3><p>Barbie could be experienced as an entertainment world and a cultural event. The partnerships gave audiences ways to take part before seeing the film.</p>
+<h3>Why it’s memorable</h3><p>A recognisable pink world appeared somewhere viewers could actually visit. The DreamHouse made participation possible before opening night, and Ken as host gave the activation a story of its own.</p>
+</div>
+<div>
+<h3>What the number can and can’t show</h3><p>Commercial outcome for the film as a whole. The ranking includes the effects of the film, reviews, distribution and promotion. It cannot isolate the value of individual partnerships or incremental toy sales.</p>
+<h3>How to measure a similar idea</h3><p>Use partner-tagged referrals and market holdouts to estimate incremental ticket sales, brand lift and partner contribution.</p>
+<h3>Further sources</h3><ul class="sources"><li><a href="https://news.airbnb.com/barbies-malibu-dreamhouse-is-back-on-airbnb-but-this-time-kens-hosting">See the DreamHouse activation · Airbnb</a></li></ul>
+</div>
+</div>
+</details>
 </details>
 </div>
-<p class="empty" id="empty" hidden>No campaigns match. Try clearing the search or choosing All.</p>
+<p class="empty" id="empty" hidden>No campaigns match. Try clearing the search or setting a filter back to All.</p>
 </section>
 </div>
 <section class="method" id="method" aria-labelledby="method-title"><div class="wrap">
-<p class="small">03 / The evidence</p><h2 id="method-title">What counts as impact?</h2>
+<p class="small">05 / The evidence</p><h2 id="method-title">What counts as impact?</h2>
 <div class="method-grid">
 <div><h3>Commercial outcomes</h3><p>Incremental sales estimate the sales above an expected baseline. To calculate profit ROI, subtract campaign cost from the incremental contribution it generated, then divide by campaign cost. Campaign CAC divides that cost by incremental new customers. Year-on-year sales can provide context when those inputs are unavailable.</p></div>
 <div><h3>Perception and behaviour</h3><p>Look for a documented change in what people believe, intend or do. Survey answers describe what people report. The timing, sample and comparison group determine what we can attribute to a campaign.</p></div>
 <div><h3>Reach and creative legacy</h3><p>Views and shares show how far an idea travelled. Archival records, documented repeat use and production evidence can explain why a campaign matters when outcome data are sparse. Each number keeps its original scope.</p></div>
+<div><h3>The evidence rating</h3><p>Every case gets one of five ratings, strongest first: modelled effect, sales trend, survey, reach only and archival. The rating describes the best public source, not the quality of the idea. A legacy fact, such as a date or a production number, is marked so it isn’t read as a result.</p></div>
 <div><h3>How cases earn a place</h3><p>Each case has a specific shift in how people were invited to see the brand or category, a creative decision that made it possible and a traceable source. The collection is curated and unranked. The measurement ideas in each case are proposals for a comparable brief today.</p></div>
 </div></div></section>
-<section class="wrap closing-note" aria-labelledby="why-archive"><div><p class="small">04 / The editorial purpose</p><h2 id="why-archive">Keep the work in view.</h2></div><div class="mission-copy"><p>A shot held long enough to make you uneasy. A phrase turned on its head. A package that gives a stranger a reason to talk to you. The archive preserves those decisions alongside the original work, its credits and the evidence that helps us understand what happened next.</p></div></section>
+<section class="wrap closing-note" aria-labelledby="why-archive"><div><p class="small">06 / The editorial purpose</p><h2 id="why-archive">Keep the work in view.</h2></div><div class="mission-copy"><p>A shot held long enough to make you uneasy. A phrase turned on its head. A package that gives a stranger a reason to talk to you. The archive preserves those decisions alongside the original work, its credits and the evidence that helps us understand what happened next.</p></div></section>
+<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">Coming next / Edition 02</p><h2 id="next-title">What will still be worth remembering?</h2></div><div class="next-copy"><p>Some of these campaigns were made when artificial intelligence belonged to research labs and science fiction. Now it shapes how quickly ideas are made and shared. Edition 02 will look at work from that new era and ask whether faster ideas leave better evidence behind, or less.</p><div class="scope"><p><b>What Edition 01 leaves out.</b> Ten of the fifteen cases are American brands or launched in the United States, and the archive jumps 25 years from 1959 to 1984. Edition 02 will start filling both gaps.</p></div></div></section>
 </main>
 <dialog class="film-player" aria-labelledby="film-title">
 <div class="player-top"><h2 id="film-title">Campaign film</h2><form method="dialog"><button type="submit">Close player</button></form></div>
 <div id="film-screen"></div>
 <p class="player-fallback"><a id="film-original">Open on YouTube</a></p>
 </dialog>
-<footer class="wrap foot small"><span>Brand Turning Points / Edition 01</span><a href="#top">Back to top ↑</a></footer>
+<footer class="wrap foot small"><span>Brand Turning Points / Edition 01 / Curated by Matthew Batcheldor</span><a href="#top">Back to top ↑</a></footer>
 <script>
 const filters = document.querySelector('#filters');
 const search = document.querySelector('#search');
@@ -843,10 +1071,11 @@ const result = document.querySelector('#result');
 const empty = document.querySelector('#empty');
 const buttons = Array.from(document.querySelectorAll('.filter'));
 const cases = Array.from(document.querySelectorAll('.case'));
-let selected = 'All';
+const dots = Array.from(document.querySelectorAll('.dot'));
+const selected = {mechanism: 'All', evidence: 'All', era: 'All'};
 
 function normalise(text) {
-  return text.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+  return text.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
     .replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
@@ -854,26 +1083,32 @@ function updateArchive() {
   const terms = normalise(search.value).split(' ').filter(Boolean);
   let count = 0;
   for (const entry of cases) {
-    const matchesFilter = selected === 'All' || entry.dataset.kind === selected;
+    const matchesFilter = Object.keys(selected).every(group => selected[group] === 'All' || entry.dataset[group] === selected[group]);
     const text = normalise(entry.textContent);
     entry.hidden = !(matchesFilter && terms.every(term => text.includes(term)));
     if (!entry.hidden) count += 1;
   }
+  for (const dot of dots) {
+    const entry = document.getElementById(dot.dataset.id);
+    dot.classList.toggle('out', entry.hidden);
+  }
   for (const button of buttons) {
-    button.setAttribute('aria-pressed', String(button.dataset.filter === selected));
+    button.setAttribute('aria-pressed', String(selected[button.dataset.group] === button.dataset.value));
   }
   result.textContent = count === 1 ? '1 campaign' : count + ' campaigns';
   empty.hidden = count !== 0;
 }
 
+function resetFilters() {
+  for (const group of Object.keys(selected)) selected[group] = 'All';
+  search.value = '';
+  updateArchive();
+}
+
 function openLinkedCase(hash) {
   const entry = cases.find(item => '#' + item.id === hash);
   if (!entry) return;
-  if (entry.hidden) {
-    selected = 'All';
-    search.value = '';
-    updateArchive();
-  }
+  if (entry.hidden) resetFilters();
   entry.open = true;
   entry.scrollIntoView({block:'start'});
 }
@@ -881,13 +1116,21 @@ function openLinkedCase(hash) {
 filters.hidden = false;
 for (const button of buttons) {
   button.addEventListener('click', () => {
-    selected = button.dataset.filter;
+    selected[button.dataset.group] = button.dataset.value;
     updateArchive();
+  });
+}
+for (const pick of document.querySelectorAll('.mech-pick')) {
+  pick.addEventListener('click', () => {
+    resetFilters();
+    selected.mechanism = pick.dataset.value;
+    updateArchive();
+    document.querySelector('#archive').scrollIntoView({block:'start'});
   });
 }
 search.addEventListener('input', updateArchive);
 window.addEventListener('hashchange', () => openLinkedCase(location.hash));
-for (const link of document.querySelectorAll('.feature-links .button, .film-actions a[href^="#"]')) {
+for (const link of document.querySelectorAll('main a[href^="#"]:not(.skip)')) {
   link.addEventListener('click', event => {
     if (location.hash === event.currentTarget.hash) openLinkedCase(location.hash);
   });

@@ -36,7 +36,11 @@
       "D&AD campaign record",
       "https://www.dandad.org/work/d-ad-awards-archive/balls"
     ],
-    "metric_label": "Balls in the shoot"
+    "metric_label": "Balls in the shoot",
+    "mechanism": "Demonstration",
+    "evidence_level": "Archival",
+    "stat_type": "legacy",
+    "take": "I'd still brief a demonstration this way. If the claim is visual, stop describing it and stage it."
   },
   {
     "id": "vw-think-small",
@@ -66,7 +70,11 @@
       "See the 1962 execution · The Henry Ford",
       "https://www.thehenryford.org/collections/explore/artifact/368680?AssetId=THF212470"
     ],
-    "metric_label": "Archival print execution"
+    "metric_label": "Archival print execution",
+    "mechanism": "Reframed weakness",
+    "evidence_level": "Archival",
+    "stat_type": "legacy",
+    "take": "The bravest line in the ad admits the car is small. Most brands still can't bring themselves to say the obvious thing first."
   },
   {
     "id": "apple-1984",
@@ -101,7 +109,11 @@
       "See the launch sales figure · MoMA",
       "https://www.moma.org/collection/works/3742"
     ],
-    "metric_label": "Launch units sold"
+    "metric_label": "Launch units sold",
+    "mechanism": "Exposing an assumption",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "Everyone remembers the hammer. Fewer remember that it aired nationally just once, and that scarcity became part of the legend."
   },
   {
     "id": "nike-just-do-it",
@@ -131,7 +143,11 @@
       "Read the platform history · Nike",
       "https://about.nike.com/en/newsroom/releases/nike-why-do-it-campaign"
     ],
-    "metric_label": "Platform span"
+    "metric_label": "Platform span",
+    "mechanism": "Representation",
+    "evidence_level": "Archival",
+    "stat_type": "legacy",
+    "take": "Three words that fit a marathon runner and someone who hasn't trained in years. That range is the real asset."
   },
   {
     "id": "got-milk",
@@ -143,7 +159,7 @@
     "kind": "Commercial",
     "hook": "Milk became interesting the second it ran out.",
     "before": "Consumers already knew milk was nutritious. Reminding them of that fact had little to do with the moment they actually wanted a glass.",
-    "idea": "Goodby Silverstein & Partners dramatized milk deprivation. In the Aaron Burr spot, a mouthful of peanut butter stops a history buff from answering a radio quiz he knows cold.",
+    "idea": "Goodby Silverstein & Partners dramatised milk deprivation. In the Aaron Burr spot, a mouthful of peanut butter stops a history buff from answering a radio quiz he knows cold.",
     "shift": "The campaign made milk feel like the missing piece in rituals people already enjoyed. It gave existing drinkers a reason to keep it in the fridge.",
     "metric": "+2.0%",
     "measure": "California milk volume, 740m to 755m gallons from 1993 to 1994",
@@ -161,7 +177,11 @@
       "Read the original strategy and volumes · ANA Educational Foundation",
       "https://aef.com/classroom-resources/case-histories/got-milk/"
     ],
-    "metric_label": "California milk volume"
+    "metric_label": "California milk volume",
+    "mechanism": "Demonstration",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "It sells the absence of the product. That's harder to pull off than any feature list, and it's a good argument for testing deprivation in research."
   },
   {
     "id": "zimbabwean-trillion",
@@ -191,7 +211,11 @@
       "Read the entrant’s results · Cannes entry archive",
       "https://www.sostav.ru/articles/rus/2009/columns/cannes/0020.html"
     ],
-    "metric_label": "Rollout week web hits"
+    "metric_label": "Rollout week web hits",
+    "mechanism": "Reframed weakness",
+    "evidence_level": "Reach only",
+    "stat_type": "result",
+    "take": "The note is the argument. You can't pull the message away from the worthless paper it's printed on, which is why it travelled."
   },
   {
     "id": "snickers-hunger",
@@ -226,7 +250,11 @@
       "Read the global effectiveness case · IPA",
       "https://ipa.co.uk/knowledge/case-studies/snickers-you-re-not-you-when-you-re-hungry/"
     ],
-    "metric_label": "One-year sales growth"
+    "metric_label": "One-year sales growth",
+    "mechanism": "Demonstration",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "A universal truth in a format you can recast. The faces change, the structure doesn't, and that's what let it run in 58 markets."
   },
   {
     "id": "old-spice",
@@ -256,7 +284,11 @@
       "Watch the creative and read the case · Wieden+Kennedy",
       "https://www.wk.com/work/old-spice-smell-like-a-man-man/"
     ],
-    "metric_label": "Body wash sales growth"
+    "metric_label": "Body wash sales growth",
+    "mechanism": "Participation",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "The response videos get the credit, but the sales number came first. I'd want to know how much of the legend belongs to the sequel."
   },
   {
     "id": "share-a-coke",
@@ -286,7 +318,11 @@
       "Read the Australian launch story · Coca-Cola",
       "https://www.coca-colacompany.com/about-us/history/how-a-campaign-got-its-start-down-under"
     ],
-    "metric_label": "Named packs sold"
+    "metric_label": "Named packs sold",
+    "mechanism": "Participation",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "The name on the bottle did the media's job. Every fridge became a hunt for someone you knew."
   },
   {
     "id": "patagonia-jacket",
@@ -316,7 +352,11 @@
       "Read the business case · IMD",
       "https://www.imd.org/research-knowledge/sustainability/case-studies/patagonia-s-sustainability-strategy-don-t-buy-our-products/"
     ],
-    "metric_label": "Company sales growth"
+    "metric_label": "Company sales growth",
+    "mechanism": "Reframed weakness",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "Telling people not to buy only works when the product and the repair service back it up. Without them it's just a clever headline."
   },
   {
     "id": "volvo-epic-split",
@@ -330,7 +370,7 @@
     "before": "The precision of a heavy truck’s steering is commercially important, but technical language alone gives buyers little to remember.",
     "idea": "Jean-Claude Van Damme did the splits between two reversing Volvo trucks. The tension of the stunt depended on the stability that Volvo Dynamic Steering was built to deliver.",
     "shift": "A technical product claim became a film people chose to watch. Its entertainment value depended on the engineering claim being true.",
-    "metric": "Almost ½",
+    "metric": "Nearly half",
     "measure": "Of surveyed truck buyers who saw the launch films said they were more likely to choose Volvo",
     "evidence": "Brand-reported purchase intent among exposed survey respondents. Volvo also reported 100m+ YouTube views across all six Live Test films in 2014. Neither result isolates the Epic Split’s effect on orders.",
     "lesson": "Make the technical feature indispensable to the action. If the stunt still works without the feature, the idea is too generic.",
@@ -346,7 +386,11 @@
       "Read the survey and series metrics · Volvo Trucks",
       "https://news.cision.com/volvo-trucks/r/volvo-trucks-campaign-receives-one-of-the-advertising-world-s-most-prestigious-awards,c9583101"
     ],
-    "metric_label": "Stated purchase intent"
+    "metric_label": "Stated purchase intent",
+    "mechanism": "Demonstration",
+    "evidence_level": "Survey",
+    "stat_type": "result",
+    "take": "A survey of people who saw the film will always flatter the film. I'd swap the view count for one matched-territory test on orders."
   },
   {
     "id": "dove-real-beauty",
@@ -370,13 +414,17 @@
     "creative": {
       "medium": "Brand film page",
       "label": "Watch and explore the sketches at Dove",
-      "url": "https://www.dove.com/us/en/campaigns/purpose/real-beauty-sketches.html?authuser=0"
+      "url": "https://www.dove.com/us/en/campaigns/purpose/real-beauty-sketches.html"
     },
     "impact_source": [
       "See the dated view count · Guinness World Records",
       "https://www.guinnessworldrecords.com/world-records/most-viewed-online-video-advertisement"
     ],
-    "metric_label": "Online video views"
+    "metric_label": "Online video views",
+    "mechanism": "Exposing an assumption",
+    "evidence_level": "Reach only",
+    "stat_type": "result",
+    "take": "Views prove attention and nothing more. The idea deserved a published before-and-after belief study."
   },
   {
     "id": "always-like-a-girl",
@@ -411,7 +459,11 @@
       "Read the strategy and study · Account Planning Group",
       "https://community.apg.org.uk/fileUploads/2015/Always_59.pdf"
     ],
-    "metric_label": "Self-reported attitude shift"
+    "metric_label": "Self-reported attitude shift",
+    "mechanism": "Exposing an assumption",
+    "evidence_level": "Survey",
+    "stat_type": "result",
+    "take": "It takes a phrase people say without thinking and shows them what it does. That's exposure rather than persuasion, and it's harder to forget."
   },
   {
     "id": "this-girl-can",
@@ -446,7 +498,11 @@
       "Read the effectiveness case · IPA",
       "https://ipa.co.uk/knowledge/case-studies/this-girl-can-giving-judgement-the-finger-inspiring-millions-of-women-to-get-active"
     ],
-    "metric_label": "Modelled social return"
+    "metric_label": "Modelled social return",
+    "mechanism": "Representation",
+    "evidence_level": "Modelled effect",
+    "stat_type": "result",
+    "take": "The only case here with a modelled return. It also shows how much a headline number depends on what you choose to value."
   },
   {
     "id": "barbie-movie",
@@ -481,6 +537,10 @@
       "Read the annual results · Mattel filing",
       "https://www.sec.gov/Archives/edgar/data/63276/000162828024016677/mat-20240418.htm"
     ],
-    "metric_label": "2023 global box office"
+    "metric_label": "2023 global box office",
+    "mechanism": "Participation",
+    "evidence_level": "Sales trend",
+    "stat_type": "result",
+    "take": "A whole film acting as the brand platform. Brilliant to watch, but it tells marketers very little about what any single partnership earned."
   }
 ]
