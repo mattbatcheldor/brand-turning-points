@@ -151,7 +151,7 @@ def render_cards(campaigns, notes, test_heading, prefix=''):
 <h3>The lesson</h3><p>{e(c['lesson'])}</p>
 <div class="memory take"><h3>My take</h3><p>{e(c['take'])}</p></div>
 <div class="creative-record">
-<h3>Original creative <span>{e(creative['medium'])}</span></h3>
+<h3>{e(creative.get('heading', 'Original creative'))} <span>{e(creative['medium'])}</span></h3>
 {creative_link}{image_credit}
 </div>
 </div>

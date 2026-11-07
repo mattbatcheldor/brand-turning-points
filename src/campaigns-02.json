@@ -16,12 +16,17 @@
     "evidence": "Call duration rose in step with the campaign, and the Central region showed what happened without it. Very few national campaigns are tested this way. The public summary doesn’t say whether the £297m is revenue or profit.",
     "lesson": "If you want proof, hold something back. One region without the ads tells you more than a year of tracking.",
     "test": "BT kept the campaign off air in the Central ITV region. Comparing calls there with the rest of the country isolated what the advertising added.",
-    "links": [],
+    "links": [
+      [
+        "View the BT materials in the Telephonic Youth exhibition",
+        "https://telephonicyouth.co.uk/exhibitions/"
+      ]
+    ],
     "memorable": "Casting Hoskins gave the campaign a familiar, down-to-earth voice. The line is short enough to say back in conversation, which suits a campaign about conversation.",
     "creative": {
-      "medium": "Archive",
-      "label": "Search for the films at the History of Advertising Trust",
-      "url": "https://www.hatads.org.uk/"
+      "medium": "Archive film",
+      "label": "Watch BT’s Private Payphone (1994), from Telephonic Youth",
+      "url": "https://telephonicyouth.co.uk/wp-content/uploads/2024/07/018.mp4"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -33,7 +38,15 @@
     "stat_type": "result",
     "take": "Leaving a whole ITV region dark takes nerve, and it’s why this paper won the Grand Prix. Most brands still won’t give up the reach to learn the answer.",
     "method": "Control region",
-    "credit": "IPA 1996 · Grand Prix · Abbott Mead Vickers BBDO for British Telecom"
+    "credit": "IPA 1996 · Grand Prix · Abbott Mead Vickers BBDO for British Telecom",
+    "image": {
+      "src": "assets/edition-02/bt-good-to-talk.webp",
+      "alt": "Bob Hoskins looking over his shoulder in a dark cinema",
+      "credit": "BT, Private Payphone (1994) · Telephonic Youth exhibition",
+      "source": "https://telephonicyouth.co.uk/exhibitions/",
+      "width": 702,
+      "height": 576
+    }
   },
   {
     "id": "kitkat-have-a-break",
@@ -60,9 +73,9 @@
     ],
     "memorable": "The line is an instruction. Six words tell you what to do and give you permission to do it, which worked in a 1958 canteen and still works on a phone screen.",
     "creative": {
-      "medium": "Archive film",
-      "label": "Watch ‘Kit Kat: Meccano’ (1969) free on BFI Player",
-      "url": "https://player.bfi.org.uk/free/film/watch-kit-kat-meccano-1969-online"
+      "medium": "Archive reel",
+      "label": "Watch the 1955–59 Rowntree’s adverts at the Yorkshire Film Archive",
+      "url": "https://www.yfanefa.com/record/7835"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -74,7 +87,16 @@
     "stat_type": "result",
     "take": "Most brand lines last a few years. This one is older than colour television in Britain, and it now has a profit figure attached.",
     "method": "Long-run value estimate",
-    "credit": "IPA 2026 · Commendation · VML and OpenMind UK for Nestlé"
+    "credit": "IPA 2026 · Commendation · VML and OpenMind UK for Nestlé",
+    "image": {
+      "src": "assets/edition-02/kitkat-have-a-break.webp",
+      "alt": "Vintage Rowntree’s advert showing a snapped KitKat and the Have a Break line",
+      "credit": "Rowntree’s print advert · KitKat’s brand history",
+      "source": "https://www.kitkat.co.id/sejarah-kitkat",
+      "width": 576,
+      "height": 720,
+      "contain": true
+    }
   },
   {
     "id": "andrex-puppy",
@@ -97,13 +119,17 @@
       [
         "See the WARC record",
         "https://www.warc.com/content/article/ipa/andrex-sold-on-a-pup/en-gb/4427"
+      ],
+      [
+        "Watch a 1974 puppy film on J. Walter Thompson’s channel",
+        "https://www.youtube.com/watch?v=jNoyMBaAoZg"
       ]
     ],
     "memorable": "The regulators’ objection created the brand’s best asset. A child making that mess looks naughty. A puppy making the same mess is irresistible.",
     "creative": {
-      "medium": "Agency upload",
-      "label": "Watch a 1974 puppy film on J. Walter Thompson’s channel",
-      "url": "https://www.youtube.com/watch?v=jNoyMBaAoZg"
+      "medium": "Archive film",
+      "label": "Watch the 1970s Softer Stronger Longer advert at the History of Advertising Trust",
+      "url": "https://www.hatads.org.uk/catalogue/record/837c9dca-106b-40a3-b525-0c37f1d1e311"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -115,7 +141,15 @@
     "stat_type": "result",
     "take": "The regulator who blocked the little girl did Andrex a huge favour. Constraints often push you to the better idea.",
     "method": "Share trend and blind tests",
-    "credit": "IPA 1992 · First Prize · J. Walter Thompson for Scott"
+    "credit": "IPA 1992 · First Prize · J. Walter Thompson for Scott",
+    "image": {
+      "src": "assets/edition-02/andrex-puppy.webp",
+      "alt": "A Labrador puppy pulling a trail of toilet tissue through a doorway",
+      "credit": "Andrex and J. Walter Thompson, Softer Stronger Longer (1970s) · History of Advertising Trust",
+      "source": "https://www.hatads.org.uk/catalogue/record/837c9dca-106b-40a3-b525-0c37f1d1e311",
+      "width": 640,
+      "height": 480
+    }
   },
   {
     "id": "krona-margarine",
@@ -142,9 +176,9 @@
     ],
     "memorable": "The whole launch rests on an implication. The viewer makes the comparison the advertiser wasn’t allowed to make.",
     "creative": {
-      "medium": "Archive",
-      "label": "Search for the films at the History of Advertising Trust",
-      "url": "https://www.hatads.org.uk/"
+      "medium": "Archive film",
+      "label": "Watch the 1980 Krona advert at TVARK",
+      "url": "https://tvark.org/krona-margarine"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -156,7 +190,15 @@
     "stat_type": "legacy",
     "take": "The first IPA winner had no modelled return, just share data and surveys. Most of this page shows how far that bar has risen since 1980.",
     "method": "Regional launch, share data and surveys",
-    "credit": "IPA 1980 · First Prize · Davidson Pearce for Van den Berghs"
+    "credit": "IPA 1980 · First Prize · Davidson Pearce for Van den Berghs",
+    "image": {
+      "src": "assets/edition-02/krona-margarine.webp",
+      "alt": "A man talks to the camera from the front seat of a car",
+      "credit": "Krona television advert (1980) · TVARK",
+      "source": "https://tvark.org/krona-margarine",
+      "width": 320,
+      "height": 240
+    }
   },
   {
     "id": "dft-drink-drive",
@@ -183,7 +225,7 @@
     ],
     "memorable": "‘Pudding’, from 1993, cuts from a family bringing in a blazing Christmas pudding to a phone call from the police. The end line becomes ‘Drinking and driving wrecks Christmas’.",
     "creative": {
-      "medium": "Official film",
+      "medium": "Official retrospective",
       "label": "Watch 50 years of drink-drive films on the THINK! channel",
       "url": "https://www.youtube.com/watch?v=Z6WjChgwSes"
     },
@@ -197,7 +239,15 @@
     "stat_type": "result",
     "take": "This is the case I’d show anyone who says advertising can’t be measured. It counts lives, and it shows the return rising and falling as the strategy changed.",
     "method": "Casualty model",
-    "credit": "IPA 2012 · Gold · Leo Burnett for the Department for Transport"
+    "credit": "IPA 2012 · Gold · Leo Burnett for the Department for Transport",
+    "image": {
+      "src": "assets/edition-02/dft-drink-drive.webp",
+      "alt": "A barman looks straight at the camera in a dimly lit pub",
+      "credit": "THINK! road safety, 50 Years of Drink Drive Campaigns · official YouTube thumbnail",
+      "source": "https://www.youtube.com/watch?v=Z6WjChgwSes",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "stella-reassuringly-expensive",
@@ -224,9 +274,9 @@
     ],
     "memorable": "Brands usually explain a high price away. This one put it in the headline and let drinkers feel clever for paying it.",
     "creative": {
-      "medium": "Archive",
-      "label": "Search for the press ads at the History of Advertising Trust",
-      "url": "https://www.hatads.org.uk/"
+      "medium": "Archive film",
+      "label": "Watch Balcony (1985–86) at the History of Advertising Trust",
+      "url": "https://www.hatads.org.uk/catalogue/record/b103ee88-4df2-426f-921c-82025d0e15c8"
     },
     "impact_source": [
       "Read the 1980s case summary · WARC",
@@ -238,7 +288,16 @@
     "stat_type": "result",
     "take": "The blind-test detail is the whole case. Take the name away and nobody prefers it. Put the price back and they pay more. That gap is what a brand is worth.",
     "method": "Profit estimate, later econometrics",
-    "credit": "IPA 1992 · Lowe Howard-Spink for Whitbread"
+    "credit": "IPA 1992 · Lowe Howard-Spink for Whitbread",
+    "image": {
+      "src": "assets/edition-02/stella-reassuringly-expensive.webp",
+      "alt": "Stella Artois print advert with rows of beer glasses and the headline My shout, he whispered",
+      "credit": "Stella Artois and Lowe Howard-Spink, My shout, he whispered · reproduced by WordDept",
+      "source": "https://worddept.com/blog/stella-artois-print-ad-blog",
+      "width": 554,
+      "height": 363,
+      "contain": true
+    }
   },
   {
     "id": "marmite-love-it-hate-it",
@@ -260,9 +319,9 @@
     "links": [],
     "memorable": "Few brand lines become figures of speech. People call a film or a politician ‘Marmite’ without a thought of toast.",
     "creative": {
-      "medium": "Archive",
-      "label": "Search for the films at the History of Advertising Trust",
-      "url": "https://www.hatads.org.uk/"
+      "medium": "Archive film",
+      "label": "Watch I Hate (1996–97) at the History of Advertising Trust",
+      "url": "https://www.hatads.org.uk/catalogue/record/d0ef66c2-1c1d-4878-acc0-b474b4856fc5"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -274,7 +333,15 @@
     "stat_type": "result",
     "take": "I’d have bet against a client approving an ad that gives equal time to people who hate the product. The model says it was one of the best decisions Marmite ever made.",
     "method": "Econometric model",
-    "credit": "IPA 2002 · Silver · adam&eveDDB for Unilever Bestfoods"
+    "credit": "IPA 2002 · Silver · adam&eveDDB for Unilever Bestfoods",
+    "image": {
+      "src": "assets/edition-02/marmite-love-it-hate-it.webp",
+      "alt": "A Marmite jar beside a hand spreading Marmite on toast",
+      "credit": "Marmite and BMP DDB, I Hate (1996–97) · History of Advertising Trust",
+      "source": "https://www.hatads.org.uk/catalogue/record/d0ef66c2-1c1d-4878-acc0-b474b4856fc5",
+      "width": 640,
+      "height": 378
+    }
   },
   {
     "id": "specsavers-shouldve",
@@ -310,7 +377,15 @@
     "stat_type": "result",
     "take": "I like that this came from an in-house team. The best line in British optics was written by people who knew the business inside out.",
     "method": "Thirty-year profit estimate",
-    "credit": "IPA 2014 · Gold · Manning Gottlieb OMD for Specsavers"
+    "credit": "IPA 2014 · Gold · Manning Gottlieb OMD for Specsavers",
+    "image": {
+      "src": "assets/edition-02/specsavers-shouldve.webp",
+      "alt": "Black-and-white thumbnail from Sheepdog showing a sheep and a sheepdog",
+      "credit": "Specsavers, Sheepdog · official YouTube thumbnail",
+      "source": "https://www.youtube.com/watch?v=fQlKewo-kQY",
+      "width": 480,
+      "height": 270
+    }
   },
   {
     "id": "australian-lamb-day",
@@ -346,7 +421,15 @@
     "stat_type": "result",
     "take": "Inventing a tradition sounds like a fantasy brief. It worked because the ads were funny enough that people wanted to join in.",
     "method": "Ten-year ROMI",
-    "credit": "IPA case, 2010 · Meat & Livestock Australia"
+    "credit": "IPA case, 2010 · Meat & Livestock Australia",
+    "image": {
+      "src": "assets/edition-02/australian-lamb-day.webp",
+      "alt": "Sam Kekovich delivering his address in front of an Australian flag",
+      "credit": "Meat & Livestock Australia and BMF, We Love Our Lamb (2005) · LambAustraliaDay on YouTube",
+      "source": "https://www.youtube.com/watch?v=Z0wegCDBts8",
+      "width": 480,
+      "height": 360
+    }
   },
   {
     "id": "john-lewis-long-wait",
@@ -382,7 +465,15 @@
     "stat_type": "result",
     "take": "Everyone remembers the tears. Fewer people know the paper put a profit figure on them, and that the staff shared in it.",
     "method": "Incremental sales and profit estimate",
-    "credit": "IPA 2012 · Gold · adam&eveDDB and Manning Gottlieb OMD for John Lewis"
+    "credit": "IPA 2012 · Gold · adam&eveDDB and Manning Gottlieb OMD for John Lewis",
+    "image": {
+      "src": "assets/edition-02/john-lewis-long-wait.webp",
+      "alt": "A boy alone on a swing in The Long Wait",
+      "credit": "John Lewis, The Long Wait (2011) · official YouTube thumbnail",
+      "source": "https://www.youtube.com/watch?v=pSLOnR1s74o",
+      "width": 800,
+      "height": 340
+    }
   },
   {
     "id": "tide-naturals",
@@ -409,9 +500,9 @@
     ],
     "memorable": "It turns a chore into something worth noticing. The product becomes the sign that the husband sees the work.",
     "creative": {
-      "medium": "Original films",
-      "label": "No official copy of the 2012 to 2013 films found online",
-      "url": ""
+      "medium": "Archive upload",
+      "label": "Watch a Haryanvi Tide Naturals advert on YouTube",
+      "url": "https://www.youtube.com/watch?v=SSjliwctrsQ"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -423,7 +514,15 @@
     "stat_type": "result",
     "take": "Commercially sharp, and it put the real buyer in the picture. I’d still like to see it remade with the husband doing the washing.",
     "method": "ROMI estimate",
-    "credit": "IPA 2014 · Leo Burnett India for Procter & Gamble"
+    "credit": "IPA 2014 · Leo Burnett India for Procter & Gamble",
+    "image": {
+      "src": "assets/edition-02/tide-naturals.webp",
+      "alt": "A woman holding a green Tide Naturals packet beside her husband",
+      "credit": "P&G and Leo Burnett India, Haryanvi Tide Naturals advert · YouTube upload cited by Hindustan Times",
+      "source": "https://www.hindustantimes.com/tv/this-women-s-day-we-count-down-the-5-most-sexist-ads-still-playing-on-tv/story-V0DdnqhWKSwlcYrKgpjoZP.html",
+      "width": 469,
+      "height": 261
+    }
   },
   {
     "id": "spies-do-it-for-denmark",
@@ -459,7 +558,15 @@
     "stat_type": "result",
     "take": "Cheeky, cheap and measured. Proof isn’t only for brands with big budgets.",
     "method": "Revenue return estimate",
-    "credit": "IPA 2016 · Bronze · Robert/Boisen & Like-minded for Spies Travels"
+    "credit": "IPA 2016 · Bronze · Robert/Boisen & Like-minded for Spies Travels",
+    "image": {
+      "src": "assets/edition-02/spies-do-it-for-denmark.webp",
+      "alt": "A woman smiling in the doorway of a hotel room",
+      "credit": "Spies Rejser, Do It For Denmark! (2014) · official YouTube thumbnail",
+      "source": "https://www.youtube.com/watch?v=vrO3TfJc9Qw",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "cherries-from-chile",
@@ -486,9 +593,10 @@
     ],
     "memorable": "It borrows a colour that already carries meaning in the market. The fruit didn’t change. What it said when you gave it did.",
     "creative": {
-      "medium": "Original campaign",
-      "label": "No official copy of the campaigns found online",
-      "url": ""
+      "medium": "Case film",
+      "label": "Watch the ASOEX case film on the IPA’s Vimeo channel",
+      "url": "https://vimeo.com/756703855",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -500,7 +608,16 @@
     "stat_type": "result",
     "take": "This was the case I knew least about, and it’s one of the cleverest. A trade body found a cultural moment and built four years around it.",
     "method": "Incremental revenue estimate",
-    "credit": "IPA 2022 · Bronze · ASOEX for the Chilean Fresh Fruit Exporters Association"
+    "credit": "IPA 2022 · Bronze · ASOEX for the Chilean Fresh Fruit Exporters Association",
+    "image": {
+      "src": "assets/edition-02/cherries-from-chile.webp",
+      "alt": "A woman holding a bowl of cherries against red and white circles in a Cherries from Chile promotion",
+      "credit": "Cherries from Chile, 2019–20 China campaign artwork · Produce Report",
+      "source": "https://www.producereport.com/article/exclusive-inside-201920-cherries-chile-promotional-campaign",
+      "width": 800,
+      "height": 449,
+      "contain": true
+    }
   },
   {
     "id": "ichnusa-anima-sarda",
@@ -541,7 +658,15 @@
     "stat_type": "result",
     "take": "The fire engine is my favourite detail in this edition. It is hard to accuse a brand of faking its roots when it is helping the island fight fires.",
     "method": "Profit return estimate",
-    "credit": "IPA 2024 · LePub for Heineken"
+    "credit": "IPA 2024 · LePub for Heineken",
+    "image": {
+      "src": "assets/edition-02/ichnusa-anima-sarda.webp",
+      "alt": "A black-and-white close-up of a face with Italian text from Anima Sarda",
+      "credit": "Birra Ichnusa, Anima Sarda (2017) · official YouTube thumbnail",
+      "source": "https://www.youtube.com/watch?v=F_Z0vR9mkxk",
+      "width": 480,
+      "height": 270
+    }
   },
   {
     "id": "o2-germany",
@@ -582,6 +707,14 @@
     "stat_type": "result",
     "take": "Telecoms ads usually shout about coverage maps. Borrowing the internet’s best clips and claiming the reaction is a smarter way to say the same thing.",
     "method": "ROMI estimate",
-    "credit": "IPA 2020 · BBDO Germany and Telefónica Germany"
+    "credit": "IPA 2020 · BBDO Germany and Telefónica Germany",
+    "image": {
+      "src": "assets/edition-02/o2-germany.webp",
+      "alt": "Friends watching a phone, framed by an O2 signal indicator",
+      "credit": "Telefónica Germany and BBDO, Für mehr O in deinem Leben (2019) · 48k studio upload",
+      "source": "https://www.youtube.com/watch?v=XhmEmAi19Tc",
+      "width": 800,
+      "height": 450
+    }
   }
 ]
