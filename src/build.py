@@ -176,13 +176,15 @@ def render_cards(campaigns, notes, test_heading, prefix=''):
         image_credit = f'\n<p class="image-credit">Image: <a href="{e(image["source"])}">{e(image["credit"])}</a></p>' if image else ''
         thumbnail = campaign_image(c, 'case-thumbnail', prefix) or proof_tile(c)
         role_attr = f' data-role="{e(c["data_role"])}"' if c.get('data_role') else ''
+        data_line = ''
         if c.get('data_source'):
+            data_line = f'<span class="case-data"><strong>{e(c["data_role"])}</strong> · {e(c["data_source"])}</span>'
             method += f'\n<p class="method-tag"><span class="small">The data</span> {e(c["data_source"])}</p>'
         cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}"{role_attr}>
 <summary>
 <span class="case-number small">{i:02d}</span>
 {thumbnail}
-<span class="case-heading"><span class="case-brand small">{e(c['brand'])} / {c['year']} / {e(c['mechanism'])}</span><span class="case-title">{e(c['title'])}</span><span class="case-hook">{e(c['hook'])}</span></span>
+<span class="case-heading"><span class="case-brand small">{e(c['brand'])} / {c['year']} / {e(c['mechanism'])}</span><span class="case-title">{e(c['title'])}</span><span class="case-hook">{e(c['hook'])}</span>{data_line}</span>
 <span class="metric-cell{' legacy' if legacy else ''}"><span class="row-metric">{e(c['metric'])}</span><span class="row-label small">{e(c["metric_label"])}{' · legacy fact' if legacy else ''}</span>{meter(c['evidence_level'])}</span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
@@ -317,7 +319,8 @@ def render_screenings(campaigns, screening, prefix=''):
     for case_id, note, drawn in screening:
         c = next(entry for entry in campaigns if entry['id'] == case_id)
         creative = c['creative']
-        video = creative['url'].partition('https://www.youtube.com/watch?v=')[2]
+        url = creative.get('screening_url', creative['url'])
+        video = url.partition('https://www.youtube.com/watch?v=')[2]
         player = ''
         if video:
             player = f'<button class="play-film small" type="button" data-video="{e(video)}" data-title="{e(c["title"])}" hidden>Play here</button>'
@@ -328,7 +331,7 @@ def render_screenings(campaigns, screening, prefix=''):
 <div class="film-heading"><p class="small">{e(c['brand'])} / {c['year']}</p><h3>{e(c['title'])}</h3></div>
 <p>{e(note)}</p>
 <div class="film-actions">
-{player}<a href="{e(creative['url'])}">{'Watch on YouTube' if video else 'Watch at HAT'}</a>
+{player}<a href="{e(url)}">{'Watch on YouTube' if video else 'Watch at HAT'}</a>
 <a href="#{case_id}">Read the case</a>
 </div>
 </div>
@@ -475,7 +478,7 @@ EDITIONS = [
             'Sales trend': 'Sales or behaviour moved, but other causes are not separated out.',
         },
         'screening': (
-            ('spotify-wrapped', 'How the yearly recap gets made, from the data to the cards people share.', 'cards'),
+            ('spotify-wrapped', 'Spotify goes behind the scenes of its 2020 recap, from the data to the cards people share.', 'cards'),
             ('british-airways-look-up', 'One plane, one billboard and a child pointing at the sky.', 'sky'),
             ('hellmanns-recipe-receipt', 'Watch the till do the cooking.', 'till'),
             ('snickers-hungerithm', 'Notice who is setting the price.', 'mood'),

@@ -20,13 +20,19 @@
       [
         "Read the 2024 effectiveness summary · WARC",
         "https://www.warc.com/en/article/spotify%3A-wrapped-on-platform-experience-156aa87b02d6450cb447f4646965a72f"
+      ],
+      [
+        "Watch Spotify’s 2020 Wrapped behind-the-scenes film",
+        "https://www.youtube.com/watch?v=hpwv5tiQGKk"
       ]
     ],
     "memorable": "It flatters the listener. The data says something about you, and sharing it says something about you too.",
     "creative": {
-      "medium": "Official film",
-      "label": "Watch ‘How It’s Made: Wrapped’ on Spotify’s channel",
-      "url": "https://www.youtube.com/watch?v=hpwv5tiQGKk"
+      "medium": "Case film",
+      "label": "Watch Spotify’s 2016 Wrapped film at The One Show",
+      "url": "https://www.oneclub.org/awards/theoneshow/-award/25327/2016-wrapped/",
+      "screening_url": "https://www.youtube.com/watch?v=hpwv5tiQGKk",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the Cannes effectiveness summary · WARC",
@@ -40,7 +46,15 @@
     "method": "Year-on-year subscription trend",
     "credit": "Cannes Creative Effectiveness entry, 2018 · Spotify",
     "data_role": "Data as the show",
-    "data_source": "Each listener’s year of streaming"
+    "data_source": "Each listener’s year of streaming",
+    "image": {
+      "src": "assets/edition-03/spotify-wrapped.webp",
+      "alt": "Red and turquoise Spotify email headed Your 2016, wrapped",
+      "credit": "Spotify, 2016 Wrapped recap email · still from The One Show entry",
+      "source": "https://www.oneclub.org/awards/theoneshow/-award/25327/2016-wrapped/",
+      "width": 800,
+      "height": 447
+    }
   },
   {
     "id": "pepsi-challenge",
@@ -59,12 +73,17 @@
     "evidence": "Pepsi’s claims rest on its own tests, run single-blind, so the people serving the colas knew which was which. Later research found that tasters tend to prefer the sweeter drink after a single sip, which suits Pepsi. No reliable public figure isolates the challenge’s effect on sales.",
     "lesson": "A claim built on data is only as strong as the method behind it, and rivals will check the method.",
     "test": "There is no published effectiveness paper. The record is the taste test itself and the arguments about how it was run.",
-    "links": [],
+    "links": [
+      [
+        "Watch an earlier US Pepsi Challenge advert (1978 archive upload)",
+        "https://www.youtube.com/watch?v=2Q_ZG1fAaSs"
+      ]
+    ],
     "memorable": "It turns the viewer into the judge. You can’t watch it without wondering which cup you would pick.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the 1970s films found online",
-      "url": ""
+      "medium": "Archive film",
+      "label": "Watch Challenge John (UK, 1983) at the History of Advertising Trust",
+      "url": "https://www.hatads.org.uk/catalogue/record/d3fbc0f6-ff0a-4512-861f-63a641171c6a"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -78,7 +97,15 @@
     "method": "The company’s own taste tests",
     "credit": "PepsiCo · running since 1975",
     "data_role": "Data as the claim",
-    "data_source": "Blind taste-test results"
+    "data_source": "Blind taste-test results",
+    "image": {
+      "src": "assets/edition-03/pepsi-challenge.webp",
+      "alt": "Two unmarked cola cups on a Pepsi Challenge table with a crowd behind it",
+      "credit": "Pepsi, Challenge John (UK, 1983) · History of Advertising Trust",
+      "source": "https://www.hatads.org.uk/catalogue/record/d3fbc0f6-ff0a-4512-861f-63a641171c6a",
+      "width": 720,
+      "height": 576
+    }
   },
   {
     "id": "duracell-lasts-longer",
@@ -97,12 +124,17 @@
     "evidence": "Penetration rose from 24% in 1980 to 61% in 1989, and share from 4% to more than 30%, with a price premium held throughout. The paper reports trends and awareness rather than a modelled estimate of the advertising’s own effect.",
     "lesson": "If your product wins a test, make the test the advertising.",
     "test": "The 1990 paper tracks penetration, share, awareness and price across a decade, and uses 1989 research to show the campaign hadn’t worn out.",
-    "links": [],
+    "links": [
+      [
+        "Watch a later UK race ad on Duracell’s channel",
+        "https://www.youtube.com/watch?v=KvfbzwNzaWs"
+      ]
+    ],
     "memorable": "It turns an invisible quality, how long a battery lasts, into something you watch happen.",
     "creative": {
-      "medium": "Official film, later",
-      "label": "Watch a later UK race ad on Duracell’s channel",
-      "url": "https://www.youtube.com/watch?v=KvfbzwNzaWs"
+      "medium": "Archive upload",
+      "label": "Watch the 1979 drumming-bunnies advert on YouTube",
+      "url": "https://www.youtube.com/watch?v=43VhRKJX_sk"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -116,7 +148,15 @@
     "method": "Penetration and share trend",
     "credit": "IPA 1990 · Duracell UK",
     "data_role": "Data as the claim",
-    "data_source": "Battery performance tests"
+    "data_source": "Battery performance tests",
+    "image": {
+      "src": "assets/edition-03/duracell-lasts-longer.webp",
+      "alt": "Rows of pink Duracell bunnies playing drums",
+      "credit": "Duracell drumming-bunnies commercial (1979) · Bionic Disco archive upload",
+      "source": "https://www.youtube.com/watch?v=43VhRKJX_sk",
+      "width": 480,
+      "height": 360
+    }
   },
   {
     "id": "boots-advantage-card",
@@ -138,9 +178,10 @@
     "links": [],
     "memorable": "It made a data relationship feel like a reward. Members saw points, and Boots saw what they bought.",
     "creative": {
-      "medium": "Archive",
-      "label": "Search for the films at the History of Advertising Trust",
-      "url": "https://www.hatads.org.uk/"
+      "medium": "Later brand film",
+      "label": "Watch Boots’ 25th-anniversary Advantage Card advert (2022)",
+      "url": "https://www.youtube.com/watch?v=k8KP9rpterk",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -154,7 +195,16 @@
     "method": "Card share of sales",
     "credit": "IPA 1998 · 1 Star · J. Walter Thompson for Boots The Chemist",
     "data_role": "Data as the product",
-    "data_source": "Members’ shopping records"
+    "data_source": "Members’ shopping records",
+    "image": {
+      "src": "assets/edition-03/boots-advantage-card.webp",
+      "alt": "Blue and multicoloured launch artwork showing Boots Advantage Cards and shopping illustrations",
+      "credit": "Boots Advantage Card launch artwork (1997) · Boots Heritage",
+      "source": "https://www.boots-uk.com/about-boots/company-information/boots-heritage/",
+      "width": 460,
+      "height": 349,
+      "contain": true
+    }
   },
   {
     "id": "garnier-ultralift-challenge",
@@ -181,9 +231,9 @@
     ],
     "memorable": "The Wrinkle Reader makes the customer the scientist.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the films found online",
-      "url": ""
+      "medium": "Archive upload",
+      "label": "Watch the 2012 UltraLift Challenge advert with Davina McCall on YouTube",
+      "url": "https://www.youtube.com/watch?v=h6k1KpHjWT8"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -197,7 +247,15 @@
     "method": "Revenue ROMI estimate",
     "credit": "IPA 2014 · Bronze · Publicis London for L’Oréal",
     "data_role": "Data as the claim",
-    "data_source": "Women measuring their own wrinkles"
+    "data_source": "Women measuring their own wrinkles",
+    "image": {
+      "src": "assets/edition-03/garnier-ultralift-challenge.webp",
+      "alt": "Garnier UltraLift Challenge sign and campaign web address above a crowd",
+      "credit": "Garnier and Publicis, UltraLift Challenge with Davina McCall (2012) · archive upload",
+      "source": "https://www.youtube.com/watch?v=h6k1KpHjWT8",
+      "width": 640,
+      "height": 362
+    }
   },
   {
     "id": "hellmanns-recipe-receipt",
@@ -219,9 +277,10 @@
     "links": [],
     "memorable": "It uses data people never think of as data: their own shopping list.",
     "creative": {
-      "medium": "Agency upload",
+      "medium": "Agency case film",
       "label": "Watch ‘Recipe Receipt’ on Ogilvy Brazil’s channel",
-      "url": "https://www.youtube.com/watch?v=SC6MRmLaAGc"
+      "url": "https://www.youtube.com/watch?v=SC6MRmLaAGc",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the APG case summary · WARC",
@@ -235,7 +294,15 @@
     "method": "Sales in participating stores",
     "credit": "APG 2013 · Bronze · Ogilvy for Unilever",
     "data_role": "Data as the show",
-    "data_source": "What was in the shopping basket"
+    "data_source": "What was in the shopping basket",
+    "image": {
+      "src": "assets/edition-03/hellmanns-recipe-receipt.webp",
+      "alt": "An itemised supermarket receipt with Hellmann’s mayonnaise circled",
+      "credit": "Hellmann’s and Ogilvy Brazil, Recipe Receipt (2012) · still from the D&AD archive",
+      "source": "https://www.dandad.org/work/d-ad-awards-archive/recipe-receipt",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "missing-people-live-appeals",
@@ -257,9 +324,10 @@
     "links": [],
     "memorable": "It treats outdoor media like a newsroom, publishing the moment the story breaks.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the appeals found online",
-      "url": ""
+      "medium": "Agency case film",
+      "label": "Watch Missing People Weekly Appeals at Grand Visual",
+      "url": "https://grandvisual.com/work/missing-people-update/",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -273,7 +341,15 @@
     "method": "Before-and-after outcome trend",
     "credit": "IPA case, 2014 · Missing People and the Outdoor Media Centre",
     "data_role": "Data as aim",
-    "data_source": "Where and when someone went missing"
+    "data_source": "Where and when someone went missing",
+    "image": {
+      "src": "assets/edition-03/missing-people-live-appeals.webp",
+      "alt": "Kate McCann standing near a digital Missing People billboard at the launch",
+      "credit": "Missing People and the Outdoor Media Centre, 2012 launch photograph · Grand Visual",
+      "source": "https://grandvisual.com/kate-mccann-launches-nationwide-dooh-campaign-to-find-missing-people/",
+      "width": 546,
+      "height": 378
+    }
   },
   {
     "id": "british-airways-look-up",
@@ -311,7 +387,15 @@
     "method": "Awards and earned media",
     "credit": "D&AD 2014 · Yellow Pencil · OgilvyOne Worldwide London for British Airways",
     "data_role": "Data as the show",
-    "data_source": "Live flight-tracking data"
+    "data_source": "Live flight-tracking data",
+    "image": {
+      "src": "assets/edition-03/british-airways-look-up.webp",
+      "alt": "The child on the British Airways billboard at Piccadilly Circus pointing towards a plane",
+      "credit": "British Airways and OgilvyOne, Look Up (2013) · still from British Airways’ film",
+      "source": "https://www.youtube.com/watch?v=GtJx_pZjvzc",
+      "width": 640,
+      "height": 360
+    }
   },
   {
     "id": "aldi-swap-save",
@@ -333,9 +417,10 @@
     "links": [],
     "memorable": "Real people adding up their own savings carry more weight than any price claim a supermarket could make.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the 2013 films found online",
-      "url": ""
+      "medium": "Later campaign film",
+      "label": "Watch The Blakes, a later Irish Swap & Save advert, on Vimeo",
+      "url": "https://vimeo.com/320450675",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -349,7 +434,16 @@
     "method": "Econometric contribution",
     "credit": "IPA 2014 · Silver · McCann Manchester for Aldi UK & Ireland",
     "data_role": "Data as the claim",
-    "data_source": "Real shoppers’ savings"
+    "data_source": "Real shoppers’ savings",
+    "image": {
+      "src": "assets/edition-03/aldi-swap-save.webp",
+      "alt": "Aldi Swap & Save artwork introducing the shoppers taking part in the challenge",
+      "credit": "Aldi Swap & Save shopper artwork (2013) · reproduced by Gm&Co",
+      "source": "https://www.gmandco.com/post/el-reto-de-aldi-para-los-shoppers",
+      "width": 732,
+      "height": 650,
+      "contain": true
+    }
   },
   {
     "id": "economist-raising-eyebrows",
@@ -371,9 +465,10 @@
     "links": [],
     "memorable": "Each ad reads like the start of an argument. It invites you to disagree, then to subscribe.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the ads found online",
-      "url": ""
+      "medium": "Agency case film",
+      "label": "Watch Raising Eyebrows and Subscriptions on Proximity London’s Vimeo channel",
+      "url": "https://vimeo.com/198993044",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -387,7 +482,16 @@
     "method": "Lifetime-value payback",
     "credit": "IPA 2016 · Gold · Proximity London and UM for The Economist",
     "data_role": "Data as aim",
-    "data_source": "Live news and audience data"
+    "data_source": "Live news and audience data",
+    "image": {
+      "src": "assets/edition-03/economist-raising-eyebrows.webp",
+      "alt": "A red Economist digital ad about women becoming CEOs above a Guardian article",
+      "credit": "The Economist and Proximity London, Raising Eyebrows digital ad · Direct New Ideas",
+      "source": "https://www.directnewideas.com/magazine/the_economist_raising_eyebrows_and_subscriptions_/?id=1861",
+      "width": 700,
+      "height": 355,
+      "contain": true
+    }
   },
   {
     "id": "narellan-pools-two-hot-days",
@@ -414,9 +518,10 @@
     ],
     "memorable": "It is the simplest data idea here. Nobody wants a pool on a cold day.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the ads found online",
-      "url": ""
+      "medium": "Agency case film",
+      "label": "Watch Diving into Data on AFFINITY’s Vimeo channel",
+      "url": "https://vimeo.com/204136316",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -430,7 +535,15 @@
     "method": "Incremental ROI",
     "credit": "IPA 2016 · Gold · AFFINITY for Narellan Pools",
     "data_role": "Data as aim",
-    "data_source": "Forecast and live temperatures"
+    "data_source": "Forecast and live temperatures",
+    "image": {
+      "src": "assets/edition-03/narellan-pools-two-hot-days.webp",
+      "alt": "Turquoise Diving into Data case film artwork with a diving mask",
+      "credit": "Narellan Pools, Diving into Data · AFFINITY’s case film artwork",
+      "source": "https://www.affinity.ad/work/diving-into-data-for-narellan-pools",
+      "width": 800,
+      "height": 506
+    }
   },
   {
     "id": "prospan-cough-predictor",
@@ -457,9 +570,10 @@
     ],
     "memorable": "The idea is all in the timing. The same ad a week later would have been too late.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the 2016 ads found online",
-      "url": ""
+      "medium": "Agency case film",
+      "label": "Watch Don’t Ignore a Cough on AFFINITY’s Vimeo channel",
+      "url": "https://vimeo.com/216949324",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -473,7 +587,16 @@
     "method": "Control group and category comparison",
     "credit": "IPA 2018 · Silver · AFFINITY for Flordis",
     "data_role": "Data as aim",
-    "data_source": "Search and social signals"
+    "data_source": "Search and social signals",
+    "image": {
+      "src": "assets/edition-03/prospan-cough-predictor.webp",
+      "alt": "Prospan print advert showing a child coughing in a room with a gathered crowd",
+      "credit": "Flordis and AFFINITY, Don’t Ignore a Cough (2016) · reproduced by B&T",
+      "source": "https://www.bandt.com.au/prospan-launches-new-campaign-via-affinity/",
+      "width": 800,
+      "height": 524,
+      "contain": true
+    }
   },
   {
     "id": "snickers-hungerithm",
@@ -495,9 +618,10 @@
     "links": [],
     "memorable": "It makes the internet’s bad mood useful. Every angry headline was a coupon.",
     "creative": {
-      "medium": "Agency network upload",
+      "medium": "Agency case film",
       "label": "Watch ‘Hunger-ithm’ on BBDO Asia’s channel",
-      "url": "https://www.youtube.com/watch?v=PLDINyDoVAU"
+      "url": "https://www.youtube.com/watch?v=PLDINyDoVAU",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the Australian Effie summary · WARC",
@@ -511,7 +635,15 @@
     "method": "Sales trend at one retailer",
     "credit": "Australian Effie Awards 2017 · Bronze · Clemenger BBDO Melbourne for Mars Australia",
     "data_role": "Data as the show",
-    "data_source": "The mood on Twitter"
+    "data_source": "The mood on Twitter",
+    "image": {
+      "src": "assets/edition-03/snickers-hungerithm.webp",
+      "alt": "Three mobile screens with different Hungerithm prices and Snickers offer barcodes",
+      "credit": "Snickers and Clemenger BBDO Melbourne, Hungerithm (2016) · still from The One Show entry",
+      "source": "https://www.oneclub.org/awards/theoneshow/-award/26178/hungerithm/",
+      "width": 800,
+      "height": 525
+    }
   },
   {
     "id": "burger-king-whopper-detour",
@@ -533,9 +665,9 @@
     "links": [],
     "memorable": "It’s a dare. To get the deal you had to stand outside McDonald’s and order a Burger King.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Campaign film",
+      "label": "Watch The Whopper Detour at The One Show",
+      "url": "https://www.oneclub.org/awards/theoneshow/-award/33196/the-whopper-detour/"
     },
     "impact_source": [
       "See the Grand Effie announcement · Effie",
@@ -549,7 +681,15 @@
     "method": "App downloads",
     "credit": "Effie US 2020 · Grand Effie · FCB New York for Burger King",
     "data_role": "Data as the show",
-    "data_source": "Phone location near McDonald’s"
+    "data_source": "Phone location near McDonald’s",
+    "image": {
+      "src": "assets/edition-03/burger-king-whopper-detour.webp",
+      "alt": "An orange Detour Ahead sign with instructions to download the Burger King app",
+      "credit": "Burger King, FCB New York and O Positive, The Whopper Detour (2018) · The One Show archive",
+      "source": "https://www.oneclub.org/awards/theoneshow/-award/33196/the-whopper-detour/",
+      "width": 800,
+      "height": 447
+    }
   },
   {
     "id": "tesco-clubcard-prices",
@@ -571,9 +711,9 @@
     "links": [],
     "memorable": "The ‘thrill face’ turns a discount into a feeling you can see.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Production upload",
+      "label": "Watch Feel the Power to Lower Prices on Sidekick’s Vimeo channel",
+      "url": "https://vimeo.com/826929264"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -587,6 +727,14 @@
     "method": "Profit ROMI estimate",
     "credit": "IPA 2024 · BBH and EssenceMediacom for Tesco",
     "data_role": "Data as the product",
-    "data_source": "Clubcard membership and shopping data"
+    "data_source": "Clubcard membership and shopping data",
+    "image": {
+      "src": "assets/edition-03/tesco-clubcard-prices.webp",
+      "alt": "A shopper strikes a superhero pose in a Tesco aisle with Clubcard price graphics",
+      "credit": "Tesco and BBH London, The Power to Lower Prices (2020) · Little Black Book",
+      "source": "https://lbbonline.com/news/release-your-superpowers-and-feel-the-power-of-tesco-clubcards-latest-low-prices",
+      "width": 800,
+      "height": 451
+    }
   }
 ]
