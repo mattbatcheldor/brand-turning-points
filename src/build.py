@@ -46,10 +46,19 @@ def meter(level):
             f'<span class="bars" aria-hidden="true">{bars}</span><span class="meter-label" aria-hidden="true">{e(level)}</span></span>')
 
 
+def campaign_image(c, placement):
+    image = c['image']
+    fit = ' image-contain' if image.get('contain') else ''
+    return (f'<span class="{placement}{fit}"><img src="{e(image["src"])}" '
+            f'alt="{e(image["alt"])}" width="{image["width"]}" height="{image["height"]}" '
+            'loading="lazy" decoding="async"></span>')
+
+
 cards = []
 for i, c in enumerate(campaigns, 1):
     sources = '\n'.join(f'<li><a href="{e(url)}">{e(label)}</a></li>' for label, url in c['links'])
     creative = c['creative']
+    image = c['image']
     primary_label, primary_url = c['impact_source']
     related_sources = f'<h3>Further sources</h3><ul class="sources">{sources}</ul>' if sources else ''
     legacy = c['stat_type'] == 'legacy'
@@ -57,7 +66,8 @@ for i, c in enumerate(campaigns, 1):
     cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}">
 <summary>
 <span class="case-number small">{i:02d}</span>
-<span><span class="case-brand small">{e(c['brand'])} / {c['year']} / {e(c['mechanism'])}</span><span class="case-title">{e(c['title'])}</span><span class="case-hook">{e(c['hook'])}</span></span>
+{campaign_image(c, 'case-thumbnail')}
+<span class="case-heading"><span class="case-brand small">{e(c['brand'])} / {c['year']} / {e(c['mechanism'])}</span><span class="case-title">{e(c['title'])}</span><span class="case-hook">{e(c['hook'])}</span></span>
 <span class="metric-cell{' legacy' if legacy else ''}"><span class="row-metric">{e(c['metric'])}</span><span class="row-label small">{e(c["metric_label"])}{' · legacy fact' if legacy else ''}</span>{meter(c['evidence_level'])}</span>
 <span class="toggle" aria-hidden="true"></span>
 </summary>
@@ -70,6 +80,7 @@ for i, c in enumerate(campaigns, 1):
 <div class="creative-record">
 <h3>Original creative <span>{e(creative['medium'])}</span></h3>
 <a href="{e(creative['url'])}">{e(creative['label'])}</a>
+<p class="image-credit">Image: <a href="{e(image['source'])}">{e(image['credit'])}</a></p>
 </div>
 </div>
 <aside class="proof" aria-label="Evidence">
@@ -135,26 +146,24 @@ filters = (f'<div class="filter-row" role="group" aria-label="Mechanism"><span c
 template = (root / 'page-template.html').read_text(encoding='utf-8')
 screening_ids = ('sony-bravia', 'volvo-epic-split', 'old-spice', 'barbie-movie')
 screening_notes = {
-    'sony-bravia': ('colour', 'The soundtrack lets the colour do the talking.'),
-    'volvo-epic-split': ('split', 'The precision is what makes the stunt possible.'),
-    'old-spice': ('spice', 'Watch the eye contact as the sets change.'),
-    'barbie-movie': ('pink', 'The film introduces a world the partnerships bring to life.'),
+    'sony-bravia': 'The soundtrack lets the colour do the talking.',
+    'volvo-epic-split': 'The precision is what makes the stunt possible.',
+    'old-spice': 'Watch the eye contact as the sets change.',
+    'barbie-movie': 'The film introduces a world the partnerships bring to life.',
 }
 screenings = []
 for case_id in screening_ids:
     c = next(entry for entry in campaigns if entry['id'] == case_id)
-    colour, note = screening_notes[case_id]
+    note = screening_notes[case_id]
     creative = c['creative']
     video = creative['url'].partition('https://www.youtube.com/watch?v=')[2]
     player = ''
     if video:
         player = f'<button class="play-film small" type="button" data-video="{e(video)}" data-title="{e(c["title"])}" hidden>Play here</button>'
     screenings.append(f'''<article class="screening">
-<div class="film-frame {colour}">
-<span class="small">{e(c['brand'])} / {c['year']}</span>
-<h3>{e(c['title'])}</h3>
-</div>
+{campaign_image(c, 'film-frame')}
 <div class="film-body">
+<div class="film-heading"><p class="small">{e(c['brand'])} / {c['year']}</p><h3>{e(c['title'])}</h3></div>
 <p>{e(note)}</p>
 <div class="film-actions">
 {player}<a href="{e(creative['url'])}">{'Watch on YouTube' if video else 'Watch at HAT'}</a>

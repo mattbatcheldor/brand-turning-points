@@ -14,6 +14,7 @@ For GitHub Pages, upload the package contents to the root of your repository and
 
 - Edit `src/campaigns.json` to add or revise a case. Keep the original creative, the primary impact source and any further reading in their separate fields. Include a specific reason the work is memorable.
 - Give every case a `mechanism` (Demonstration, Reframed weakness, Participation, Exposing an assumption or Representation), an `evidence_level` (Modelled effect, Sales trend, Survey, Reach only or Archival), a `stat_type` (`result`, or `legacy` for a date or production fact that is not an outcome) and a one-line `take` in the curator’s own voice. The finding ladder, mechanism map, timeline and filters are generated from these fields.
+- Keep campaign thumbnails in `assets/` and record the original source and credit in the corresponding case’s image metadata.
 - Edit `src/page-template.html` for changes to the layout, typography or site copy. The screening selection lives in `src/build.py`. Use direct links for archival films and eligible official YouTube uploads for in-page viewing.
 - Run `python3 src/build.py` to regenerate `index.html`. Preview the updated site and commit the source and output together. Recheck each new source link and any film playback.
 

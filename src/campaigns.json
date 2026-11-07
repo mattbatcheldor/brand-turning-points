@@ -40,7 +40,15 @@
     "mechanism": "Demonstration",
     "evidence_level": "Archival",
     "stat_type": "legacy",
-    "take": "I'd still brief a demonstration this way. If the claim is visual, stop describing it and stage it."
+    "take": "I'd still brief a demonstration this way. If the claim is visual, stop describing it and stage it.",
+    "image": {
+      "src": "assets/sony-bravia-balls.jpg",
+      "alt": "Colourful bouncy balls fill a steep San Francisco street.",
+      "credit": "Sony BRAVIA campaign still",
+      "source": "https://www.hatads.org.uk/catalogue/record/e0331ed6-f87f-4ba6-8c44-0f752919b0cb",
+      "width": 554,
+      "height": 554
+    }
   },
   {
     "id": "vw-think-small",
@@ -74,7 +82,16 @@
     "mechanism": "Reframed weakness",
     "evidence_level": "Archival",
     "stat_type": "legacy",
-    "take": "The bravest line in the ad admits the car is small. Most brands still can't bring themselves to say the obvious thing first."
+    "take": "The bravest line in the ad admits the car is small. Most brands still can't bring themselves to say the obvious thing first.",
+    "image": {
+      "src": "assets/vw-think-small.webp",
+      "alt": "A tiny Volkswagen Beetle sits in a mostly blank page above the headline “Think small.”",
+      "credit": "Volkswagen ad, Smithsonian National Museum of American History",
+      "source": "https://www.flickr.com/photos/nationalmuseumofamericanhistory/6418777239/",
+      "width": 394,
+      "height": 500,
+      "contain": true
+    }
   },
   {
     "id": "apple-1984",
@@ -113,7 +130,15 @@
     "mechanism": "Exposing an assumption",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "Everyone remembers the hammer. Fewer remember that it aired nationally just once, and that scarcity became part of the legend."
+    "take": "Everyone remembers the hammer. Fewer remember that it aired nationally just once, and that scarcity became part of the legend.",
+    "image": {
+      "src": "assets/apple-1984.webp",
+      "alt": "Anya Major runs down a dark corridor with a sledgehammer in Apple’s 1984 commercial.",
+      "credit": "Apple commercial still, via ParcelaDigital",
+      "source": "https://parceladigital.com/articulo/famoso-anuncio-mac-1984",
+      "width": 720,
+      "height": 405
+    }
   },
   {
     "id": "nike-just-do-it",
@@ -147,7 +172,15 @@
     "mechanism": "Representation",
     "evidence_level": "Archival",
     "stat_type": "legacy",
-    "take": "Three words that fit a marathon runner and someone who hasn't trained in years. That range is the real asset."
+    "take": "Three words that fit a marathon runner and someone who hasn't trained in years. That range is the real asset.",
+    "image": {
+      "src": "assets/nike-just-do-it.webp",
+      "alt": "Walt Stack runs shirtless along a San Francisco bridge in Nike’s 1988 commercial.",
+      "credit": "Nike commercial still, filed as evidence with the USPTO",
+      "source": "https://ttabvue.uspto.gov/ttabvue/ttabvue-91289764-OPP-29.pdf#page=7",
+      "width": 715,
+      "height": 474
+    }
   },
   {
     "id": "got-milk",
@@ -181,7 +214,15 @@
     "mechanism": "Demonstration",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "It sells the absence of the product. That's harder to pull off than any feature list, and it's a good argument for testing deprivation in research."
+    "take": "It sells the absence of the product. That's harder to pull off than any feature list, and it's a good argument for testing deprivation in research.",
+    "image": {
+      "src": "assets/got-milk.webp",
+      "alt": "Sean Whalen holds a phone to his ear in the Aaron Burr Got Milk? commercial.",
+      "credit": "California Milk Processor Board commercial still, via Yahoo Entertainment",
+      "source": "https://www.yahoo.com/entertainment/got-milk-turns-25-aaron-burr-reflects-classic-michael-bay-directed-commercial-130005856.html",
+      "width": 720,
+      "height": 452
+    }
   },
   {
     "id": "zimbabwean-trillion",
@@ -215,7 +256,16 @@
     "mechanism": "Reframed weakness",
     "evidence_level": "Reach only",
     "stat_type": "result",
-    "take": "The note is the argument. You can't pull the message away from the worthless paper it's printed on, which is why it travelled."
+    "take": "The note is the argument. You can't pull the message away from the worthless paper it's printed on, which is why it travelled.",
+    "image": {
+      "src": "assets/zimbabwean-trillion.webp",
+      "alt": "A poster assembled from Zimbabwean banknotes reads “It’s cheaper to print this on money than paper.”",
+      "credit": "The Zimbabwean and TBWA Hunt Lascaris, via D&AD",
+      "source": "https://www.dandad.org/work/d-ad-awards-archive/trillion-dollar-campaign",
+      "width": 479,
+      "height": 760,
+      "contain": true
+    }
   },
   {
     "id": "snickers-hunger",
@@ -254,7 +304,15 @@
     "mechanism": "Demonstration",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "A universal truth in a format you can recast. The faces change, the structure doesn't, and that's what let it run in 58 markets."
+    "take": "A universal truth in a format you can recast. The faces change, the structure doesn't, and that's what let it run in 58 markets.",
+    "image": {
+      "src": "assets/snickers-hunger.webp",
+      "alt": "Betty White holds a Snickers bar on a football field in the 2010 commercial.",
+      "credit": "Snickers commercial still, via Mashed",
+      "source": "https://www.mashed.com/1195555/the-most-ridiculous-super-bowl-snack-ads-that-live-in-our-heads-rent-free/",
+      "width": 720,
+      "height": 404
+    }
   },
   {
     "id": "old-spice",
@@ -288,7 +346,15 @@
     "mechanism": "Participation",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "The response videos get the credit, but the sales number came first. I'd want to know how much of the legend belongs to the sequel."
+    "take": "The response videos get the credit, but the sales number came first. I'd want to know how much of the legend belongs to the sequel.",
+    "image": {
+      "src": "assets/old-spice.webp",
+      "alt": "Isaiah Mustafa looks into the camera while standing in front of a shower in the Old Spice commercial.",
+      "credit": "Old Spice official YouTube thumbnail",
+      "source": "https://www.youtube.com/watch?v=owGykVbfgUE",
+      "width": 720,
+      "height": 405
+    }
   },
   {
     "id": "share-a-coke",
@@ -322,7 +388,15 @@
     "mechanism": "Participation",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "The name on the bottle did the media's job. Every fridge became a hunt for someone you knew."
+    "take": "The name on the bottle did the media's job. Every fridge became a hunt for someone you knew.",
+    "image": {
+      "src": "assets/share-a-coke.webp",
+      "alt": "A hand holds a Coca-Cola bottle with a red label personalised with the name Sam.",
+      "credit": "Coca-Cola campaign image, via Ogilvy Australia",
+      "source": "https://www.ogilvy.com.au/Our-Work/Coca-Cola-Share-a-Coke",
+      "width": 720,
+      "height": 344
+    }
   },
   {
     "id": "patagonia-jacket",
@@ -356,7 +430,16 @@
     "mechanism": "Reframed weakness",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "Telling people not to buy only works when the product and the repair service back it up. Without them it's just a clever headline."
+    "take": "Telling people not to buy only works when the product and the repair service back it up. Without them it's just a clever headline.",
+    "image": {
+      "src": "assets/patagonia-jacket.webp",
+      "alt": "The original Patagonia print ad pairs a fleece jacket with the headline “Don’t Buy This Jacket.”",
+      "credit": "Patagonia’s original New York Times ad",
+      "source": "https://www.patagonia.com/blog/wp-content/uploads/2016/07/nyt_11-25-11.pdf",
+      "width": 415,
+      "height": 760,
+      "contain": true
+    }
   },
   {
     "id": "volvo-epic-split",
@@ -390,7 +473,15 @@
     "mechanism": "Demonstration",
     "evidence_level": "Survey",
     "stat_type": "result",
-    "take": "A survey of people who saw the film will always flatter the film. I'd swap the view count for one matched-territory test on orders."
+    "take": "A survey of people who saw the film will always flatter the film. I'd swap the view count for one matched-territory test on orders.",
+    "image": {
+      "src": "assets/volvo-epic-split.webp",
+      "alt": "Jean-Claude Van Damme does the splits between two Volvo trucks at sunset.",
+      "credit": "Volvo Trucks film still, via MUBI Notebook",
+      "source": "https://mubi.com/en/notebook/posts/video-of-the-week-the-epic-split-ft-jean-claude-van-damme",
+      "width": 720,
+      "height": 360
+    }
   },
   {
     "id": "dove-real-beauty",
@@ -424,7 +515,16 @@
     "mechanism": "Exposing an assumption",
     "evidence_level": "Reach only",
     "stat_type": "result",
-    "take": "Views prove attention and nothing more. The idea deserved a published before-and-after belief study."
+    "take": "Views prove attention and nothing more. The idea deserved a published before-and-after belief study.",
+    "image": {
+      "src": "assets/dove-real-beauty.webp",
+      "alt": "Two pencil portraits of the same woman sit side by side in Dove’s Real Beauty Sketches artwork.",
+      "credit": "Dove and Ogilvy campaign artwork, via D&AD",
+      "source": "https://www.dandad.org/work/d-ad-awards-archive/real-beauty-sketches",
+      "width": 720,
+      "height": 480,
+      "contain": true
+    }
   },
   {
     "id": "always-like-a-girl",
@@ -463,7 +563,15 @@
     "mechanism": "Exposing an assumption",
     "evidence_level": "Survey",
     "stat_type": "result",
-    "take": "It takes a phrase people say without thinking and shows them what it does. That's exposure rather than persuasion, and it's harder to forget."
+    "take": "It takes a phrase people say without thinking and shows them what it does. That's exposure rather than persuasion, and it's harder to forget.",
+    "image": {
+      "src": "assets/always-like-a-girl.webp",
+      "alt": "Six frames from the Always commercial show girls and adults responding to its directions.",
+      "credit": "Always commercial frames, via The Express Tribune",
+      "source": "https://tribune.com.pk/article/23178/throwing-like-a-girl-is-not-an-insult",
+      "width": 640,
+      "height": 480
+    }
   },
   {
     "id": "this-girl-can",
@@ -502,7 +610,15 @@
     "mechanism": "Representation",
     "evidence_level": "Modelled effect",
     "stat_type": "result",
-    "take": "The only case here with a modelled return. It also shows how much a headline number depends on what you choose to value."
+    "take": "The only case here with a modelled return. It also shows how much a headline number depends on what you choose to value.",
+    "image": {
+      "src": "assets/this-girl-can.webp",
+      "alt": "A woman works a rowing machine beside the slogan “Hot and not bothered.”",
+      "credit": "Sport England campaign artwork",
+      "source": "https://www.sportengland.org/news/this-girl-can-wins-marketing-industry-accolades",
+      "width": 720,
+      "height": 431
+    }
   },
   {
     "id": "barbie-movie",
@@ -541,6 +657,14 @@
     "mechanism": "Participation",
     "evidence_level": "Sales trend",
     "stat_type": "result",
-    "take": "A whole film acting as the brand platform. Brilliant to watch, but it tells marketers very little about what any single partnership earned."
+    "take": "A whole film acting as the brand platform. Brilliant to watch, but it tells marketers very little about what any single partnership earned.",
+    "image": {
+      "src": "assets/barbie-movie.webp",
+      "alt": "The pink Malibu DreamHouse and its pool, photographed from above for the Barbie and Airbnb promotion.",
+      "credit": "Hogwash Studios, via Airbnb Newsroom",
+      "source": "https://news.airbnb.com/barbies-malibu-dreamhouse-is-back-on-airbnb-but-this-time-kens-hosting",
+      "width": 720,
+      "height": 480
+    }
   }
 ]
