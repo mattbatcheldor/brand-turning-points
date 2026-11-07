@@ -116,7 +116,6 @@
 }
 
 /* Edition switching */
-.top nav .edition-link{border:1px solid var(--ink);border-radius:2rem;padding:.12rem .55rem;margin-left:.2rem}.top nav .edition-link:hover{background:var(--ink);color:var(--light);text-decoration:none}
 .feature-drawn svg{position:absolute;inset:0;width:100%;height:100%;max-width:none}
 /* Edition 02 case details */
 .case-credit{color:var(--muted);font-size:.62rem;margin:-.75rem 0 1.2rem}
@@ -139,19 +138,22 @@
 .film-frame.denmark{background:linear-gradient(90deg,transparent 0 30%,#fffdf7 30% 38%,transparent 38%),linear-gradient(transparent 0 42%,#fffdf7 42% 58%,transparent 58%),#c8102e}
 @media(max-width:1000px){.mech-grid.six{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:850px){.mech-grid.six{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.top .wrap{flex-wrap:wrap;row-gap:.55rem}.wordmark{white-space:nowrap}.top nav{flex-wrap:wrap;align-items:center;gap:.45rem .8rem}.top nav a{white-space:nowrap}.top nav .edition-link{margin-left:0;padding:.1rem .45rem}.mech-grid.six{grid-template-columns:1fr}.ladder.compare li{grid-template-columns:minmax(0,1fr) 7.5rem}.ladder.compare .ladder-cases{grid-column:1/-1}.ladder.compare .ladder-bar{width:calc(var(--n) * .32rem)}.case-thumbnail.proof-tile{aspect-ratio:auto;min-height:3.6rem;flex-direction:row;align-items:baseline;justify-content:space-between;gap:.8rem}.proof-tile .tile-year{font-size:1.5rem}.proof-tile .tile-method{text-align:right}}
+@media(max-width:560px){.top .wrap{flex-wrap:wrap;row-gap:.55rem}.wordmark{white-space:nowrap}.top nav{flex-wrap:wrap;align-items:center;gap:.45rem .8rem}.top nav a{white-space:nowrap}.mech-grid.six{grid-template-columns:1fr}.ladder.compare li{grid-template-columns:minmax(0,1fr) 7.5rem}.ladder.compare .ladder-cases{grid-column:1/-1}.ladder.compare .ladder-bar{width:calc(var(--n) * .32rem)}.case-thumbnail.proof-tile{aspect-ratio:auto;min-height:3.6rem;flex-direction:row;align-items:baseline;justify-content:space-between;gap:.8rem}.proof-tile .tile-year{font-size:1.5rem}.proof-tile .tile-method{text-align:right}}
+/* Editions switcher in the menu */
+.edition-nav{display:inline-flex;align-items:center;gap:.3rem;margin-left:.3rem}.edition-nav-label{color:var(--muted);margin-right:.15rem}.top nav .edition-nav a{display:inline-grid;place-items:center;min-width:2.1rem;padding:.1rem .45rem;border:1px solid var(--ink);border-radius:2rem;text-decoration:none}.top nav .edition-nav a:hover{background:#e7e6da;text-decoration:none}.top nav .edition-nav a[aria-current=page]{background:var(--ink);color:var(--light)}
+@media(max-width:560px){.edition-nav{margin-left:0}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#archive">Skip to the archive</a>
 <header class="top"><div class="wrap">
 <a class="wordmark small" href="#top"><span class="signal" aria-hidden="true"></span> Brand Turning Points</a>
-<nav class="small" aria-label="Main navigation"><a href="#finding">Finding</a><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a><a class="edition-link" href="../">Edition 01</a></nav>
+<nav class="small" aria-label="Main navigation"><a href="#finding">Finding</a><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a><span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span><a href="../" title="Edition 01"><span class="sr">Edition </span>01</a><a href="#top" aria-current="page" title="Edition 02, Proof first"><span class="sr">Edition </span>02</a></span></nav>
 </div></header>
 <main>
 <div class="wrap">
 <section class="mast" aria-labelledby="mast-title">
-<div><p class="issue small">The campaign archive / Edition 02</p><h1 id="mast-title">Proof<br><em>first.</em></h1></div>
+<div><p class="issue small">The campaign archive / Edition 02 / Proof first</p><h1 id="mast-title">Brand Turning<br><em>Points.</em></h1></div>
 <div class="mast-intro" aria-labelledby="founder-note">
 <h2 id="founder-note" class="small">Why this edition exists</h2>
 <figure class="founder-quote">

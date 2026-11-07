@@ -265,6 +265,55 @@ def render_screenings(campaigns, screening, prefix=''):
     return screenings
 
 
+def relative_dir(from_output, to_output):
+    import posixpath
+    here = posixpath.dirname(from_output) or '.'
+    there = posixpath.dirname(to_output) or '.'
+    rel = posixpath.relpath(there, here)
+    return '' if rel == '.' else rel + '/'
+
+
+def render_edition_nav(edition):
+    links = []
+    for other in EDITIONS:
+        if not (root / other['data']).exists():
+            continue
+        label = f'<span class="sr">Edition </span>{other["number"]}'
+        if other is edition:
+            links.append(f'<a href="#top" aria-current="page" title="Edition {other["number"]}{", " + other["name"] if other.get("name") else ""}">{label}</a>')
+        else:
+            href = relative_dir(edition['output'], other['output']) or './'
+            links.append(f'<a href="{href}" title="Edition {other["number"]}{", " + other["name"] if other.get("name") else ""}">{label}</a>')
+    return f'<span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span>{"".join(links)}</span>'
+
+
+def write_forwarding_page(edition):
+    alias = edition.get('alias')
+    if not alias:
+        return None
+    target = relative_dir(alias, edition['output']) or './'
+    page = f'''<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Turning Points | Edition {edition["number"]}</title>
+<link rel="canonical" href="{target}">
+<meta http-equiv="refresh" content="0; url={target}">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<p><a href="{target}">Open Brand Turning Points, Edition {edition["number"]}</a></p>
+<script>location.replace({json.dumps(target)} + location.hash);</script>
+</body>
+</html>
+'''
+    out = root.parent / alias
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(page, encoding='utf-8')
+    return out
+
+
 def build(edition):
     campaigns = json.loads((root / edition['data']).read_text(encoding='utf-8'))
     notes = dict(LEVEL_NOTES, **edition.get('level_notes', {}))
@@ -289,6 +338,7 @@ def build(edition):
               .replace('@@FILTERS@@', render_filters(campaigns))
               .replace('@@MODELLED@@', str(modelled))
               .replace('@@COMPARE_MODELLED@@', str(compare_modelled))
+              .replace('@@EDITION_NAV@@', render_edition_nav(edition))
               .replace('@@COUNT@@', str(len(campaigns)))
               .replace('@@FIRST_YEAR@@', str(min(c['year'] for c in campaigns)))
               .replace('@@LAST_YEAR@@', str(max(c['year'] for c in campaigns))))
@@ -298,11 +348,20 @@ def build(edition):
     return out
 
 
+# The series convention: number every edition with two digits and give it three things.
+#   src/campaigns-NN.json      the cases
+#   src/page-template-NN.html  the page copy
+#   edition-NN/index.html      the published page (Edition 01 also sits on the home page)
+# Add an entry below and run `python3 src/build.py`. The editions switcher in the menu updates itself.
 EDITIONS = [
     {
-        'data': 'campaigns.json',
-        'template': 'page-template.html',
+        # Edition 01 lives on the home page. edition-01/ forwards there, so every edition has an edition-NN/ address.
+        'number': '01',
+        'name': None,
+        'data': 'campaigns-01.json',
+        'template': 'page-template-01.html',
         'output': 'index.html',
+        'alias': 'edition-01/index.html',
         'test_heading': 'How to measure a similar idea',
         'screening': (
             ('sony-bravia', 'The soundtrack lets the colour do the talking.', None),
@@ -312,6 +371,8 @@ EDITIONS = [
         ),
     },
     {
+        'number': '02',
+        'name': 'Proof first',
         'data': 'campaigns-02.json',
         'template': 'page-template-02.html',
         'output': 'edition-02/index.html',
@@ -319,7 +380,7 @@ EDITIONS = [
         'art': itv_art,
         'test_heading': 'How the proof was built',
         'level_notes': {'Modelled effect': 'A model or a control region estimates the effect against a baseline.'},
-        'compare': {'label': 'Edition 01', 'data': 'campaigns.json'},
+        'compare': {'label': 'Edition 01', 'data': 'campaigns-01.json'},
         'screening': (
             ('dft-drink-drive', 'Fifty years of films in under two minutes. Watch the target change.', 'road'),
             ('specsavers-shouldve', 'A mistake, a beat, then the line.', 'sheep'),
@@ -338,3 +399,6 @@ if __name__ == '__main__':
         if not (root / edition['data']).exists():
             continue
         print('Built', build(edition).relative_to(root.parent))
+        forwarding = write_forwarding_page(edition)
+        if forwarding:
+            print('Built', forwarding.relative_to(root.parent), '(forwards to', edition['output'] + ')')
