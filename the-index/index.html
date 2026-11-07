@@ -175,6 +175,11 @@
 .ix-stats b{display:block;font:normal clamp(2rem,4vw,3.2rem)/1 var(--serif);letter-spacing:-.03em}.ix-stats span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
 .ix-section{padding-top:clamp(3.2rem,7vw,5.5rem);scroll-margin-top:1rem}
 .ix-section .section-head{margin-bottom:1.2rem}.ix-section .section-head>p{max-width:34rem;color:var(--muted)}
+.ix-about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1.5rem 3rem;padding-top:clamp(2.6rem,6vw,4.5rem)}
+.ix-about h2{margin:0;padding-top:.3rem;border-top:1px solid var(--ink)}.ix-about-copy{border-top:1px solid var(--ink);padding-top:.3rem}
+.ix-about-copy p{font:normal clamp(1.15rem,1.8vw,1.4rem)/1.45 var(--serif);margin:.6rem 0 0;max-width:40rem}
+.ix-about-copy .ix-about-note{font:normal .95rem/1.55 var(--sans);color:var(--muted);border-left:3px solid var(--accent);padding-left:.9rem;margin-top:1.1rem}
+.ev-caveat{margin:1.1rem 0 0;max-width:46rem;font-size:.9rem;color:var(--muted);border-left:3px solid var(--accent);padding-left:.9rem}.ev-caveat strong{color:var(--ink)}
 .ed-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .ed-card{display:flex;flex-direction:column;gap:.55rem;background:var(--light);border:1px solid var(--line);border-top:3px solid var(--ink);padding:1.1rem 1.1rem 1.2rem;text-decoration:none;color:var(--ink);min-width:0}
 .ed-card:hover{border-top-color:#557400}.ed-card:hover .ed-finding{text-decoration:underline}
@@ -201,7 +206,8 @@
 .ix-side{display:flex;flex-direction:column;gap:.3rem;align-items:flex-start;font-size:.8rem}.ix-ed{color:var(--ink)}
 .gap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 3rem;margin-top:1.4rem}.gap-grid h3{font-size:1.05rem;margin:0 0 .4rem}.gap-grid p{margin:0;color:#d3d1c5}
 @media(max-width:900px){.ed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.ix-stats div:nth-child(3){border-right:0}}
-@media(max-width:700px){.ed-grid,.lesson-grid,.gap-grid{grid-template-columns:1fr}.brand-row{grid-template-columns:1fr;gap:.6rem}
+@media(max-width:700px){.ix-about{grid-template-columns:1fr;gap:.4rem}.ix-about-copy{border-top:0}
+.ed-grid,.lesson-grid,.gap-grid{grid-template-columns:1fr}.brand-row{grid-template-columns:1fr;gap:.6rem}
 .ev-row{grid-template-columns:1fr;gap:.3rem}.ix-case a{grid-template-columns:3.2rem minmax(0,1fr);gap:.4rem .8rem}.ix-side{grid-column:2}
 .ix-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats div{border-right:0}.ix-stats div:nth-child(odd){border-right:1px solid var(--line)}}
 </style>
@@ -210,7 +216,7 @@
 <a class="skip" href="#all-cases">Skip to every case</a>
 <header class="top"><div class="wrap">
 <a class="wordmark small" href="#top"><span class="signal" aria-hidden="true"></span> Brand Turning Points</a>
-<nav class="small" aria-label="Main navigation"><a href="#lessons">Lessons</a><a href="#brands">Brands</a><a href="#all-cases">All cases</a><a href="#gaps">Gaps</a><span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span><a href="../" title="Edition 01, Fame first"><span class="sr">Edition </span>01</a><a href="../edition-02/" title="Edition 02, Proof first"><span class="sr">Edition </span>02</a><a href="../edition-03/" title="Edition 03, Data first"><span class="sr">Edition </span>03</a><a href="../edition-04/" title="Edition 04, Machine first"><span class="sr">Edition </span>04</a><a href="../edition-05/" title="Edition 05, Failure first"><span class="sr">Edition </span>05</a><a href="../edition-06/" title="Edition 06, Product first"><span class="sr">Edition </span>06</a><a class="index-link" href="#top" aria-current="page" title="The Index: the whole series in one place">Index</a></span></nav>
+<nav class="small" aria-label="Main navigation"><a href="#about">About</a><a href="#lessons">Lessons</a><a href="#brands">Brands</a><a href="#all-cases">All cases</a><a href="#gaps">Gaps</a><span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span><a href="../" title="Edition 01, Fame first"><span class="sr">Edition </span>01</a><a href="../edition-02/" title="Edition 02, Proof first"><span class="sr">Edition </span>02</a><a href="../edition-03/" title="Edition 03, Data first"><span class="sr">Edition </span>03</a><a href="../edition-04/" title="Edition 04, Machine first"><span class="sr">Edition </span>04</a><a href="../edition-05/" title="Edition 05, Failure first"><span class="sr">Edition </span>05</a><a href="../edition-06/" title="Edition 06, Product first"><span class="sr">Edition </span>06</a><a class="index-link" href="#top" aria-current="page" title="The Index: the whole series in one place">Index</a></span></nav>
 </div></header>
 <main>
 <div class="wrap">
@@ -234,6 +240,15 @@
 <div role="listitem"><b>1958</b><span>To 2025</span></div>
 </div>
 
+<section class="ix-about" id="about" aria-labelledby="about-title">
+<h2 id="about-title" class="small">About this archive</h2>
+<div class="ix-about-copy">
+<p>Brand Turning Points started with a question about a Sony advert. I remembered thousands of coloured balls bouncing down a San Francisco street, and I wanted to understand why the idea had stayed with me for so long.</p>
+<p>Six editions later, it is an archive of 90 cases from 1958 to 2025. Every case has a credited image, a watch link, a source for its headline evidence and my own take. The series moves from how brands earn attention, in Fame first, to what gives people a reason to believe them, in Product first.</p>
+<p class="ix-about-note">It is not a ranking. I rate each case on the strength of its public evidence, and that rating says more about what was measured and published than about what worked. Read the conclusions as hypotheses to take into a brief and test.</p>
+</div>
+</section>
+
 <section class="ix-section" id="editions" aria-labelledby="editions-title">
 <div class="section-head"><div><p class="small">01 / The editions</p><h2 id="editions-title">Six angles, one question</h2></div><p>Every edition asks what changed how people saw a brand, and what the evidence can prove. Each one reached its own finding.</p></div>
 <div class="ed-grid">
@@ -247,7 +262,7 @@
 </section>
 
 <section class="ix-section" id="evidence" aria-labelledby="evidence-title">
-<div class="section-head"><div><p class="small">02 / The evidence</p><h2 id="evidence-title">What the series can prove</h2></div><p>Every case carries one of five evidence ratings. Read across the editions and one pattern stands out: proof depends far more on planning than on fame.</p></div>
+<div class="section-head"><div><p class="small">02 / The evidence</p><h2 id="evidence-title">What the series can prove</h2></div><p>Every case carries one of five evidence ratings. Read across the editions and one pattern stands out: the work that planned its measurement is the work that left proof behind.</p></div>
 <div class="ev-chart" role="group" aria-label="Evidence ratings by edition">
 <div class="ev-row"><span class="ev-label"><a href="../">Edition 01</a> <span>Fame first</span></span><span class="ev-bar"><span class="ev-seg dark" style="--n:1;background:#557400" title="Modelled effect: 1">1<span class="sr"> Modelled effect</span></span><span class="ev-seg dark" style="--n:7;background:#7c9a1e" title="Sales trend: 7">7<span class="sr"> Sales trend</span></span><span class="ev-seg" style="--n:2;background:#a5c31c" title="Survey: 2">2<span class="sr"> Survey</span></span><span class="ev-seg" style="--n:2;background:#d3d1c5" title="Reach only: 2">2<span class="sr"> Reach only</span></span><span class="ev-seg" style="--n:3;background:#a8aa9d" title="Archival: 3">3<span class="sr"> Archival</span></span></span></div>
 <div class="ev-row"><span class="ev-label"><a href="../edition-02/">Edition 02</a> <span>Proof first</span></span><span class="ev-bar"><span class="ev-seg dark" style="--n:13;background:#557400" title="Modelled effect: 13">13<span class="sr"> Modelled effect</span></span><span class="ev-seg dark" style="--n:2;background:#7c9a1e" title="Sales trend: 2">2<span class="sr"> Sales trend</span></span></span></div>
@@ -257,6 +272,7 @@
 <div class="ev-row"><span class="ev-label"><a href="../edition-06/">Edition 06</a> <span>Product first</span></span><span class="ev-bar"><span class="ev-seg dark" style="--n:11;background:#7c9a1e" title="Sales trend: 11">11<span class="sr"> Sales trend</span></span><span class="ev-seg" style="--n:4;background:#a8aa9d" title="Archival: 4">4<span class="sr"> Archival</span></span></span></div>
 </div>
 <p class="ev-legend"><span><i style="background:#557400"></i>Modelled effect <b>22</b></span><span><i style="background:#7c9a1e"></i>Sales trend <b>34</b></span><span><i style="background:#a5c31c"></i>Survey <b>3</b></span><span><i style="background:#d3d1c5"></i>Reach only <b>8</b></span><span><i style="background:#a8aa9d"></i>Archival <b>23</b></span></p>
+<p class="ev-caveat"><strong>How to read this chart.</strong> These counts show which work left a usable public record, not which work was most effective. Thirteen of the 22 modelled effects are in Edition 02 because I chose IPA effectiveness papers for it on purpose. Read the lessons below as hypotheses to test in a brief, not rules.</p>
 </section>
 
 <section class="ix-section" id="lessons" aria-labelledby="lessons-title">
