@@ -5,6 +5,19 @@ An editorial archive of campaigns that changed how people saw a brand, a product
 - **Edition 01, Fame first** (the home page, also at `edition-01/`) opens with Sony BRAVIA’s *Balls* and covers 15 of the most famous campaigns, from 1959 to 2023. It finds that the most famous campaigns rarely prove they worked.
 - **Edition 02, Proof first** (`edition-02/`) opens with BT’s *It’s Good to Talk* and covers 15 campaigns that can show they worked, from 1958 to 2019. Every case is an IPA Effectiveness Awards paper.
 
+## Series plan
+
+The editions run in this fixed order. Keep the numbers and names exactly as listed.
+
+| Edition | Name | Status |
+| --- | --- | --- |
+| 01 | Fame first | Published |
+| 02 | Proof first | Published |
+| 03 | Data first | In development |
+| 04 | Machine first | Planned |
+| 05 | Failure first | Planned |
+| 06 | Product first | Planned |
+
 [Read the brand and editorial guidelines](Brand_Turning_Points_Guidelines.html) for the visual identity, case structure, citation standards and film policy.
 
 ## Preview and publish
