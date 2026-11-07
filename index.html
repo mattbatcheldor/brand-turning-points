@@ -142,13 +142,26 @@
 /* Editions switcher in the menu */
 .edition-nav{display:inline-flex;align-items:center;gap:.3rem;margin-left:.3rem}.edition-nav-label{color:var(--muted);margin-right:.15rem}.top nav .edition-nav a{display:inline-grid;place-items:center;min-width:2.1rem;padding:.1rem .45rem;border:1px solid var(--ink);border-radius:2rem;text-decoration:none}.top nav .edition-nav a:hover{background:#e7e6da;text-decoration:none}.top nav .edition-nav a[aria-current=page]{background:var(--ink);color:var(--light)}
 @media(max-width:560px){.edition-nav{margin-left:0}}
+/* Edition 03: data-role tiles, role grid and drawn screening frames */
+.proof-tile.r-data-as-aim{background:#dfe9c8}.proof-tile.r-data-as-the-show{background:#f3dfd2}.proof-tile.r-data-as-the-claim{background:#dbe4ee}.proof-tile.r-data-as-the-product{background:#ece3f2}
+.ladder-key i.mid{background:#a5c31c}
+.role-grid{display:grid;grid-template-columns:10.5rem repeat(var(--cols),minmax(0,1fr));border-top:1px solid var(--ink)}
+.rg-corner{border-bottom:1px solid var(--line)}.rg-head{font:bold .62rem/1.3 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:.6rem .5rem;border-bottom:1px solid var(--line)}
+.rg-role{font:bold .9rem/1.3 var(--sans);padding:.75rem .5rem;border-bottom:1px solid var(--line)}
+.rg-cell{display:flex;flex-wrap:wrap;gap:.35rem;align-content:flex-start;padding:.6rem .5rem;border-bottom:1px solid var(--line);border-left:1px solid var(--line);min-height:3.2rem}
+.rg-chip{font:.8rem/1.25 var(--sans);padding:.28rem .55rem;border-radius:2rem;text-decoration:none;background:#d3d1c5;color:var(--ink)}.rg-chip.s5{background:#557400;color:#fffdf7}.rg-chip.s4{background:#a5c31c;color:var(--ink)}.rg-chip:hover{text-decoration:underline}
+.film-frame.cards{background:linear-gradient(120deg,#f2709c 0 34%,#ffcf5a 34% 67%,#2fbf9b 67%)}
+.film-frame.sky{background:linear-gradient(160deg,transparent 0 47.5%,rgba(255,255,255,.9) 47.5% 48.6%,transparent 48.6%),radial-gradient(circle at 82% 22%,#fff6d8 0 6%,transparent 6.5%),linear-gradient(#5f9fd8,#cfe2f3)}
+.film-frame.till{background:repeating-linear-gradient(0deg,transparent 0 13px,rgba(29,33,27,.28) 13px 15px) 50% 50%/20% 64% no-repeat,linear-gradient(#fbf9f1,#fbf9f1) 50% 0/27% 100% no-repeat,#20302a}
+.film-frame.mood{background:radial-gradient(circle at 76% 40%,#ffcf5a 0 15%,transparent 15.5%),linear-gradient(135deg,#6e1b1b,#d2462f)}
+@media(max-width:700px){.role-grid{display:block}.rg-head,.rg-corner{display:none}.rg-role{display:block;padding:.8rem 0 .4rem;border-bottom:0;border-top:1px solid var(--line)}.rg-cell{border:0;padding:.2rem 0 .5rem;min-height:0}.rg-cell.empty{display:none}.rg-cell::before{content:attr(data-level);width:100%;font:bold .6rem/1.3 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#archive">Skip to the archive</a>
 <header class="top"><div class="wrap">
 <a class="wordmark small" href="#top"><span class="signal" aria-hidden="true"></span> Brand Turning Points</a>
-<nav class="small" aria-label="Main navigation"><a href="#finding">Finding</a><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a><span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span><a href="#top" aria-current="page" title="Edition 01, Fame first"><span class="sr">Edition </span>01</a><a href="edition-02/" title="Edition 02, Proof first"><span class="sr">Edition </span>02</a></span></nav>
+<nav class="small" aria-label="Main navigation"><a href="#finding">Finding</a><a href="#screening">Watch</a><a href="#archive">Archive</a><a href="#method">Evidence</a><span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span><a href="#top" aria-current="page" title="Edition 01, Fame first"><span class="sr">Edition </span>01</a><a href="edition-02/" title="Edition 02, Proof first"><span class="sr">Edition </span>02</a><a href="edition-03/" title="Edition 03, Data first"><span class="sr">Edition </span>03</a></span></nav>
 </div></header>
 <main>
 <div class="wrap">
@@ -967,7 +980,7 @@
 <div><h3>How cases earn a place</h3><p>Each case has a specific shift in how people were invited to see the brand or category, a creative decision that made it possible and a traceable source. The collection is curated and unranked. The measurement ideas in each case are proposals for a comparable brief today.</p></div>
 </div></div></section>
 <section class="wrap closing-note" aria-labelledby="why-archive"><div><p class="small">06 / The editorial purpose</p><h2 id="why-archive">Keep the work in view.</h2></div><div class="mission-copy"><p>A shot held long enough to make you uneasy. A phrase turned on its head. A package that gives a stranger a reason to talk to you. The archive preserves those decisions alongside the original work, its credits and the evidence that helps us understand what happened next.</p></div></section>
-<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">Out now / Edition 02</p><h2 id="next-title">Proof first.</h2></div><div class="next-copy"><p>Edition 02 starts from the other end of this edition’s finding. It gathers fifteen campaigns that can show they worked, from KitKat’s ‘Have a break’ in 1958 to O2 Germany in 2019, all drawn from the IPA Effectiveness Awards. <a href="edition-02/">Read Edition 02</a>.</p><p>Some of these campaigns were made when artificial intelligence belonged to research labs and science fiction. Now it shapes how quickly ideas are made and shared. Edition 04, Machine first, will look at work from that new era and ask whether faster ideas leave better evidence behind, or less.</p></div></section>
+<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">Out now / Edition 02</p><h2 id="next-title">Proof first.</h2></div><div class="next-copy"><p>Edition 02 starts from the other end of this edition’s finding. It gathers fifteen campaigns that can show they worked, from KitKat’s ‘Have a break’ in 1958 to O2 Germany in 2019, all drawn from the IPA Effectiveness Awards. <a href="edition-02/">Read Edition 02</a>.</p><p>Edition 03, <a href="edition-03/">Data first</a>, is out now too. It looks at campaigns where data was the idea, and what that data can prove.</p><p>Some of these campaigns were made when artificial intelligence belonged to research labs and science fiction. Now it shapes how quickly ideas are made and shared. Edition 04, Machine first, will look at work from that new era and ask whether faster ideas leave better evidence behind, or less.</p></div></section>
 </main>
 <dialog class="film-player" aria-labelledby="film-title">
 <div class="player-top"><h2 id="film-title">Campaign film</h2><form method="dialog"><button type="submit">Close player</button></form></div>
@@ -983,7 +996,8 @@ const empty = document.querySelector('#empty');
 const buttons = Array.from(document.querySelectorAll('.filter'));
 const cases = Array.from(document.querySelectorAll('.case'));
 const dots = Array.from(document.querySelectorAll('.dot'));
-const selected = {mechanism: 'All', evidence: 'All', era: 'All'};
+const selected = {};
+for (const button of buttons) selected[button.dataset.group] = 'All';
 
 function normalise(text) {
   return text.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')

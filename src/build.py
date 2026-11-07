@@ -58,6 +58,39 @@ def itv_art():
 </svg>'''
 
 
+
+def receipt_art():
+    # Editorial illustration: a till receipt of data trails whose barcode rises into a bar chart.
+    mono = "'Courier New', Courier, monospace"
+    lines = [
+        ('BRAND TURNING POINTS', True), ('EDITION 03 / DATA FIRST', False), ('-' * 30, False),
+        ("SEARCHES  'CHILD COUGH'     x3", False), ('ONLINE MOOD  HANGRY      -12%', False),
+        ('2 WARM DAYS IN A ROW     ADS ON', False), ('SONGS PLAYED THIS YEAR   2,914', False),
+        ('1 JAR MAYONNAISE  + RECIPE', False), ('LOYALTY PRICE   SAVED   1.20', False),
+        ('-' * 30, False), ('TOTAL     ONE TURNING POINT', True),
+    ]
+    text = ''.join(f'<text x="252" y="{116 + i * 24}" font-family="{mono}" font-size="15" font-weight="{"bold" if bold else "normal"}" fill="#1d211b">{e(t)}</text>'
+                   for i, (t, bold) in enumerate(lines))
+    random.seed(3)
+    bars, x = [], 252
+    for i in range(30):
+        w = random.choice((2, 3, 4, 6))
+        h = 26 + (i / 29) ** 2.2 * 72
+        colour = '#1d211b' if i < 18 else ('#557400' if i < 27 else '#d9f55d')
+        bars.append(f'<rect x="{x}" y="{498 - h:.1f}" width="{w}" height="{h:.1f}" fill="{colour}"/>')
+        x += w + 3.2
+    teeth = ''.join(f'l-14 12-14-12' for _ in range(14))
+    return f'''<svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
+<title id="art-title">Illustration of a till receipt listing data trails, such as searches, online mood and songs played, whose barcode rises into a bar chart.</title>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#20302a"/><stop offset="1" stop-color="#12201b"/></linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".45"/></filter></defs>
+<path d="M0 0h920v560H0z" fill="url(#bg)"/>
+<g transform="translate(46 4) scale(.9)"><g transform="rotate(-4 460 300)" filter="url(#sh)">
+<path d="M222 40h400v470{teeth}z" fill="#fbf9f1"/>
+{text}{''.join(bars)}
+</g></g>
+</svg>'''
+
 LEVELS = ['Modelled effect', 'Sales trend', 'Survey', 'Reach only', 'Archival']
 LEVEL_NOTES = {
     'Modelled effect': 'A model estimates the effect against a baseline.',
@@ -74,6 +107,7 @@ MECHANISMS = [
     ('Representation', 'Put people in the picture who were missing from it.'),
     ('Owning a moment', 'Tie the brand to an occasion people already keep.'),
 ]
+ROLES = ['Data as aim', 'Data as the show', 'Data as the claim', 'Data as the product']
 ERAS = ['1950s to 1980s', '1990s and 2000s', '2010s', '2020s']
 
 
@@ -113,9 +147,14 @@ def campaign_image(c, placement, prefix=''):
 
 
 def proof_tile(c):
-    # Used where a case has no licensed image: a type tile that names how the effect was proved.
-    return (f'<span class="case-thumbnail proof-tile m-{slug(c["mechanism"])}" aria-hidden="true">'
-            f'<span class="tile-year">{c["year"]}</span><span class="tile-method">{e(c.get("method") or c["evidence_level"])}</span></span>')
+    # Used where a case has no licensed image: a type tile that names how the effect was proved,
+    # or, in a data edition, how the data was used and where it came from.
+    if c.get('data_role'):
+        cls, label = f'r-{slug(c["data_role"])}', f'{c["data_role"]} / {c["data_source"]}'
+    else:
+        cls, label = f'm-{slug(c["mechanism"])}', c.get('method') or c['evidence_level']
+    return (f'<span class="case-thumbnail proof-tile {cls}" aria-hidden="true">'
+            f'<span class="tile-year">{c["year"]}</span><span class="tile-method">{e(label)}</span></span>')
 
 
 def render_cards(campaigns, notes, test_heading, prefix=''):
@@ -136,7 +175,10 @@ def render_cards(campaigns, notes, test_heading, prefix=''):
             creative_link = f'<p class="no-copy">{e(creative["label"])}</p>'
         image_credit = f'\n<p class="image-credit">Image: <a href="{e(image["source"])}">{e(image["credit"])}</a></p>' if image else ''
         thumbnail = campaign_image(c, 'case-thumbnail', prefix) or proof_tile(c)
-        cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}">
+        role_attr = f' data-role="{e(c["data_role"])}"' if c.get('data_role') else ''
+        if c.get('data_source'):
+            method += f'\n<p class="method-tag"><span class="small">The data</span> {e(c["data_source"])}</p>'
+        cards.append(f'''<details id="{e(c['id'])}" class="case" data-mechanism="{e(c['mechanism'])}" data-evidence="{e(c['evidence_level'])}" data-era="{e(era(c['year']))}"{role_attr}>
 <summary>
 <span class="case-number small">{i:02d}</span>
 {thumbnail}
@@ -200,6 +242,33 @@ def render_ladder(campaigns, notes, compare=None):
     return ladder
 
 
+def render_role_grid(campaigns):
+    roles = [r for r in ROLES if any(c.get('data_role') == r for c in campaigns)]
+    if not roles:
+        return ''
+    levels = [l for l in LEVELS if any(c['evidence_level'] == l for c in campaigns)]
+    cells = ['<span class="rg-corner" aria-hidden="true"></span>'] + [f'<span class="rg-head">{e(l)}</span>' for l in levels]
+    for r in roles:
+        cells.append(f'<span class="rg-role">{e(r)}</span>')
+        for l in levels:
+            group = [c for c in campaigns if c.get('data_role') == r and c['evidence_level'] == l]
+            chips_html = ''.join(f'<a class="rg-chip s{strength_of(l)}" href="#{e(c["id"])}">{e(c["brand"])}</a>' for c in group)
+            cells.append(f'<span class="rg-cell{" empty" if not group else ""}" data-level="{e(l)}">{chips_html}</span>')
+    return (f'<div class="role-grid" style="--cols:{len(levels)}" role="group" aria-label="Cases by how data was used and by evidence strength">'
+            + ''.join(cells) + '</div>')
+
+
+def series_modelled(edition):
+    parts = []
+    for other in EDITIONS:
+        data = root / other['data']
+        if not data.exists():
+            continue
+        n = sum(1 for c in json.loads(data.read_text(encoding='utf-8')) if c['evidence_level'] == 'Modelled effect')
+        parts.append(f'{n} here' if other is edition else f'{n} in Edition {other["number"]}')
+    return ', '.join(parts[:-1]) + ' and ' + parts[-1] if len(parts) > 1 else (parts[0] if parts else '')
+
+
 def present_mechanisms(campaigns):
     return [(m, note) for m, note in MECHANISMS if any(c['mechanism'] == m for c in campaigns)]
 
@@ -236,7 +305,9 @@ def render_filters(campaigns):
     mech_names = [m for m, _ in present_mechanisms(campaigns)]
     levels = [l for l in LEVELS if any(c['evidence_level'] == l for c in campaigns)]
     eras = [x for x in ERAS if any(era(c['year']) == x for c in campaigns)]
-    return (f'<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span>{chips("mechanism", mech_names)}</div>'
+    roles = [r for r in ROLES if any(c.get('data_role') == r for c in campaigns)]
+    role_row = f'<div class="filter-row" role="group" aria-label="How data was used"><span class="small">Data use</span>{chips("role", roles)}</div>' if roles else ''
+    return role_row + (f'<div class="filter-row" role="group" aria-label="Mechanism"><span class="small">Mechanism</span>{chips("mechanism", mech_names)}</div>'
             f'<div class="filter-row" role="group" aria-label="Evidence strength"><span class="small">Evidence</span>{chips("evidence", levels)}</div>'
             f'<div class="filter-row" role="group" aria-label="Era"><span class="small">Era</span>{chips("era", eras)}</div>')
 
@@ -339,6 +410,8 @@ def build(edition):
               .replace('@@MODELLED@@', str(modelled))
               .replace('@@COMPARE_MODELLED@@', str(compare_modelled))
               .replace('@@EDITION_NAV@@', render_edition_nav(edition))
+              .replace('@@ROLE_GRID@@', render_role_grid(campaigns))
+              .replace('@@SERIES_MODELLED@@', series_modelled(edition))
               .replace('@@COUNT@@', str(len(campaigns)))
               .replace('@@FIRST_YEAR@@', str(min(c['year'] for c in campaigns)))
               .replace('@@LAST_YEAR@@', str(max(c['year'] for c in campaigns))))
@@ -386,6 +459,26 @@ EDITIONS = [
             ('specsavers-shouldve', 'A mistake, a beat, then the line.', 'sheep'),
             ('john-lewis-long-wait', 'Watch where the boy is looking on Christmas morning.', 'wait'),
             ('spies-do-it-for-denmark', 'Notice how long it plays the joke straight.', 'denmark'),
+        ),
+    },
+    {
+        'number': '03',
+        'name': 'Data first',
+        'data': 'campaigns-03.json',
+        'template': 'page-template-03.html',
+        'output': 'edition-03/index.html',
+        'asset_prefix': '../',
+        'art': receipt_art,
+        'test_heading': 'How the proof was built',
+        'level_notes': {
+            'Modelled effect': 'A model or a control group estimates the effect against a baseline.',
+            'Sales trend': 'Sales or behaviour moved, but other causes are not separated out.',
+        },
+        'screening': (
+            ('spotify-wrapped', 'How the yearly recap gets made, from the data to the cards people share.', 'cards'),
+            ('british-airways-look-up', 'One plane, one billboard and a child pointing at the sky.', 'sky'),
+            ('hellmanns-recipe-receipt', 'Watch the till do the cooking.', 'till'),
+            ('snickers-hungerithm', 'Notice who is setting the price.', 'mood'),
         ),
     },
 ]

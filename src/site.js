@@ -5,7 +5,8 @@ const empty = document.querySelector('#empty');
 const buttons = Array.from(document.querySelectorAll('.filter'));
 const cases = Array.from(document.querySelectorAll('.case'));
 const dots = Array.from(document.querySelectorAll('.dot'));
-const selected = {mechanism: 'All', evidence: 'All', era: 'All'};
+const selected = {};
+for (const button of buttons) selected[button.dataset.group] = 'All';
 
 function normalise(text) {
   return text.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')

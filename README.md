@@ -4,6 +4,7 @@ An editorial archive of campaigns that changed how people saw a brand, a product
 
 - **Edition 01, Fame first** (the home page, also at `edition-01/`) opens with Sony BRAVIA’s *Balls* and covers 15 of the most famous campaigns, from 1959 to 2023. It finds that the most famous campaigns rarely prove they worked.
 - **Edition 02, Proof first** (`edition-02/`) opens with BT’s *It’s Good to Talk* and covers 15 campaigns that can show they worked, from 1958 to 2019. Every case is an IPA Effectiveness Awards paper.
+- **Edition 03, Data first** (`edition-03/`) opens with Spotify Wrapped and covers 15 campaigns where data was the idea, from 1975 to 2020. It finds that data used to aim the work proves itself, while data used as the show mostly proves attention.
 
 ## Series plan
 
@@ -13,7 +14,7 @@ The editions run in this fixed order. Keep the numbers and names exactly as list
 | --- | --- | --- |
 | 01 | Fame first | Published |
 | 02 | Proof first | Published |
-| 03 | Data first | In development |
+| 03 | Data first | Published |
 | 04 | Machine first | Planned |
 | 05 | Failure first | Planned |
 | 06 | Product first | Planned |
@@ -45,4 +46,4 @@ The series follows one naming pattern, so each new edition is a copy-and-number 
 4. Run `python3 src/build.py`. The editions switcher in every edition’s menu picks up the new number.
 5. Work on a branch called `edition-03-short-name` and commit it as “Add Edition 03: Name”.
 
-Edition 01’s cover uses a still from the Sony BRAVIA *Balls* campaign. Edition 02’s cover is an editorial illustration. Original advertisements and external video belong to their respective rights holders.
+Edition 01’s cover uses a still from the Sony BRAVIA *Balls* campaign. Edition 02’s and Edition 03’s covers are editorial illustrations. Original advertisements and external video belong to their respective rights holders.
