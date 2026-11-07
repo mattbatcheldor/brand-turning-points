@@ -151,3 +151,8 @@
 .film-frame.shop{background:linear-gradient(transparent 0 30%,#ffcf5a 30% 38%,transparent 38%),linear-gradient(90deg,transparent 0 30%,#3b1c5a 30% 70%,transparent 70%) 0 100%/100% 62% no-repeat,#5b2c8a}
 .film-frame.canvas{background:radial-gradient(ellipse at 50% 44%,#e3b886 0 13%,transparent 13.5%),radial-gradient(ellipse at 50% 85%,#20180f 0 30%,transparent 30.5%),linear-gradient(#3a2a18,#120c06)}
 .film-frame.prompt{background:linear-gradient(transparent 0 46%,#fbf9f1 46% 58%,transparent 58%) 50% 0/72% 100% no-repeat,linear-gradient(90deg,transparent 0 16%,#557400 16% 17.4%,transparent 17.4%) 50% 0/72% 100% no-repeat,#e9e3da}
+.proof-tile.r-reversed{background:#dbe4ee}.proof-tile.r-withdrawn{background:#f3dfd2}.proof-tile.r-paid-the-price{background:#ecd6d2}.proof-tile.r-turned-around{background:#dfe9c8}
+.film-frame.can{background:linear-gradient(90deg,transparent 0 41%,#b5121b 41% 59%,transparent 59%) 50% 50%/100% 70% no-repeat,radial-gradient(ellipse at 50% 15%,#d8d8d8 0 9%,transparent 9.5%),#2a1d1a}
+.film-frame.box{background:linear-gradient(transparent 0 42%,#e31837 42% 58%,transparent 58%) 50% 50%/60% 100% no-repeat,linear-gradient(#006491,#006491) 50% 50%/60% 56% no-repeat,#e9e3da}
+.film-frame.bucket{background:repeating-linear-gradient(90deg,#c8102e 0 16px,#fbf9f1 16px 32px) 50% 70%/36% 58% no-repeat,#1d211b}
+.film-frame.barrel{background:repeating-linear-gradient(0deg,transparent 0 22px,rgba(0,0,0,.25) 22px 25px) 50% 100%/30% 62% no-repeat,linear-gradient(#8a5a2b,#8a5a2b) 50% 100%/30% 62% no-repeat,linear-gradient(#e9c27a,#c98f3e)}

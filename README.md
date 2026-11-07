@@ -6,6 +6,7 @@ An editorial archive of campaigns that changed how people saw a brand, a product
 - **Edition 02, Proof first** (`edition-02/`) opens with BT’s *It’s Good to Talk* and covers 15 campaigns that can show they worked, from 1958 to 2019. Every case is an IPA Effectiveness Awards paper.
 - **Edition 03, Data first** (`edition-03/`) opens with Spotify Wrapped and covers 15 campaigns where data was the idea, from 1975 to 2020. It finds that data used to aim the work proves itself, while data used as the show mostly proves attention.
 - **Edition 04, Machine first** (`edition-04/`) opens with Cadbury’s *Shah Rukh Khan-My-Ad* and covers 15 campaigns made with machines or about them, from 1997 to 2025. It finds that machines working behind the scenes prove the most, while machines on screen mostly prove attention, and sometimes backlash.
+- **Edition 05, Failure first** (`edition-05/`) opens with New Coke and covers 15 campaigns that went wrong, from 1985 to 2025, sorted by the mistake behind each and what the brand did next. It finds that failure is easy to see and hard to cost: none of the fifteen has a modelled effect.
 
 ## Series plan
 
@@ -17,7 +18,7 @@ The editions run in this fixed order. Keep the numbers and names exactly as list
 | 02 | Proof first | Published |
 | 03 | Data first | Published |
 | 04 | Machine first | Published |
-| 05 | Failure first | Planned |
+| 05 | Failure first | Published |
 | 06 | Product first | Planned |
 
 [Read the brand and editorial guidelines](Brand_Turning_Points_Guidelines.html) for the visual identity, case structure, citation standards and film policy.
@@ -34,7 +35,7 @@ For GitHub Pages, upload the package contents to the root of your repository and
 - Give every case a `mechanism` (Demonstration, Reframed weakness, Participation, Exposing an assumption, Representation or Owning a moment), an `evidence_level` (Modelled effect, Sales trend, Survey, Reach only or Archival), a `stat_type` (`result`, or `legacy` for a date, award or production fact that is not an outcome) and a one-line `take` in the curator’s own voice. The finding ladder, mechanism map, timeline and filters are generated from these fields.
 - Keep campaign thumbnails in `assets/` and record the original source and credit in the corresponding case’s `image` metadata. A case without an `image` shows a method tile in the list and a drawn frame in the screening room, so nothing is reused without a source.
 - Edition 02 cases also carry a `method` (how the effect was measured) and a `credit` (the IPA record: year, award, agency and client). If no official copy of the work is online, leave `creative.url` empty and say so in `creative.label`.
-- Shared layout, typography and behaviour live in `src/site.css` and `src/site.js`. Each edition’s copy lives in its own numbered template: `src/page-template-01.html` and `src/page-template-02.html`. Edition settings, including the screening-room films, are in `EDITIONS` in `src/build.py`. An edition that sorts cases by role (03 by data, 04 by machine) sets `data_role` and `data_source` on each case and names its roles and labels in the entry's `roles` setting. Use direct links for archival films and eligible official YouTube uploads for in-page viewing.
+- Shared layout, typography and behaviour live in `src/site.css` and `src/site.js`. Each edition’s copy lives in its own numbered template: `src/page-template-01.html` and `src/page-template-02.html`. Edition settings, including the screening-room films, are in `EDITIONS` in `src/build.py`. An edition that sorts cases by role (03 by data, 04 by machine) sets `data_role` and `data_source` on each case and names its roles and labels in the entry's `roles` setting. An edition can also replace the six mechanisms with its own list through `mechanisms` and `mechanism_label`, as Edition 05 does with the mistakes behind each failure. Use direct links for archival films and eligible official YouTube uploads for in-page viewing.
 - Run `python3 src/build.py` to regenerate both editions, or `python3 src/build.py edition-02/index.html` for one. Preview the site and commit the source and output together. Recheck each new source link and any film playback.
 
 ## Add an edition
