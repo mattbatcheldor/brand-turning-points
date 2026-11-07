@@ -20,6 +20,10 @@
       [
         "Read the history · Wikipedia",
         "https://en.wikipedia.org/wiki/New_Coke"
+      ],
+      [
+        "See Coca-Cola’s 1985 launch advertisement · The Henry Ford",
+        "https://www.thehenryford.org/collections/explore/artifact/228904"
       ]
     ],
     "memorable": "It is the rare failure that became a love letter. The anger proved how much the old brand meant.",
@@ -41,7 +45,15 @@
     "method": "Company history",
     "credit": "Coca-Cola, 1985",
     "data_role": "Reversed",
-    "data_source": "Coca-Cola Classic came back"
+    "data_source": "Coca-Cola Classic came back",
+    "image": {
+      "src": "assets/edition-05/new-coke.webp",
+      "alt": "A red 1985 Coke can marked NEW",
+      "credit": "New Coke can (1985) · CBS News archive feature",
+      "source": "https://www.cbsnews.com/news/30-years-ago-today-coca-cola-new-coke-failure/",
+      "width": 600,
+      "height": 315
+    }
   },
   {
     "id": "ratners-speech",
@@ -63,9 +75,10 @@
     "links": [],
     "memorable": "It gave the language a phrase. ‘Doing a Ratner’ still means talking down your own business.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official recording of the speech found online",
-      "url": ""
+      "medium": "Archive recording",
+      "label": "Watch Gerald Ratner’s 1991 speech in the Institute of Directors archive",
+      "url": "https://www.youtube.com/watch?v=Nj9BZz71yQE",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -79,7 +92,15 @@
     "method": "Market value",
     "credit": "Ratners, 1991",
     "data_role": "Paid the price",
-    "data_source": "The company lost its name"
+    "data_source": "The company lost its name",
+    "image": {
+      "src": "assets/edition-05/ratners-speech.webp",
+      "alt": "Gerald Ratner speaking at the Institute of Directors’ 1991 convention",
+      "credit": "Gerald Ratner at the 1991 Annual Convention · Institute of Directors archive",
+      "source": "https://www.youtube.com/watch?v=Nj9BZz71yQE",
+      "width": 768,
+      "height": 576
+    }
   },
   {
     "id": "hoover-free-flights",
@@ -101,9 +122,10 @@
     "links": [],
     "memorable": "People bought vacuum cleaners they didn’t want to get a holiday they did.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Original advert",
+      "label": "Watch Hoover’s 1992 Two Return Flights advert on The Laundry Lab",
+      "url": "https://www.youtube.com/watch?v=pPj1vUjdfm8",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -117,7 +139,16 @@
     "method": "Reported cost",
     "credit": "Hoover UK, 1992",
     "data_role": "Paid the price",
-    "data_source": "The promotion ran away with the brand"
+    "data_source": "The promotion ran away with the brand",
+    "image": {
+      "src": "assets/edition-05/hoover-free-flights.webp",
+      "alt": "Hoover washing machine and vacuum next to the promise of two return flight tickets",
+      "credit": "Hoover, Two Return Flights (1992) · still from The Laundry Lab archive upload",
+      "source": "https://www.youtube.com/watch?v=pPj1vUjdfm8",
+      "width": 800,
+      "height": 450,
+      "contain": true
+    }
   },
   {
     "id": "pepsi-number-fever",
@@ -136,12 +167,18 @@
     "evidence": "The promotion is well recorded, but the figures for claims, payments and lawsuits vary between sources.",
     "lesson": "When a promise goes wrong at scale, the cost isn’t only money.",
     "test": "The record is the reported payments, lawsuits and the events that followed.",
-    "links": [],
+    "links": [
+      [
+        "Licence for the 349 cap photograph · CC BY-SA 4.0",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ]
+    ],
     "memorable": "A three-digit number became shorthand for a corporate disaster.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Documentary",
+      "label": "Watch Bloomberg Originals’ account of Number Fever and the 349 caps",
+      "url": "https://www.youtube.com/watch?v=SChZyhpQJ_U",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -155,7 +192,16 @@
     "method": "Reported settlements",
     "credit": "Pepsi Philippines, 1992",
     "data_role": "Paid the price",
-    "data_source": "Lawsuits and settlements"
+    "data_source": "Lawsuits and settlements",
+    "image": {
+      "src": "assets/edition-05/pepsi-number-fever.webp",
+      "alt": "Inside of a Pepsi crown cap stamped 349 and Plays for 1 Million",
+      "credit": "Geric Cruz, Pepsi Number Fever 349 cap · Wikimedia Commons, CC BY-SA 4.0 · resized to WebP",
+      "source": "https://commons.wikimedia.org/wiki/File:Pepsi_Number_Fever_349_winning_bottle_cap.jpg",
+      "width": 707,
+      "height": 720,
+      "contain": true
+    }
   },
   {
     "id": "royal-mail-consignia",
@@ -182,9 +228,10 @@
     ],
     "memorable": "It is a word that sounds like a brand and means almost nothing.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "News archive preview",
+      "label": "Watch ITN’s 2002 interview with Consignia chief executive John Roberts",
+      "url": "https://www.gettyimages.com.au/detail/video/consignia-monopoly-removed-extjohn-roberts-interviewed-news-footage/683834100",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the reversal story · Post&Parcel",
@@ -198,7 +245,15 @@
     "method": "Trade press",
     "credit": "The Post Office Group, 2001",
     "data_role": "Reversed",
-    "data_source": "The old name came back"
+    "data_source": "The old name came back",
+    "image": {
+      "src": "assets/edition-05/royal-mail-consignia.webp",
+      "alt": "Blue Consignia sign for Gavrelle House",
+      "credit": "Consignia sign from Gavrelle House · British Postal Museum and Archive collection",
+      "source": "https://www.postoffice.alectritton.co.uk/collections/museum/businesshistory/",
+      "width": 250,
+      "height": 123
+    }
   },
   {
     "id": "dasani-uk",
@@ -225,9 +280,10 @@
     ],
     "memorable": "It became the punchline the sitcom had already written.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Video retrospective",
+      "label": "Watch Tom Scott revisit why the UK launch failed",
+      "url": "https://www.youtube.com/watch?v=wD79NZroV88",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the recall report · CNN",
@@ -241,7 +297,15 @@
     "method": "Press record",
     "credit": "Coca-Cola, 2004",
     "data_role": "Withdrawn",
-    "data_source": "Recalled and pulled from the UK"
+    "data_source": "Recalled and pulled from the UK",
+    "image": {
+      "src": "assets/edition-05/dasani-uk.webp",
+      "alt": "Close-up of a blue Dasani label reading Pure, Still Water",
+      "credit": "Dasani’s UK launch packaging (2004) · BBC News",
+      "source": "https://news.bbc.co.uk/2/hi/uk_news/3523303.stm",
+      "width": 203,
+      "height": 152
+    }
   },
   {
     "id": "tropicana-redesign",
@@ -263,9 +327,10 @@
     "links": [],
     "memorable": "Everyone remembers the orange with the straw, which is exactly the point.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Archive interview",
+      "label": "Watch designer Peter Arnell explain the new carton to Ad Age in 2009",
+      "url": "https://www.youtube.com/watch?v=WJ4yF4F74vc",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case · The Branding Journal",
@@ -279,7 +344,15 @@
     "method": "Retail sales data",
     "credit": "PepsiCo, 2009 · Arnell",
     "data_role": "Reversed",
-    "data_source": "The old carton came back"
+    "data_source": "The old carton came back",
+    "image": {
+      "src": "assets/edition-05/tropicana-redesign.webp",
+      "alt": "Original orange-and-straw Tropicana carton beside the 2009 glass-of-juice redesign",
+      "credit": "Tropicana, original and redesigned cartons (2009) · Brand New / UnderConsideration",
+      "source": "https://www.underconsideration.com/brandnew_v1/archives/in_brief_tropicana_hits_comman.php",
+      "width": 470,
+      "height": 200
+    }
   },
   {
     "id": "dominos-pizza-turnaround",
@@ -317,7 +390,15 @@
     "method": "Company earnings",
     "credit": "Crispin Porter + Bogusky for Domino’s",
     "data_role": "Turned around",
-    "data_source": "Admitted it and fixed the pizza"
+    "data_source": "Admitted it and fixed the pizza",
+    "image": {
+      "src": "assets/edition-05/dominos-pizza-turnaround.webp",
+      "alt": "Two customers speaking in a Domino’s pizza focus group",
+      "credit": "Domino’s and Crispin Porter + Bogusky, Pizza Turnaround · case-film still from D&AD",
+      "source": "https://www.dandad.org/work/d-ad-awards-archive/pizza-turnaround",
+      "width": 800,
+      "height": 600
+    }
   },
   {
     "id": "gap-logo",
@@ -336,12 +417,18 @@
     "evidence": "The reversal is well recorded. No public source shows an effect on sales.",
     "lesson": "Social media gives people a vote, whether or not you asked for one.",
     "test": "The record is press coverage of the launch and the reversal.",
-    "links": [],
+    "links": [
+      [
+        "Read Gap’s decision to restore the blue box",
+        "https://www.gapinc.com/en-us/articles/2010/10/gap-listens-to-customers-and-will-keep-classic-blu"
+      ]
+    ],
     "memorable": "A parody account for the new logo became more famous than the logo.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Design discussion",
+      "label": "Watch branding practitioners discuss the Gap logo reversal",
+      "url": "https://www.youtube.com/watch?v=4wSl11DR9PY",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the reversal report · CNN Money",
@@ -355,7 +442,16 @@
     "method": "Press record",
     "credit": "Gap, 2010",
     "data_role": "Reversed",
-    "data_source": "The blue box came back"
+    "data_source": "The blue box came back",
+    "image": {
+      "src": "assets/edition-05/gap-logo.webp",
+      "alt": "Gap’s 2010 Helvetica wordmark next to the classic blue square",
+      "credit": "Gap’s 2010 and classic logos compared · Sky News",
+      "source": "https://news.sky.com/story/gap-steps-back-after-logo-change-disaster-10491458",
+      "width": 800,
+      "height": 450,
+      "contain": true
+    }
   },
   {
     "id": "pepsi-live-for-now",
@@ -374,12 +470,18 @@
     "evidence": "The withdrawal and apology are in Pepsi’s own statement. No public figure shows an effect on sales.",
     "lesson": "If a brand borrows a cause, people will ask what it has ever done for it.",
     "test": "There is no effectiveness record. The evidence is the reaction and Pepsi’s statement.",
-    "links": [],
+    "links": [
+      [
+        "Read Pepsi’s statement withdrawing the film",
+        "https://www.pepsico.com/newsroom/press-releases/2017/pepsi-statement-re--pepsi-moments-content"
+      ]
+    ],
     "memorable": "The scene with the can became a meme within hours.",
     "creative": {
-      "medium": "Original work",
-      "label": "Withdrawn by Pepsi",
-      "url": ""
+      "medium": "Archived advert",
+      "label": "Watch the withdrawn Live for Now spot in a Vimeo archive upload",
+      "url": "https://vimeo.com/394994325",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -393,7 +495,15 @@
     "method": "Company statement",
     "credit": "Pepsi, 2017",
     "data_role": "Withdrawn",
-    "data_source": "Pulled within a day"
+    "data_source": "Pulled within a day",
+    "image": {
+      "src": "assets/edition-05/pepsi-live-for-now.webp",
+      "alt": "Kendall Jenner handing a can of Pepsi to a police officer in the 2017 advert",
+      "credit": "Pepsi, Live for Now (2017) · film still reproduced by KQED",
+      "source": "https://www.kqed.org/pop/73437/police-brutality-is-officially-over-thanks-to-kendall-jenners-messy-pepsi-commercial",
+      "width": 800,
+      "height": 449
+    }
   },
   {
     "id": "kfc-fck",
@@ -420,10 +530,11 @@
     ],
     "memorable": "It is rude, funny and completely honest, which is hard to manage in one word.",
     "creative": {
-      "medium": "News report",
-      "label": "Watch The Star’s report on the closures. The apology itself ran in print",
-      "url": "https://www.youtube.com/watch?v=MKo32cOB_xg",
-      "heading": "News film"
+      "medium": "Agency case film",
+      "label": "Watch Mother London’s case film for the FCK print apology at The One Show",
+      "url": "https://www.oneclub.org/awards/theoneshow/-award/34056/fck/",
+      "heading": "Campaign media",
+      "screening_url": "https://www.youtube.com/watch?v=MKo32cOB_xg"
     },
     "impact_source": [
       "Read the launch report · CNBC",
@@ -437,7 +548,15 @@
     "method": "Earned media",
     "credit": "Mother London for KFC",
     "data_role": "Turned around",
-    "data_source": "Said sorry, with a joke"
+    "data_source": "Said sorry, with a joke",
+    "image": {
+      "src": "assets/edition-05/kfc-fck.webp",
+      "alt": "A tipped KFC bucket with its letters rearranged to FCK against a red background",
+      "credit": "KFC and Mother London, FCK (2018) · print artwork reproduced by It’s Nice That",
+      "source": "https://www.itsnicethat.com/news/mother-london-kfc-advert-apology-230218",
+      "width": 742,
+      "height": 424
+    }
   },
   {
     "id": "peloton-gift",
@@ -459,9 +578,10 @@
     "links": [],
     "memorable": "Her face. Viewers saw nerves where the brand meant joy.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Original advert",
+      "label": "Watch the original 2019 television advert in PRODU’s archive",
+      "url": "https://www.produ.com/mercadeo/videos/the-gift-that-gives-back-de-peloton/",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the market report · InsideHook",
@@ -475,7 +595,15 @@
     "method": "Share price",
     "credit": "Peloton, 2019",
     "data_role": "Paid the price",
-    "data_source": "A fall in market value"
+    "data_source": "A fall in market value",
+    "image": {
+      "src": "assets/edition-05/peloton-gift.webp",
+      "alt": "Monica Ruiz recording herself next to a Peloton bike",
+      "credit": "Peloton, The Gift That Gives Back (2019) · still from the original television spot",
+      "source": "https://www.produ.com/mercadeo/videos/the-gift-that-gives-back-de-peloton/",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "burger-king-iwd",
@@ -494,12 +622,18 @@
     "evidence": "The deletion and apology are recorded in coverage and in the brand’s own posts. No public figure shows an effect.",
     "lesson": "On social, the first line is the whole ad. Nobody reads the thread.",
     "test": "There is no effectiveness record. The evidence is the reaction and the apology.",
-    "links": [],
+    "links": [
+      [
+        "See the full-page scholarship advert · B&T",
+        "https://www.bandt.com.au/women-belong-in-the-kitchen-burger-king-flame-grilled-for-tone-deaf-ad/"
+      ]
+    ],
     "memorable": "It is a provocation that only worked for people who read to the end.",
     "creative": {
-      "medium": "Original work",
-      "label": "Deleted by Burger King UK",
-      "url": ""
+      "medium": "News report",
+      "label": "Watch Global News report on the tweet and Burger King’s apology",
+      "url": "https://globalnews.ca/video/7684751/burger-king-u-k-apologizes-following-backlash-for-women-belong-in-the-kitchen-tweet/",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the story · Adweek",
@@ -513,7 +647,16 @@
     "method": "Company statement",
     "credit": "Burger King UK, 2021",
     "data_role": "Withdrawn",
-    "data_source": "Tweet deleted, apology posted"
+    "data_source": "Tweet deleted, apology posted",
+    "image": {
+      "src": "assets/edition-05/burger-king-iwd.webp",
+      "alt": "Screenshot of the original Burger King UK International Women’s Day tweet",
+      "credit": "Burger King UK, International Women’s Day tweet (2021) · screenshot from Reuters footage published by The Washington Post",
+      "source": "https://www.washingtonpost.com/food/2021/03/08/burger-king-women-ad/",
+      "width": 800,
+      "height": 450,
+      "contain": true
+    }
   },
   {
     "id": "bud-light-2023",
@@ -540,9 +683,10 @@
     ],
     "memorable": "It shows how quickly a single post can become a national argument.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "News report",
+      "label": "Watch NBC News report on the response, with excerpts from Dylan Mulvaney’s post",
+      "url": "https://www.youtube.com/watch?v=Zac5UBnEJhM",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the sales report · CBS News",
@@ -556,7 +700,15 @@
     "method": "Retail sales data",
     "credit": "Anheuser-Busch, 2023",
     "data_role": "Paid the price",
-    "data_source": "Lost its place as the top beer"
+    "data_source": "Lost its place as the top beer",
+    "image": {
+      "src": "assets/edition-05/bud-light-2023.webp",
+      "alt": "Dylan Mulvaney with Bud Light and a close-up of the can bearing her portrait",
+      "credit": "Dylan Mulvaney’s sponsored Instagram post (2023) · screenshots reproduced by The Philadelphia Inquirer",
+      "source": "https://www.inquirer.com/news/bud-light-controversy-executives-on-leave-explained-dylan-mulvaney-20230424.html",
+      "width": 760,
+      "height": 507
+    }
   },
   {
     "id": "cracker-barrel-logo",
@@ -600,6 +752,15 @@
     "method": "Press record",
     "credit": "Cracker Barrel, 2025",
     "data_role": "Reversed",
-    "data_source": "The old logo came back"
+    "data_source": "The old logo came back",
+    "image": {
+      "src": "assets/edition-05/cracker-barrel-logo.webp",
+      "alt": "The short-lived yellow Cracker Barrel logo with only the wordmark",
+      "credit": "Cracker Barrel, August 2025 logo · Heidi Pearce / brand press kit on MultiVu",
+      "source": "https://www.multivu.com/cracker-barrel/9351251-en-cracker-barrel-creative-campaign-with-jordan-davis",
+      "width": 200,
+      "height": 135,
+      "contain": true
+    }
   }
 ]
