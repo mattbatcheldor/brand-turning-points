@@ -1,0 +1,486 @@
+[
+  {
+    "id": "sony-bravia",
+    "brand": "Sony BRAVIA",
+    "title": "Balls",
+    "year": 2005,
+    "place": "European launch · Filmed in San Francisco",
+    "medium": "Film & earned media",
+    "kind": "Creative legacy",
+    "hook": "The day San Francisco rolled downhill in colour.",
+    "before": "LCD televisions were being sold through specifications. Sony needed a reason for people to care about how a picture felt.",
+    "idea": "Fallon and director Nicolai Fuglsig sent brightly coloured bouncy balls down San Francisco streets. Residents filmed the shoot and shared the spectacle before the UK television launch.",
+    "shift": "Colour became an experience people could picture and pass on. The making of the film became part of the distribution.",
+    "metric": "250,000",
+    "measure": "Bouncy balls reported in D&AD’s campaign entry",
+    "evidence": "Production scale. The IPA case documents early diffusion through digital influencers and into wider audiences. The public summary gives no campaign-level sales lift, ROI or CAC.",
+    "lesson": "Make the benefit visible enough that the demonstration itself becomes the thing people share.",
+    "test": "Measure the lift in association with superior colour, then compare retailer sell-through in matched markets.",
+    "links": [
+      [
+        "Read the launch story · D&AD",
+        "https://www.dandad.org/insights/awards/sony-balls-case-study-insights"
+      ],
+      [
+        "Read the effectiveness case · IPA",
+        "https://ipa.co.uk/knowledge/case-studies/sony-bravia-lcd-tv-balls"
+      ]
+    ],
+    "memorable": "The image is instantly recognisable even as a single frame. José González’s quiet cover of “Heartbeats” makes the bouncing colour feel playful and unexpectedly tender, giving a TV demonstration the rhythm of a short film.",
+    "creative": {
+      "medium": "Film archive",
+      "label": "Watch the film at the History of Advertising Trust",
+      "url": "https://www.hatads.org.uk/catalogue/record/e0331ed6-f87f-4ba6-8c44-0f752919b0cb"
+    },
+    "impact_source": [
+      "D&AD campaign record",
+      "https://www.dandad.org/work/d-ad-awards-archive/balls"
+    ],
+    "metric_label": "Balls in the shoot"
+  },
+  {
+    "id": "vw-think-small",
+    "brand": "Volkswagen",
+    "title": "Think Small",
+    "year": 1959,
+    "place": "United States",
+    "medium": "Print",
+    "kind": "Creative legacy",
+    "hook": "The little car that made big cars look excessive.",
+    "before": "In a market where car advertising made size and flash look like success, the Beetle had little to gain by imitating the competition.",
+    "idea": "Doyle Dane Bernbach placed a tiny Beetle in a field of white space. Wry copy turned smallness into a case for economy and practicality.",
+    "shift": "Buying a small car could signal good judgement. The layout made the argument before the reader reached the copy.",
+    "metric": "1962",
+    "measure": "Date of the later execution preserved by The Henry Ford",
+    "evidence": "Archival evidence. The Smithsonian dates an example to 1959. The 1962 execution documents the idea’s continued use. The cited material gives no attributable sales lift.",
+    "lesson": "If a perceived weakness has a real customer benefit, give that feature the most conspicuous space in the ad.",
+    "test": "Compare value perceptions, dealer enquiries and sales against markets using conventional automotive messaging.",
+    "links": [],
+    "memorable": "The empty page makes the tiny car the most conspicuous object on it. The layout performs the argument for restraint before the headline makes it explicit.",
+    "creative": {
+      "medium": "Print artefact",
+      "label": "View the 1959 print ad at the Smithsonian",
+      "url": "https://www.flickr.com/photos/nationalmuseumofamericanhistory/6418777239/"
+    },
+    "impact_source": [
+      "See the 1962 execution · The Henry Ford",
+      "https://www.thehenryford.org/collections/explore/artifact/368680?AssetId=THF212470"
+    ],
+    "metric_label": "Archival print execution"
+  },
+  {
+    "id": "apple-1984",
+    "brand": "Apple",
+    "title": "1984",
+    "year": 1984,
+    "place": "United States",
+    "medium": "Television",
+    "kind": "Commercial",
+    "hook": "A hammer made the personal computer feel personal.",
+    "before": "Apple had to make a new computer matter to people accustomed to seeing computing as the domain of institutions and specialists.",
+    "idea": "Chiat/Day and Ridley Scott made a dystopian film in which a runner throws a hammer into an authoritarian broadcast. Apple aired it during the Super Bowl ahead of the Macintosh launch.",
+    "shift": "The Macintosh entered the market as a symbol of individual agency. The emotional launch made the practical promise of a more approachable computer feel consequential.",
+    "metric": "70,000",
+    "measure": "Macintosh 128K units sold in its first 100 days, per MoMA",
+    "evidence": "Product launch sales. The total includes the combined effects of distribution, press, demand and other marketing. The isolated contribution of the spot is unknown.",
+    "lesson": "Give a product launch a clear cultural opponent when the product delivers a credible alternative.",
+    "test": "Track first-time buyers and estimate incremental units against a launch baseline that accounts for press and distribution.",
+    "links": [
+      [
+        "Read the campaign history · Smithsonian",
+        "https://www.americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad"
+      ]
+    ],
+    "memorable": "The hammer blow gives the story an image that can stand in for the whole film. The audience feels the release before Apple names the computer, and the product inherits that feeling.",
+    "creative": {
+      "medium": "Museum film record",
+      "label": "Explore the original commercial at the Computer History Museum",
+      "url": "https://www.computerhistory.org/revolution/personal-computers/17/303/1201"
+    },
+    "impact_source": [
+      "See the launch sales figure · MoMA",
+      "https://www.moma.org/collection/works/3742"
+    ],
+    "metric_label": "Launch units sold"
+  },
+  {
+    "id": "nike-just-do-it",
+    "brand": "Nike",
+    "title": "Just Do It",
+    "year": 1988,
+    "place": "United States launch",
+    "medium": "Television & brand platform",
+    "kind": "Creative legacy",
+    "hook": "An older runner made Nike’s invitation bigger than sport.",
+    "before": "Elite athletes could make a sports brand aspirational, but they also set a high bar for who might recognise themselves in the advertising.",
+    "idea": "An early Wieden+Kennedy spot followed veteran San Francisco runner Walt Stack. His unglamorous routine made the line feel like a prompt anyone could act on.",
+    "shift": "Nike gave people a way to identify with the act of starting, whether or not they thought of themselves as athletes.",
+    "metric": "37 years",
+    "measure": "From the 1988 launch to Nike’s 2025 reintroduction",
+    "evidence": "Brand-platform longevity, calculated from Nike’s documented dates. The cited material does not isolate the original campaign’s sales, ROI or CAC.",
+    "lesson": "A brand line can outlive its first advert if it gives a broad audience something specific to do.",
+    "test": "Measure brand association and incremental first purchase among occasional exercisers as well as established athletes.",
+    "links": [],
+    "memorable": "Walt Stack’s matter-of-fact delivery makes the achievement feel ordinary in the best sense. His humour and routine put a human face on a line that could otherwise sound like a command.",
+    "creative": {
+      "medium": "Film archive",
+      "label": "Watch the Walt Stack spot at Ads of the World",
+      "url": "https://www.adsoftheworld.com/campaigns/just-do-it-0c281b3b-fa6b-44f5-9728-72b4b5c93e84"
+    },
+    "impact_source": [
+      "Read the platform history · Nike",
+      "https://about.nike.com/en/newsroom/releases/nike-why-do-it-campaign"
+    ],
+    "metric_label": "Platform span"
+  },
+  {
+    "id": "got-milk",
+    "brand": "California Milk Processor Board",
+    "title": "Got Milk?",
+    "year": 1993,
+    "place": "California",
+    "medium": "Television & category marketing",
+    "kind": "Commercial",
+    "hook": "Milk became interesting the second it ran out.",
+    "before": "Consumers already knew milk was nutritious. Reminding them of that fact had little to do with the moment they actually wanted a glass.",
+    "idea": "Goodby Silverstein & Partners dramatized milk deprivation. In the Aaron Burr spot, a mouthful of peanut butter stops a history buff from answering a radio quiz he knows cold.",
+    "shift": "The campaign made milk feel like the missing piece in rituals people already enjoyed. It gave existing drinkers a reason to keep it in the fridge.",
+    "metric": "+2.0%",
+    "measure": "California milk volume, 740m to 755m gallons from 1993 to 1994",
+    "evidence": "Observed category sales. The percentage is calculated from the ANA case’s volumes. It does not isolate advertising from price, distribution or wider category changes.",
+    "lesson": "For a familiar product, show the cost of its absence in a moment the buyer recognises.",
+    "test": "Compare purchase frequency and volume against similar regions, adjusting for category and pricing trends.",
+    "links": [],
+    "memorable": "The viewer can hear the right answer and knows exactly why the caller cannot say it. That shared frustration makes an empty carton the punchline and the product reminder.",
+    "creative": {
+      "medium": "Film archive",
+      "label": "Find the original Aaron Burr spot in the Milk Mustache Database",
+      "url": "https://www.milkmustachedatabase.com/page/commercials.html"
+    },
+    "impact_source": [
+      "Read the original strategy and volumes · ANA Educational Foundation",
+      "https://aef.com/classroom-resources/case-histories/got-milk/"
+    ],
+    "metric_label": "California milk volume"
+  },
+  {
+    "id": "zimbabwean-trillion",
+    "brand": "The Zimbabwean",
+    "title": "Trillion Dollar Campaign",
+    "year": 2009,
+    "place": "South Africa · Zimbabwean newspaper",
+    "medium": "Outdoor, print & direct",
+    "kind": "Reach",
+    "hook": "A banknote that could barely buy anything became the medium.",
+    "before": "The independent Zimbabwean newspaper needed readers outside Zimbabwe to help sustain distribution back home after an import duty made copies more expensive.",
+    "idea": "TBWA\\Hunt\\Lascaris in Johannesburg printed the campaign on real Zimbabwean banknotes rendered nearly worthless by hyperinflation. The notes became handouts, posters and even billboards.",
+    "shift": "The campaign made an economic crisis tangible. The thing people could hold in their hands also made the case for why the newspaper’s reporting mattered.",
+    "metric": "2m+",
+    "measure": "Website hits in the rollout week, according to the campaign entry",
+    "evidence": "Entrant-reported web hits. A hit is a technical traffic count and can include multiple requests per page. The entry gives no comparable unique-visitor count, subscription uplift or CAC.",
+    "lesson": "Choose a medium that physically carries the argument.",
+    "test": "Track attributable subscriptions, reader donations and the cost of getting a copy into the intended market.",
+    "links": [],
+    "memorable": "The absurd number on a real banknote makes the argument before the copy does. A person could take the evidence home, show it to someone else and retell the story without the billboard.",
+    "creative": {
+      "medium": "Outdoor and print artefact",
+      "label": "View the banknote campaign at D&AD",
+      "url": "https://www.dandad.org/work/d-ad-awards-archive/trillion-dollar-campaign"
+    },
+    "impact_source": [
+      "Read the entrant’s results · Cannes entry archive",
+      "https://www.sostav.ru/articles/rus/2009/columns/cannes/0020.html"
+    ],
+    "metric_label": "Rollout week web hits"
+  },
+  {
+    "id": "snickers-hunger",
+    "brand": "Snickers",
+    "title": "You’re Not You When You’re Hungry",
+    "year": 2010,
+    "place": "US launch · International rollout",
+    "medium": "Television & global platform",
+    "kind": "Commercial",
+    "hook": "Betty White made hunger a personality problem.",
+    "before": "A chocolate bar can be easy to recognise and still lack a distinctive reason to buy it in the moment.",
+    "idea": "In the opening US Super Bowl film, Betty White plays an out-of-sorts football teammate until a Snickers restores the player to himself. The substitution became a format local markets could adapt.",
+    "shift": "Snickers owned an instantly recognisable social moment: being so hungry you stop acting like yourself.",
+    "metric": "+15.9%",
+    "measure": "One-year sales growth reported in the IPA’s international case",
+    "evidence": "Reported sales growth, with share gained in 56 of the 58 markets in the case. A separate IPA paper reports over US$70m incremental sales for the later Mr Bean execution. Those are different results and scopes.",
+    "lesson": "Build a repeatable story with a fixed product role and enough room for local culture.",
+    "test": "Compare incremental household penetration and margin across markets, using media and promotion data.",
+    "links": [
+      [
+        "Read the later Mr Bean case · IPA",
+        "https://ipa.co.uk/knowledge/case-studies/snickers-thinking-like-a-hollywood-blockbuster/"
+      ]
+    ],
+    "memorable": "Betty White in a rough football game is funny before the first line lands. The transformation at the end turns the visual joke into a repeatable story in which the bar always has a job.",
+    "creative": {
+      "medium": "Film archive",
+      "label": "Watch the Betty White spot at Ads of the World",
+      "url": "https://www.adsoftheworld.com/campaigns/betty-white"
+    },
+    "impact_source": [
+      "Read the global effectiveness case · IPA",
+      "https://ipa.co.uk/knowledge/case-studies/snickers-you-re-not-you-when-you-re-hungry/"
+    ],
+    "metric_label": "One-year sales growth"
+  },
+  {
+    "id": "old-spice",
+    "brand": "Old Spice",
+    "title": "The Man Your Man Could Smell Like",
+    "year": 2010,
+    "place": "United States",
+    "medium": "Television & social video",
+    "kind": "Commercial",
+    "hook": "A body-wash pitch turned into a conversation.",
+    "before": "Wieden+Kennedy identified women as a major audience for body wash purchases, even when the intended user was a man.",
+    "idea": "Isaiah Mustafa addressed women directly in a film that moved from bathroom to boat to horseback. The character later answered individual fans and celebrities with 186 videos shot in two and a half days.",
+    "shift": "Old Spice became a brand people could joke with. The live responses gave viewers a role in a campaign that began as a broadcast.",
+    "metric": "+60%",
+    "measure": "Red Zone Body Wash sales year on year by May 2010, per Wieden+Kennedy",
+    "evidence": "Agency-reported product sales growth. May precedes the July response activation, so the number belongs to the earlier campaign period. It cannot show the response videos’ separate sales effect.",
+    "lesson": "Give the character a consistent voice and a reason to respond. The audience will help write the next scene.",
+    "test": "Separate the effects of the launch film, promotions and the response campaign on incremental buyers.",
+    "links": [],
+    "memorable": "Isaiah Mustafa’s unbroken eye contact holds the film together while the sets change around him. That deadpan delivery also made the character recognisable in 186 individual replies.",
+    "creative": {
+      "medium": "Original film",
+      "label": "Watch on the Old Spice YouTube channel",
+      "url": "https://www.youtube.com/watch?v=owGykVbfgUE"
+    },
+    "impact_source": [
+      "Watch the creative and read the case · Wieden+Kennedy",
+      "https://www.wk.com/work/old-spice-smell-like-a-man-man/"
+    ],
+    "metric_label": "Body wash sales growth"
+  },
+  {
+    "id": "share-a-coke",
+    "brand": "Coca-Cola",
+    "title": "Share a Coke",
+    "year": 2011,
+    "place": "Australia launch",
+    "medium": "Packaging, retail & social",
+    "kind": "Commercial",
+    "hook": "The logo made room for someone you knew.",
+    "before": "Coke was already widely recognised. The opportunity was to make a familiar brand feel personally relevant and give people a reason to seek it out.",
+    "idea": "The Australian launch printed popular first names on bottles and cans. Finding someone’s name turned ordinary packaging into something to hunt for, photograph or give away.",
+    "shift": "The pack became a social invitation. The idea could cross markets by changing names and cultural details while keeping the same behaviour at its centre.",
+    "metric": "250m+",
+    "measure": "Named bottles and cans sold in the launch summer in Australia",
+    "evidence": "Brand-reported unit sales for the named packs. That count includes people who may already have bought Coke and does not estimate incremental demand or unique buyers.",
+    "lesson": "Put the act of participation inside the product where customers can find it and repeat it.",
+    "test": "Compare named and standard packs in matched stores to estimate incremental units, basket size and margin.",
+    "links": [],
+    "memorable": "A familiar label suddenly gave shoppers someone to look for. The reward was personal and visible, which made the ordinary act of buying a Coke easy to turn into a small gift.",
+    "creative": {
+      "medium": "Agency campaign record",
+      "label": "Explore the original Australian work at Ogilvy",
+      "url": "https://www.ogilvy.com.au/Our-Work/Coca-Cola-Share-a-Coke"
+    },
+    "impact_source": [
+      "Read the Australian launch story · Coca-Cola",
+      "https://www.coca-colacompany.com/about-us/history/how-a-campaign-got-its-start-down-under"
+    ],
+    "metric_label": "Named packs sold"
+  },
+  {
+    "id": "patagonia-jacket",
+    "brand": "Patagonia",
+    "title": "Don’t Buy This Jacket",
+    "year": 2011,
+    "place": "United States",
+    "medium": "Print & brand activism",
+    "kind": "Commercial",
+    "hook": "On Black Friday, a retailer asked people to buy less.",
+    "before": "An outdoor brand that promoted environmental responsibility also depended on selling things. Black Friday made that tension especially visible.",
+    "idea": "Patagonia bought a New York Times ad and detailed the environmental cost of making one of its own jackets. Its existing repair and reuse efforts gave the message practical substance.",
+    "shift": "Patagonia invited customers to judge it by how long its products could stay in use. The brand made the contradictions of consumption part of the conversation.",
+    "metric": "~30%",
+    "measure": "Sales growth in the following nine months, cited by IMD",
+    "evidence": "Company sales trend in an IMD business-school case. The comparison shows what happened after the ad. It gives no estimate of how much the ad contributed or whether customers consumed less.",
+    "lesson": "A surprising stance can build credibility when customers can point to what the company is already doing about it.",
+    "test": "Track repair uptake, useful product life and contribution margin alongside brand trust.",
+    "links": [],
+    "memorable": "A full-page product image and a refusal to sell make the reader stop. The environmental cost in the copy gives the reversal a specific argument that a provocative headline alone could never carry.",
+    "creative": {
+      "medium": "Print artefact",
+      "label": "Read the original New York Times ad at Patagonia",
+      "url": "https://www.patagonia.com/blog/wp-content/uploads/2016/07/nyt_11-25-11.pdf"
+    },
+    "impact_source": [
+      "Read the business case · IMD",
+      "https://www.imd.org/research-knowledge/sustainability/case-studies/patagonia-s-sustainability-strategy-don-t-buy-our-products/"
+    ],
+    "metric_label": "Company sales growth"
+  },
+  {
+    "id": "volvo-epic-split",
+    "brand": "Volvo Trucks",
+    "title": "The Epic Split",
+    "year": 2013,
+    "place": "Global",
+    "medium": "Online film & B2B marketing",
+    "kind": "Perception",
+    "hook": "A stunt made a steering system impossible to forget.",
+    "before": "The precision of a heavy truck’s steering is commercially important, but technical language alone gives buyers little to remember.",
+    "idea": "Jean-Claude Van Damme did the splits between two reversing Volvo trucks. The tension of the stunt depended on the stability that Volvo Dynamic Steering was built to deliver.",
+    "shift": "A technical product claim became a film people chose to watch. Its entertainment value depended on the engineering claim being true.",
+    "metric": "Almost ½",
+    "measure": "Of surveyed truck buyers who saw the launch films said they were more likely to choose Volvo",
+    "evidence": "Brand-reported purchase intent among exposed survey respondents. Volvo also reported 100m+ YouTube views across all six Live Test films in 2014. Neither result isolates the Epic Split’s effect on orders.",
+    "lesson": "Make the technical feature indispensable to the action. If the stunt still works without the feature, the idea is too generic.",
+    "test": "Measure incremental qualified enquiries, orders and margin in exposed sales territories over a full purchase cycle.",
+    "links": [],
+    "memorable": "Van Damme moves slowly enough for viewers to see the risk build. The moment works because a slight steering wobble would break the illusion and the product claim at once.",
+    "creative": {
+      "medium": "Original film",
+      "label": "Watch on the Volvo Trucks YouTube channel",
+      "url": "https://www.youtube.com/watch?v=M7FIvfx5J10"
+    },
+    "impact_source": [
+      "Read the survey and series metrics · Volvo Trucks",
+      "https://news.cision.com/volvo-trucks/r/volvo-trucks-campaign-receives-one-of-the-advertising-world-s-most-prestigious-awards,c9583101"
+    ],
+    "metric_label": "Stated purchase intent"
+  },
+  {
+    "id": "dove-real-beauty",
+    "brand": "Dove",
+    "title": "Real Beauty Sketches",
+    "year": 2013,
+    "place": "Global",
+    "medium": "Online film",
+    "kind": "Reach",
+    "hook": "Two portraits showed how harshly we can see ourselves.",
+    "before": "Beauty marketing regularly gives people a standard to measure themselves against. Dove had been building a platform around questioning those standards.",
+    "idea": "Forensic artist Gil Zamora drew women from their own descriptions and then from a stranger’s description. The reveal put the two drawings beside each other.",
+    "shift": "The film made self-criticism visible in a way viewers could recognise and discuss. It also leaves an open question about whose judgement gets to define beauty.",
+    "metric": "124.9m",
+    "measure": "Online video views by 2 November 2013",
+    "evidence": "Guinness World Records cites the Unruly Viral Video Chart for the film’s view count. Views show distribution and attention. They cannot establish a sustained change in self-perception or Dove sales.",
+    "lesson": "Use a simple reveal that lets viewers discover the insight for themselves.",
+    "test": "Measure belief and brand-association change before exposure, afterwards and again months later, with a comparison group.",
+    "links": [],
+    "memorable": "The two drawings make an internal judgement visible. The film lets the portraits sit beside each other long enough for the participants’ reactions to carry the emotional weight.",
+    "creative": {
+      "medium": "Brand film page",
+      "label": "Watch and explore the sketches at Dove",
+      "url": "https://www.dove.com/us/en/campaigns/purpose/real-beauty-sketches.html?authuser=0"
+    },
+    "impact_source": [
+      "See the dated view count · Guinness World Records",
+      "https://www.guinnessworldrecords.com/world-records/most-viewed-online-video-advertisement"
+    ],
+    "metric_label": "Online video views"
+  },
+  {
+    "id": "always-like-a-girl",
+    "brand": "Always",
+    "title": "#LikeAGirl",
+    "year": 2014,
+    "place": "Global",
+    "medium": "Online film & social",
+    "kind": "Perception",
+    "hook": "The same words could be an insult or a source of pride.",
+    "before": "For a brand that enters many customers’ lives around puberty, the link between growing up and losing confidence gave Always a specific issue to address.",
+    "idea": "Director Lauren Greenfield asked people to run, throw and fight ‘like a girl’. The contrast between the older participants’ caricatures and younger girls’ earnest efforts exposed the phrase as a learned put-down.",
+    "shift": "A familiar insult became something audiences could question and reclaim. The action on screen made the reversal easy to understand without an explanation.",
+    "metric": "~70%",
+    "measure": "Of women in a December 2014 study said the film changed their view of the phrase",
+    "evidence": "The submitted APG case reports a self-reported change among surveyed viewers, alongside roughly 60% of men. The public summary gives no measure of long-term attitude change or incremental product sales.",
+    "lesson": "Stage a contrast that exposes the assumption inside everyday language.",
+    "test": "Check whether the changed meaning endures, then separately measure brand preference and incremental trial.",
+    "links": [
+      [
+        "Read the campaign case · WARC",
+        "https://www.warc.com/en/article/always%3A-%23likeagirl-7dac5b562abc43068488663a7f78f12c"
+      ]
+    ],
+    "memorable": "The same direction produces two completely different performances. Seeing the girls take the instruction seriously makes it hard to hear the phrase the old way again.",
+    "creative": {
+      "medium": "Film archive",
+      "label": "Watch the original social experiment at Ads of the World",
+      "url": "https://www.adsoftheworld.com/campaigns/like-a-girl"
+    },
+    "impact_source": [
+      "Read the strategy and study · Account Planning Group",
+      "https://community.apg.org.uk/fileUploads/2015/Always_59.pdf"
+    ],
+    "metric_label": "Self-reported attitude shift"
+  },
+  {
+    "id": "this-girl-can",
+    "brand": "Sport England",
+    "title": "This Girl Can",
+    "year": 2015,
+    "place": "England",
+    "medium": "Film, outdoor & social",
+    "kind": "Behaviour",
+    "hook": "Exercise ads finally showed what exercise feels like.",
+    "before": "Research identified fear of judgement as a barrier to being active. Idealised images of fitness could reinforce the very feeling Sport England wanted to remove.",
+    "idea": "The launch showed real women sweating, moving and enjoying activity in their own way. The advertising made visible the people fitness campaigns often left out.",
+    "shift": "Exercise looked like something people could do on their own terms. The brand made participation feel more attainable by changing who was seen taking part.",
+    "metric": "£35 per £1",
+    "measure": "Estimated return in sports and health benefits, per the IPA case",
+    "evidence": "Modelled social return on marketing investment. The same case estimates over 2m women became more active and reports that the activity gender gap narrowed from 1.79m to 1.55m. The £35 is a valuation of benefits rather than revenue or profit.",
+    "lesson": "If embarrassment is the barrier, representation can be a practical intervention.",
+    "test": "Follow participation and retention over time, using a comparison group and publishing the assumptions behind any monetised benefits.",
+    "links": [
+      [
+        "Explore the campaign · Sport England",
+        "https://www.sportengland.org/funds-and-campaigns/this-girl-can"
+      ]
+    ],
+    "memorable": "The sweat, effort and joy normally edited out of fitness ads become the images people remember. Missy Elliott’s soundtrack helps those real moments feel exuberant rather than apologetic.",
+    "creative": {
+      "medium": "Broadcaster film archive",
+      "label": "Watch the 2015 launch film at ITV Media",
+      "url": "https://www.itvmedia.co.uk/living-room-legends/sport-england---this-girl-can"
+    },
+    "impact_source": [
+      "Read the effectiveness case · IPA",
+      "https://ipa.co.uk/knowledge/case-studies/this-girl-can-giving-judgement-the-finger-inspiring-millions-of-women-to-get-active"
+    ],
+    "metric_label": "Modelled social return"
+  },
+  {
+    "id": "barbie-movie",
+    "brand": "Mattel & Warner Bros.",
+    "title": "Barbie: The Movie Launch",
+    "year": 2023,
+    "place": "Global",
+    "medium": "Film, licensing & partnerships",
+    "kind": "Commercial",
+    "hook": "A toy brand built a world adults wanted to visit.",
+    "before": "Mattel had a toy almost everyone could recognise. Turning that recognition into anticipation for a film required a role for people who had long since stopped playing with dolls.",
+    "idea": "The launch made elements of the film available outside the cinema. Airbnb brought back the Malibu DreamHouse with Ken as host, giving the film’s setting an address and a bookable experience.",
+    "shift": "Barbie could be experienced as an entertainment world and a cultural event. The partnerships gave audiences ways to take part before seeing the film.",
+    "metric": "No. 1",
+    "measure": "Global box-office ranking among 2023 films, per Mattel",
+    "evidence": "Commercial outcome for the film as a whole. The ranking includes the effects of the film, reviews, distribution and promotion. It cannot isolate the value of individual partnerships or incremental toy sales.",
+    "lesson": "Give each partner a distinct way to extend the same world using something it already does well.",
+    "test": "Use partner-tagged referrals and market holdouts to estimate incremental ticket sales, brand lift and partner contribution.",
+    "links": [
+      [
+        "See the DreamHouse activation · Airbnb",
+        "https://news.airbnb.com/barbies-malibu-dreamhouse-is-back-on-airbnb-but-this-time-kens-hosting"
+      ]
+    ],
+    "memorable": "A recognisable pink world appeared somewhere viewers could actually visit. The DreamHouse made participation possible before opening night, and Ken as host gave the activation a story of its own.",
+    "creative": {
+      "medium": "Official trailer",
+      "label": "Watch on the Warner Bros. Pictures YouTube channel",
+      "url": "https://www.youtube.com/watch?v=pBk4NYhWNMM"
+    },
+    "impact_source": [
+      "Read the annual results · Mattel filing",
+      "https://www.sec.gov/Archives/edgar/data/63276/000162828024016677/mat-20240418.htm"
+    ],
+    "metric_label": "2023 global box office"
+  }
+]
