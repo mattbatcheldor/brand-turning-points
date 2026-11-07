@@ -16,7 +16,12 @@
     "evidence": "The work won the 2023 Cannes Creative Effectiveness Grand Prix and topped WARC’s ranking of the most effective campaigns that year. The 35% growth comes from coverage of the entry, and the public record doesn’t show how it was modelled.",
     "lesson": "Use the machine to give people something they couldn’t get before.",
     "test": "The effectiveness entry reports business growth for the brand. The full method sits behind the awards records.",
-    "links": [],
+    "links": [
+      [
+        "Watch Ogilvy’s case film and campaign executions",
+        "https://www.ogilvy.com/work/shah-rukh-khan-my-ad?version=published"
+      ]
+    ],
     "memorable": "It flips the usual deal. The brand gave its celebrity away to the people who sell its chocolate.",
     "creative": {
       "medium": "Official film",
@@ -35,7 +40,15 @@
     "method": "Reported business growth",
     "credit": "Cannes Lions 2023 · Creative Effectiveness Grand Prix · Ogilvy Mumbai and Wavemaker for Mondelēz",
     "data_role": "Machine as the maker",
-    "data_source": "Machine-learning Shah Rukh Khan avatars"
+    "data_source": "Machine-learning Shah Rukh Khan avatars",
+    "image": {
+      "src": "assets/edition-04/cadbury-not-just-an-ad.webp",
+      "alt": "Shah Rukh Khan in a cream embroidered jacket in the Cadbury Celebrations ad",
+      "credit": "Cadbury Celebrations and Ogilvy Mumbai, Shah Rukh Khan My Ad (2021) · Ogilvy",
+      "source": "https://www.ogilvy.com/work/shah-rukh-khan-my-ad?version=published",
+      "width": 800,
+      "height": 418
+    }
   },
   {
     "id": "ibm-deep-blue",
@@ -54,12 +67,18 @@
     "evidence": "The record shows the match and its fame. No public source isolates what it did for IBM’s sales or reputation.",
     "lesson": "When the product is invisible, a contest can make it visible.",
     "test": "There is no effectiveness paper. The evidence is the historical record of the match.",
-    "links": [],
+    "links": [
+      [
+        "Read IBM’s account of the Deep Blue rematch",
+        "https://www.ibm.com/history/deep-blue"
+      ]
+    ],
     "memorable": "It had a human face, an angry one. Kasparov’s reaction made the machine’s win feel real.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy of the match broadcast found online",
-      "url": ""
+      "medium": "News archive",
+      "label": "Watch RTVE’s 1997 report on the rematch (Spanish)",
+      "url": "https://www.rtve.es/play/videos/fue-noticia-en-el-archivo-de-rtve/deep-blue-vence-kasparov-1997/1397298/",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the history · Wikipedia",
@@ -73,7 +92,15 @@
     "method": "Historical record",
     "credit": "IBM Research, 1997",
     "data_role": "Machine as the show",
-    "data_source": "A chess supercomputer"
+    "data_source": "A chess supercomputer",
+    "image": {
+      "src": "assets/edition-04/ibm-deep-blue.webp",
+      "alt": "Garry Kasparov leaning over the chessboard during game four of the 1997 rematch",
+      "credit": "Monroe Newborn, Kasparov during game four (1997) · Computer History Museum",
+      "source": "https://www.computerhistory.org/chess/stl-430b9bbcaadb4/",
+      "width": 800,
+      "height": 550
+    }
   },
   {
     "id": "ibm-watson-jeopardy",
@@ -92,7 +119,12 @@
     "evidence": "The win made Watson famous. Wikipedia reports that by 2023 Watson had cost IBM far more than it earned. Fame and commercial success came apart.",
     "lesson": "A great demonstration creates expectations. The product has to meet them afterwards.",
     "test": "There is no effectiveness paper. The record is the broadcast and what happened to Watson as a business.",
-    "links": [],
+    "links": [
+      [
+        "Read IBM’s account of the televised competition",
+        "https://www.ibm.com/history/watson-jeopardy"
+      ]
+    ],
     "memorable": "It made a machine look quick and clever in the most familiar format there is, a quiz.",
     "creative": {
       "medium": "Official film",
@@ -111,7 +143,15 @@
     "method": "Historical record",
     "credit": "IBM, 2011",
     "data_role": "Machine as the show",
-    "data_source": "A question-answering computer"
+    "data_source": "A question-answering computer",
+    "image": {
+      "src": "assets/edition-04/ibm-watson-jeopardy.webp",
+      "alt": "Watson’s screen between the two human contestants at their Jeopardy! podiums",
+      "credit": "IBM Research, Watson and the Jeopardy! Challenge · official film thumbnail",
+      "source": "https://www.youtube.com/watch?v=P18EdAKuC1U",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "ing-next-rembrandt",
@@ -149,7 +189,15 @@
     "method": "Earned media",
     "credit": "Cannes Lions 2016 · Two Grand Prix · J. Walter Thompson Amsterdam for ING",
     "data_role": "Machine as the maker",
-    "data_source": "Machine learning on Rembrandt’s paintings"
+    "data_source": "Machine learning on Rembrandt’s paintings",
+    "image": {
+      "src": "assets/edition-04/ing-next-rembrandt.webp",
+      "alt": "The project’s finished portrait of a man wearing a broad black hat and white collar",
+      "credit": "ING and J. Walter Thompson Amsterdam, The Next Rembrandt (2016) · Güney Soykan’s project portfolio",
+      "source": "https://www.guneysoykan.com/nextrembrandt",
+      "width": 800,
+      "height": 449
+    }
   },
   {
     "id": "lays-messi-messages",
@@ -168,12 +216,17 @@
     "evidence": "The campaign won a Cannes Lion. Its makers describe huge global shareability, but no public figure shows its effect on sales or the brand.",
     "lesson": "AI can scale intimacy. Whether that sells crisps still needs measuring.",
     "test": "There is no published effectiveness record, only award entries and the makers’ own descriptions.",
-    "links": [],
+    "links": [
+      [
+        "Watch Synthesia explain how the Messi videos were made",
+        "https://www.synthesia.io/post/messi"
+      ]
+    ],
     "memorable": "Hearing a famous voice say your friend’s name is a strange, small thrill.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Official film",
+      "label": "Watch the 2021 Messi Messages spot on Lay’s Football",
+      "url": "https://www.youtube.com/watch?v=mwWtxF7wKvQ"
     },
     "impact_source": [
       "Read the launch story · Marketing Dive",
@@ -187,7 +240,15 @@
     "method": "Awards only",
     "credit": "Cannes Lions 2021 · Lay’s with Synthesia",
     "data_role": "Machine as the maker",
-    "data_source": "A synthetic Lionel Messi avatar"
+    "data_source": "A synthetic Lionel Messi avatar",
+    "image": {
+      "src": "assets/edition-04/lays-messi-messages.webp",
+      "alt": "A phone showing Messi Messages on a yellow Lay’s campaign end card",
+      "credit": "Lay’s, Messi Messages (2021) · still from Lay’s Football",
+      "source": "https://www.youtube.com/watch?v=mwWtxF7wKvQ",
+      "width": 640,
+      "height": 360
+    }
   },
   {
     "id": "heinz-ai-ketchup",
@@ -209,9 +270,9 @@
     "links": [],
     "memorable": "It is a brag disguised as an experiment. Heinz didn’t say it was the only ketchup. The machine did.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Official film",
+      "label": "Watch A.I. Ketchup on Heinz’s channel",
+      "url": "https://www.youtube.com/watch?v=LFmpVy6eGXs"
     },
     "impact_source": [
       "Read the summary · WARC",
@@ -225,7 +286,15 @@
     "method": "Earned impressions",
     "credit": "WARC Creative 100, 2024 · Rethink for Heinz",
     "data_role": "Machine as the show",
-    "data_source": "The DALL-E 2 image generator"
+    "data_source": "The DALL-E 2 image generator",
+    "image": {
+      "src": "assets/edition-04/heinz-ai-ketchup.webp",
+      "alt": "AI-generated red ketchup bottle above clouds against a blue outer-space background",
+      "credit": "Heinz and Rethink, A.I. Ketchup (2022) · Xavier Blais’s creative portfolio",
+      "source": "https://www.xavierblais.com/work/ai-ketchup",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "coca-cola-create-real-magic",
@@ -244,12 +313,17 @@
     "evidence": "The case reports over 120,000 images, more than 316m media impressions and 90% positive sentiment. These are reach and sentiment measures, not sales.",
     "lesson": "Give people the tools and the stage, and they will make the brand theirs.",
     "test": "The case counts images, impressions, posts and sentiment.",
-    "links": [],
+    "links": [
+      [
+        "Read Coca-Cola’s announcement for the creative platform",
+        "https://www.coca-colacompany.com/media-center/coca-cola-invites-digital-artists-to-create-real-magic-using-new-ai-platform"
+      ]
+    ],
     "memorable": "Seeing your own picture on a billboard in Piccadilly Circus is a reward no discount can match.",
     "creative": {
-      "medium": "Official film",
-      "label": "Watch ‘Masterpiece’, Coca-Cola’s AI-assisted film from the same spring",
-      "url": "https://www.youtube.com/watch?v=VGa1imApfdg"
+      "medium": "Official launch film",
+      "label": "Watch the Create Real Magic launch film on Coca-Cola’s channel",
+      "url": "https://www.youtube.com/watch?v=FPGDMj1QUBE"
     },
     "impact_source": [
       "Read the summary · WARC",
@@ -263,7 +337,15 @@
     "method": "Reach and sentiment",
     "credit": "SABRE Awards · Gold · Coca-Cola",
     "data_role": "Machine as the maker",
-    "data_source": "DALL-E and GPT, used by the public"
+    "data_source": "DALL-E and GPT, used by the public",
+    "image": {
+      "src": "assets/edition-04/coca-cola-create-real-magic.webp",
+      "alt": "The red Create Real Magic interface next to an artwork with a glass Coke bottle",
+      "credit": "Coca-Cola, Create Real Magic (2023) · official launch film thumbnail",
+      "source": "https://www.youtube.com/watch?v=FPGDMj1QUBE",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "nike-serena-evolving",
@@ -285,9 +367,9 @@
     "links": [],
     "memorable": "It answers a question every sports fan has asked, which version of a champion was best.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Agency film",
+      "label": "Watch Never Done Evolving on AKQA’s Vimeo channel",
+      "url": "https://vimeo.com/738608995"
     },
     "impact_source": [
       "Read the award announcement · AKQA",
@@ -301,7 +383,15 @@
     "method": "Awards only",
     "credit": "Cannes Lions 2023 · Digital Craft Grand Prix · AKQA for Nike",
     "data_role": "Machine as the maker",
-    "data_source": "Machine-learning models of two Serenas"
+    "data_source": "Machine-learning models of two Serenas",
+    "image": {
+      "src": "assets/edition-04/nike-serena-evolving.webp",
+      "alt": "Two versions of Serena Williams facing each other in Nike’s Never Done Evolving artwork",
+      "credit": "Nike and AKQA, Never Done Evolving · agency campaign artwork",
+      "source": "https://www.akqa.com/work/nike/nike-50th-anniversary/never-done-evolving/",
+      "width": 800,
+      "height": 420
+    }
   },
   {
     "id": "temptations-cats-lose-their-cool",
@@ -323,9 +413,9 @@
     "links": [],
     "memorable": "Every cat owner knows the moment a cool cat hears the treat packet. The ads live in that moment.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Agency-hosted advert",
+      "label": "Watch the Artist spot at adam&eve",
+      "url": "https://adamandeveddb.com/work/cats-loose-their-cool/"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -339,7 +429,15 @@
     "method": "Econometric model",
     "credit": "IPA 2024 · adam&eveDDB for Mars",
     "data_role": "Machine behind the scenes",
-    "data_source": "An algorithm reading how people talk about cats"
+    "data_source": "An algorithm reading how people talk about cats",
+    "image": {
+      "src": "assets/edition-04/temptations-cats-lose-their-cool.webp",
+      "alt": "A black-and-white cat wearing a patterned outfit and sitting on a stool",
+      "credit": "Mars and adam&eveDDB, Cats Lose Their Cool (2023) · still from the agency’s Artist spot",
+      "source": "https://adamandeveddb.com/work/cats-loose-their-cool/",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "coach-courage-to-be-real",
@@ -361,9 +459,10 @@
     "links": [],
     "memorable": "The films are about courage and self-expression, which is a nice irony for work shaped by so much testing.",
     "creative": {
-      "medium": "Official film",
-      "label": "Watch ‘Find Your Courage’ on Coach’s channel",
-      "url": "https://www.youtube.com/watch?v=Trs2UK-QLv8"
+      "medium": "Official campaign example",
+      "label": "Watch Coach’s 2024 Find Your Courage recap on YouTube",
+      "url": "https://www.youtube.com/watch?v=Trs2UK-QLv8",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -377,7 +476,15 @@
     "method": "Sales and preference trend",
     "credit": "IPA 2026 · Human Made Machine for Coach",
     "data_role": "Machine behind the scenes",
-    "data_source": "Creative pre-testing at every stage"
+    "data_source": "Creative pre-testing at every stage",
+    "image": {
+      "src": "assets/edition-04/coach-courage-to-be-real.webp",
+      "alt": "Virtual model imma with pink hair on a rooftop in Find Your Courage",
+      "credit": "Coach, Find Your Courage (2024) · official recap thumbnail",
+      "source": "https://www.youtube.com/watch?v=Trs2UK-QLv8",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "coca-cola-holidays-ai",
@@ -400,13 +507,17 @@
       [
         "Read how the reaction turned · Adweek",
         "https://www.adweek.com/creativity/how-coca-colas-ai-holiday-ad-went-from-praise-to-rage/"
+      ],
+      [
+        "See the other 2024 holiday films in Coca-Cola’s announcement",
+        "https://www.coca-colacompany.com/media-center/groundbreaking-digital-experience-and-films-fuse-holiday-heritage-with-cutting-edge-tech"
       ]
     ],
     "memorable": "It is a remake of a memory. That makes any strangeness in the pictures easy to spot and hard to forgive.",
     "creative": {
-      "medium": "Original work",
-      "label": "No confirmed official copy of the 2024 AI film found online",
-      "url": ""
+      "medium": "Official film",
+      "label": "Watch Silver Santa, one of the 2024 AI holiday films, on Coca-Cola’s channel",
+      "url": "https://www.youtube.com/watch?v=JmdeavxkPAw"
     },
     "impact_source": [
       "Read the testing story · MediaPost",
@@ -420,7 +531,15 @@
     "method": "Pre-test score against public reaction",
     "credit": "Coca-Cola, 2024",
     "data_role": "Machine as the maker",
-    "data_source": "Generative AI video"
+    "data_source": "Generative AI video",
+    "image": {
+      "src": "assets/edition-04/coca-cola-holidays-ai.webp",
+      "alt": "A red Coca-Cola truck lit with Christmas lights in a snowy town",
+      "credit": "Coca-Cola, Silver Santa (2024) · official film thumbnail",
+      "source": "https://www.youtube.com/watch?v=JmdeavxkPAw",
+      "width": 480,
+      "height": 270
+    }
   },
   {
     "id": "toys-r-us-sora",
@@ -442,9 +561,9 @@
     "links": [],
     "memorable": "It looks like a dream of an advert, which is both its achievement and its problem.",
     "creative": {
-      "medium": "Original work",
-      "label": "No official copy found online",
-      "url": ""
+      "medium": "Official film",
+      "label": "Watch the Sora-made origin film at Toys “R” Us Studios",
+      "url": "https://www.toysrus.com/pages/studios"
     },
     "impact_source": [
       "Read the story · Decrypt",
@@ -458,7 +577,15 @@
     "method": "Public reaction",
     "credit": "Cannes Lions 2024 premiere · Native Foreign for Toys “R” Us",
     "data_role": "Machine as the maker",
-    "data_source": "OpenAI’s Sora video model"
+    "data_source": "OpenAI’s Sora video model",
+    "image": {
+      "src": "assets/edition-04/toys-r-us-sora.webp",
+      "alt": "Young Charles in glasses looking up as lights swirl around him",
+      "credit": "Toys “R” Us Studios and Native Foreign, The Origin of Toys “R” Us (2024) · still from the brand film",
+      "source": "https://www.toysrus.com/pages/studios",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "dove-the-code",
@@ -496,7 +623,15 @@
     "method": "Views and sentiment",
     "credit": "Dove, 2024",
     "data_role": "Machine as the show",
-    "data_source": "AI image generators, used as the problem"
+    "data_source": "AI image generators, used as the problem",
+    "image": {
+      "src": "assets/edition-04/dove-the-code.webp",
+      "alt": "Two people with curly hair standing together in a still from The Code",
+      "credit": "Dove, The Code (2024) · Dove’s Keep Beauty Real campaign page",
+      "source": "https://www.dove.com/us/en/campaigns/purpose/keep-beauty-real.html",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "easyjet-creative-system",
@@ -515,12 +650,18 @@
     "evidence": "Modelling estimates £136m of incremental profit in 2025, up 60% year on year, and a 49% rise in margin ROI against a 10% target. It is one of the strongest results in this edition, and it comes from the machine working behind the scenes.",
     "lesson": "Build for the feed first, then scale what the feed tells you works.",
     "test": "Modelling estimated the incremental profit the system delivered and compared margin ROI with the target set for it.",
-    "links": [],
+    "links": [
+      [
+        "See how VCCP built the Big Orange Sale campaign",
+        "https://www.vccp.com/uk/work/easyjet/big-orange-sale"
+      ]
+    ],
     "memorable": "There is no single ad to remember, and that is the point.",
     "creative": {
-      "medium": "Original work",
-      "label": "No single film represents the system",
-      "url": ""
+      "medium": "Agency campaign example",
+      "label": "Watch Big Orange Sale, a 2025 example of the system, on VCCP’s Vimeo",
+      "url": "https://vimeo.com/1046408586",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the case summary · IPA",
@@ -534,7 +675,15 @@
     "method": "Econometric model",
     "credit": "IPA 2026 · Bronze · VCCP, T&P and Kepler for easyJet",
     "data_role": "Machine behind the scenes",
-    "data_source": "Algorithmic media and a content engine"
+    "data_source": "Algorithmic media and a content engine",
+    "image": {
+      "src": "assets/edition-04/easyjet-creative-system.webp",
+      "alt": "A woman with sunglasses holding a bright red fan in a sunny street",
+      "credit": "easyJet and VCCP, Big Orange Sale (2025) · agency campaign artwork",
+      "source": "https://www.vccp.com/uk/work/easyjet/big-orange-sale",
+      "width": 800,
+      "height": 450
+    }
   },
   {
     "id": "mcdonalds-netherlands-ai",
@@ -556,9 +705,10 @@
     "links": [],
     "memorable": "It tried to be honest about Christmas stress, and the method drowned out the message.",
     "creative": {
-      "medium": "Original work",
-      "label": "Withdrawn by McDonald’s",
-      "url": ""
+      "medium": "Archived reupload",
+      "label": "Watch an archived reupload of the withdrawn 2025 Christmas advert",
+      "url": "https://www.youtube.com/watch?v=_NIdwvy14pA",
+      "heading": "Campaign media"
     },
     "impact_source": [
       "Read the story · Fox Business",
@@ -572,6 +722,14 @@
     "method": "Public reaction",
     "credit": "McDonald’s Netherlands, 2025",
     "data_role": "Machine as the maker",
-    "data_source": "Generative AI imagery"
+    "data_source": "Generative AI imagery",
+    "image": {
+      "src": "assets/edition-04/mcdonalds-netherlands-ai.webp",
+      "alt": "A choir of Santas beneath the McDonald’s arches in a snowy street",
+      "credit": "McDonald’s Netherlands, TBWA\\Neboko and The Sweetshop, 2025 Christmas spot · still published by Adformatie",
+      "source": "https://www.adformatie.nl/creatie/artificial-intelligence/mcdonalds-trekt-ai-kerstcommercial-terug",
+      "width": 754,
+      "height": 424
+    }
   }
 ]
