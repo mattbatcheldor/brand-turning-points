@@ -17,4 +17,4 @@ For GitHub Pages, upload the package contents to the root of your repository and
 - Edit `src/page-template.html` for changes to the layout, typography or site copy. The screening selection lives in `src/build.py`. Use direct links for archival films and eligible official YouTube uploads for in-page viewing.
 - Run `python3 src/build.py` to regenerate `index.html`. Preview the updated site and commit the source and output together. Recheck each new source link and any film playback.
 
-The cover is an editorial illustration. Original advertisements and external video belong to their respective rights holders.
+The cover uses a still from the Sony BRAVIA *Balls* campaign. Original advertisements and external video belong to their respective rights holders.
