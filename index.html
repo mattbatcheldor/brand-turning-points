@@ -63,7 +63,7 @@
 .patterns{margin-top:clamp(3rem,6vw,5.5rem);scroll-margin-top:1rem}.mech-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin-top:1rem}.mech{background:var(--light);border:1px solid var(--line);border-top:3px solid var(--ink);padding:1rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}.mech h3{font-size:1.55rem}.mech-pick{all:unset;cursor:pointer;font:inherit;letter-spacing:inherit}.mech-pick:hover{text-decoration:underline}.mech-pick:focus-visible{outline:3px solid #557400;outline-offset:3px}.mech p{font-size:.9rem;color:var(--muted)}.mech ul{list-style:none;margin:auto 0 0;padding:.6rem 0 0;border-top:1px solid var(--line);font-size:.9rem}.mech li+li{margin-top:.25rem}.mech li span{color:var(--muted)}
 .timeline{position:relative;height:6.5rem;margin:1.3rem .6rem .4rem}.axis{position:absolute;left:0;right:0;bottom:1.3rem;border-top:1px solid var(--ink)}.tick{position:absolute;left:var(--x);top:.35rem;transform:translateX(-50%);font-size:.72rem;color:var(--muted)}.tick::before{content:"";position:absolute;left:50%;top:-.6rem;height:.45rem;border-left:1px solid var(--ink)}.dot{position:absolute;left:var(--x);bottom:calc(1.3rem + .45rem + var(--y) * 1.15rem);width:.95rem;height:.95rem;margin-left:-.475rem;border-radius:50%;background:#557400;border:2px solid var(--paper);transition:opacity .2s,transform .2s}.dot.s4{background:#7c9a1e}.dot.s3{background:#a5c31c}.dot.s2,.dot.s1{background:#a8aa9d}.dot:hover,.dot:focus-visible{transform:scale(1.35)}.dot.out{opacity:.18}.timeline-key{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-size:.78rem;color:var(--muted);padding-bottom:.8rem}.timeline-key i{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.35rem;vertical-align:-.05rem}
 .filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;width:100%}.filter-row>.small{width:6.5rem;font-size:.62rem;color:var(--muted)}.filter-bar{gap:.65rem}
-.next{display:grid;grid-template-columns:1fr 1.35fr;gap:1.5rem 4rem;padding-block:clamp(2rem,5vw,4.5rem);border-bottom:1px solid var(--line)}.next h2{font-size:clamp(2.3rem,4.2vw,4.1rem);margin-top:.4rem}.next-copy p{max-width:62ch}.next-copy p+p{margin-top:.7rem}.scope{background:var(--light);border:1px solid var(--line);padding:1rem;margin-top:1rem}
+.next{display:grid;grid-template-columns:1fr 1.35fr;gap:1.5rem 4rem;padding-block:clamp(2rem,5vw,4.5rem);border-bottom:1px solid var(--line)}.next h2{font-size:clamp(2.3rem,4.2vw,4.1rem);margin-top:.4rem}.next-copy p{max-width:62ch}.next-copy p+p{margin-top:.7rem}
 @media(max-width:1000px){.mech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.finding-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.mech-grid{grid-template-columns:1fr}.ladder li{grid-template-columns:minmax(0,1fr) auto}.ladder-count{justify-content:flex-end}.ladder-bar{width:calc(var(--n) * .4rem)}.ladder-cases{grid-column:1/-1}.full-inner,.next{grid-template-columns:1fr}.full-case{margin-inline:.75rem}.filter-row>.small{width:100%}.timeline{height:7rem}.tick:nth-child(even){display:none}.metric-cell .meter{margin-top:0}}
 
@@ -97,6 +97,22 @@
   .case > summary .case-heading {grid-column:2;grid-row:2}
   .case > summary .metric-cell {grid-column:2;grid-row:3}
   .case > summary .toggle {grid-column:3;grid-row:1;align-self:start}
+}
+.edition-scope {
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);
+  align-items:center;
+  gap:1rem clamp(2rem,5vw,5rem);
+  margin-top:clamp(1.5rem,3vw,2.5rem);
+  padding:1.2rem clamp(1rem,2.2vw,1.8rem);
+  border-left:3px solid #829a2d;
+  background:#eeeee1;
+}
+.edition-scope .small {color:var(--muted)}
+.edition-scope h3 {font-size:clamp(1.65rem,3vw,2.5rem);margin-top:.35rem}
+.edition-scope > p {max-width:64ch}
+@media(max-width:750px) {
+  .edition-scope {grid-template-columns:1fr;gap:.7rem}
 }
 </style>
 </head>
@@ -160,6 +176,13 @@
 <span class="ladder-cases"><span class="ladder-note">The record shows the work existed and endured.</span> <a href="#sony-bravia">Sony BRAVIA</a>, <a href="#vw-think-small">Volkswagen</a>, <a href="#nike-just-do-it">Nike</a></span></li>
 </ol>
 </div>
+<aside class="edition-scope" id="edition-scope" aria-labelledby="edition-scope-title">
+<div>
+<p class="small">A note on scope</p>
+<h3 id="edition-scope-title">What Edition 01 leaves out</h3>
+</div>
+<p><strong>Ten of the 15 cases</strong> feature American brands or campaigns launched in the United States. The archive also jumps <strong>25 years</strong>, from 1959 to 1984. <a href="#next">Edition 02</a> will start filling both gaps.</p>
+</aside>
 </section>
 <section class="patterns" id="patterns" aria-labelledby="patterns-title">
 <div class="section-head"><div><p class="small">02 / The patterns</p><h2 id="patterns-title">Five ways to change what people see</h2></div><p>Fifteen stories, five mechanisms. Choose one to filter the archive.</p></div>
@@ -916,7 +939,7 @@
 <div><h3>How cases earn a place</h3><p>Each case has a specific shift in how people were invited to see the brand or category, a creative decision that made it possible and a traceable source. The collection is curated and unranked. The measurement ideas in each case are proposals for a comparable brief today.</p></div>
 </div></div></section>
 <section class="wrap closing-note" aria-labelledby="why-archive"><div><p class="small">06 / The editorial purpose</p><h2 id="why-archive">Keep the work in view.</h2></div><div class="mission-copy"><p>A shot held long enough to make you uneasy. A phrase turned on its head. A package that gives a stranger a reason to talk to you. The archive preserves those decisions alongside the original work, its credits and the evidence that helps us understand what happened next.</p></div></section>
-<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">Coming next / Edition 02</p><h2 id="next-title">What will still be worth remembering?</h2></div><div class="next-copy"><p>Some of these campaigns were made when artificial intelligence belonged to research labs and science fiction. Now it shapes how quickly ideas are made and shared. Edition 02 will look at work from that new era and ask whether faster ideas leave better evidence behind, or less.</p><div class="scope"><p><b>What Edition 01 leaves out.</b> Ten of the fifteen cases are American brands or launched in the United States, and the archive jumps 25 years from 1959 to 1984. Edition 02 will start filling both gaps.</p></div></div></section>
+<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">Coming next / Edition 02</p><h2 id="next-title">What will still be worth remembering?</h2></div><div class="next-copy"><p>Some of these campaigns were made when artificial intelligence belonged to research labs and science fiction. Now it shapes how quickly ideas are made and shared. Edition 02 will look at work from that new era and ask whether faster ideas leave better evidence behind, or less.</p></div></section>
 </main>
 <dialog class="film-player" aria-labelledby="film-title">
 <div class="player-top"><h2 id="film-title">Campaign film</h2><form method="dialog"><button type="submit">Close player</button></form></div>
