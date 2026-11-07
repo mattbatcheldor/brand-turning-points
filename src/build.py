@@ -197,6 +197,44 @@ def blueprint_art():
 </g>
 </svg>'''
 
+
+def postcard_art():
+    # Editorial illustration: a postcard from the edges of the archive, its stamps from far-off places and a small price tag.
+    mono = "'Courier New', Courier, monospace"
+    serif = "Georgia, 'Times New Roman', serif"
+    stamps = [(588, 92, '#d2462f', 'COLOMBIA'), (676, 92, '#557400', 'KENYA'), (588, 196, '#1d3f63', 'JAPAN'), (676, 196, '#c98f3e', 'BRASIL')]
+    tilt = (-3, 2, 3, -2)
+    st = ''.join(f'<g transform="rotate({tilt[i]} {x + 38} {y + 48})"><rect x="{x}" y="{y}" width="76" height="96" fill="#fbf9f1" stroke="#a8aa9d" stroke-width="1.5" stroke-dasharray="3 3"/>'
+                 f'<rect x="{x + 7}" y="{y + 7}" width="62" height="62" fill="{c}"/><circle cx="{x + 38}" cy="{y + 38}" r="14" fill="#fbf9f1" opacity=".85"/>'
+                 f'<text x="{x + 38}" y="{y + 86}" text-anchor="middle" font-family="{mono}" font-size="10" font-weight="bold" fill="#1d211b">{n}</text></g>'
+                 for i, (x, y, c, n) in enumerate(stamps))
+    waves = ''.join(f'<path d="M540 {120 + k * 12}c20 -8 40 8 60 0s40 8 60 0s40 8 60 0" fill="none" stroke="#1d211b" stroke-width="1.6" opacity=".45"/>' for k in range(5))
+    lines = ''.join(f'<line x1="520" y1="{340 + k * 34}" x2="760" y2="{340 + k * 34}" stroke="#a8aa9d" stroke-width="1.5"/>' for k in range(4))
+    return f'''<svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
+<title id="art-title">Illustration of a postcard from the edges of the archive. It carries stamps from Colombia, Kenya, Japan and Brazil, a postmark, a handwritten note and a small price tag reading $4,500.</title>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#2b2a20"/><stop offset="1" stop-color="#15140f"/></linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".45"/></filter></defs>
+<path d="M0 0h920v560H0z" fill="url(#bg)"/>
+<g transform="translate(46 26) scale(.9)"><g transform="rotate(-3 460 280)" filter="url(#sh)">
+<rect x="130" y="60" width="660" height="430" fill="#f4ecd8"/>
+<line x1="490" y1="90" x2="490" y2="460" stroke="#a8aa9d" stroke-width="2"/>
+<text x="164" y="116" font-family="{mono}" font-size="12" letter-spacing="2" fill="#53584d">EDITION 07 / EDGE FIRST</text>
+<text x="164" y="176" font-family="{serif}" font-size="34" font-style="italic" fill="#1d211b">Greetings from</text>
+<text x="164" y="222" font-family="{serif}" font-size="34" font-style="italic" fill="#1d211b">the edge of the map.</text>
+<text x="164" y="290" font-family="{mono}" font-size="14" fill="#1d211b">Small budgets. Far places.</text>
+<text x="164" y="314" font-family="{mono}" font-size="14" fill="#1d211b">Big turning points.</text>
+<text x="164" y="372" font-family="{mono}" font-size="14" fill="#1d211b">Wish you were here,</text>
+<text x="164" y="396" font-family="{mono}" font-size="14" fill="#1d211b">M.</text>
+{waves}{st}
+{lines}
+</g>
+<g transform="rotate(12 760 470)" filter="url(#sh)">
+<path d="M700 440h110l24 30l-24 30h-110z" fill="#d9f55d"/>
+<circle cx="716" cy="470" r="6" fill="#15140f"/>
+<text x="732" y="477" font-family="{mono}" font-size="18" font-weight="bold" fill="#1d211b">$4,500</text>
+</g></g>
+</svg>'''
+
 LEVELS = ['Modelled effect', 'Sales trend', 'Survey', 'Reach only', 'Archival']
 LEVEL_NOTES = {
     'Modelled effect': 'A model estimates the effect against a baseline.',
@@ -379,7 +417,7 @@ def series_modelled(edition):
         if not data.exists():
             continue
         n = sum(1 for c in json.loads(data.read_text(encoding='utf-8')) if c['evidence_level'] == 'Modelled effect')
-        parts.append((f'{n} here' if n else 'none here') if other is edition else f'{n} in Edition {other["number"]}')
+        parts.append((f'{n} here' if n else 'none here') if other is edition else (f'{n} in Edition {other["number"]}' if n else f'none in Edition {other["number"]}'))
     return ', '.join(parts[:-1]) + ' and ' + parts[-1] if len(parts) > 1 else (parts[0] if parts else '')
 
 
@@ -692,6 +730,32 @@ EDITIONS = [
             ('xbox-adaptive-controller', 'Listen to who designed it, and who it was designed for.', 'pad'),
         ),
     },
+    {
+        'number': '07',
+        'name': 'Edge first',
+        'data': 'campaigns-07.json',
+        'template': 'page-template-07.html',
+        'output': 'edition-07/index.html',
+        'asset_prefix': '../',
+        'art': postcard_art,
+        'test_heading': 'How the proof was built',
+        'level_notes': {
+            'Modelled effect': 'A model or a natural experiment estimates the effect against a baseline.',
+            'Sales trend': 'Sales, orders or money raised moved, but other causes are not separated out.',
+        },
+        'roles': {
+            'roles': ['Place first', 'Small first', 'Both'],
+            'role_label': 'Edge',
+            'role_aria': 'Which edge',
+            'source_label': 'Why it is here',
+        },
+        'screening': (
+            ('operation-christmas', 'Watch the trees light up as someone walks past.', 'jungle'),
+            ('calm-project-84', 'The unveiling on live television. Notice how quiet the studio goes.', 'roof'),
+            ('dollar-shave-club', 'One take, one warehouse, one founder. Count the jokes per minute.', 'razor'),
+            ('blendtec-will-it-blend', 'The question is always the same. That is the brand.', 'blend'),
+        ),
+    },
 ]
 
 
@@ -702,20 +766,20 @@ REGIONS = [
     ('North America', ('United States', 'US launch', 'California', 'New York', 'Canada')),
     ('Europe', ('European', 'Denmark', 'Germany', 'Italy', 'Netherlands', 'Sweden', 'Switzerland', 'Monza')),
     ('Asia', ('India', 'China', 'Japan', 'Philippines')),
-    ('Latin America', ('Brazil',)),
-    ('Africa', ('South Africa',)),
+    ('Latin America', ('Brazil', 'Colombia')),
+    ('Africa', ('South Africa', 'Kenya')),
     ('Australia', ('Australia',)),
 ]
 EVIDENCE_COLOURS = {'Modelled effect': '#557400', 'Sales trend': '#7c9a1e', 'Survey': '#a5c31c', 'Reach only': '#d3d1c5', 'Archival': '#a8aa9d'}
 LESSONS = [
     ('Plan to measure, and you can prove it.',
-     'Edition 02 holds 13 of the archive’s 22 modelled effects, because every case there is an IPA paper written to prove its effect. The famous work in Edition 01 has one.',
+     'Edition 02 holds 13 of the archive’s {modelled} modelled effects, because every case there is an IPA paper written to prove its effect. The famous work in Edition 01 has one.',
      [('02', 'dft-drink-drive'), ('02', 'john-lewis-long-wait'), ('03', 'prospan-cough-predictor'), ('04', 'easyjet-creative-system'), ('01', 'this-girl-can')]),
     ('Show, don’t tell.',
-     'Demonstration is the most common mechanism in the archive, used in 21 of the 90 cases. The strongest let the product make the argument.',
+     'Demonstration is the most common mechanism in the archive, used in {demo} of the {total} cases. The strongest let the product make the argument.',
      [('01', 'volvo-epic-split'), ('03', 'hellmanns-recipe-receipt'), ('04', 'heinz-ai-ketchup'), ('06', 'dyson-dc01'), ('06', 'volvo-three-point-seatbelt')]),
     ('Say the uncomfortable thing first.',
-     'Reframed weakness turns up in 12 cases across four editions, and the two recoveries in Edition 05 use the same move. Naming the problem makes the answer believable.',
+     'Reframed weakness turns up in {reframed} cases across {reframed_eds} editions, and the two recoveries in Edition 05 use the same move. Naming the problem makes the answer believable.',
      [('01', 'vw-think-small'), ('02', 'marmite-love-it-hate-it'), ('06', 'skoda-fabia'), ('05', 'dominos-pizza-turnaround'), ('05', 'kfc-fck')]),
     ('Give people something back.',
      'The data and machine ideas people loved gave something back: a year in music, a star for a corner shop, a billboard of their own. Work that took something away met resistance.',
@@ -737,6 +801,7 @@ BRAND_NOTES = {
     'Pepsi': 'The taste test that pushed Coca-Cola into New Coke, then two failures of its own.',
     'Burger King': 'A data stunt that worked, and a tweet that didn’t.',
     'Snickers': 'A hunger insight, then the same insight run by an algorithm.',
+    'KitKat': 'A break in Britain, a good-luck charm in Japan. The same bar, given a different job by a different culture.',
 }
 
 
@@ -808,6 +873,10 @@ def build_index():
             s = by_number[num]
             c = next(c for c in s['campaigns'] if c['id'] == cid)
             chip_html.append(f'<a class="lesson-chip" href="{case_href(s["edition"], cid)}"><span class="small">{num}</span> {e(c["brand"])}, {e(c["title"])}</a>')
+        words = {2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'}
+        reframed_eds = len({ed['number'] for ed, c in everything if c['mechanism'] == 'Reframed weakness'})
+        text = text.format(modelled=modelled, demo=mechs['Demonstration'], total=total,
+                           reframed=mechs['Reframed weakness'], reframed_eds=words.get(reframed_eds, reframed_eds))
         lessons.append(f'<article class="lesson"><p class="lesson-num small">{i:02d}</p><h3>{e(title)}</h3><p>{e(text)}</p><div class="lesson-chips">{"".join(chip_html)}</div></article>')
 
     groups = collections.defaultdict(list)
@@ -847,7 +916,7 @@ def build_index():
                                f'Asia has {regions["Asia"]}, Latin America {regions["Latin America"]} and Africa {regions["Africa"]}. The IPA databank is the richest source of proof, and it is British.'),
         ('When', f'{recent} of the {total} cases, {share(recent)}, date from 2010 or later. Only {early} come from before 1970, because older campaigns rarely left a public record.'),
         ('What the proof looks like', f'{modelled} of {total} cases have a modelled effect. {levels["Sales trend"]} show a sales trend, {levels["Archival"]} are archival only, and survey evidence is the rarest, with {levels["Survey"]}.'),
-        ('Who it is about', 'Most cases are big brands with big budgets. Small businesses, charities and public services appear, but rarely, and they may have the most to teach.'),
+        ('Who it is about', 'Most cases are big brands with big budgets. Edge first adds charities, start-ups and a government, but small organisations are still a minority, and they may have the most to teach.'),
     ]
     gap_html = ''.join(f'<div><h3>{e(t)}</h3><p>{e(x)}</p></div>' for t, x in gaps)
     reads = ', '.join(f'<a href="{relative_dir(INDEX_OUTPUT, s["edition"]["output"]) or "./"}">Edition {s["edition"]["number"]}, {e(s["edition"]["name"])}</a>' for s in series)
@@ -857,6 +926,8 @@ def build_index():
     output = (template.replace('@@CSS@@\n', css)
               .replace('@@EDITION_NAV@@', render_edition_nav(None))
               .replace('@@EDITION_COUNT@@', str(len(series)))
+              .replace('@@EDITION_WORD@@', {6: 'Six', 7: 'Seven', 8: 'Eight'}.get(len(series), str(len(series))))
+              .replace('@@TOTAL_WORD@@', {90: 'Ninety', 100: 'A hundred'}.get(total, str(total)))
               .replace('@@TOTAL@@', str(total))
               .replace('@@MODELLED@@', str(modelled))
               .replace('@@FIRST_YEAR@@', str(min(years)))

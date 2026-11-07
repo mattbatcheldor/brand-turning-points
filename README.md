@@ -8,12 +8,13 @@ An editorial archive of campaigns that changed how people saw a brand, a product
 - **Edition 04, Machine first** (`edition-04/`) opens with Cadbury’s *Shah Rukh Khan-My-Ad* and covers 15 campaigns made with machines or about them, from 1997 to 2025. It finds that machines working behind the scenes prove the most, while machines on screen mostly prove attention, and sometimes backlash.
 - **Edition 05, Failure first** (`edition-05/`) opens with New Coke and covers 15 campaigns that went wrong, from 1985 to 2025, sorted by the mistake behind each and what the brand did next. It finds that failure is easy to see and hard to cost: none of the fifteen has a modelled effect.
 - **Edition 06, Product first** (`edition-06/`) opens with the Greggs vegan sausage roll and covers 15 products that changed how people saw a brand, from 1959 to 2020. It finds that products prove they sell but rarely prove the advertising: eleven show a sales trend and none a modelled effect.
+- **Edition 07, Edge first** (`edition-07/`) is the finale. It opens with Colombia’s Operation Christmas and covers 10 cases from places outside the UK and North America and from organisations with tiny budgets, taking the archive to 100. It finds that the edges measured themselves best, and closes with ‘What lasts’, a short piece on the whole series.
 
 - **The Index** (`the-index/`) reads the whole series in one place: each edition’s finding, the evidence across editions, six lessons that hold across them, the brands that came back, every case in one searchable list and what the series doesn’t cover yet. It is built from the same case files as the editions, so it updates itself when you rebuild. Its lessons and brand notes live in `LESSONS` and `BRAND_NOTES` in `src/build.py`.
 
 ## Series plan
 
-The editions run in this fixed order. Keep the numbers and names exactly as listed.
+The editions run in this fixed order. Keep the numbers and names exactly as listed. Editions 01 to 06 have 15 cases each, and the Edge first finale has 10, for 100 in all.
 
 | Edition | Name | Status |
 | --- | --- | --- |
@@ -23,6 +24,7 @@ The editions run in this fixed order. Keep the numbers and names exactly as list
 | 04 | Machine first | Published |
 | 05 | Failure first | Published |
 | 06 | Product first | Published |
+| 07 | Edge first (finale, 10 cases) | Published |
 
 [Read the brand and editorial guidelines](Brand_Turning_Points_Guidelines.html) for the visual identity, case structure, citation standards and film policy.
 

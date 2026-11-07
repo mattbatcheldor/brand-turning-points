@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The Index to Brand Turning Points. Six editions and ninety campaigns in one place: what the series found, the lessons that hold across editions, the brands that came back and every case, searchable.">
+<meta name="description" content="The Index to Brand Turning Points. Seven editions and a hundred campaigns in one place: what the series found, the lessons that hold across editions, the brands that came back and every case, searchable.">
 <meta name="theme-color" content="#171914">
 <title>Brand Turning Points | The Index</title>
 <style>
@@ -23,6 +23,7 @@
 .ed-card:hover{border-top-color:#557400}.ed-card:hover .ed-finding{text-decoration:underline}
 .ed-num{font:bold .7rem/1 var(--sans);letter-spacing:.12em;color:var(--muted)}.ed-name{font:normal 1.9rem/1.05 var(--serif);letter-spacing:-.02em}
 .ed-finding{font:italic 1.05rem/1.35 var(--serif)}.ed-meta{margin-top:auto;color:var(--muted)}
+.ed-card:last-child:nth-child(3n+1){grid-column:1/-1}
 .ev-chart{display:grid;gap:.55rem}.ev-row{display:grid;grid-template-columns:13rem minmax(0,1fr);align-items:center;gap:1rem}
 .ev-label{font-size:.9rem}.ev-label a{font-weight:bold;color:var(--ink)}.ev-label span{color:var(--muted)}
 .ev-bar{display:flex;height:2.1rem;gap:2px}.ev-seg{flex:var(--n) 0 0;display:grid;place-items:center;font:bold .78rem/1 var(--sans);color:var(--ink);min-width:1.4rem}.ev-seg.dark{color:#fffdf7}
@@ -43,8 +44,8 @@
 .ix-main{display:flex;flex-direction:column;gap:.15rem;min-width:0}.ix-brand{color:var(--muted);font-size:.64rem}.ix-title{font:normal 1.3rem/1.15 var(--serif)}.ix-place{font-size:.8rem;color:var(--muted)}
 .ix-side{display:flex;flex-direction:column;gap:.3rem;align-items:flex-start;font-size:.8rem}.ix-ed{color:var(--ink)}
 .gap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 3rem;margin-top:1.4rem}.gap-grid h3{font-size:1.05rem;margin:0 0 .4rem}.gap-grid p{margin:0;color:#d3d1c5}
-@media(max-width:900px){.ed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.ix-stats div:nth-child(3){border-right:0}}
-@media(max-width:700px){.ix-about{grid-template-columns:1fr;gap:.4rem}.ix-about-copy{border-top:0}
+@media(max-width:900px){.ed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ed-card:last-child:nth-child(3n+1){grid-column:auto}.ed-card:last-child:nth-child(odd){grid-column:1/-1}.ix-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.ix-stats div:nth-child(3){border-right:0}}
+@media(max-width:700px){.ed-card:last-child:nth-child(odd){grid-column:auto}.ix-about{grid-template-columns:1fr;gap:.4rem}.ix-about-copy{border-top:0}
 .ed-grid,.lesson-grid,.gap-grid{grid-template-columns:1fr}.brand-row{grid-template-columns:1fr;gap:.6rem}
 .ev-row{grid-template-columns:1fr;gap:.3rem}.ix-case a{grid-template-columns:3.2rem minmax(0,1fr);gap:.4rem .8rem}.ix-side{grid-column:2}
 .ix-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats div{border-right:0}.ix-stats div:nth-child(odd){border-right:1px solid var(--line)}}
@@ -64,7 +65,7 @@
 <h2 id="founder-note" class="small">Why this page exists</h2>
 <figure class="founder-quote">
 <img src="../assets/matthew-batcheldor.webp" width="256" height="256" alt="Matthew Batcheldor in Niseko">
-<blockquote><p>“Ninety campaigns taught me one thing above all. A great idea and a proven idea are not the same, and the best work is both.”</p></blockquote>
+<blockquote><p>“@@TOTAL_WORD@@ campaigns taught me one thing above all. A great idea and a proven idea are not the same, and the best work is both.”</p></blockquote>
 <figcaption class="founder-byline">Matthew Batcheldor <span>Curator</span></figcaption>
 </figure>
 <p class="founder-context">Each edition looks at brand turning points from one angle: fame, proof, data, machines, failure and products. This page reads them together. It shows what the series found, the lessons that hold across editions, the brands that came back and every case in one searchable list.</p>
@@ -82,13 +83,13 @@
 <h2 id="about-title" class="small">About this archive</h2>
 <div class="ix-about-copy">
 <p>Brand Turning Points started with a question about a Sony advert. I remembered thousands of coloured balls bouncing down a San Francisco street, and I wanted to understand why the idea had stayed with me for so long.</p>
-<p>Six editions later, it is an archive of @@TOTAL@@ cases from @@FIRST_YEAR@@ to @@LAST_YEAR@@. Every case has a credited image, a watch link, a source for its headline evidence and my own take. The series moves from how brands earn attention, in Fame first, to what gives people a reason to believe them, in Product first.</p>
+<p>@@EDITION_WORD@@ editions later, it is an archive of @@TOTAL@@ cases from @@FIRST_YEAR@@ to @@LAST_YEAR@@. Every case has a source for its headline evidence and my own take, and most have a credited image and a film to watch. The series moves from how brands earn attention, in Fame first, to what gives people a reason to believe them, in Product first, and ends at the edges of the map in Edge first.</p>
 <p class="ix-about-note">It is not a ranking. I rate each case on the strength of its public evidence, and that rating says more about what was measured and published than about what worked. Read the conclusions as hypotheses to take into a brief and test.</p>
 </div>
 </section>
 
 <section class="ix-section" id="editions" aria-labelledby="editions-title">
-<div class="section-head"><div><p class="small">01 / The editions</p><h2 id="editions-title">Six angles, one question</h2></div><p>Every edition asks what changed how people saw a brand, and what the evidence can prove. Each one reached its own finding.</p></div>
+<div class="section-head"><div><p class="small">01 / The editions</p><h2 id="editions-title">@@EDITION_WORD@@ angles, one question</h2></div><p>Every edition asks what changed how people saw a brand, and what the evidence can prove. Each one reached its own finding.</p></div>
 <div class="ed-grid">
 @@EDITION_CARDS@@
 </div>
