@@ -1,6 +1,8 @@
 from html import escape
 from pathlib import Path
+import collections
 import json
+import re
 import random
 
 root = Path(__file__).resolve().parent
@@ -464,11 +466,16 @@ def render_edition_nav(edition):
         if not (root / other['data']).exists():
             continue
         label = f'<span class="sr">Edition </span>{other["number"]}'
-        if other is edition:
+        if edition is not None and other is edition:
             links.append(f'<a href="#top" aria-current="page" title="Edition {other["number"]}{", " + other["name"] if other.get("name") else ""}">{label}</a>')
         else:
-            href = relative_dir(edition['output'], other['output']) or './'
+            href = relative_dir(edition['output'] if edition else INDEX_OUTPUT, other['output']) or './'
             links.append(f'<a href="{href}" title="Edition {other["number"]}{", " + other["name"] if other.get("name") else ""}">{label}</a>')
+    here = edition['output'] if edition else INDEX_OUTPUT
+    if edition:
+        links.append(f'<a class="index-link" href="{relative_dir(here, INDEX_OUTPUT)}" title="The Index: the whole series in one place">Index</a>')
+    else:
+        links.append('<a class="index-link" href="#top" aria-current="page" title="The Index: the whole series in one place">Index</a>')
     return f'<span class="edition-nav"><span class="edition-nav-label" aria-hidden="true">Editions</span>{"".join(links)}</span>'
 
 
@@ -687,6 +694,192 @@ EDITIONS = [
     },
 ]
 
+
+# The Index: one page that reads the whole series. It is built from the same case files as the editions.
+INDEX_OUTPUT = 'the-index/index.html'
+REGIONS = [
+    ('UK and Ireland', ('United Kingdom', 'Great Britain', 'England', 'London', 'Harlech', 'Britain')),
+    ('North America', ('United States', 'US launch', 'California', 'New York', 'Canada')),
+    ('Europe', ('European', 'Denmark', 'Germany', 'Italy', 'Netherlands', 'Sweden', 'Switzerland', 'Monza')),
+    ('Asia', ('India', 'China', 'Japan', 'Philippines')),
+    ('Latin America', ('Brazil',)),
+    ('Africa', ('South Africa',)),
+    ('Australia', ('Australia',)),
+]
+EVIDENCE_COLOURS = {'Modelled effect': '#557400', 'Sales trend': '#7c9a1e', 'Survey': '#a5c31c', 'Reach only': '#d3d1c5', 'Archival': '#a8aa9d'}
+LESSONS = [
+    ('Plan to measure, and you can prove it.',
+     'Edition 02 holds 13 of the archive’s 22 modelled effects, because every case there is an IPA paper written to prove its effect. The famous work in Edition 01 has one.',
+     [('02', 'dft-drink-drive'), ('02', 'john-lewis-long-wait'), ('03', 'prospan-cough-predictor'), ('04', 'easyjet-creative-system'), ('01', 'this-girl-can')]),
+    ('Show, don’t tell.',
+     'Demonstration is the most common mechanism in the archive, used in 21 of the 90 cases. The strongest let the product make the argument.',
+     [('01', 'volvo-epic-split'), ('03', 'hellmanns-recipe-receipt'), ('04', 'heinz-ai-ketchup'), ('06', 'dyson-dc01'), ('06', 'volvo-three-point-seatbelt')]),
+    ('Say the uncomfortable thing first.',
+     'Reframed weakness turns up in 12 cases across four editions, and the two recoveries in Edition 05 use the same move. Naming the problem makes the answer believable.',
+     [('01', 'vw-think-small'), ('02', 'marmite-love-it-hate-it'), ('06', 'skoda-fabia'), ('05', 'dominos-pizza-turnaround'), ('05', 'kfc-fck')]),
+    ('Give people something back.',
+     'The data and machine ideas people loved gave something back: a year in music, a star for a corner shop, a billboard of their own. Work that took something away met resistance.',
+     [('03', 'spotify-wrapped'), ('04', 'cadbury-not-just-an-ad'), ('01', 'share-a-coke'), ('04', 'coca-cola-create-real-magic'), ('04', 'coca-cola-holidays-ai')]),
+    ('Don’t change what people feel they own.',
+     'Five brands in Edition 05 changed a formula, a carton, a logo or a name, and all five changed it back. MINI is the exception that proves it: it changed almost everything and kept the bit people loved.',
+     [('05', 'new-coke'), ('05', 'tropicana-redesign'), ('05', 'gap-logo'), ('05', 'cracker-barrel-logo'), ('06', 'mini-2001')]),
+    ('Fame is not proof.',
+     'Some of the most celebrated work in the archive left the thinnest evidence. These cases are remembered everywhere and proven almost nowhere.',
+     [('01', 'sony-bravia'), ('01', 'vw-think-small'), ('04', 'ibm-watson-jeopardy'), ('04', 'ing-next-rembrandt'), ('06', 'nike-vaporfly')]),
+]
+BRAND_GROUPS = {'Volvo Trucks': 'Volvo', 'Burger King UK': 'Burger King', 'McDonald’s Netherlands': 'McDonald’s'}
+BRAND_NOTES = {
+    'Coca-Cola': 'Its most famous mistake, its biggest participation hit, then AI work that was loved and then hated.',
+    'Nike': 'A line, a shoe and an AI film. Three ways of saying the same thing.',
+    'Apple': 'The ad that promised a revolution, and the product that delivered one.',
+    'Volvo': 'A truck stunt and a seatbelt. Volvo Trucks and Volvo Cars have been separate companies since 1999, but both trade on the same story of safety and engineering.',
+    'Dove': 'Real Beauty, then a pledge to keep it real in the age of AI.',
+    'Pepsi': 'The taste test that pushed Coca-Cola into New Coke, then two failures of its own.',
+    'Burger King': 'A data stunt that worked, and a tweet that didn’t.',
+    'Snickers': 'A hunger insight, then the same insight run by an algorithm.',
+}
+
+
+def region_of(place):
+    head = place.split(',')[0].split('·')[0]
+    if head.strip().lower().startswith(('global', 'worldwide', 'online')) and 'London' not in place:
+        return 'Global'
+    # The first place named wins, so 'United States and United Kingdom' counts as North America.
+    hits = [(place.find(k), name) for name, keys in REGIONS for k in keys if k in place]
+    return min(hits)[1] if hits else 'Global'
+
+
+def decade_of(year):
+    return f'{year // 10 * 10}s'
+
+
+def load_series():
+    series = []
+    for edition in EDITIONS:
+        if not (root / edition['data']).exists():
+            continue
+        campaigns = json.loads((root / edition['data']).read_text(encoding='utf-8'))
+        template = (root / edition['template']).read_text(encoding='utf-8')
+        finding = re.search(r'<h2 id="finding-title">(.*?)</h2>', template)
+        series.append({'edition': edition, 'campaigns': campaigns, 'finding': finding.group(1) if finding else ''})
+    return series
+
+
+def case_href(edition, case_id):
+    return f'{relative_dir(INDEX_OUTPUT, edition["output"]) or "./"}#{case_id}'
+
+
+def build_index():
+    series = load_series()
+    by_number = {s['edition']['number']: s for s in series}
+    everything = [(s['edition'], c) for s in series for c in s['campaigns']]
+    total = len(everything)
+    modelled = sum(1 for _, c in everything if c['evidence_level'] == 'Modelled effect')
+    years = [c['year'] for _, c in everything]
+    regions = collections.Counter(region_of(c['place']) for _, c in everything)
+    decades = collections.Counter(decade_of(c['year']) for _, c in everything)
+    levels = collections.Counter(c['evidence_level'] for _, c in everything)
+    mechs = collections.Counter(c['mechanism'] for _, c in everything)
+
+    cards = []
+    for s in series:
+        ed, cs = s['edition'], s['campaigns']
+        n_mod = sum(1 for c in cs if c['evidence_level'] == 'Modelled effect')
+        href = relative_dir(INDEX_OUTPUT, ed['output']) or './'
+        cards.append(f'<a class="ed-card" href="{href}"><span class="ed-num">{ed["number"]}</span><span class="ed-name">{e(ed["name"])}</span>'
+                     f'<span class="ed-finding">{e(s["finding"])}</span><span class="ed-meta small">{len(cs)} cases · {min(c["year"] for c in cs)} to {max(c["year"] for c in cs)} · {n_mod or "no"} modelled</span></a>')
+
+    rows = []
+    for s in series:
+        ed, cs = s['edition'], s['campaigns']
+        segs = []
+        for level in LEVELS:
+            n = sum(1 for c in cs if c['evidence_level'] == level)
+            if n:
+                dark = level in ('Modelled effect', 'Sales trend')
+                segs.append(f'<span class="ev-seg{" dark" if dark else ""}" style="--n:{n};background:{EVIDENCE_COLOURS[level]}" title="{e(level)}: {n}">{n}<span class="sr"> {e(level)}</span></span>')
+        rows.append(f'<div class="ev-row"><span class="ev-label"><a href="{relative_dir(INDEX_OUTPUT, ed["output"]) or "./"}">Edition {ed["number"]}</a> <span>{e(ed["name"])}</span></span><span class="ev-bar">{"".join(segs)}</span></div>')
+    legend = ''.join(f'<span><i style="background:{EVIDENCE_COLOURS[l]}"></i>{e(l)} <b>{levels[l]}</b></span>' for l in LEVELS)
+
+    lessons = []
+    for i, (title, text, refs) in enumerate(LESSONS, 1):
+        chip_html = []
+        for num, cid in refs:
+            s = by_number[num]
+            c = next(c for c in s['campaigns'] if c['id'] == cid)
+            chip_html.append(f'<a class="lesson-chip" href="{case_href(s["edition"], cid)}"><span class="small">{num}</span> {e(c["brand"])}, {e(c["title"])}</a>')
+        lessons.append(f'<article class="lesson"><p class="lesson-num small">{i:02d}</p><h3>{e(title)}</h3><p>{e(text)}</p><div class="lesson-chips">{"".join(chip_html)}</div></article>')
+
+    groups = collections.defaultdict(list)
+    for ed, c in everything:
+        groups[BRAND_GROUPS.get(c['brand'], c['brand'])].append((ed, c))
+    recurring = sorted(((b, v) for b, v in groups.items() if len({ed['number'] for ed, _ in v}) > 1),
+                       key=lambda bv: (-len({ed['number'] for ed, _ in bv[1]}), bv[0]))
+    brands = []
+    for b, v in recurring:
+        items = ''.join(f'<li><a href="{case_href(ed, c["id"])}"><span class="small">Edition {ed["number"]}</span> {e(c["title"])} <span class="yr">{c["year"]}</span></a></li>'
+                        for ed, c in sorted(v, key=lambda x: x[1]['year']))
+        brands.append(f'<article class="brand-row"><div><h3>{e(b)}</h3><p>{e(BRAND_NOTES.get(b, ""))}</p></div><ol>{items}</ol></article>')
+
+    eds = [s['edition']['number'] for s in series]
+    region_order = [r for r, _ in REGIONS] + ['Global']
+    filt = {
+        'edition': ('Edition', eds),
+        'evidence': ('Evidence', [l for l in LEVELS if levels[l]]),
+        'region': ('Where', [r for r in region_order if regions[r]]),
+        'decade': ('Decade', sorted(decades)),
+    }
+    filters = ''.join(f'<div class="filter-row" role="group" aria-label="{label}"><span class="small">{label}</span>{chips(g, vals)}</div>' for g, (label, vals) in filt.items())
+    lines = []
+    for ed, c in sorted(everything, key=lambda x: (x[1]['year'], x[1]['brand'])):
+        lines.append(f'<li class="ix-case" data-edition="{ed["number"]}" data-evidence="{e(c["evidence_level"])}" data-region="{e(region_of(c["place"]))}" data-decade="{decade_of(c["year"])}">'
+                     f'<a href="{case_href(ed, c["id"])}"><span class="ix-year">{c["year"]}</span><span class="ix-main"><span class="ix-brand small">{e(c["brand"])} · {e(c["mechanism"])}</span>'
+                     f'<span class="ix-title">{e(c["title"])}</span><span class="ix-place">{e(c["place"])}</span></span>'
+                     f'<span class="ix-side"><span class="ix-ed">Edition {ed["number"]}, {e(ed["name"])}</span>{meter(c["evidence_level"])}</span></a></li>')
+
+    share = lambda n: f'{round(n / total * 100)}%'
+    uk, na = regions['UK and Ireland'], regions['North America']
+    recent = sum(n for d, n in decades.items() if int(d[:4]) >= 2010)
+    early = sum(n for d, n in decades.items() if int(d[:4]) < 1970)
+    thin = [r for r in ('Asia', 'Latin America', 'Africa') if regions[r] <= 5]
+    gaps = [
+        ('Where the work ran', f'{uk} cases, {share(uk)}, started in the UK or Ireland, and {na}, {share(na)}, in North America. '
+                               f'Asia has {regions["Asia"]}, Latin America {regions["Latin America"]} and Africa {regions["Africa"]}. The IPA databank is the richest source of proof, and it is British.'),
+        ('When', f'{recent} of the {total} cases, {share(recent)}, date from 2010 or later. Only {early} come from before 1970, because older campaigns rarely left a public record.'),
+        ('What the proof looks like', f'{modelled} of {total} cases have a modelled effect. {levels["Sales trend"]} show a sales trend, {levels["Archival"]} are archival only, and survey evidence is the rarest, with {levels["Survey"]}.'),
+        ('Who it is about', 'Most cases are big brands with big budgets. Small businesses, charities and public services appear, but rarely, and they may have the most to teach.'),
+    ]
+    gap_html = ''.join(f'<div><h3>{e(t)}</h3><p>{e(x)}</p></div>' for t, x in gaps)
+    reads = ', '.join(f'<a href="{relative_dir(INDEX_OUTPUT, s["edition"]["output"]) or "./"}">Edition {s["edition"]["number"]}, {e(s["edition"]["name"])}</a>' for s in series)
+
+    template = (root / 'page-template-index.html').read_text(encoding='utf-8')
+    css = (root / 'site.css').read_text(encoding='utf-8')
+    output = (template.replace('@@CSS@@\n', css)
+              .replace('@@EDITION_NAV@@', render_edition_nav(None))
+              .replace('@@EDITION_COUNT@@', str(len(series)))
+              .replace('@@TOTAL@@', str(total))
+              .replace('@@MODELLED@@', str(modelled))
+              .replace('@@FIRST_YEAR@@', str(min(years)))
+              .replace('@@LAST_YEAR@@', str(max(years)))
+              .replace('@@REGION_COUNT@@', str(len([r for r in regions if r != 'Global'])))
+              .replace('@@DEMO@@', str(mechs['Demonstration']))
+              .replace('@@EDITION_CARDS@@', '\n'.join(cards))
+              .replace('@@EVIDENCE_ROWS@@', '\n'.join(rows))
+              .replace('@@EVIDENCE_LEGEND@@', legend)
+              .replace('@@LESSONS@@', '\n'.join(lessons))
+              .replace('@@BRAND_COUNT@@', str(len(recurring)))
+              .replace('@@BRANDS@@', '\n'.join(brands))
+              .replace('@@FILTERS@@', filters)
+              .replace('@@CASES@@', '\n'.join(lines))
+              .replace('@@GAPS@@', gap_html)
+              .replace('@@READS@@', reads))
+    assert '@@' not in output, re.findall(r'@@\w+@@', output)
+    out = root.parent / INDEX_OUTPUT
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(output, encoding='utf-8')
+    return out, regions
+
+
 if __name__ == '__main__':
     import sys
     wanted = sys.argv[1:]
@@ -699,3 +892,5 @@ if __name__ == '__main__':
         forwarding = write_forwarding_page(edition)
         if forwarding:
             print('Built', forwarding.relative_to(root.parent), '(forwards to', edition['output'] + ')')
+    if not wanted or INDEX_OUTPUT in wanted:
+        print('Built', build_index()[0].relative_to(root.parent))

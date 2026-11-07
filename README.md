@@ -9,6 +9,8 @@ An editorial archive of campaigns that changed how people saw a brand, a product
 - **Edition 05, Failure first** (`edition-05/`) opens with New Coke and covers 15 campaigns that went wrong, from 1985 to 2025, sorted by the mistake behind each and what the brand did next. It finds that failure is easy to see and hard to cost: none of the fifteen has a modelled effect.
 - **Edition 06, Product first** (`edition-06/`) opens with the Greggs vegan sausage roll and covers 15 products that changed how people saw a brand, from 1959 to 2020. It finds that products prove they sell but rarely prove the advertising: eleven show a sales trend and none a modelled effect.
 
+- **The Index** (`the-index/`) reads the whole series in one place: each edition’s finding, the evidence across editions, six lessons that hold across them, the brands that came back, every case in one searchable list and what the series doesn’t cover yet. It is built from the same case files as the editions, so it updates itself when you rebuild. Its lessons and brand notes live in `LESSONS` and `BRAND_NOTES` in `src/build.py`.
+
 ## Series plan
 
 The editions run in this fixed order. Keep the numbers and names exactly as listed.

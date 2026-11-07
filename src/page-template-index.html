@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Index to Brand Turning Points. Six editions and ninety campaigns in one place: what the series found, the lessons that hold across editions, the brands that came back and every case, searchable.">
+<meta name="theme-color" content="#171914">
+<title>Brand Turning Points | The Index</title>
+<style>
+@@CSS@@
+.ix-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:clamp(2rem,4vw,3rem)}
+.ix-stats div{padding:1rem .8rem 1.1rem 0;border-right:1px solid var(--line)}.ix-stats div:last-child{border-right:0}
+.ix-stats b{display:block;font:normal clamp(2rem,4vw,3.2rem)/1 var(--serif);letter-spacing:-.03em}.ix-stats span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.ix-section{padding-top:clamp(3.2rem,7vw,5.5rem);scroll-margin-top:1rem}
+.ix-section .section-head{margin-bottom:1.2rem}.ix-section .section-head>p{max-width:34rem;color:var(--muted)}
+.ed-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.ed-card{display:flex;flex-direction:column;gap:.55rem;background:var(--light);border:1px solid var(--line);border-top:3px solid var(--ink);padding:1.1rem 1.1rem 1.2rem;text-decoration:none;color:var(--ink);min-width:0}
+.ed-card:hover{border-top-color:#557400}.ed-card:hover .ed-finding{text-decoration:underline}
+.ed-num{font:bold .7rem/1 var(--sans);letter-spacing:.12em;color:var(--muted)}.ed-name{font:normal 1.9rem/1.05 var(--serif);letter-spacing:-.02em}
+.ed-finding{font:italic 1.05rem/1.35 var(--serif)}.ed-meta{margin-top:auto;color:var(--muted)}
+.ev-chart{display:grid;gap:.55rem}.ev-row{display:grid;grid-template-columns:13rem minmax(0,1fr);align-items:center;gap:1rem}
+.ev-label{font-size:.9rem}.ev-label a{font-weight:bold;color:var(--ink)}.ev-label span{color:var(--muted)}
+.ev-bar{display:flex;height:2.1rem;gap:2px}.ev-seg{flex:var(--n) 0 0;display:grid;place-items:center;font:bold .78rem/1 var(--sans);color:var(--ink);min-width:1.4rem}.ev-seg.dark{color:#fffdf7}
+.ev-legend{display:flex;flex-wrap:wrap;gap:.5rem 1.3rem;margin-top:1rem;font-size:.78rem;color:var(--muted)}.ev-legend i{display:inline-block;width:.8rem;height:.8rem;margin-right:.35rem;vertical-align:-1px}.ev-legend b{color:var(--ink)}
+.lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.lesson{background:var(--light);border:1px solid var(--line);padding:1.2rem 1.2rem 1.3rem;min-width:0}
+.lesson h3{font:normal 1.6rem/1.1 var(--serif);letter-spacing:-.02em;margin:.2rem 0 .6rem}.lesson>p{margin:0 0 .9rem}.lesson-num{color:var(--muted);margin:0}
+.lesson-chips{display:flex;flex-wrap:wrap;gap:.4rem}.lesson-chip{font-size:.8rem;padding:.3rem .65rem;border:1px solid #a8aa9d;border-radius:2rem;color:var(--ink);text-decoration:none;background:var(--paper)}
+.lesson-chip:hover{background:var(--accent);border-color:var(--ink)}.lesson-chip .small{font-size:.62rem;color:var(--muted);margin-right:.15rem}
+.brand-list{border-top:1px solid var(--ink)}
+.brand-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.brand-row h3{font:normal 1.7rem/1.1 var(--serif);margin:0 0 .35rem}.brand-row p{margin:0;color:var(--muted);font-size:.92rem}
+.brand-row ol{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}.brand-row li a{display:flex;gap:.6rem;align-items:baseline;color:var(--ink);text-decoration:none;font-size:.95rem}
+.brand-row li a:hover{text-decoration:underline}.brand-row .small{min-width:5.6rem;color:var(--muted);font-size:.64rem}.brand-row .yr{color:var(--muted);font-size:.85rem}
+.ix-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.ix-case a{display:grid;grid-template-columns:4rem minmax(0,1fr) 15rem;gap:1rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.ix-case a:hover .ix-title{text-decoration:underline}.ix-year{font:normal 1.25rem/1 var(--serif);color:var(--muted)}
+.ix-main{display:flex;flex-direction:column;gap:.15rem;min-width:0}.ix-brand{color:var(--muted);font-size:.64rem}.ix-title{font:normal 1.3rem/1.15 var(--serif)}.ix-place{font-size:.8rem;color:var(--muted)}
+.ix-side{display:flex;flex-direction:column;gap:.3rem;align-items:flex-start;font-size:.8rem}.ix-ed{color:var(--ink)}
+.gap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 3rem;margin-top:1.4rem}.gap-grid h3{font-size:1.05rem;margin:0 0 .4rem}.gap-grid p{margin:0;color:#d3d1c5}
+@media(max-width:900px){.ed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.ix-stats div:nth-child(3){border-right:0}}
+@media(max-width:700px){.ed-grid,.lesson-grid,.gap-grid{grid-template-columns:1fr}.brand-row{grid-template-columns:1fr;gap:.6rem}
+.ev-row{grid-template-columns:1fr;gap:.3rem}.ix-case a{grid-template-columns:3.2rem minmax(0,1fr);gap:.4rem .8rem}.ix-side{grid-column:2}
+.ix-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats div{border-right:0}.ix-stats div:nth-child(odd){border-right:1px solid var(--line)}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#all-cases">Skip to every case</a>
+<header class="top"><div class="wrap">
+<a class="wordmark small" href="#top"><span class="signal" aria-hidden="true"></span> Brand Turning Points</a>
+<nav class="small" aria-label="Main navigation"><a href="#lessons">Lessons</a><a href="#brands">Brands</a><a href="#all-cases">All cases</a><a href="#gaps">Gaps</a>@@EDITION_NAV@@</nav>
+</div></header>
+<main>
+<div class="wrap">
+<section class="mast" aria-labelledby="mast-title">
+<div><p class="issue small">The campaign archive / The Index</p><h1 id="mast-title">Brand Turning<br><em>Points.</em></h1></div>
+<div class="mast-intro" aria-labelledby="founder-note">
+<h2 id="founder-note" class="small">Why this page exists</h2>
+<figure class="founder-quote">
+<img src="../assets/matthew-batcheldor.webp" width="256" height="256" alt="Matthew Batcheldor in Niseko">
+<blockquote><p>“Ninety campaigns taught me one thing above all. A great idea and a proven idea are not the same, and the best work is both.”</p></blockquote>
+<figcaption class="founder-byline">Matthew Batcheldor <span>Curator</span></figcaption>
+</figure>
+<p class="founder-context">Each edition looks at brand turning points from one angle: fame, proof, data, machines, failure and products. This page reads them together. It shows what the series found, the lessons that hold across editions, the brands that came back and every case in one searchable list.</p>
+</div>
+</section>
+<div class="ix-stats" role="list">
+<div role="listitem"><b>@@EDITION_COUNT@@</b><span>Editions</span></div>
+<div role="listitem"><b>@@TOTAL@@</b><span>Campaigns</span></div>
+<div role="listitem"><b>@@MODELLED@@</b><span>With a modelled effect</span></div>
+<div role="listitem"><b>@@REGION_COUNT@@</b><span>Regions, plus global work</span></div>
+<div role="listitem"><b>@@FIRST_YEAR@@</b><span>To @@LAST_YEAR@@</span></div>
+</div>
+
+<section class="ix-section" id="editions" aria-labelledby="editions-title">
+<div class="section-head"><div><p class="small">01 / The editions</p><h2 id="editions-title">Six angles, one question</h2></div><p>Every edition asks what changed how people saw a brand, and what the evidence can prove. Each one reached its own finding.</p></div>
+<div class="ed-grid">
+@@EDITION_CARDS@@
+</div>
+</section>
+
+<section class="ix-section" id="evidence" aria-labelledby="evidence-title">
+<div class="section-head"><div><p class="small">02 / The evidence</p><h2 id="evidence-title">What the series can prove</h2></div><p>Every case carries one of five evidence ratings. Read across the editions and one pattern stands out: proof depends far more on planning than on fame.</p></div>
+<div class="ev-chart" role="group" aria-label="Evidence ratings by edition">
+@@EVIDENCE_ROWS@@
+</div>
+<p class="ev-legend">@@EVIDENCE_LEGEND@@</p>
+</section>
+
+<section class="ix-section" id="lessons" aria-labelledby="lessons-title">
+<div class="section-head"><div><p class="small">03 / The lessons</p><h2 id="lessons-title">Six lessons that hold across editions</h2></div><p>None of these belongs to one edition. Each is backed by cases from at least two angles. Choose a case to read it in full.</p></div>
+<div class="lesson-grid">
+@@LESSONS@@
+</div>
+</section>
+
+<section class="ix-section" id="brands" aria-labelledby="brands-title">
+<div class="section-head"><div><p class="small">04 / Brands that came back</p><h2 id="brands-title">The same brand, seen from different sides</h2></div><p>@@BRAND_COUNT@@ brands appear in more than one edition. Reading their cases together shows how one name can be a hit, an experiment and a mistake.</p></div>
+<div class="brand-list">
+@@BRANDS@@
+</div>
+</section>
+
+<section class="ix-section archive" id="all-cases" aria-labelledby="all-title">
+<div class="section-head"><div><p class="small">05 / Every case</p><h2 id="all-title">All @@TOTAL@@ campaigns</h2></div><p>The whole archive in date order. Filter by edition, evidence, where the work ran or decade, or search by brand. Each case opens in its edition.</p></div>
+<div class="filter-bar" id="filters" hidden aria-label="Filter campaigns">
+@@FILTERS@@
+<label class="search">Search <input id="search" type="search" placeholder="Brand, idea or year" autocomplete="off"></label>
+</div>
+<p id="result" class="result" aria-live="polite">@@TOTAL@@ campaigns</p>
+<ol class="ix-list">
+@@CASES@@
+</ol>
+<p class="empty" id="empty" hidden>No campaigns match. Try clearing the search or setting a filter back to All.</p>
+</section>
+</div>
+
+<section class="method" id="gaps" aria-labelledby="gaps-title"><div class="wrap">
+<p class="small">06 / What’s missing</p><h2 id="gaps-title">What the series doesn’t cover yet</h2>
+<div class="gap-grid">@@GAPS@@</div>
+</div></section>
+
+<section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">07 / Start reading</p><h2 id="next-title">Pick an angle.</h2></div><div class="next-copy"><p>Every edition stands on its own, and they read best in order. Start with the famous work, then see what can be proved.</p><p>@@READS@@.</p></div></section>
+</main>
+<footer class="wrap foot small"><span>Brand Turning Points / The Index / Curated by Matthew Batcheldor</span><a href="#top">Back to top ↑</a></footer>
+<script>
+const buttons = Array.from(document.querySelectorAll('.filter'));
+const rows = Array.from(document.querySelectorAll('.ix-case'));
+const search = document.querySelector('#search');
+const result = document.querySelector('#result');
+const empty = document.querySelector('#empty');
+const selected = {};
+for (const b of buttons) selected[b.dataset.group] = 'All';
+const norm = t => t.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+function update() {
+  const terms = norm(search.value).split(' ').filter(Boolean);
+  let n = 0;
+  for (const r of rows) {
+    const ok = Object.keys(selected).every(g => selected[g] === 'All' || r.dataset[g] === selected[g]) && terms.every(t => norm(r.textContent).includes(t));
+    r.hidden = !ok; if (ok) n += 1;
+  }
+  for (const b of buttons) b.setAttribute('aria-pressed', String(selected[b.dataset.group] === b.dataset.value));
+  result.textContent = n === 1 ? '1 campaign' : n + ' campaigns';
+  empty.hidden = n !== 0;
+}
+document.querySelector('#filters').hidden = false;
+for (const b of buttons) b.addEventListener('click', () => { selected[b.dataset.group] = b.dataset.value; update(); });
+search.addEventListener('input', update);
+</script>
+</body>
+</html>
