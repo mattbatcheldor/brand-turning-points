@@ -7,6 +7,7 @@ An editorial archive of campaigns that changed how people saw a brand, a product
 - **Edition 03, Data first** (`edition-03/`) opens with Spotify Wrapped and covers 15 campaigns where data was the idea, from 1975 to 2020. It finds that data used to aim the work proves itself, while data used as the show mostly proves attention.
 - **Edition 04, Machine first** (`edition-04/`) opens with Cadbury’s *Shah Rukh Khan-My-Ad* and covers 15 campaigns made with machines or about them, from 1997 to 2025. It finds that machines working behind the scenes prove the most, while machines on screen mostly prove attention, and sometimes backlash.
 - **Edition 05, Failure first** (`edition-05/`) opens with New Coke and covers 15 campaigns that went wrong, from 1985 to 2025, sorted by the mistake behind each and what the brand did next. It finds that failure is easy to see and hard to cost: none of the fifteen has a modelled effect.
+- **Edition 06, Product first** (`edition-06/`) opens with the Greggs vegan sausage roll and covers 15 products that changed how people saw a brand, from 1959 to 2020. It finds that products prove they sell but rarely prove the advertising: eleven show a sales trend and none a modelled effect.
 
 ## Series plan
 
@@ -19,7 +20,7 @@ The editions run in this fixed order. Keep the numbers and names exactly as list
 | 03 | Data first | Published |
 | 04 | Machine first | Published |
 | 05 | Failure first | Published |
-| 06 | Product first | Planned |
+| 06 | Product first | Published |
 
 [Read the brand and editorial guidelines](Brand_Turning_Points_Guidelines.html) for the visual identity, case structure, citation standards and film policy.
 

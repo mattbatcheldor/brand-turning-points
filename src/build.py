@@ -163,6 +163,38 @@ def stamp_art():
 </g>
 </svg>'''
 
+
+def blueprint_art():
+    # Editorial illustration: an exploded technical drawing of a product, its layers labelled idea, product and proof.
+    mono = "'Courier New', Courier, monospace"
+    grid = ''.join(f'<path d="M{x} 0v560" stroke="#2f5a86" stroke-width="1"/>' for x in range(0, 921, 40)) + \
+           ''.join(f'<path d="M0 {y}h920" stroke="#2f5a86" stroke-width="1"/>' for y in range(0, 561, 40))
+    def slab(y, fill, label, n):
+        top = f'M300 {y}l160 -60l160 60l-160 60z'
+        side_l = f'M300 {y}v34l160 60v-34z'
+        side_r = f'M620 {y}v34l-160 60v-34z'
+        return (f'<path d="{side_l}" fill="{fill}" opacity=".55" stroke="#e8f1fb" stroke-width="2"/>'
+                f'<path d="{side_r}" fill="{fill}" opacity=".35" stroke="#e8f1fb" stroke-width="2"/>'
+                f'<path d="{top}" fill="{fill}" opacity=".9" stroke="#e8f1fb" stroke-width="2"/>'
+                f'<path d="M620 {y}h70" stroke="#e8f1fb" stroke-width="1.5" stroke-dasharray="4 4"/>'
+                f'<circle cx="694" cy="{y}" r="4" fill="#e8f1fb"/>'
+                f'<text x="706" y="{y + 5}" font-family="{mono}" font-size="15" font-weight="bold" fill="#e8f1fb">{n} / {label}</text>')
+    return f'''<svg viewBox="0 0 920 560" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="art-title">
+<title id="art-title">Illustration of a technical blueprint showing a product drawn as three stacked layers pulled apart, labelled idea, product and proof.</title>
+<path d="M0 0h920v560H0z" fill="#1d3f63"/>
+<g opacity=".55">{grid}</g>
+<g transform="translate(20 10) scale(.94)">
+<path d="M460 120v330" stroke="#e8f1fb" stroke-width="1.5" stroke-dasharray="2 6"/>
+{slab(150, "#d9f55d", "PROOF", "03")}
+{slab(270, "#a5c31c", "PRODUCT", "02")}
+{slab(390, "#557400", "IDEA", "01")}
+<path d="M250 150v274M242 150h16M242 424h16" stroke="#e8f1fb" stroke-width="1.5"/>
+<text x="236" y="292" font-family="{mono}" font-size="12" fill="#e8f1fb" transform="rotate(-90 236 292)" text-anchor="middle">EXPLODED VIEW</text>
+<text x="460" y="52" text-anchor="middle" font-family="{mono}" font-size="13" letter-spacing="2" fill="#e8f1fb">EDITION 06 / PRODUCT FIRST</text>
+<text x="460" y="74" text-anchor="middle" font-family="{mono}" font-size="11" fill="#9fc1e3">DRG. NO. BTP-06 · SCALE 1:1 · NOT TO BE ADVERTISED SEPARATELY</text>
+</g>
+</svg>'''
+
 LEVELS = ['Modelled effect', 'Sales trend', 'Survey', 'Reach only', 'Archival']
 LEVEL_NOTES = {
     'Modelled effect': 'A model estimates the effect against a baseline.',
@@ -625,6 +657,32 @@ EDITIONS = [
             ('dominos-pizza-turnaround', 'Watch the faces of the people reading the reviews.', 'box'),
             ('kfc-fck', 'The news on the day. The apology that turned it around came days later, in print.', 'bucket'),
             ('cracker-barrel-logo', 'A local news report as the backlash grew. Notice who is defending the old logo.', 'barrel'),
+        ),
+    },
+    {
+        'number': '06',
+        'name': 'Product first',
+        'data': 'campaigns-06.json',
+        'template': 'page-template-06.html',
+        'output': 'edition-06/index.html',
+        'asset_prefix': '../',
+        'art': blueprint_art,
+        'test_heading': 'How the proof was built',
+        'level_notes': {
+            'Sales trend': 'Sales or market share moved, but the product and the advertising are not separated out.',
+            'Archival': 'The record shows what the product did, not what it earned the brand.',
+        },
+        'roles': {
+            'roles': ['A new category', 'A rescue', 'Proof of the promise', 'A statement'],
+            'role_label': 'Product',
+            'role_aria': 'What the product did',
+            'source_label': 'The product',
+        },
+        'screening': (
+            ('greggs-vegan-sausage-roll', 'A pastry launched like a gadget. Watch for the slow reveal.', 'roll'),
+            ('volvo-three-point-seatbelt', 'An old safety film. The product is the whole argument.', 'belt'),
+            ('nike-vaporfly', 'WIRED on the science of the attempt. Notice how much of it is about the shoe.', 'track'),
+            ('xbox-adaptive-controller', 'Listen to who designed it, and who it was designed for.', 'pad'),
         ),
     },
 ]
