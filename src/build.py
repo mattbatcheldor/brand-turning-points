@@ -297,7 +297,7 @@ def write_forwarding_page(edition):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brand Turning Points | Edition {edition["number"]}</title>
+<title>Brand Turning Points | Edition {edition["number"]}{", " + edition["name"] if edition.get("name") else ""}</title>
 <link rel="canonical" href="{target}">
 <meta http-equiv="refresh" content="0; url={target}">
 <meta name="robots" content="noindex">
@@ -357,7 +357,7 @@ EDITIONS = [
     {
         # Edition 01 lives on the home page. edition-01/ forwards there, so every edition has an edition-NN/ address.
         'number': '01',
-        'name': None,
+        'name': 'Fame first',
         'data': 'campaigns-01.json',
         'template': 'page-template-01.html',
         'output': 'index.html',
