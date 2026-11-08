@@ -39,15 +39,16 @@
 .brand-row ol{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}.brand-row li a{display:flex;gap:.6rem;align-items:baseline;color:var(--ink);text-decoration:none;font-size:.95rem}
 .brand-row li a:hover{text-decoration:underline}.brand-row .small{min-width:5.6rem;color:var(--muted);font-size:.64rem}.brand-row .yr{color:var(--muted);font-size:.85rem}
 .ix-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-.ix-case a{display:grid;grid-template-columns:4rem minmax(0,1fr) 15rem;gap:1rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
-.ix-case a:hover .ix-title{text-decoration:underline}.ix-year{font:normal 1.25rem/1 var(--serif);color:var(--muted)}
+.ix-case a{display:grid;grid-template-columns:6.2rem minmax(0,1fr) minmax(8rem,12rem);gap:1rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.ix-case a:hover .ix-title{text-decoration:underline}.ix-year{font:normal 1rem/1 var(--serif);color:var(--muted)}
+.ix-visual{display:flex;flex-direction:column;gap:.35rem}
 .ix-main{display:flex;flex-direction:column;gap:.15rem;min-width:0}.ix-brand{color:var(--muted);font-size:.64rem}.ix-title{font:normal 1.3rem/1.15 var(--serif)}.ix-place{font-size:.8rem;color:var(--muted)}
 .ix-side{display:flex;flex-direction:column;gap:.3rem;align-items:flex-start;font-size:.8rem}.ix-ed{color:var(--ink)}
 .gap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 3rem;margin-top:1.4rem}.gap-grid h3{font-size:1.05rem;margin:0 0 .4rem}.gap-grid p{margin:0;color:#d3d1c5}
 @media(max-width:900px){.ed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ed-card:last-child:nth-child(3n+1){grid-column:auto}.ed-card:last-child:nth-child(odd){grid-column:1/-1}.ix-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.ix-stats div:nth-child(3){border-right:0}}
 @media(max-width:700px){.ed-card:last-child:nth-child(odd){grid-column:auto}.ix-about{grid-template-columns:1fr;gap:.4rem}.ix-about-copy{border-top:0}
 .ed-grid,.lesson-grid,.gap-grid{grid-template-columns:1fr}.brand-row{grid-template-columns:1fr;gap:.6rem}
-.ev-row{grid-template-columns:1fr;gap:.3rem}.ix-case a{grid-template-columns:3.2rem minmax(0,1fr);gap:.4rem .8rem}.ix-side{grid-column:2}
+.ev-row{grid-template-columns:1fr;gap:.3rem}.ix-case a{grid-template-columns:4.4rem minmax(0,1fr);gap:.4rem .8rem}.ix-visual{grid-row:span 2;align-self:start}.ix-side{grid-column:2}
 .ix-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.ix-stats div{border-right:0}.ix-stats div:nth-child(odd){border-right:1px solid var(--line)}}
 </style>
 </head>
@@ -120,7 +121,7 @@
 </section>
 
 <section class="ix-section archive" id="all-cases" aria-labelledby="all-title">
-<div class="section-head"><div><p class="small">05 / Every case</p><h2 id="all-title">All @@TOTAL@@ campaigns</h2></div><p>The whole archive in date order. Filter by edition, evidence, where the work ran or decade, or search by brand. Each case opens in its edition.</p></div>
+<div class="section-head"><div><p class="small">05 / Every case</p><h2 id="all-title">All @@TOTAL@@ campaigns</h2></div><p>The whole archive in date order. Filter by edition, evidence, where the work ran or decade, or search by brand. Open a case in its edition for the full story and image credit.</p></div>
 <div class="filter-bar" id="filters" hidden aria-label="Filter campaigns">
 @@FILTERS@@
 <label class="search">Search <input id="search" type="search" placeholder="Brand, idea or year" autocomplete="off"></label>
