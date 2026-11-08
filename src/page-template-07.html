@@ -10,6 +10,18 @@
 @@CSS@@
 .case-data{display:block;margin-top:.5rem;color:var(--muted);font-size:.78rem}
 .finale .next-copy p{font:normal clamp(1.1rem,1.6vw,1.3rem)/1.5 var(--serif);max-width:38rem}.finale .next-copy .finale-links{font:normal .95rem/1.5 var(--sans)}
+.postcard-art{display:grid;align-content:center;gap:clamp(1.4rem,3vw,2.2rem);padding:clamp(1.4rem,3vw,3rem);background:radial-gradient(ellipse at 45% 40%,#434638,#262820 67%,#1c1e18)}
+.postcard-pair{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;margin-inline:auto;width:100%;max-width:48rem}
+.postcard-art img.postcard-front{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;border:1px solid #d5c8a5;box-shadow:0 .85rem 1.6rem #0007;transform:rotate(3deg);z-index:1}
+.postcard-note{position:relative;z-index:2;margin-right:-.45rem;padding:clamp(.85rem,2.25vw,2.25rem);background:#f4ecd8;color:#25271e;box-shadow:0 .8rem 1.6rem #0006;transform:rotate(-3deg)}
+.postcard-note p{margin:0}.postcard-note .small{font-size:clamp(.59rem,.76vw,.74rem);color:#585d50}.postcard-note .postcard-greeting{margin-block:.7rem 1rem;font:italic clamp(1.2rem,2.5vw,2.6rem)/1.08 var(--serif)}
+.postcard-note .postcard-message,.postcard-note .postcard-signature{font:clamp(.74rem,1.05vw,1rem)/1.5 'Courier New',Courier,monospace}
+.postcard-note .postcard-signature{margin-top:1rem}
+.postcard-routes{display:flex;flex-wrap:wrap;gap:.25rem .45rem;margin:.95rem 0 0;padding:.6rem 0 0;border-top:1px solid #b5ad97;list-style:none;font:bold .58rem/1.25 'Courier New',Courier,monospace;letter-spacing:.04em}
+.postcard-tag{display:inline-block;margin-top:.75rem;padding:.2rem .5rem;background:var(--accent);color:var(--ink);font:bold .71rem/1.4 'Courier New',Courier,monospace}
+.postcard-credit{margin:0;color:#e4e1d3;font-size:.68rem;line-height:1.55}.postcard-credit a{text-underline-offset:.18em}
+@media(max-width:800px){.postcard-feature{grid-template-columns:1fr}.postcard-pair{max-width:35rem}.postcard-note .postcard-greeting{font-size:clamp(1.25rem,4.4vw,2.5rem)}}
+@media(max-width:380px){.postcard-art{padding:1rem}.postcard-note{padding:.7rem}.postcard-note .postcard-signature{margin-top:.65rem}}
 </style>
 </head>
 <body id="top">
@@ -33,8 +45,21 @@
 <p class="small">@@COUNT@@ case studies &nbsp; / &nbsp; @@FIRST_YEAR@@ to @@LAST_YEAR@@</p>
 </div>
 </section>
-<section class="feature" aria-labelledby="feature-title">
-<figure class="feature-art feature-drawn">@@ART@@<figcaption class="art-credit small">Editorial illustration / The postcard</figcaption></figure>
+<section class="feature postcard-feature" aria-labelledby="feature-title">
+<figure class="feature-art postcard-art">
+<div class="postcard-pair">
+<div class="postcard-note">
+<p class="small">Edition 07 / Edge first</p>
+<p class="postcard-greeting">Greetings from<br>the edge of the map.</p>
+<p class="postcard-message">Small budgets. Far places.<br>Big turning points.</p>
+<p class="postcard-signature">Wish you were here,<br>M.</p>
+<ul class="postcard-routes" aria-label="Places in this edition"><li>COLOMBIA</li><li>KENYA</li><li>JAPAN</li><li>BRASIL</li></ul>
+<span class="postcard-tag" title="The reported budget for Dollar Shave Club’s launch video">$4,500</span>
+</div>
+<img class="postcard-front" src="../assets/edition-07/tequendama-postcard.webp" width="722" height="1126" alt="Vintage Colombian postcard showing Tequendama Falls plunging into a wooded gorge">
+</div>
+<figcaption class="postcard-credit">Archival postcard / <a href="https://commons.wikimedia.org/wiki/File:Postal_Salto_de_Tequendama-Bogot%C3%A1.jpg">Salto de Tequendama</a> · Flohr, Price &amp; Co., early 1900s · Biblioteca Luis Ángel Arango</figcaption>
+</figure>
 <div class="feature-copy">
 <p class="small">Opening story / Colombia / 2010</p>
 <h2 id="feature-title">The Christmas lights that called fighters home.</h2>
