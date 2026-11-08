@@ -176,6 +176,9 @@
 .film-frame.razor{background:linear-gradient(90deg,transparent 0 44%,#1d3f63 44% 56%,transparent 56%) 50% 100%/100% 70% no-repeat,linear-gradient(#e9e3da,#e9e3da) 50% 22%/40% 14% no-repeat,#f6f3ec}
 .film-frame.blend{background:linear-gradient(transparent 0 30%,rgba(255,255,255,.25) 30% 80%,transparent 80%) 50% 0/34% 100% no-repeat,linear-gradient(#1d211b,#1d211b) 50% 100%/44% 22% no-repeat,#b9c4bf}
 .foot{flex-wrap:wrap}.foot-copy{flex-basis:100%;order:3;text-transform:none;letter-spacing:0;font:normal .78rem/1.5 var(--sans);color:var(--muted)}
+.foot-links{display:inline-flex;gap:1.2rem;align-items:center}
+.gap-suggest{margin-top:1.8rem;color:var(--light)}.gap-suggest a{color:var(--light);font-weight:bold}
+@media(max-width:560px){.foot-links{gap:.9rem}}
 .ix-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:clamp(2rem,4vw,3rem)}
 .ix-stats div{padding:1rem .8rem 1.1rem 0;border-right:1px solid var(--line)}.ix-stats div:last-child{border-right:0}
 .ix-stats b{display:block;font:normal clamp(2rem,4vw,3.2rem)/1 var(--serif);letter-spacing:-.03em}.ix-stats span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
@@ -428,11 +431,12 @@
 <section class="method" id="gaps" aria-labelledby="gaps-title"><div class="wrap">
 <p class="small">06 / What’s missing</p><h2 id="gaps-title">What the series doesn’t cover yet</h2>
 <div class="gap-grid"><div><h3>Where the work ran</h3><p>33 cases, 33%, started in the UK or Ireland, and 26, 26%, in North America. Asia has 8, Latin America 3 and Africa 2. The IPA databank is the richest source of proof, and it is British.</p></div><div><h3>When</h3><p>57 of the 100 cases, 57%, date from 2010 or later. Only 3 come from before 1970, because older campaigns rarely left a public record.</p></div><div><h3>What the proof looks like</h3><p>25 of 100 cases have a modelled effect. 40 show a sales trend, 24 are archival only, and survey evidence is the rarest, with 3.</p></div><div><h3>Who it is about</h3><p>Most cases are big brands with big budgets. Edge first adds charities, start-ups and a government, but small organisations are still a minority, and they may have the most to teach.</p></div></div>
+<p class="gap-suggest">Know a campaign that belongs here? <a href="https://github.com/mattbatcheldor/brand-turning-points/issues/new?template=suggest-a-case.yml">Suggest a case</a>. It takes a couple of minutes and needs a free GitHub account.</p>
 </div></section>
 
 <section class="wrap next" id="next" aria-labelledby="next-title"><div><p class="small">07 / Start reading</p><h2 id="next-title">Pick an angle.</h2></div><div class="next-copy"><p>Every edition stands on its own, and they read best in order. Start with the famous work, then see what can be proved.</p><p><a href="../">Edition 01, Fame first</a>, <a href="../edition-02/">Edition 02, Proof first</a>, <a href="../edition-03/">Edition 03, Data first</a>, <a href="../edition-04/">Edition 04, Machine first</a>, <a href="../edition-05/">Edition 05, Failure first</a>, <a href="../edition-06/">Edition 06, Product first</a>, <a href="../edition-07/">Edition 07, Edge first</a>.</p></div></section>
 </main>
-<footer class="wrap foot small"><span>Brand Turning Points / The Index / Curated by Matthew Batcheldor</span><a href="#top">Back to top ↑</a><span class="foot-copy">© 2026 Matthew Batcheldor. Text and ratings by Matthew Batcheldor. Campaign images and films belong to their owners and are credited in each case.</span></footer>
+<footer class="wrap foot small"><span>Brand Turning Points / The Index / Curated by Matthew Batcheldor</span><span class="foot-links"><a href="https://github.com/mattbatcheldor/brand-turning-points/issues/new?template=suggest-a-case.yml">Suggest a case</a><a href="#top">Back to top ↑</a></span><span class="foot-copy">© 2026 Matthew Batcheldor. Text and ratings by Matthew Batcheldor. Campaign images and films belong to their owners and are credited in each case.</span></footer>
 <script>
 const buttons = Array.from(document.querySelectorAll('.filter'));
 const rows = Array.from(document.querySelectorAll('.ix-case'));

@@ -176,6 +176,9 @@
 .film-frame.razor{background:linear-gradient(90deg,transparent 0 44%,#1d3f63 44% 56%,transparent 56%) 50% 100%/100% 70% no-repeat,linear-gradient(#e9e3da,#e9e3da) 50% 22%/40% 14% no-repeat,#f6f3ec}
 .film-frame.blend{background:linear-gradient(transparent 0 30%,rgba(255,255,255,.25) 30% 80%,transparent 80%) 50% 0/34% 100% no-repeat,linear-gradient(#1d211b,#1d211b) 50% 100%/44% 22% no-repeat,#b9c4bf}
 .foot{flex-wrap:wrap}.foot-copy{flex-basis:100%;order:3;text-transform:none;letter-spacing:0;font:normal .78rem/1.5 var(--sans);color:var(--muted)}
+.foot-links{display:inline-flex;gap:1.2rem;align-items:center}
+.gap-suggest{margin-top:1.8rem;color:var(--light)}.gap-suggest a{color:var(--light);font-weight:bold}
+@media(max-width:560px){.foot-links{gap:.9rem}}
 </style>
 </head>
 <body id="top">
@@ -1310,7 +1313,7 @@
 <div id="film-screen"></div>
 <p class="player-fallback"><a id="film-original">Open on YouTube</a></p>
 </dialog>
-<footer class="wrap foot small"><span>Brand Turning Points / Edition 02 / Curated by Matthew Batcheldor</span><a href="#top">Back to top ↑</a><span class="foot-copy">© 2026 Matthew Batcheldor. Text and ratings by Matthew Batcheldor. Campaign images and films belong to their owners and are credited in each case.</span></footer>
+<footer class="wrap foot small"><span>Brand Turning Points / Edition 02 / Curated by Matthew Batcheldor</span><span class="foot-links"><a href="https://github.com/mattbatcheldor/brand-turning-points/issues/new?template=suggest-a-case.yml">Suggest a case</a><a href="#top">Back to top ↑</a></span><span class="foot-copy">© 2026 Matthew Batcheldor. Text and ratings by Matthew Batcheldor. Campaign images and films belong to their owners and are credited in each case.</span></footer>
 <script>
 const filters = document.querySelector('#filters');
 const search = document.querySelector('#search');

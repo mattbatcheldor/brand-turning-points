@@ -1,0 +1,59 @@
+name: Suggest a case
+description: Tell me about a campaign that belongs in Brand Turning Points.
+title: "Suggestion: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a case. Brand Turning Points is a selection, not a complete list, and suggestions help fill the gaps.
+        I read every one, though not every suggestion will make it into an edition.
+  - type: input
+    id: case
+    attributes:
+      label: The campaign
+      description: Brand and campaign name, for example Volvo, The Epic Split.
+    validations:
+      required: true
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      description: The year it launched.
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Which edition would it suit?
+      options:
+        - Not sure
+        - Fame first
+        - Proof first
+        - Data first
+        - Machine first
+        - Failure first
+        - Product first
+        - Edge first
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs here
+      description: What changed how people saw the brand? A sentence or two is plenty.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, if you know of any
+      description: A sales figure, an effectiveness paper or a news report that shows what it achieved.
+    validations:
+      required: false
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: The campaign film, a source or a write-up.
+    validations:
+      required: false
