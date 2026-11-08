@@ -190,6 +190,19 @@
 .postcard-credit{margin:0;color:#e4e1d3;font-size:.68rem;line-height:1.55}.postcard-credit a{text-underline-offset:.18em}
 @media(max-width:800px){.postcard-feature{grid-template-columns:1fr}.postcard-pair{max-width:35rem}.postcard-note .postcard-greeting{font-size:clamp(1.25rem,4.4vw,2.5rem)}}
 @media(max-width:380px){.postcard-art{padding:1rem}.postcard-note{padding:.7rem}.postcard-note .postcard-signature{margin-top:.65rem}}
+.postcard-country{display:flex;align-items:center;gap:.55rem;color:inherit;font-weight:bold;font-size:.7rem;letter-spacing:.14em;line-height:1.4}
+.postcard-country .postcard-flag{display:block;width:1.65rem;height:1.1rem;object-fit:contain;object-position:center;box-shadow:0 0 0 1px #827d70}
+.postcard-art .postcard-flag{position:static;inset:auto}
+.postcard-credit .postcard-country{margin-bottom:.45rem}
+.postcard-dispatches{margin:clamp(1.7rem,4vw,3.25rem) 0;padding:clamp(1rem,3vw,2rem);background:#e9e3d2;border-block:1px solid #d0c8b5}
+.postcard-dispatches h2{margin:0 0 1.25rem;font:italic clamp(1.6rem,3vw,2.3rem)/1.15 var(--serif);letter-spacing:-.02em}
+.postcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.85rem,2vw,1.5rem)}
+.postcard-item{margin:0;padding:.75rem;background:#f9f5e8;border:1px solid #d9d0ba;box-shadow:0 .18rem .45rem #25271e15}
+.postcard-item .postcard-scan{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#eee7d6}
+.postcard-item figcaption{padding:.8rem .15rem .15rem}
+.postcard-item figcaption p{margin:.4rem 0 0;font-size:.78rem;line-height:1.5;color:#53584d}
+.postcard-item figcaption a{text-underline-offset:.18em}
+@media(max-width:720px){.postcard-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
@@ -226,7 +239,7 @@
 </div>
 <img class="postcard-front" src="../assets/edition-07/tequendama-postcard.webp" width="722" height="1126" alt="Vintage Colombian postcard showing Tequendama Falls plunging into a wooded gorge">
 </div>
-<figcaption class="postcard-credit">Archival postcard / <a href="https://commons.wikimedia.org/wiki/File:Postal_Salto_de_Tequendama-Bogot%C3%A1.jpg">Salto de Tequendama</a> · Flohr, Price &amp; Co., early 1900s · Biblioteca Luis Ángel Arango</figcaption>
+<figcaption class="postcard-credit"><span class="postcard-country"><img class="postcard-flag" src="../assets/edition-07/colombia-flag.svg" width="27" height="18" alt="">COLOMBIA</span>Archival postcard / <a href="https://commons.wikimedia.org/wiki/File:Postal_Salto_de_Tequendama-Bogot%C3%A1.jpg">Salto de Tequendama</a> · Flohr, Price &amp; Co., early 1900s · Biblioteca Luis Ángel Arango</figcaption>
 </figure>
 <div class="feature-copy">
 <p class="small">Opening story / Colombia / 2010</p>
@@ -236,6 +249,26 @@
 </div>
 </section>
 <div class="edition-meta small"><span>Featured case 01 / Place first</span><span>Colombian Ministry of Defence / Christmas in the jungle</span></div>
+<section class="postcard-dispatches" aria-labelledby="postcard-dispatches-title">
+<h2 id="postcard-dispatches-title">Three more postcards from the edge</h2>
+<div class="postcard-grid">
+<figure class="postcard-item">
+<img class="postcard-scan" src="../assets/edition-07/kenya-postcard.webp" width="900" height="575" loading="lazy" alt="Sepia postcard of Nairobi railway station with carriages, passengers and a guard">
+<figcaption><span class="postcard-country"><img class="postcard-flag" src="../assets/edition-07/kenya-flag.svg" width="27" height="18" alt="">KENYA</span>
+<p><a href="https://commons.wikimedia.org/wiki/File:Postcard_photograph_of_Nairobi_Station,_Uganda_Railway,_by_D._V._Figueira,_Mombasa,_B.E.A.,_ca.1900%27s.jpg">Nairobi Station, Uganda Railway</a> · D. V. Figueira, c. 1900s</p></figcaption>
+</figure>
+<figure class="postcard-item">
+<img class="postcard-scan" src="../assets/edition-07/japan-postcard.webp" width="900" height="589" loading="lazy" alt="Colour postcard of Mount Fuji across Lake Kawaguchi with a small boat in the foreground">
+<figcaption><span class="postcard-country"><img class="postcard-flag" src="../assets/edition-07/japan-flag.svg" width="27" height="18" alt="">JAPAN</span>
+<p><a href="https://commons.wikimedia.org/wiki/File:Fuji-from-Kawaguchi_1918_Madein-Japan.jpg">Mount Fuji from Lake Kawaguchi</a> · Postcard sent in 1918</p></figcaption>
+</figure>
+<figure class="postcard-item">
+<img class="postcard-scan" src="../assets/edition-07/brasil-postcard.webp" width="900" height="588" loading="lazy" alt="Colour postcard of the Rio de Janeiro market with boats moored in front">
+<figcaption><span class="postcard-country"><img class="postcard-flag" src="../assets/edition-07/brasil-flag.svg" width="27" height="18" alt="">BRASIL</span>
+<p><a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_-_Mercado_-_1900.jpg">Rio de Janeiro market</a> · Meteor postcard, 1900</p></figcaption>
+</figure>
+</div>
+</section>
 <section class="finding" id="finding" aria-labelledby="finding-title">
 <p class="small">01 / The finding</p>
 <h2 id="finding-title">The edges measured themselves best.</h2>
